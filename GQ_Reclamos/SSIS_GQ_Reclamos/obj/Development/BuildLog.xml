@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>SSIS_GQ_Reclamos</Name>
-    <LastWriteTime>2014-05-16T20:20:08.0712402Z</LastWriteTime>
+    <LastWriteTime>2014-05-16T20:21:31.072102Z</LastWriteTime>
     <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -33,7 +33,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_mdr_severidad.dtsx</Name>
-      <LastWriteTime>2014-05-16T20:20:08.0222634Z</LastWriteTime>
+      <LastWriteTime>2014-05-16T20:23:45.4486667Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -48,7 +48,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_mdr_usuario.dtsx</Name>
-      <LastWriteTime>2014-05-16T20:07:01.9533957Z</LastWriteTime>
+      <LastWriteTime>2014-05-16T20:23:57.1836686Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -63,57 +63,57 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_Homologado_mdr_area.dtsx</Name>
-      <LastWriteTime>2014-05-16T20:20:07.9592245Z</LastWriteTime>
+      <LastWriteTime>2014-05-16T20:21:31.1070646Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_Homologada__vendedor.dtsx</Name>
-      <LastWriteTime>2014-05-16T20:20:07.8932165Z</LastWriteTime>
+      <LastWriteTime>2014-05-16T20:21:31.0943094Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_Homologada_mdr_reclamo.dtsx</Name>
-      <LastWriteTime>2014-05-16T20:20:07.8252051Z</LastWriteTime>
+      <LastWriteTime>2014-05-16T20:21:31.0993147Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_Homologada_mdr_usuario.dtsx</Name>
-      <LastWriteTime>2014-05-16T20:20:07.7481939Z</LastWriteTime>
+      <LastWriteTime>2014-05-16T20:21:31.1060637Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_Homologada_mdr_transaccion.dtsx</Name>
-      <LastWriteTime>2014-05-16T20:20:07.6661848Z</LastWriteTime>
+      <LastWriteTime>2014-05-16T20:21:31.1050619Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_Homologada_mdr_tipo_item.dtsx</Name>
-      <LastWriteTime>2014-05-16T20:20:07.5961712Z</LastWriteTime>
+      <LastWriteTime>2014-05-16T20:21:31.1040617Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_Homologada_mdr_severidad.dtsx</Name>
-      <LastWriteTime>2014-05-16T20:20:07.5311625Z</LastWriteTime>
+      <LastWriteTime>2014-05-16T20:21:31.1030579Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_Homologada_mdr_reclamo_asignado.dtsx</Name>
-      <LastWriteTime>2014-05-16T20:20:07.4601517Z</LastWriteTime>
+      <LastWriteTime>2014-05-16T20:21:31.1003148Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_Homologada_mdr_clasificacion_item.dtsx</Name>
-      <LastWriteTime>2014-05-16T20:20:07.398144Z</LastWriteTime>
+      <LastWriteTime>2014-05-16T20:21:31.0983121Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_Homologada_marca.dtsx</Name>
-      <LastWriteTime>2014-05-16T20:20:07.3361634Z</LastWriteTime>
+      <LastWriteTime>2014-05-16T20:21:31.0973119Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_Homologada_ban_sucursal.dtsx</Name>
-      <LastWriteTime>2014-05-16T20:20:05.6098819Z</LastWriteTime>
+      <LastWriteTime>2014-05-16T20:21:31.09531Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
