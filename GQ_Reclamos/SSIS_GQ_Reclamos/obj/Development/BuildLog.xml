@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>SSIS_GQ_Reclamos</Name>
-    <LastWriteTime>2014-05-16T20:20:08.0712402Z</LastWriteTime>
+    <LastWriteTime>2014-05-16T20:32:13.0412192Z</LastWriteTime>
     <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -63,57 +63,57 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_Homologado_mdr_area.dtsx</Name>
-      <LastWriteTime>2014-05-16T20:20:07.9592245Z</LastWriteTime>
-      <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
-      <Name>st_Homologada__vendedor.dtsx</Name>
-      <LastWriteTime>2014-05-16T20:20:07.8932165Z</LastWriteTime>
+      <LastWriteTime>2014-05-16T20:30:49.1307769Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_Homologada_mdr_reclamo.dtsx</Name>
-      <LastWriteTime>2014-05-16T20:20:07.8252051Z</LastWriteTime>
+      <LastWriteTime>2014-05-16T20:32:12.9432013Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_Homologada_mdr_usuario.dtsx</Name>
-      <LastWriteTime>2014-05-16T20:20:07.7481939Z</LastWriteTime>
+      <LastWriteTime>2014-05-16T20:32:12.9302055Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_Homologada_mdr_transaccion.dtsx</Name>
-      <LastWriteTime>2014-05-16T20:20:07.6661848Z</LastWriteTime>
+      <LastWriteTime>2014-05-16T20:32:12.9182021Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_Homologada_mdr_tipo_item.dtsx</Name>
-      <LastWriteTime>2014-05-16T20:20:07.5961712Z</LastWriteTime>
+      <LastWriteTime>2014-05-16T20:32:12.9052006Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_Homologada_mdr_severidad.dtsx</Name>
-      <LastWriteTime>2014-05-16T20:20:07.5311625Z</LastWriteTime>
+      <LastWriteTime>2014-05-16T20:32:12.8932185Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_Homologada_mdr_reclamo_asignado.dtsx</Name>
-      <LastWriteTime>2014-05-16T20:20:07.4601517Z</LastWriteTime>
+      <LastWriteTime>2014-05-16T20:32:12.8811904Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_Homologada_mdr_clasificacion_item.dtsx</Name>
-      <LastWriteTime>2014-05-16T20:20:07.398144Z</LastWriteTime>
+      <LastWriteTime>2014-05-16T20:32:12.868218Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_Homologada_marca.dtsx</Name>
-      <LastWriteTime>2014-05-16T20:20:07.3361634Z</LastWriteTime>
+      <LastWriteTime>2014-05-16T20:32:12.8561846Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_Homologada_ban_sucursal.dtsx</Name>
-      <LastWriteTime>2014-05-16T20:20:05.6098819Z</LastWriteTime>
+      <LastWriteTime>2014-05-16T20:32:04.9496815Z</LastWriteTime>
+      <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>st_Homologada_vendedor.dtsx</Name>
+      <LastWriteTime>2014-05-16T20:32:12.8431851Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
