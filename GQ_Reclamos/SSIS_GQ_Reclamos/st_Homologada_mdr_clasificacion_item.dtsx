@@ -1,0 +1,1012 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/15/2014 10:25:09 AM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="GQSV-BI"
+  DTS:CreatorName="GQSV\gqservicios"
+  DTS:DTSID="{B150BFD7-7956-4B85-8B78-80A9BDC58F7F}"
+  DTS:EnableConfig="True"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.3402.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="st_mdr_clasificacion_item"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="33"
+  DTS:VersionGUID="{3F87A65D-FBE4-4371-B51E-DFD7A7D999AB}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[cnADOSqlServerST]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{C57640BF-3CA8-435A-9C49-E9A95F4D8CAE}"
+      DTS:ObjectName="cnADOSqlServerST">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=GQSV-BI\BIGQ;User ID=sapbi;Initial Catalog=STADWCAL;Persist Security Info=True;Application Name=SSIS-Package-{D84B850A-A69F-4409-AA56-714C3C1B5B83}GQSV-BI\BIGQ.STADWCAL.sapbi;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"></DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[cnODBCMySql]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{35FADA60-307E-478E-827C-F153545100CB}"
+      DTS:ObjectName="cnODBCMySql">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::connection_string]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="uid=antonio;Dsn=QRM_COSTA_RICA;">
+          <DTS:Password
+            DTS:Name="pwd"
+            Sensitive="1"></DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[cnOLEDBSqlServerST]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{8B605EB1-941C-4581-B4CD-E0BE65AF62D0}"
+      DTS:ObjectName="cnOLEDBSqlServerST">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=GQSV-BI\BIGQ;User ID=sapbi;Initial Catalog=STADWCAL;Provider=SQLNCLI11.1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"></DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Configurations>
+    <DTS:Configuration
+      DTS:ConfigurationString="C:\SSIS_Config\SSIS_GQ_Reclamos.dtsConfig"
+      DTS:ConfigurationType="1"
+      DTS:CreationName=""
+      DTS:DTSID="{50BCFAEE-D76D-436B-954C-B950486BA8D2}"
+      DTS:ObjectName="SSIS_GQ_Reclamos" />
+  </DTS:Configurations>
+  <DTS:LogProviders>
+    <DTS:LogProvider
+      DTS:ConfigString="cnOLEDBSqlServerST"
+      DTS:CreationName="DTS.LogProviderSQLServer.3"
+      DTS:Description="Writes log entries for events to a SQL Server database"
+      DTS:DTSID="{A982BBB3-70BC-4E5E-A1BB-CEAE54C93BCB}"
+      DTS:ObjectName="SSIS log provider for SQL Server">
+      <DTS:ObjectData>
+        <InnerObject />
+      </DTS:ObjectData>
+    </DTS:LogProvider>
+  </DTS:LogProviders>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{3B49D88C-CD3A-4CEA-BD19-7BAA29353B81}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="codigo_sociedad">
+      <DTS:VariableValue
+        DTS:DataType="8">C101</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2B1DD19F-3732-4F6F-920B-406C11A82113}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="connection_string">
+      <DTS:VariableValue
+        DTS:DataType="8">Dsn=QRM_COSTA_RICA;uid=antonio;pwd=ant#2011#</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F78FE96E-9B14-4E1C-B915-49A0AC64079D}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="DataSet">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:LoggingOptions
+    DTS:FilterKind="0"
+    DTS:LoggingMode="1">
+    <DTS:Property
+      DTS:DataType="8"
+      DTS:Name="EventFilter">2,7,OnError,12,OnTaskFailed</DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnError"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnTaskFailed"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+  </DTS:LoggingOptions>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Clear ST"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{3756389F-EA07-4FA6-97E2-59565BE60ECE}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Clear ST"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C57640BF-3CA8-435A-9C49-E9A95F4D8CAE}"
+          SQLTask:SqlStatementSource="truncate table [dbo].[st_mdr_area]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Get Sources My Sql"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{BBE0B1E1-CF23-48D3-A7AA-1E17BC910EE3}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Get Sources My Sql">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.SqlServer.Dts.Runtime.Enumerators.ADO.ForEachADOEnumerator, Microsoft.SqlServer.ForEachADOEnumerator, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+        DTS:DTSID="{B8BF3198-BD4F-4766-B308-47D2FD871301}"
+        DTS:ObjectName="{B8BF3198-BD4F-4766-B308-47D2FD871301}">
+        <DTS:ObjectData>
+          <FEEADO
+            EnumType="EnumerateRowsInFirstTable"
+            VarName="User::DataSet" />
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Get Sources My Sql\LoadMySQL"
+          DTS:CreationName="SSIS.Pipeline.3"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{BC4206D3-6B96-48E5-82EA-3E915373809B}"
+          DTS:ExecutableType="SSIS.Pipeline.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="LoadMySQL"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Get Sources My Sql\LoadMySQL\Add Sociedad"
+                  componentClassID="{49928E82-9C4E-49F0-AABE-3812B82707EC}"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Add Sociedad"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Get Sources My Sql\LoadMySQL\Add Sociedad.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Get Sources My Sql\LoadMySQL\Add Sociedad.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Get Sources My Sql\LoadMySQL\Add Sociedad.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\Add Sociedad.Outputs[Derived Column Output].Columns[codigo_sociedad]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="4"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\Add Sociedad.Outputs[Derived Column Output].Columns[codigo_sociedad]"
+                          name="codigo_sociedad"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_STR,4,1252)@[User::codigo_sociedad]</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_STR,4,1252)@[User::codigo_sociedad]</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Get Sources My Sql\LoadMySQL\Add Sociedad.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Get Sources My Sql\LoadMySQL\Add Sociedad.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\Add Sociedad.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\Add Sociedad.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\Add Sociedad.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\Add Sociedad.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource"
+                  componentClassID="{A77F5655-A006-443A-9B7E-90B6BD55CB84}"
+                  contactInfo="ODBC Source;Connector for Open Database Connectivity (ODBC) by Attunity; Attunity Ltd.; All Rights Reserved; http://www.attunity.com;1"
+                  description="ODBC Source"
+                  name="MySqlSource"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="The name of the table to be fetched."
+                      expressionType="Notify"
+                      name="TableName"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      expressionType="Notify"
+                      name="SqlCommand">select 
+	id_mdr_area, 
+	fk_id_mdr_clasificacion_item, 
+	descripcion, 
+	codigo_homologacion_isc, 
+	estado, 
+	identificador, 
+	consecutivo 
+from mdr_area</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specify the number of rows fetched per batch."
+                      expressionType="Notify"
+                      name="BatchSize">1000</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Determines the chunk size allocation for LOB columns"
+                      expressionType="Notify"
+                      name="LobChunkSize">32768</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines how the component exposes CHAR columns. If False, CHAR columns are exposed as (multi-)byte strings (DT_STR), if True, CHAR columns are exposed as wide strings (DT_WSTR)"
+                      expressionType="Notify"
+                      name="ExposeCharColumnsAsUnicode">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                      expressionType="Notify"
+                      name="StatementTimeout">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The code page to use when code page information is unavailable from the data source."
+                      expressionType="Notify"
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The method used for fetching data."
+                      expressionType="Notify"
+                      name="FetchMethod"
+                      typeConverter="FetchMethod">1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The ODBC C data type for binding numeric data."
+                      expressionType="Notify"
+                      name="BindNumericAs"
+                      typeConverter="BindNumericAs">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                      expressionType="Notify"
+                      name="BindCharColumnsAs"
+                      typeConverter="BindCharColumnsAs">0</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Connections[ODBCConnection]"
+                      connectionManagerID="Package.ConnectionManagers[cnODBCMySql]"
+                      connectionManagerRefId="Package.ConnectionManagers[cnODBCMySql]"
+                      description="The ODBC runtime connection"
+                      name="ODBCConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output]"
+                      errorRowDisposition="FailComponent"
+                      name="ODBC Source Output"
+                      truncationRowDisposition="FailComponent">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[id_mdr_area]"
+                          dataType="i4"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[id_mdr_area]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[id_mdr_area]"
+                          name="id_mdr_area" />
+                        <outputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[fk_id_mdr_clasificacion_item]"
+                          dataType="i4"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[fk_id_mdr_clasificacion_item]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[fk_id_mdr_clasificacion_item]"
+                          name="fk_id_mdr_clasificacion_item" />
+                        <outputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[descripcion]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[descripcion]"
+                          length="51"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[descripcion]"
+                          name="descripcion" />
+                        <outputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[codigo_homologacion_isc]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[codigo_homologacion_isc]"
+                          length="11"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[codigo_homologacion_isc]"
+                          name="codigo_homologacion_isc" />
+                        <outputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[estado]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[estado]"
+                          length="9"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[estado]"
+                          name="estado" />
+                        <outputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[identificador]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[identificador]"
+                          length="6"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[identificador]"
+                          name="identificador" />
+                        <outputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[consecutivo]"
+                          dataType="i4"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[consecutivo]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[consecutivo]"
+                          name="consecutivo" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[id_mdr_area]"
+                          dataType="i4"
+                          name="id_mdr_area" />
+                        <externalMetadataColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[fk_id_mdr_clasificacion_item]"
+                          dataType="i4"
+                          name="fk_id_mdr_clasificacion_item" />
+                        <externalMetadataColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[descripcion]"
+                          codePage="1252"
+                          dataType="str"
+                          length="51"
+                          name="descripcion" />
+                        <externalMetadataColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[codigo_homologacion_isc]"
+                          codePage="1252"
+                          dataType="str"
+                          length="11"
+                          name="codigo_homologacion_isc" />
+                        <externalMetadataColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[estado]"
+                          codePage="1252"
+                          dataType="str"
+                          length="9"
+                          name="estado" />
+                        <externalMetadataColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[identificador]"
+                          codePage="1252"
+                          dataType="str"
+                          length="6"
+                          name="identificador" />
+                        <externalMetadataColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[consecutivo]"
+                          dataType="i4"
+                          name="consecutivo" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output]"
+                      isErrorOut="true"
+                      name="ODBC Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[id_mdr_area]"
+                          dataType="i4"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[id_mdr_area]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[id_mdr_area]"
+                          name="id_mdr_area" />
+                        <outputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[fk_id_mdr_clasificacion_item]"
+                          dataType="i4"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[fk_id_mdr_clasificacion_item]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[fk_id_mdr_clasificacion_item]"
+                          name="fk_id_mdr_clasificacion_item" />
+                        <outputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[descripcion]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[descripcion]"
+                          length="51"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[descripcion]"
+                          name="descripcion" />
+                        <outputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[codigo_homologacion_isc]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[codigo_homologacion_isc]"
+                          length="11"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[codigo_homologacion_isc]"
+                          name="codigo_homologacion_isc" />
+                        <outputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[estado]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[estado]"
+                          length="9"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[estado]"
+                          name="estado" />
+                        <outputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[identificador]"
+                          codePage="1252"
+                          dataType="str"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[identificador]"
+                          length="6"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[identificador]"
+                          name="identificador" />
+                        <outputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[consecutivo]"
+                          dataType="i4"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[consecutivo]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[consecutivo]"
+                          name="consecutivo" />
+                        <outputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination"
+                  componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="SqlDestination"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[st_mdr_area]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[cnOLEDBSqlServerST]"
+                      connectionManagerRefId="Package.ConnectionManagers[cnOLEDBSqlServerST]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].Columns[id_mdr_area]"
+                          cachedDataType="i4"
+                          cachedName="id_mdr_area"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[id_mdr_area]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[id_mdr_area]" />
+                        <inputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].Columns[fk_id_mdr_clasificacion_item]"
+                          cachedDataType="i4"
+                          cachedName="fk_id_mdr_clasificacion_item"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[fk_id_mdr_clasificacion_item]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[fk_id_mdr_clasificacion_item]" />
+                        <inputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].Columns[descripcion]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="51"
+                          cachedName="descripcion"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[descripcion]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[descripcion]" />
+                        <inputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].Columns[codigo_homologacion_isc]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="11"
+                          cachedName="codigo_homologacion_isc"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[codigo_homologacion_isc]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[codigo_homologacion_isc]" />
+                        <inputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].Columns[estado]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="9"
+                          cachedName="estado"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[estado]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[estado]" />
+                        <inputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].Columns[identificador]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="6"
+                          cachedName="identificador"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[identificador]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[identificador]" />
+                        <inputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].Columns[consecutivo]"
+                          cachedDataType="i4"
+                          cachedName="consecutivo"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[consecutivo]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[consecutivo]" />
+                        <inputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].Columns[codigo_sociedad]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="4"
+                          cachedName="codigo_sociedad"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[codigo_sociedad]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\Add Sociedad.Outputs[Derived Column Output].Columns[codigo_sociedad]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[codigo_sociedad]"
+                          codePage="1252"
+                          dataType="str"
+                          length="4"
+                          name="codigo_sociedad" />
+                        <externalMetadataColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[id_mdr_area]"
+                          dataType="i4"
+                          name="id_mdr_area" />
+                        <externalMetadataColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[fk_id_mdr_clasificacion_item]"
+                          dataType="i4"
+                          name="fk_id_mdr_clasificacion_item" />
+                        <externalMetadataColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[descripcion]"
+                          codePage="1252"
+                          dataType="str"
+                          length="60"
+                          name="descripcion" />
+                        <externalMetadataColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[codigo_homologacion_isc]"
+                          codePage="1252"
+                          dataType="str"
+                          length="11"
+                          name="codigo_homologacion_isc" />
+                        <externalMetadataColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[estado]"
+                          codePage="1252"
+                          dataType="str"
+                          length="20"
+                          name="estado" />
+                        <externalMetadataColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[identificador]"
+                          codePage="1252"
+                          dataType="str"
+                          length="6"
+                          name="identificador" />
+                        <externalMetadataColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[consecutivo]"
+                          dataType="i4"
+                          name="consecutivo" />
+                        <externalMetadataColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[Id_DW]"
+                          dataType="i4"
+                          name="Id_DW" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Get Sources My Sql\LoadMySQL.Paths[Derived Column Output]"
+                  endId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input]"
+                  name="Derived Column Output"
+                  startId="Package\Get Sources My Sql\LoadMySQL\Add Sociedad.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Get Sources My Sql\LoadMySQL.Paths[ODBC Source Output]"
+                  endId="Package\Get Sources My Sql\LoadMySQL\Add Sociedad.Inputs[Derived Column Input]"
+                  name="ODBC Source Output"
+                  startId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{B2DD804F-6310-4E61-87E0-FD84CBF8E6DF}"
+          DTS:ObjectName="{B2DD804F-6310-4E61-87E0-FD84CBF8E6DF}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::codigo_sociedad" />
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{F00FE21F-715E-41AD-B0BE-51E66D8280EC}"
+          DTS:ObjectName="{F00FE21F-715E-41AD-B0BE-51E66D8280EC}"
+          DTS:ValueIndex="1"
+          DTS:VariableName="User::connection_string" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\GetConnectionString"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{BA2D0D86-4348-412D-B418-FD8BF6FE7252}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="GetConnectionString"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C57640BF-3CA8-435A-9C49-E9A95F4D8CAE}"
+          SQLTask:SqlStatementSource="SELECT [CodigoSociedad],&#xA;       [ConnectionString]&#xA;FROM [dbo].[Conf_Conexiones]"
+          SQLTask:ResultType="ResultSetType_Rowset" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::DataSet" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{1DACEACF-99DD-40E5-BAE7-022E196CFEED}"
+      DTS:From="Package\GetConnectionString"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Clear ST" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{44A4A741-000B-4A02-8493-713B0B680076}"
+      DTS:From="Package\Clear ST"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Get Sources My Sql" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="120,42"
+          Id="Package\Clear ST"
+          TopLeft="34,107.5" />
+        <NodeLayout
+          Size="136,42"
+          Id="Package\Get Sources My Sql\LoadMySQL"
+          TopLeft="35.5,28.5" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="199,126"
+          Size="199,168"
+          Id="Package\Get Sources My Sql"
+          TopLeft="20.5,209.5" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\GetConnectionString"
+          TopLeft="5.5,5.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="94,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="94,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="26,60"
+              Start="0,0"
+              End="26,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="4,30" />
+                  <mssgle:LineSegment
+                    End="22,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22,30"
+                    Point2="26,30"
+                    Point3="26,34" />
+                  <mssgle:LineSegment
+                    End="26,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Get Sources My Sql\LoadMySQL">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="141,42"
+          Id="Package\Get Sources My Sql\LoadMySQL\MySqlSource"
+          TopLeft="9.00000000000001,5.5" />
+        <NodeLayout
+          Size="148,42"
+          Id="Package\Get Sources My Sql\LoadMySQL\SqlDestination"
+          TopLeft="5.50000000000003,209.5" />
+        <NodeLayout
+          Size="145,42"
+          Id="Package\Get Sources My Sql\LoadMySQL\Add Sociedad"
+          TopLeft="7.00000000000003,107.5" />
+        <EdgeLayout
+          Id="Package\Get Sources My Sql\LoadMySQL.Paths[ODBC Source Output]"
+          TopLeft="79.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Get Sources My Sql\LoadMySQL.Paths[Derived Column Output]"
+          TopLeft="79.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Get Sources My Sql\LoadMySQL\MySqlSource">
+    <Properties>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Get Sources My Sql\LoadMySQL\SqlDestination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
