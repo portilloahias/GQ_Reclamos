@@ -5,16 +5,16 @@
   DTS:CreationName="SSIS.Package.3"
   DTS:CreatorComputerName="GQSV-BI"
   DTS:CreatorName="GQSV\gqservicios"
-  DTS:DTSID="{C776635B-C4E7-4F95-BAC7-749FBBF9EC23}"
+  DTS:DTSID="{4F58885A-D0D8-469A-A322-6AC18E9542C5}"
   DTS:EnableConfig="True"
   DTS:ExecutableType="SSIS.Package.3"
   DTS:LastModifiedProductVersion="11.0.3402.0"
   DTS:LocaleID="1033"
-  DTS:ObjectName="st_vendedor"
+  DTS:ObjectName="st_Homologada_vendedor"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="34"
-  DTS:VersionGUID="{C6BDCE94-D9FB-410C-9B2A-DD74E0464602}">
+  DTS:VersionBuild="35"
+  DTS:VersionGUID="{15F57AFC-D314-4ED5-8C93-056A56D6CEAD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
