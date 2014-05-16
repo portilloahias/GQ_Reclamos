@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="5/15/2014 10:25:09 AM"
@@ -13,8 +13,8 @@
   DTS:ObjectName="st_mdr_reclamo_asignado"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="33"
-  DTS:VersionGUID="{3A92B8E5-D60F-4D6F-8287-00C8E287B492}">
+  DTS:VersionBuild="34"
+  DTS:VersionGUID="{3A99F0BA-5BBD-4B74-92B3-A7E46E2D4267}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>

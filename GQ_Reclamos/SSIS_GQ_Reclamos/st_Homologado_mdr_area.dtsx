@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="5/15/2014 10:25:09 AM"
@@ -13,8 +13,8 @@
   DTS:ObjectName="st_mdr_area"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="33"
-  DTS:VersionGUID="{1C7C6B62-A418-409C-ACF4-9755A25A8B17}">
+  DTS:VersionBuild="34"
+  DTS:VersionGUID="{1A5DD22B-58D1-4287-B488-230947DEB058}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,7 +25,7 @@
       DTS:ObjectName="cnADOSqlServerST">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=GQSV-BI\BIGQ;User ID=sapbi;Initial Catalog=STADWCAL;Persist Security Info=True;Application Name=SSIS-Package-{033E2574-83F3-49C6-A321-524B8C0C63A9}GQSV-BI\BIGQ.STADWCAL.sapbi;">
+          DTS:ConnectionString="Data Source=GQSV-BI\BIGQ;User ID=sapbi;Initial Catalog=STADWCAL;Persist Security Info=True;Application Name=SSIS-Package-{D84B850A-A69F-4409-AA56-714C3C1B5B83}GQSV-BI\BIGQ.STADWCAL.sapbi;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"></DTS:Password>

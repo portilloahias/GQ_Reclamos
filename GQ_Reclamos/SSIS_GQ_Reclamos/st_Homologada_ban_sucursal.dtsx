@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="5/15/2014 10:25:09 AM"
@@ -13,8 +13,8 @@
   DTS:ObjectName="st_ban_sucursal"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="33"
-  DTS:VersionGUID="{3D888B41-FC87-43F1-AF4C-9F45417E9547}">
+  DTS:VersionBuild="34"
+  DTS:VersionGUID="{C12F39D4-B91E-4700-893F-9AF47BD8D727}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
