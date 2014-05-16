@@ -1,41 +1,41 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="5/15/2014 10:25:09 AM"
   DTS:CreationName="SSIS.Package.3"
   DTS:CreatorComputerName="GQSV-BI"
   DTS:CreatorName="GQSV\gqservicios"
-  DTS:DTSID="{B42FFEFE-2090-46B5-AF11-7F896EFDC4E5}"
+  DTS:DTSID="{798F0B9D-CC28-4FA3-93BE-722B9A8CF484}"
   DTS:EnableConfig="True"
   DTS:ExecutableType="SSIS.Package.3"
   DTS:LastModifiedProductVersion="11.0.3402.0"
   DTS:LocaleID="1033"
-  DTS:ObjectName="st_mdr_area"
+  DTS:ObjectName="st_vendedor"
   DTS:PackageType="5"
-  DTS:VersionBuild="28"
-  DTS:VersionGUID="{F545BA44-4E71-4418-BD29-C4F9D09A2F81}">
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="33"
+  DTS:VersionGUID="{D22C2C62-6101-46E3-9805-3C8D36C0C700}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[cnADOSqlServerST]"
       DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
-      DTS:DTSID="{5E2B220C-5674-4D31-91AA-59F4639984D0}"
+      DTS:DTSID="{71D1694B-0843-4805-B1D8-6549FD173529}"
       DTS:ObjectName="cnADOSqlServerST">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=GQSV-BI\BIGQ;User ID=sapbi;Initial Catalog=STADWCAL;Persist Security Info=True;Application Name=SSIS-Package-{5E2B220C-5674-4D31-91AA-59F4639984D0}GQSV-BI\BIGQ.STADWCAL.sapbi;">
+          DTS:ConnectionString="Data Source=GQSV-BI\BIGQ;User ID=sapbi;Initial Catalog=STADWCAL;Persist Security Info=True;Application Name=SSIS-Package-{D84B850A-A69F-4409-AA56-714C3C1B5B83}GQSV-BI\BIGQ.STADWCAL.sapbi;">
           <DTS:Password
             DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAADsPsIbnNEirqxlcW/FMfgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAgnXF40lV/t0Yg2JVbt5LtAAAAAASAAACgAAAAEAAAABBCipbpcfeCuzRNFgeWhHwYAAAA7ktVbNZ7FwyXrnVUq5+nlBWaCWGWTTMJFAAAAMVPNC1jNzTWt/sTSrQCbTL9j6eZ</DTS:Password>
+            Sensitive="1"></DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[cnODBCMySql]"
       DTS:CreationName="ODBC"
-      DTS:DTSID="{F4DD0C98-C320-44B1-BD2C-65CCFFAD6841}"
+      DTS:DTSID="{2026A709-E1AE-4EDE-ABA2-7E093CC8C14A}"
       DTS:ObjectName="cnODBCMySql">
       <DTS:PropertyExpression
         DTS:Name="ConnectionString">@[User::connection_string]</DTS:PropertyExpression>
@@ -44,33 +44,31 @@
           DTS:ConnectionString="uid=antonio;Dsn=QRM_COSTA_RICA;">
           <DTS:Password
             DTS:Name="pwd"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAADsPsIbnNEirqxlcW/FMfgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACQXptLD21yfnfmm1HjalPJAAAAAASAAACgAAAAEAAAAOxyo3VFzYmBmujiRtvyEf0YAAAA5a50OhbpFrvMMl8fGO6s4CdtYEj/7bGyFAAAAFJR6HPRSn0NRhK3x6cUwYcxrelM</DTS:Password>
+            Sensitive="1"></DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[cnOLEDBSqlServerST]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{814BE38E-0933-4AEF-9140-37B6B3C6777F}"
+      DTS:DTSID="{7362C5D9-0ADF-4626-8FD2-F6A55E2B2508}"
       DTS:ObjectName="cnOLEDBSqlServerST">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="Data Source=GQSV-BI\BIGQ;User ID=sapbi;Initial Catalog=STADWCAL;Provider=SQLNCLI11.1;Auto Translate=False;">
           <DTS:Password
             DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAADsPsIbnNEirqxlcW/FMfgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABmKTJp6nz1ZEYRihkXULGgAAAAAASAAACgAAAAEAAAAAwumdLthLe1Qp2sk0SWNR0YAAAA0wERsAp1zlPvEwIkfZKP4x/9lFP9B55NFAAAAMdmhMSWOJsGXLp5bFT8f+nShk0E</DTS:Password>
+            Sensitive="1"></DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Configurations>
     <DTS:Configuration
-      DTS:ConfigurationString="C:\Fuentes Reclamos GQ\GQ_Reclamos\GQ_Reclamos.git\GQ_Reclamos\SSIS_GQ_Reclamos\SSIS_GQ_Reclamos.dtsConfig"
+      DTS:ConfigurationString="C:\SSIS_Config\SSIS_GQ_Reclamos.dtsConfig"
       DTS:ConfigurationType="1"
       DTS:CreationName=""
-      DTS:DTSID="{0A1E9F4A-6EBA-4C71-B330-99FF1DB557AC}"
+      DTS:DTSID="{27073DAE-A919-4054-BA93-42503E3FD669}"
       DTS:ObjectName="SSIS_GQ_Reclamos" />
   </DTS:Configurations>
   <DTS:LogProviders>
@@ -78,7 +76,7 @@
       DTS:ConfigString="cnOLEDBSqlServerST"
       DTS:CreationName="DTS.LogProviderSQLServer.3"
       DTS:Description="Writes log entries for events to a SQL Server database"
-      DTS:DTSID="{3F408AD0-CFA9-4416-B598-36E2FF18E8A4}"
+      DTS:DTSID="{1C266801-C5E0-4BCE-9541-6A2816213A4B}"
       DTS:ObjectName="SSIS log provider for SQL Server">
       <DTS:ObjectData>
         <InnerObject />
@@ -88,7 +86,7 @@
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{C74F13CC-9630-41E5-AC78-A9D6FAD4F74B}"
+      DTS:DTSID="{23BB546E-1415-4FE3-B8A6-14723BD5F6D7}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="codigo_sociedad">
@@ -97,7 +95,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{875796A1-059A-4FD7-977B-34A5DD1A2C3D}"
+      DTS:DTSID="{8E1BE42C-71C3-4F70-8B0E-6F16E9B441AF}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="connection_string">
@@ -106,7 +104,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{FC188980-A319-4FD8-9A57-26BE0771BAB3}"
+      DTS:DTSID="{93128400-C652-4969-99D0-86EBEC759CAA}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="DataSet">
@@ -171,7 +169,7 @@
       DTS:refId="Package\Clear ST"
       DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{DAE98C5F-7A27-497E-B824-3F7481A781A8}"
+      DTS:DTSID="{2160C63A-A148-4B28-98FE-FBFFA3020240}"
       DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
       DTS:LocaleID="-1"
       DTS:ObjectName="Clear ST"
@@ -182,7 +180,7 @@
         DTS:FilterKind="0" />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{5E2B220C-5674-4D31-91AA-59F4639984D0}"
+          SQLTask:Connection="{71D1694B-0843-4805-B1D8-6549FD173529}"
           SQLTask:SqlStatementSource="truncate table [dbo].[st_mdr_area]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -190,14 +188,14 @@
       DTS:refId="Package\Get Sources My Sql"
       DTS:CreationName="STOCK:FOREACHLOOP"
       DTS:Description="Foreach Loop Container"
-      DTS:DTSID="{118B6752-E2CA-4F4E-9DD9-83ED8B8FF37B}"
+      DTS:DTSID="{FDE5204C-ED72-4FC7-A31E-60E6D8EED9A5}"
       DTS:ExecutableType="STOCK:FOREACHLOOP"
       DTS:LocaleID="-1"
       DTS:ObjectName="Get Sources My Sql">
       <DTS:ForEachEnumerator
         DTS:CreationName="Microsoft.SqlServer.Dts.Runtime.Enumerators.ADO.ForEachADOEnumerator, Microsoft.SqlServer.ForEachADOEnumerator, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
-        DTS:DTSID="{899EB7E5-D4B4-41B8-A57C-7FB1E0B319E5}"
-        DTS:ObjectName="{899EB7E5-D4B4-41B8-A57C-7FB1E0B319E5}">
+        DTS:DTSID="{5F1B0E82-EE3E-4786-A24E-BC239867F869}"
+        DTS:ObjectName="{5F1B0E82-EE3E-4786-A24E-BC239867F869}">
         <DTS:ObjectData>
           <FEEADO
             EnumType="EnumerateRowsInFirstTable"
@@ -212,7 +210,7 @@
           DTS:refId="Package\Get Sources My Sql\LoadMySQL"
           DTS:CreationName="SSIS.Pipeline.3"
           DTS:Description="Data Flow Task"
-          DTS:DTSID="{D795460A-A189-4161-8749-EF345273DF28}"
+          DTS:DTSID="{53589C98-ABFF-4551-88DD-B8DDCA19C156}"
           DTS:ExecutableType="SSIS.Pipeline.3"
           DTS:LocaleID="-1"
           DTS:ObjectName="LoadMySQL"
@@ -778,14 +776,14 @@ from mdr_area</property>
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{5CACA521-1621-4BB0-AD04-1CEA72D956D5}"
-          DTS:ObjectName="{5CACA521-1621-4BB0-AD04-1CEA72D956D5}"
+          DTS:DTSID="{220F7B94-8406-4CE7-BD9D-C8FD16CCF808}"
+          DTS:ObjectName="{220F7B94-8406-4CE7-BD9D-C8FD16CCF808}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::codigo_sociedad" />
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{A2463B57-2038-44CA-BA5F-7C1E88C9E1D2}"
-          DTS:ObjectName="{A2463B57-2038-44CA-BA5F-7C1E88C9E1D2}"
+          DTS:DTSID="{FDC86A48-C220-44DF-BF11-BE91DF34D2D7}"
+          DTS:ObjectName="{FDC86A48-C220-44DF-BF11-BE91DF34D2D7}"
           DTS:ValueIndex="1"
           DTS:VariableName="User::connection_string" />
       </DTS:ForEachVariableMappings>
@@ -794,7 +792,7 @@ from mdr_area</property>
       DTS:refId="Package\GetConnectionString"
       DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{E70BD32C-80B4-440E-81F7-EBE9E9DFC132}"
+      DTS:DTSID="{7972526D-154B-4BE1-B027-C79BDC26EBB9}"
       DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
       DTS:LocaleID="-1"
       DTS:ObjectName="GetConnectionString"
@@ -805,7 +803,7 @@ from mdr_area</property>
         DTS:FilterKind="0" />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{5E2B220C-5674-4D31-91AA-59F4639984D0}"
+          SQLTask:Connection="{71D1694B-0843-4805-B1D8-6549FD173529}"
           SQLTask:SqlStatementSource="SELECT [CodigoSociedad],&#xA;       [ConnectionString]&#xA;FROM [dbo].[Conf_Conexiones]"
           SQLTask:ResultType="ResultSetType_Rowset" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
@@ -819,7 +817,7 @@ from mdr_area</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{D8A017F7-B5B0-48FA-AE3B-8F1A767BC355}"
+      DTS:DTSID="{A6EA5024-235E-4333-AD69-FE60E28CF9E9}"
       DTS:From="Package\GetConnectionString"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -827,7 +825,7 @@ from mdr_area</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{4E05CBBE-07BB-488B-B8B9-E51AAF9430C9}"
+      DTS:DTSID="{F3DB3D10-46A5-4A9C-9A8E-BC8093E46CA5}"
       DTS:From="Package\Clear ST"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"

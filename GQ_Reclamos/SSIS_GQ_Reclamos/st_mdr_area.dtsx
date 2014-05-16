@@ -12,8 +12,9 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="st_mdr_area"
   DTS:PackageType="5"
-  DTS:VersionBuild="28"
-  DTS:VersionGUID="{467577EF-B444-4781-A854-8F92A291C186}">
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="33"
+  DTS:VersionGUID="{C3FE3942-00BC-4515-AB0D-1405CDAFC9D0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,8 +28,7 @@
           DTS:ConnectionString="Data Source=GQSV-BI\BIGQ;User ID=sapbi;Initial Catalog=STADWCAL;Persist Security Info=True;Application Name=SSIS-Package-{D84B850A-A69F-4409-AA56-714C3C1B5B83}GQSV-BI\BIGQ.STADWCAL.sapbi;">
           <DTS:Password
             DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAADsPsIbnNEirqxlcW/FMfgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAgnXF40lV/t0Yg2JVbt5LtAAAAAASAAACgAAAAEAAAABBCipbpcfeCuzRNFgeWhHwYAAAA7ktVbNZ7FwyXrnVUq5+nlBWaCWGWTTMJFAAAAMVPNC1jNzTWt/sTSrQCbTL9j6eZ</DTS:Password>
+            Sensitive="1"></DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -44,8 +44,7 @@
           DTS:ConnectionString="uid=antonio;Dsn=QRM_COSTA_RICA;">
           <DTS:Password
             DTS:Name="pwd"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAADsPsIbnNEirqxlcW/FMfgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACQXptLD21yfnfmm1HjalPJAAAAAASAAACgAAAAEAAAAOxyo3VFzYmBmujiRtvyEf0YAAAA5a50OhbpFrvMMl8fGO6s4CdtYEj/7bGyFAAAAFJR6HPRSn0NRhK3x6cUwYcxrelM</DTS:Password>
+            Sensitive="1"></DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -59,18 +58,17 @@
           DTS:ConnectionString="Data Source=GQSV-BI\BIGQ;User ID=sapbi;Initial Catalog=STADWCAL;Provider=SQLNCLI11.1;Auto Translate=False;">
           <DTS:Password
             DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAADsPsIbnNEirqxlcW/FMfgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABmKTJp6nz1ZEYRihkXULGgAAAAAASAAACgAAAAEAAAAAwumdLthLe1Qp2sk0SWNR0YAAAA0wERsAp1zlPvEwIkfZKP4x/9lFP9B55NFAAAAMdmhMSWOJsGXLp5bFT8f+nShk0E</DTS:Password>
+            Sensitive="1"></DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Configurations>
     <DTS:Configuration
-      DTS:ConfigurationString="C:\Fuentes Reclamos GQ\GQ_Reclamos\GQ_Reclamos.git\GQ_Reclamos\SSIS_GQ_Reclamos\SSIS_GQ_Reclamos.dtsConfig"
+      DTS:ConfigurationString="C:\SSIS_Config\SSIS_GQ_Reclamos.dtsConfig"
       DTS:ConfigurationType="1"
       DTS:CreationName=""
-      DTS:DTSID="{BF6A00E7-8A77-479C-8523-BC208D2EEDD2}"
+      DTS:DTSID="{7B978750-2102-47B9-B3A9-A13470496488}"
       DTS:ObjectName="SSIS_GQ_Reclamos" />
   </DTS:Configurations>
   <DTS:LogProviders>

@@ -12,11 +12,11 @@
   <DataSourceViews />
   <DeploymentModelSpecificContent>
     <Manifest>
-      <SSIS:Project SSIS:ProtectionLevel="EncryptSensitiveWithUserKey" xmlns:SSIS="www.microsoft.com/SqlServer/SSIS">
+      <SSIS:Project SSIS:ProtectionLevel="DontSaveSensitive" xmlns:SSIS="www.microsoft.com/SqlServer/SSIS">
         <SSIS:Properties>
           <SSIS:Property SSIS:Name="ID">{27869e50-1bfd-4ec4-98c7-1c1fe114e58e}</SSIS:Property>
           <SSIS:Property SSIS:Name="Name">SSIS_GQ_Reclamos</SSIS:Property>
-          <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+          <SSIS:Property SSIS:Name="VersionMajor">0</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionBuild">0</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionComments">
@@ -26,7 +26,6 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">GQSV-BI</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAADsPsIbnNEirqxlcW/FMfgAAAAACAAAAAAADZgAAwAAAABAAAAC7lBjzBwsTfc+8LkaS0wOSAAAAAASAAACgAAAAEAAAANHgmas61sL4dunJGQ1lR6GIAAAAWxbTSj7snTiqoKbvICQoGTbXKpydghUu3fciLGC/zzYqlFC7FJ9DqdYJhMb2VkYGLMt2QW1cYa+WcxUhlwogQccbKBKabzlOzipW1c6/LKBDuJn51Zc7HCdDtGALgv3RZtFwlGM1yN8vUmX7qlTIa/lt7aypehuU48XYLH9REheXMkZVJmKD2RQAAAAZCMjlcfTHyr46vFgYcp/l3X3DgQ==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -42,14 +41,14 @@
                 <SSIS:Property SSIS:Name="Name">st_mdr_area</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">28</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">32</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{467577EF-B444-4781-A854-8F92A291C186}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{2FCFBE9F-D8E4-497B-BE70-E4D63DEEAFCB}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">6</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">0</SSIS:Property>
               </SSIS:Properties>
               <SSIS:Parameters>
                 <SSIS:Parameter SSIS:Name="CM.cnADOSqlServerST.ConnectionString">
