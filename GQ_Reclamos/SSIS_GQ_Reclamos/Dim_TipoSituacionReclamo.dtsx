@@ -5,37 +5,45 @@
   DTS:CreationName="SSIS.Package.3"
   DTS:CreatorComputerName="GQSV-BI"
   DTS:CreatorName="GQSV\gqservicios"
-  DTS:DTSID="{E1C0A34B-1A9C-4652-86E1-41AC4FC67FC6}"
+  DTS:DTSID="{E27A57D7-1443-44A2-A9D7-40C1245298D2}"
   DTS:EnableConfig="True"
   DTS:ExecutableType="SSIS.Package.3"
   DTS:LastModifiedProductVersion="11.0.3402.0"
   DTS:LocaleID="1033"
-  DTS:ObjectName="Dim_Area"
+  DTS:ObjectName="Dim_TipoSituacionReclamo"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="60"
-  DTS:VersionGUID="{64F1175A-DB3B-4432-9A7F-D81BE2E321CA}">
+  DTS:VersionBuild="73"
+  DTS:VersionGUID="{7793A6E3-5B77-467D-9CD5-2CBF97ACB6F3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[cnOLEDBSqlServerDW]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{E7F6035B-AD29-490C-835F-398CF29BA63D}"
+      DTS:DTSID="{3644000B-8ED9-4851-BE26-EDBFC99FB63E}"
       DTS:ObjectName="cnOLEDBSqlServerDW">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=gqsv-bi\BIGQ;User ID=sapbi;Initial Catalog=BIDWGQCAL;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=gqsv-bi\BIGQ;User ID=sapbi;Initial Catalog=BIDWGQCAL;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"></DTS:Password>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[cnOLEDBSqlServerST]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{123732C7-F1F8-470F-B9CA-430560FE8AF1}"
+      DTS:DTSID="{0D1A8722-DA07-4E4F-B01A-E6E8FBD91FC6}"
       DTS:ObjectName="cnOLEDBSqlServerST">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=GQSV-BI\BIGQ;User ID=sapbi;Initial Catalog=STADWCAL;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=GQSV-BI\BIGQ;User ID=sapbi;Initial Catalog=STADWCAL;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"></DTS:Password>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -44,7 +52,7 @@
       DTS:ConfigurationString="C:\SSIS_Config\SSIS_GQ_Reclamos_DW.dtsConfig"
       DTS:ConfigurationType="1"
       DTS:CreationName=""
-      DTS:DTSID="{BAC90FEF-894E-4BC9-BECE-0D59C5824C4D}"
+      DTS:DTSID="{127B1D61-4141-4912-A2BC-13A2D4705E59}"
       DTS:ObjectName="SSIS_GQ_Reclamos_DW" />
   </DTS:Configurations>
   <DTS:LogProviders>
@@ -52,7 +60,7 @@
       DTS:ConfigString="cnOLEDBSqlServerST"
       DTS:CreationName="DTS.LogProviderSQLServer.3"
       DTS:Description="Writes log entries for events to a SQL Server database"
-      DTS:DTSID="{234594EA-78CD-4A24-B3F0-49B353FD8D2F}"
+      DTS:DTSID="{2926D57D-E781-4A03-B05A-B908A0659015}"
       DTS:ObjectName="SSIS log provider for SQL Server">
       <DTS:ObjectData>
         <InnerObject />
@@ -108,7 +116,7 @@
       DTS:refId="Package\Get Valor Homologado"
       DTS:CreationName="SSIS.Pipeline.3"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{7FC53FDC-E829-43C8-A45D-901B6919F73F}"
+      DTS:DTSID="{C513EE2A-14DB-4AD9-B942-8CEFF5CDF2FA}"
       DTS:ExecutableType="SSIS.Pipeline.3"
       DTS:LocaleID="-1"
       DTS:ObjectName="Get Valor Homologado"
@@ -134,22 +142,22 @@
                   name="Conditional Split Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Get Valor Homologado\Conditional Split.Inputs[Conditional Split Input].Columns[Id_Area]"
+                      refId="Package\Get Valor Homologado\Conditional Split.Inputs[Conditional Split Input].Columns[Id_Severidad]"
                       cachedDataType="i4"
-                      cachedName="Id_Area"
-                      lineageId="Package\Get Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[Id_Area]" />
+                      cachedName="Id_Severidad"
+                      lineageId="Package\Get Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[Id_Severidad]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Get Valor Homologado\Conditional Split.Outputs[Id_DW]"
+                  refId="Package\Get Valor Homologado\Conditional Split.Outputs[Value DW]"
                   description="Output 1 of the Conditional Split Transformation"
                   errorOrTruncationOperation="Computation"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
-                  name="Id_DW"
+                  name="Value DW"
                   synchronousInputId="Package\Get Valor Homologado\Conditional Split.Inputs[Conditional Split Input]"
                   truncationRowDisposition="FailComponent">
                   <properties>
@@ -157,13 +165,13 @@
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">![ISNULL](#{Package\Get Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[Id_Area]})</property>
+                      name="Expression">![ISNULL](#{Package\Get Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[Id_Severidad]})</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the friendly version of the expression. This expression version uses column names."
                       expressionType="Notify"
-                      name="FriendlyExpression">!ISNULL(Id_Area)</property>
+                      name="FriendlyExpression">!ISNULL(Id_Severidad)</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
@@ -225,7 +233,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[DIMArea]</property>
+                  name="OpenRowset">[dbo].[DimSeveridad]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -271,38 +279,38 @@
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[Id_Area]"
+                      refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[Id_Severidad]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[Id_Area]"
-                      lineageId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[Id_Area]"
-                      name="Id_Area"
+                      externalMetadataColumnId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[Id_Severidad]"
+                      lineageId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[Id_Severidad]"
+                      name="Id_Severidad"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[DescripcionArea]"
+                      refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[DescripcionSeveridad]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[DescripcionArea]"
+                      externalMetadataColumnId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[DescripcionSeveridad]"
                       length="60"
-                      lineageId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[DescripcionArea]"
-                      name="DescripcionArea"
+                      lineageId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[DescripcionSeveridad]"
+                      name="DescripcionSeveridad"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[Id_Area]"
+                      refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[Id_Severidad]"
                       dataType="i4"
-                      name="Id_Area" />
+                      name="Id_Severidad" />
                     <externalMetadataColumn
-                      refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[DescripcionArea]"
+                      refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[DescripcionSeveridad]"
                       codePage="1252"
                       dataType="str"
                       length="60"
-                      name="DescripcionArea" />
+                      name="DescripcionSeveridad" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -311,17 +319,17 @@
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[Id_Area]"
+                      refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[Id_Severidad]"
                       dataType="i4"
-                      lineageId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[Id_Area]"
-                      name="Id_Area" />
+                      lineageId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[Id_Severidad]"
+                      name="Id_Severidad" />
                     <outputColumn
-                      refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[DescripcionArea]"
+                      refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[DescripcionSeveridad]"
                       codePage="1252"
                       dataType="str"
                       length="60"
-                      lineageId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[DescripcionArea]"
-                      name="DescripcionArea" />
+                      lineageId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[DescripcionSeveridad]"
+                      name="DescripcionSeveridad" />
                     <outputColumn
                       refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -364,11 +372,10 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT 
-	[codigo_sociedad],
-	[id_mdr_area],
-	descripcion=LTRIM(RTRIM(UPPER([descripcion])))
-FROM [dbo].[st_mdr_area]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select codigo_sociedad,  
+       [id_st_severidad],
+       descripcion=LTRIM(RTRIM(UPPER([descripcion])))
+from [dbo].[st_mdr_severidad]</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -416,15 +423,6 @@ FROM [dbo].[st_mdr_area]</property>
                       name="codigo_sociedad"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].Columns[id_mdr_area]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].ExternalColumns[id_mdr_area]"
-                      lineageId="Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].Columns[id_mdr_area]"
-                      name="id_mdr_area"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].Columns[descripcion]"
                       codePage="1252"
                       dataType="str"
@@ -434,6 +432,15 @@ FROM [dbo].[st_mdr_area]</property>
                       length="60"
                       lineageId="Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].Columns[descripcion]"
                       name="descripcion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].Columns[id_st_severidad]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].ExternalColumns[id_st_severidad]"
+                      lineageId="Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].Columns[id_st_severidad]"
+                      name="id_st_severidad"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -445,15 +452,15 @@ FROM [dbo].[st_mdr_area]</property>
                       length="4"
                       name="codigo_sociedad" />
                     <externalMetadataColumn
-                      refId="Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].ExternalColumns[id_mdr_area]"
-                      dataType="i4"
-                      name="id_mdr_area" />
-                    <externalMetadataColumn
                       refId="Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].ExternalColumns[descripcion]"
                       codePage="1252"
                       dataType="str"
-                      length="60"
+                      length="51"
                       name="descripcion" />
+                    <externalMetadataColumn
+                      refId="Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].ExternalColumns[id_st_severidad]"
+                      dataType="i4"
+                      name="id_st_severidad" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -469,15 +476,15 @@ FROM [dbo].[st_mdr_area]</property>
                       lineageId="Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Error Output].Columns[codigo_sociedad]"
                       name="codigo_sociedad" />
                     <outputColumn
-                      refId="Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Error Output].Columns[id_mdr_area]"
+                      refId="Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Error Output].Columns[id_st_severidad]"
                       dataType="i4"
-                      lineageId="Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Error Output].Columns[id_mdr_area]"
-                      name="id_mdr_area" />
+                      lineageId="Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Error Output].Columns[id_st_severidad]"
+                      name="id_st_severidad" />
                     <outputColumn
                       refId="Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Error Output].Columns[descripcion]"
                       codePage="1252"
                       dataType="str"
-                      length="60"
+                      length="51"
                       lineageId="Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Error Output].Columns[descripcion]"
                       name="descripcion" />
                     <outputColumn
@@ -545,10 +552,10 @@ FROM [dbo].[st_mdr_area]</property>
                       cachedName="codigo_sociedad"
                       lineageId="Package\Get Valor Homologado\Sort ST.Outputs[Sort Output].Columns[codigo_sociedad]" />
                     <inputColumn
-                      refId="Package\Get Valor Homologado\Merge Join.Inputs[Merge Join Left Input].Columns[id_mdr_area]"
+                      refId="Package\Get Valor Homologado\Merge Join.Inputs[Merge Join Left Input].Columns[id_st_severidad]"
                       cachedDataType="i4"
-                      cachedName="id_mdr_area"
-                      lineageId="Package\Get Valor Homologado\Sort ST.Outputs[Sort Output].Columns[id_mdr_area]" />
+                      cachedName="id_st_severidad"
+                      lineageId="Package\Get Valor Homologado\Sort ST.Outputs[Sort Output].Columns[id_st_severidad]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -558,18 +565,18 @@ FROM [dbo].[st_mdr_area]</property>
                   name="Merge Join Right Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Get Valor Homologado\Merge Join.Inputs[Merge Join Right Input].Columns[DescripcionArea]"
+                      refId="Package\Get Valor Homologado\Merge Join.Inputs[Merge Join Right Input].Columns[DescripcionSeveridad]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="60"
-                      cachedName="DescripcionArea"
+                      cachedName="DescripcionSeveridad"
                       cachedSortKeyPosition="1"
-                      lineageId="Package\Get Valor Homologado\Sort  DW.Outputs[Sort Output].Columns[DescripcionArea]" />
+                      lineageId="Package\Get Valor Homologado\Sort DW.Outputs[Sort Output].Columns[DescripcionSeveridad]" />
                     <inputColumn
-                      refId="Package\Get Valor Homologado\Merge Join.Inputs[Merge Join Right Input].Columns[Id_Area]"
+                      refId="Package\Get Valor Homologado\Merge Join.Inputs[Merge Join Right Input].Columns[Id_Severidad]"
                       cachedDataType="i4"
-                      cachedName="Id_Area"
-                      lineageId="Package\Get Valor Homologado\Sort  DW.Outputs[Sort Output].Columns[Id_Area]" />
+                      cachedName="Id_Severidad"
+                      lineageId="Package\Get Valor Homologado\Sort DW.Outputs[Sort Output].Columns[Id_Severidad]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -595,29 +602,29 @@ FROM [dbo].[st_mdr_area]</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Get Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[id_mdr_area]"
+                      refId="Package\Get Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[id_st_severidad]"
                       dataType="i4"
-                      lineageId="Package\Get Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[id_mdr_area]"
-                      name="id_mdr_area">
+                      lineageId="Package\Get Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[id_st_severidad]"
+                      name="id_st_severidad">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Get Valor Homologado\Merge Join.Inputs[Merge Join Left Input].Columns[id_mdr_area]}</property>
+                          name="InputColumnID">#{Package\Get Valor Homologado\Merge Join.Inputs[Merge Join Left Input].Columns[id_st_severidad]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Get Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[Id_Area]"
+                      refId="Package\Get Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[Id_Severidad]"
                       dataType="i4"
-                      lineageId="Package\Get Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[Id_Area]"
-                      name="Id_Area">
+                      lineageId="Package\Get Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[Id_Severidad]"
+                      name="Id_Severidad">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Get Valor Homologado\Merge Join.Inputs[Merge Join Right Input].Columns[Id_Area]}</property>
+                          name="InputColumnID">#{Package\Get Valor Homologado\Merge Join.Inputs[Merge Join Right Input].Columns[Id_Severidad]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -643,11 +650,11 @@ FROM [dbo].[st_mdr_area]</property>
                   description="The SQL command to be executed."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [dbo].[st_mdr_area]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [dbo].[st_mdr_severidad]
    SET 
        [Id_DW] = ?
  WHERE [codigo_sociedad] = ?  AND
-       [id_mdr_area] = ?</property>
+        [id_st_severidad]= ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -670,12 +677,6 @@ FROM [dbo].[st_mdr_area]</property>
                   name="OLE DB Command Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Get Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input].Columns[Id_Area]"
-                      cachedDataType="i4"
-                      cachedName="Id_Area"
-                      externalMetadataColumnId="Package\Get Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      lineageId="Package\Get Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[Id_Area]" />
-                    <inputColumn
                       refId="Package\Get Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input].Columns[codigo_sociedad]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -684,11 +685,17 @@ FROM [dbo].[st_mdr_area]</property>
                       externalMetadataColumnId="Package\Get Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
                       lineageId="Package\Get Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[codigo_sociedad]" />
                     <inputColumn
-                      refId="Package\Get Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input].Columns[id_mdr_area]"
+                      refId="Package\Get Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input].Columns[Id_Severidad]"
                       cachedDataType="i4"
-                      cachedName="id_mdr_area"
+                      cachedName="Id_Severidad"
+                      externalMetadataColumnId="Package\Get Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Get Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[Id_Severidad]" />
+                    <inputColumn
+                      refId="Package\Get Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input].Columns[id_st_severidad]"
+                      cachedDataType="i4"
+                      cachedName="id_st_severidad"
                       externalMetadataColumnId="Package\Get Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                      lineageId="Package\Get Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[id_mdr_area]" />
+                      lineageId="Package\Get Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[id_st_severidad]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -763,11 +770,11 @@ FROM [dbo].[st_mdr_area]</property>
               </outputs>
             </component>
             <component
-              refId="Package\Get Valor Homologado\Sort  DW"
+              refId="Package\Get Valor Homologado\Sort DW"
               componentClassID="{5B1A3FF5-D366-4D75-AD1F-F19A36FCBEDB}"
               contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
-              name="Sort  DW"
+              name="Sort DW"
               version="1">
               <properties>
                 <property
@@ -782,14 +789,14 @@ FROM [dbo].[st_mdr_area]</property>
               </properties>
               <inputs>
                 <input
-                  refId="Package\Get Valor Homologado\Sort  DW.Inputs[Sort Input]"
+                  refId="Package\Get Valor Homologado\Sort DW.Inputs[Sort Input]"
                   name="Sort Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Get Valor Homologado\Sort  DW.Inputs[Sort Input].Columns[Id_Area]"
+                      refId="Package\Get Valor Homologado\Sort DW.Inputs[Sort Input].Columns[Id_Severidad]"
                       cachedDataType="i4"
-                      cachedName="Id_Area"
-                      lineageId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[Id_Area]">
+                      cachedName="Id_Severidad"
+                      lineageId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[Id_Severidad]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -802,12 +809,12 @@ FROM [dbo].[st_mdr_area]</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Get Valor Homologado\Sort  DW.Inputs[Sort Input].Columns[DescripcionArea]"
+                      refId="Package\Get Valor Homologado\Sort DW.Inputs[Sort Input].Columns[DescripcionSeveridad]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="60"
-                      cachedName="DescripcionArea"
-                      lineageId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[DescripcionArea]">
+                      cachedName="DescripcionSeveridad"
+                      lineageId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[DescripcionSeveridad]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -825,37 +832,37 @@ FROM [dbo].[st_mdr_area]</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Get Valor Homologado\Sort  DW.Outputs[Sort Output]"
+                  refId="Package\Get Valor Homologado\Sort DW.Outputs[Sort Output]"
                   isSorted="true"
                   name="Sort Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Get Valor Homologado\Sort  DW.Outputs[Sort Output].Columns[Id_Area]"
+                      refId="Package\Get Valor Homologado\Sort DW.Outputs[Sort Output].Columns[Id_Severidad]"
                       dataType="i4"
-                      lineageId="Package\Get Valor Homologado\Sort  DW.Outputs[Sort Output].Columns[Id_Area]"
-                      name="Id_Area">
+                      lineageId="Package\Get Valor Homologado\Sort DW.Outputs[Sort Output].Columns[Id_Severidad]"
+                      name="Id_Severidad">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[Id_Area]}</property>
+                          name="SortColumnId">#{Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[Id_Severidad]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Get Valor Homologado\Sort  DW.Outputs[Sort Output].Columns[DescripcionArea]"
+                      refId="Package\Get Valor Homologado\Sort DW.Outputs[Sort Output].Columns[DescripcionSeveridad]"
                       codePage="1252"
                       dataType="str"
                       length="60"
-                      lineageId="Package\Get Valor Homologado\Sort  DW.Outputs[Sort Output].Columns[DescripcionArea]"
-                      name="DescripcionArea"
+                      lineageId="Package\Get Valor Homologado\Sort DW.Outputs[Sort Output].Columns[DescripcionSeveridad]"
+                      name="DescripcionSeveridad"
                       sortKeyPosition="1">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[DescripcionArea]}</property>
+                          name="SortColumnId">#{Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[DescripcionSeveridad]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -905,22 +912,6 @@ FROM [dbo].[st_mdr_area]</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Get Valor Homologado\Sort ST.Inputs[Sort Input].Columns[id_mdr_area]"
-                      cachedDataType="i4"
-                      cachedName="id_mdr_area"
-                      lineageId="Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].Columns[id_mdr_area]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
                       refId="Package\Get Valor Homologado\Sort ST.Inputs[Sort Input].Columns[descripcion]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -936,6 +927,22 @@ FROM [dbo].[st_mdr_area]</property>
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
                           name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Get Valor Homologado\Sort ST.Inputs[Sort Input].Columns[id_st_severidad]"
+                      cachedDataType="i4"
+                      cachedName="id_st_severidad"
+                      lineageId="Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].Columns[id_st_severidad]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -964,19 +971,6 @@ FROM [dbo].[st_mdr_area]</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Get Valor Homologado\Sort ST.Outputs[Sort Output].Columns[id_mdr_area]"
-                      dataType="i4"
-                      lineageId="Package\Get Valor Homologado\Sort ST.Outputs[Sort Output].Columns[id_mdr_area]"
-                      name="id_mdr_area">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].Columns[id_mdr_area]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\Get Valor Homologado\Sort ST.Outputs[Sort Output].Columns[descripcion]"
                       codePage="1252"
                       dataType="str"
@@ -992,6 +986,19 @@ FROM [dbo].[st_mdr_area]</property>
                           name="SortColumnId">#{Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].Columns[descripcion]}</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Valor Homologado\Sort ST.Outputs[Sort Output].Columns[id_st_severidad]"
+                      dataType="i4"
+                      lineageId="Package\Get Valor Homologado\Sort ST.Outputs[Sort Output].Columns[id_st_severidad]"
+                      name="id_st_severidad">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].Columns[id_st_severidad]}</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -999,11 +1006,6 @@ FROM [dbo].[st_mdr_area]</property>
             </component>
           </components>
           <paths>
-            <path
-              refId="Package\Get Valor Homologado.Paths[Id_DW]"
-              endId="Package\Get Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input]"
-              name="Id_DW"
-              startId="Package\Get Valor Homologado\Conditional Split.Outputs[Id_DW]" />
             <path
               refId="Package\Get Valor Homologado.Paths[Merge Join Output]"
               endId="Package\Get Valor Homologado\Conditional Split.Inputs[Conditional Split Input]"
@@ -1016,7 +1018,7 @@ FROM [dbo].[st_mdr_area]</property>
               startId="Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Get Valor Homologado.Paths[OLE DB Source Output1]"
-              endId="Package\Get Valor Homologado\Sort  DW.Inputs[Sort Input]"
+              endId="Package\Get Valor Homologado\Sort DW.Inputs[Sort Input]"
               name="OLE DB Source Output"
               startId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output]" />
             <path
@@ -1028,7 +1030,12 @@ FROM [dbo].[st_mdr_area]</property>
               refId="Package\Get Valor Homologado.Paths[Sort Output1]"
               endId="Package\Get Valor Homologado\Merge Join.Inputs[Merge Join Right Input]"
               name="Sort Output"
-              startId="Package\Get Valor Homologado\Sort  DW.Outputs[Sort Output]" />
+              startId="Package\Get Valor Homologado\Sort DW.Outputs[Sort Output]" />
+            <path
+              refId="Package\Get Valor Homologado.Paths[Value DW]"
+              endId="Package\Get Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input]"
+              name="Value DW"
+              startId="Package\Get Valor Homologado\Conditional Split.Outputs[Value DW]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1037,7 +1044,7 @@ FROM [dbo].[st_mdr_area]</property>
       DTS:refId="Package\Insertar Nuevos Valores DW"
       DTS:CreationName="SSIS.Pipeline.3"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{C30DEDE2-4F39-4903-B78A-A1382E436A96}"
+      DTS:DTSID="{8FA53025-F475-4EA8-BE4F-359774B587D1}"
       DTS:ExecutableType="SSIS.Pipeline.3"
       DTS:LocaleID="-1"
       DTS:ObjectName="Insertar Nuevos Valores DW"
@@ -1065,7 +1072,7 @@ FROM [dbo].[st_mdr_area]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[DIMArea]</property>
+                  name="OpenRowset">[dbo].[DimSeveridad]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1122,26 +1129,26 @@ FROM [dbo].[st_mdr_area]</property>
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Insertar Nuevos Valores DW\Destination DW.Inputs[OLE DB Destination Input].Columns[descripcion]"
+                      refId="Package\Insertar Nuevos Valores DW\Destination DW.Inputs[OLE DB Destination Input].Columns[DescripcionSeveridad]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="60"
-                      cachedName="descripcion"
-                      externalMetadataColumnId="Package\Insertar Nuevos Valores DW\Destination DW.Inputs[OLE DB Destination Input].ExternalColumns[DescripcionArea]"
-                      lineageId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[descripcion]" />
+                      cachedLength="51"
+                      cachedName="DescripcionSeveridad"
+                      externalMetadataColumnId="Package\Insertar Nuevos Valores DW\Destination DW.Inputs[OLE DB Destination Input].ExternalColumns[DescripcionSeveridad]"
+                      lineageId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[DescripcionSeveridad]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Insertar Nuevos Valores DW\Destination DW.Inputs[OLE DB Destination Input].ExternalColumns[Id_Area]"
+                      refId="Package\Insertar Nuevos Valores DW\Destination DW.Inputs[OLE DB Destination Input].ExternalColumns[Id_Severidad]"
                       dataType="i4"
-                      name="Id_Area" />
+                      name="Id_Severidad" />
                     <externalMetadataColumn
-                      refId="Package\Insertar Nuevos Valores DW\Destination DW.Inputs[OLE DB Destination Input].ExternalColumns[DescripcionArea]"
+                      refId="Package\Insertar Nuevos Valores DW\Destination DW.Inputs[OLE DB Destination Input].ExternalColumns[DescripcionSeveridad]"
                       codePage="1252"
                       dataType="str"
                       length="60"
-                      name="DescripcionArea" />
+                      name="DescripcionSeveridad" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1196,8 +1203,8 @@ FROM [dbo].[st_mdr_area]</property>
                   description="The SQL command to be executed."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT DISTINCT
-	descripcion=LTRIM(RTRIM(UPPER([descripcion])))
-FROM [dbo].[st_mdr_area]
+	[DescripcionSeveridad]=LTRIM(RTRIM(UPPER([descripcion])))
+FROM [dbo].[st_mdr_severidad]
 WHERE [Id_DW] is null</property>
                 <property
                   dataType="System.String"
@@ -1235,25 +1242,25 @@ WHERE [Id_DW] is null</property>
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[descripcion]"
+                      refId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[DescripcionSeveridad]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].ExternalColumns[descripcion]"
-                      length="60"
-                      lineageId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[descripcion]"
-                      name="descripcion"
+                      externalMetadataColumnId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].ExternalColumns[DescripcionSeveridad]"
+                      length="51"
+                      lineageId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[DescripcionSeveridad]"
+                      name="DescripcionSeveridad"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].ExternalColumns[descripcion]"
+                      refId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].ExternalColumns[DescripcionSeveridad]"
                       codePage="1252"
                       dataType="str"
-                      length="60"
-                      name="descripcion" />
+                      length="51"
+                      name="DescripcionSeveridad" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1262,12 +1269,12 @@ WHERE [Id_DW] is null</property>
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Error Output].Columns[descripcion]"
+                      refId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Error Output].Columns[DescripcionSeveridad]"
                       codePage="1252"
                       dataType="str"
-                      length="60"
-                      lineageId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Error Output].Columns[descripcion]"
-                      name="descripcion" />
+                      length="51"
+                      lineageId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Error Output].Columns[DescripcionSeveridad]"
+                      name="DescripcionSeveridad" />
                     <outputColumn
                       refId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -1300,7 +1307,7 @@ WHERE [Id_DW] is null</property>
       DTS:refId="Package\Update Valor Homologado"
       DTS:CreationName="SSIS.Pipeline.3"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{5FA7591B-1FBE-4131-BD87-97C39ADC734E}"
+      DTS:DTSID="{56342596-7486-4468-9060-97FF88E367C6}"
       DTS:ExecutableType="SSIS.Pipeline.3"
       DTS:LocaleID="-1"
       DTS:ObjectName="Update Valor Homologado"
@@ -1326,7 +1333,7 @@ WHERE [Id_DW] is null</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[DIMArea]</property>
+                  name="OpenRowset">[dbo].[DimSeveridad]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1372,38 +1379,38 @@ WHERE [Id_DW] is null</property>
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[Id_Area]"
+                      refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[Id_Severidad]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[Id_Area]"
-                      lineageId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[Id_Area]"
-                      name="Id_Area"
+                      externalMetadataColumnId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[Id_Severidad]"
+                      lineageId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[Id_Severidad]"
+                      name="Id_Severidad"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[DescripcionArea]"
+                      refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[DescripcionSeveridad]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[DescripcionArea]"
+                      externalMetadataColumnId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[DescripcionSeveridad]"
                       length="60"
-                      lineageId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[DescripcionArea]"
-                      name="DescripcionArea"
+                      lineageId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[DescripcionSeveridad]"
+                      name="DescripcionSeveridad"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[Id_Area]"
+                      refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[Id_Severidad]"
                       dataType="i4"
-                      name="Id_Area" />
+                      name="Id_Severidad" />
                     <externalMetadataColumn
-                      refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[DescripcionArea]"
+                      refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[DescripcionSeveridad]"
                       codePage="1252"
                       dataType="str"
                       length="60"
-                      name="DescripcionArea" />
+                      name="DescripcionSeveridad" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1412,17 +1419,17 @@ WHERE [Id_DW] is null</property>
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[Id_Area]"
+                      refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[Id_Severidad]"
                       dataType="i4"
-                      lineageId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[Id_Area]"
-                      name="Id_Area" />
+                      lineageId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[Id_Severidad]"
+                      name="Id_Severidad" />
                     <outputColumn
-                      refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[DescripcionArea]"
+                      refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[DescripcionSeveridad]"
                       codePage="1252"
                       dataType="str"
                       length="60"
-                      lineageId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[DescripcionArea]"
-                      name="DescripcionArea" />
+                      lineageId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[DescripcionSeveridad]"
+                      name="DescripcionSeveridad" />
                     <outputColumn
                       refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -1465,11 +1472,10 @@ WHERE [Id_DW] is null</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT 
-	[codigo_sociedad],
-	[id_mdr_area],
-	descripcion=LTRIM(RTRIM(UPPER([descripcion])))
-FROM [dbo].[st_mdr_area]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT codigo_sociedad,  
+       [id_st_severidad],
+       descripcion=LTRIM(RTRIM(UPPER([descripcion])))
+FROM [dbo].[st_mdr_severidad]
 WHERE [Id_DW] is null</property>
                 <property
                   dataType="System.String"
@@ -1518,15 +1524,6 @@ WHERE [Id_DW] is null</property>
                       name="codigo_sociedad"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].Columns[id_mdr_area]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].ExternalColumns[id_mdr_area]"
-                      lineageId="Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].Columns[id_mdr_area]"
-                      name="id_mdr_area"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].Columns[descripcion]"
                       codePage="1252"
                       dataType="str"
@@ -1536,6 +1533,15 @@ WHERE [Id_DW] is null</property>
                       length="60"
                       lineageId="Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].Columns[descripcion]"
                       name="descripcion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].Columns[id_st_severidad]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].ExternalColumns[id_st_severidad]"
+                      lineageId="Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].Columns[id_st_severidad]"
+                      name="id_st_severidad"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -1547,15 +1553,15 @@ WHERE [Id_DW] is null</property>
                       length="4"
                       name="codigo_sociedad" />
                     <externalMetadataColumn
-                      refId="Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].ExternalColumns[id_mdr_area]"
-                      dataType="i4"
-                      name="id_mdr_area" />
-                    <externalMetadataColumn
                       refId="Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].ExternalColumns[descripcion]"
                       codePage="1252"
                       dataType="str"
-                      length="60"
+                      length="51"
                       name="descripcion" />
+                    <externalMetadataColumn
+                      refId="Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].ExternalColumns[id_st_severidad]"
+                      dataType="i4"
+                      name="id_st_severidad" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1571,15 +1577,15 @@ WHERE [Id_DW] is null</property>
                       lineageId="Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Error Output].Columns[codigo_sociedad]"
                       name="codigo_sociedad" />
                     <outputColumn
-                      refId="Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Error Output].Columns[id_mdr_area]"
+                      refId="Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Error Output].Columns[id_st_severidad]"
                       dataType="i4"
-                      lineageId="Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Error Output].Columns[id_mdr_area]"
-                      name="id_mdr_area" />
+                      lineageId="Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Error Output].Columns[id_st_severidad]"
+                      name="id_st_severidad" />
                     <outputColumn
                       refId="Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Error Output].Columns[descripcion]"
                       codePage="1252"
                       dataType="str"
-                      length="60"
+                      length="51"
                       lineageId="Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Error Output].Columns[descripcion]"
                       name="descripcion" />
                     <outputColumn
@@ -1647,10 +1653,10 @@ WHERE [Id_DW] is null</property>
                       cachedName="codigo_sociedad"
                       lineageId="Package\Update Valor Homologado\Sort ST.Outputs[Sort Output].Columns[codigo_sociedad]" />
                     <inputColumn
-                      refId="Package\Update Valor Homologado\Merge Join.Inputs[Merge Join Left Input].Columns[id_mdr_area]"
+                      refId="Package\Update Valor Homologado\Merge Join.Inputs[Merge Join Left Input].Columns[id_st_severidad]"
                       cachedDataType="i4"
-                      cachedName="id_mdr_area"
-                      lineageId="Package\Update Valor Homologado\Sort ST.Outputs[Sort Output].Columns[id_mdr_area]" />
+                      cachedName="id_st_severidad"
+                      lineageId="Package\Update Valor Homologado\Sort ST.Outputs[Sort Output].Columns[id_st_severidad]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1660,18 +1666,18 @@ WHERE [Id_DW] is null</property>
                   name="Merge Join Right Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Update Valor Homologado\Merge Join.Inputs[Merge Join Right Input].Columns[DescripcionArea]"
+                      refId="Package\Update Valor Homologado\Merge Join.Inputs[Merge Join Right Input].Columns[DescripcionSeveridad]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="60"
-                      cachedName="DescripcionArea"
+                      cachedName="DescripcionSeveridad"
                       cachedSortKeyPosition="1"
-                      lineageId="Package\Update Valor Homologado\Sort  DW.Outputs[Sort Output].Columns[DescripcionArea]" />
+                      lineageId="Package\Update Valor Homologado\Sort  DW.Outputs[Sort Output].Columns[DescripcionSeveridad]" />
                     <inputColumn
-                      refId="Package\Update Valor Homologado\Merge Join.Inputs[Merge Join Right Input].Columns[Id_Area]"
+                      refId="Package\Update Valor Homologado\Merge Join.Inputs[Merge Join Right Input].Columns[Id_Severidad]"
                       cachedDataType="i4"
-                      cachedName="Id_Area"
-                      lineageId="Package\Update Valor Homologado\Sort  DW.Outputs[Sort Output].Columns[Id_Area]" />
+                      cachedName="Id_Severidad"
+                      lineageId="Package\Update Valor Homologado\Sort  DW.Outputs[Sort Output].Columns[Id_Severidad]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1697,29 +1703,29 @@ WHERE [Id_DW] is null</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Update Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[id_mdr_area]"
+                      refId="Package\Update Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[id_st_severidad]"
                       dataType="i4"
-                      lineageId="Package\Update Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[id_mdr_area]"
-                      name="id_mdr_area">
+                      lineageId="Package\Update Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[id_st_severidad]"
+                      name="id_st_severidad">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Update Valor Homologado\Merge Join.Inputs[Merge Join Left Input].Columns[id_mdr_area]}</property>
+                          name="InputColumnID">#{Package\Update Valor Homologado\Merge Join.Inputs[Merge Join Left Input].Columns[id_st_severidad]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Update Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[Id_Area]"
+                      refId="Package\Update Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[Id_Severidad]"
                       dataType="i4"
-                      lineageId="Package\Update Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[Id_Area]"
-                      name="Id_Area">
+                      lineageId="Package\Update Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[Id_Severidad]"
+                      name="Id_Severidad">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Update Valor Homologado\Merge Join.Inputs[Merge Join Right Input].Columns[Id_Area]}</property>
+                          name="InputColumnID">#{Package\Update Valor Homologado\Merge Join.Inputs[Merge Join Right Input].Columns[Id_Severidad]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1745,11 +1751,11 @@ WHERE [Id_DW] is null</property>
                   description="The SQL command to be executed."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [dbo].[st_mdr_area]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [dbo].[st_mdr_severidad]
    SET 
        [Id_DW] = ?
  WHERE [codigo_sociedad] = ?  AND
-       [id_mdr_area] = ?</property>
+        [id_st_severidad]= ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1772,12 +1778,6 @@ WHERE [Id_DW] is null</property>
                   name="OLE DB Command Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Update Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input].Columns[Id_Area]"
-                      cachedDataType="i4"
-                      cachedName="Id_Area"
-                      externalMetadataColumnId="Package\Update Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      lineageId="Package\Update Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[Id_Area]" />
-                    <inputColumn
                       refId="Package\Update Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input].Columns[codigo_sociedad]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -1786,11 +1786,17 @@ WHERE [Id_DW] is null</property>
                       externalMetadataColumnId="Package\Update Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
                       lineageId="Package\Update Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[codigo_sociedad]" />
                     <inputColumn
-                      refId="Package\Update Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input].Columns[id_mdr_area]"
+                      refId="Package\Update Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input].Columns[Id_Severidad]"
                       cachedDataType="i4"
-                      cachedName="id_mdr_area"
+                      cachedName="Id_Severidad"
+                      externalMetadataColumnId="Package\Update Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Update Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[Id_Severidad]" />
+                    <inputColumn
+                      refId="Package\Update Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input].Columns[id_st_severidad]"
+                      cachedDataType="i4"
+                      cachedName="id_st_severidad"
                       externalMetadataColumnId="Package\Update Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                      lineageId="Package\Update Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[id_mdr_area]" />
+                      lineageId="Package\Update Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[id_st_severidad]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1888,10 +1894,10 @@ WHERE [Id_DW] is null</property>
                   name="Sort Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Update Valor Homologado\Sort  DW.Inputs[Sort Input].Columns[Id_Area]"
+                      refId="Package\Update Valor Homologado\Sort  DW.Inputs[Sort Input].Columns[Id_Severidad]"
                       cachedDataType="i4"
-                      cachedName="Id_Area"
-                      lineageId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[Id_Area]">
+                      cachedName="Id_Severidad"
+                      lineageId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[Id_Severidad]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1904,12 +1910,12 @@ WHERE [Id_DW] is null</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Update Valor Homologado\Sort  DW.Inputs[Sort Input].Columns[DescripcionArea]"
+                      refId="Package\Update Valor Homologado\Sort  DW.Inputs[Sort Input].Columns[DescripcionSeveridad]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="60"
-                      cachedName="DescripcionArea"
-                      lineageId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[DescripcionArea]">
+                      cachedName="DescripcionSeveridad"
+                      lineageId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[DescripcionSeveridad]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1932,32 +1938,32 @@ WHERE [Id_DW] is null</property>
                   name="Sort Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Update Valor Homologado\Sort  DW.Outputs[Sort Output].Columns[Id_Area]"
+                      refId="Package\Update Valor Homologado\Sort  DW.Outputs[Sort Output].Columns[Id_Severidad]"
                       dataType="i4"
-                      lineageId="Package\Update Valor Homologado\Sort  DW.Outputs[Sort Output].Columns[Id_Area]"
-                      name="Id_Area">
+                      lineageId="Package\Update Valor Homologado\Sort  DW.Outputs[Sort Output].Columns[Id_Severidad]"
+                      name="Id_Severidad">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[Id_Area]}</property>
+                          name="SortColumnId">#{Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[Id_Severidad]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Update Valor Homologado\Sort  DW.Outputs[Sort Output].Columns[DescripcionArea]"
+                      refId="Package\Update Valor Homologado\Sort  DW.Outputs[Sort Output].Columns[DescripcionSeveridad]"
                       codePage="1252"
                       dataType="str"
                       length="60"
-                      lineageId="Package\Update Valor Homologado\Sort  DW.Outputs[Sort Output].Columns[DescripcionArea]"
-                      name="DescripcionArea"
+                      lineageId="Package\Update Valor Homologado\Sort  DW.Outputs[Sort Output].Columns[DescripcionSeveridad]"
+                      name="DescripcionSeveridad"
                       sortKeyPosition="1">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[DescripcionArea]}</property>
+                          name="SortColumnId">#{Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[DescripcionSeveridad]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -2007,22 +2013,6 @@ WHERE [Id_DW] is null</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Update Valor Homologado\Sort ST.Inputs[Sort Input].Columns[id_mdr_area]"
-                      cachedDataType="i4"
-                      cachedName="id_mdr_area"
-                      lineageId="Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].Columns[id_mdr_area]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
                       refId="Package\Update Valor Homologado\Sort ST.Inputs[Sort Input].Columns[descripcion]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -2038,6 +2028,22 @@ WHERE [Id_DW] is null</property>
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
                           name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update Valor Homologado\Sort ST.Inputs[Sort Input].Columns[id_st_severidad]"
+                      cachedDataType="i4"
+                      cachedName="id_st_severidad"
+                      lineageId="Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].Columns[id_st_severidad]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -2066,19 +2072,6 @@ WHERE [Id_DW] is null</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Update Valor Homologado\Sort ST.Outputs[Sort Output].Columns[id_mdr_area]"
-                      dataType="i4"
-                      lineageId="Package\Update Valor Homologado\Sort ST.Outputs[Sort Output].Columns[id_mdr_area]"
-                      name="id_mdr_area">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].Columns[id_mdr_area]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\Update Valor Homologado\Sort ST.Outputs[Sort Output].Columns[descripcion]"
                       codePage="1252"
                       dataType="str"
@@ -2092,6 +2085,19 @@ WHERE [Id_DW] is null</property>
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
                           name="SortColumnId">#{Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].Columns[descripcion]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update Valor Homologado\Sort ST.Outputs[Sort Output].Columns[id_st_severidad]"
+                      dataType="i4"
+                      lineageId="Package\Update Valor Homologado\Sort ST.Outputs[Sort Output].Columns[id_st_severidad]"
+                      name="id_st_severidad">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].Columns[id_st_severidad]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -2135,7 +2141,7 @@ WHERE [Id_DW] is null</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{877B9E6B-452B-49E9-A143-5957A80FB954}"
+      DTS:DTSID="{9221B777-6EFB-4D39-8A24-3875E4AE2BB6}"
       DTS:From="Package\Get Valor Homologado"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -2143,7 +2149,7 @@ WHERE [Id_DW] is null</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{AE62E966-FF32-44D2-8A80-DE3D70A8C1B6}"
+      DTS:DTSID="{C433923A-93A5-419E-99A8-BE6825B66323}"
       DTS:From="Package\Insertar Nuevos Valores DW"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
@@ -2228,62 +2234,32 @@ WHERE [Id_DW] is null</property>
         <NodeLayout
           Size="178,42"
           Id="Package\Get Valor Homologado\Get DW Homologado"
-          TopLeft="239,5.5" />
+          TopLeft="5.5,5.5" />
         <NodeLayout
-          Size="122,42"
-          Id="Package\Get Valor Homologado\Sort  DW"
-          TopLeft="267,107.5" />
+          Size="118,42"
+          Id="Package\Get Valor Homologado\Sort DW"
+          TopLeft="94.5,107.5" />
         <NodeLayout
           Size="114,42"
           Id="Package\Get Valor Homologado\Sort ST"
-          TopLeft="92,107.5" />
+          TopLeft="273.5,107.5" />
         <NodeLayout
           Size="170,42"
           Id="Package\Get Valor Homologado\Set Id Homologado"
-          TopLeft="243,413.5" />
-        <NodeLayout
-          Size="130,42"
-          Id="Package\Get Valor Homologado\Merge Join"
-          TopLeft="263,209.5" />
-        <NodeLayout
-          Size="155,42"
-          Id="Package\Get Valor Homologado\Conditional Split"
-          TopLeft="250.5,311.5" />
+          TopLeft="245.5,413.5" />
         <NodeLayout
           Size="173,42"
           Id="Package\Get Valor Homologado\Get ST Homologado"
-          TopLeft="5.5,5.5" />
+          TopLeft="244,5.5" />
         <EdgeLayout
           Id="Package\Get Valor Homologado.Paths[OLE DB Source Output1]"
-          TopLeft="328,47.5">
+          TopLeft="94.5,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="59,60"
               Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Get Valor Homologado.Paths[OLE DB Source Output]"
-          TopLeft="92,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="57,60"
-              Start="0,0"
-              End="57,52.5">
+              End="59,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -2294,13 +2270,13 @@ WHERE [Id_DW] is null</property>
                     Point2="0,30"
                     Point3="4,30" />
                   <mssgle:LineSegment
-                    End="53,30" />
+                    End="55,30" />
                   <mssgle:CubicBezierSegment
-                    Point1="53,30"
-                    Point2="57,30"
-                    Point3="57,34" />
+                    Point1="55,30"
+                    Point2="59,30"
+                    Point3="59,34" />
                   <mssgle:LineSegment
-                    End="57,52.5" />
+                    End="59,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2310,8 +2286,8 @@ WHERE [Id_DW] is null</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Get Valor Homologado.Paths[Merge Join Output]"
-          TopLeft="328,251.5">
+          Id="Package\Get Valor Homologado.Paths[OLE DB Source Output]"
+          TopLeft="330.5,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2331,33 +2307,13 @@ WHERE [Id_DW] is null</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Get Valor Homologado\Merge Join"
+          TopLeft="265.5,209.5" />
         <EdgeLayout
-          Id="Package\Get Valor Homologado.Paths[Id_DW]"
-          TopLeft="328,353.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-15.96875,20.71875,31.9375,11.0625"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Get Valor Homologado.Paths[Sort Output1]"
-          TopLeft="328,149.5">
+          Id="Package\Get Valor Homologado.Paths[Sort Output]"
+          TopLeft="330.5,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2390,14 +2346,14 @@ WHERE [Id_DW] is null</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Get Valor Homologado.Paths[Sort Output]"
-          TopLeft="149,149.5">
+          Id="Package\Get Valor Homologado.Paths[Sort Output1]"
+          TopLeft="153.5,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="158.666666666667,60"
+              EndConnector="156.666666666667,60"
               Start="0,0"
-              End="158.666666666667,52.5">
+              End="156.666666666667,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -2408,19 +2364,69 @@ WHERE [Id_DW] is null</property>
                     Point2="0,35.5623100303951"
                     Point3="4,35.5623100303951" />
                   <mssgle:LineSegment
-                    End="154.666666666667,35.5623100303951" />
+                    End="152.666666666667,35.5623100303951" />
                   <mssgle:CubicBezierSegment
-                    Point1="154.666666666667,35.5623100303951"
-                    Point2="158.666666666667,35.5623100303951"
-                    Point3="158.666666666667,39.5623100303951" />
+                    Point1="152.666666666667,35.5623100303951"
+                    Point2="156.666666666667,35.5623100303951"
+                    Point3="156.666666666667,39.5623100303951" />
                   <mssgle:LineSegment
-                    End="158.666666666667,52.5" />
+                    End="156.666666666667,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Get Valor Homologado\Conditional Split"
+          TopLeft="253,311.5" />
+        <EdgeLayout
+          Id="Package\Get Valor Homologado.Paths[Merge Join Output]"
+          TopLeft="330.5,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Get Valor Homologado.Paths[Value DW]"
+          TopLeft="330.5,353.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-22.59533203125,21.37548828125,45.1906640625,9.7490234375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -2516,10 +2522,6 @@ WHERE [Id_DW] is null</property>
           Id="Package\Update Valor Homologado\Set Id Homologado"
           TopLeft="243,311.5" />
         <NodeLayout
-          Size="130,42"
-          Id="Package\Update Valor Homologado\Merge Join"
-          TopLeft="263,209.5" />
-        <NodeLayout
           Size="173,42"
           Id="Package\Update Valor Homologado\Get ST Homologado"
           TopLeft="5.5,5.5" />
@@ -2535,74 +2537,6 @@ WHERE [Id_DW] is null</property>
           Size="122,42"
           Id="Package\Update Valor Homologado\Sort  DW"
           TopLeft="267,107.5" />
-        <EdgeLayout
-          Id="Package\Update Valor Homologado.Paths[Sort Output1]"
-          TopLeft="328,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="20.3333333333334,60"
-              Start="0,0"
-              End="20.3333333333334,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5623100303951" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.5623100303951"
-                    Point2="0,35.5623100303951"
-                    Point3="4,35.5623100303951" />
-                  <mssgle:LineSegment
-                    End="16.3333333333334,35.5623100303951" />
-                  <mssgle:CubicBezierSegment
-                    Point1="16.3333333333334,35.5623100303951"
-                    Point2="20.3333333333334,35.5623100303951"
-                    Point3="20.3333333333334,39.5623100303951" />
-                  <mssgle:LineSegment
-                    End="20.3333333333334,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Update Valor Homologado.Paths[Sort Output]"
-          TopLeft="149,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="158.666666666667,60"
-              Start="0,0"
-              End="158.666666666667,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5623100303951" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.5623100303951"
-                    Point2="0,35.5623100303951"
-                    Point3="4,35.5623100303951" />
-                  <mssgle:LineSegment
-                    End="154.666666666667,35.5623100303951" />
-                  <mssgle:CubicBezierSegment
-                    Point1="154.666666666667,35.5623100303951"
-                    Point2="158.666666666667,35.5623100303951"
-                    Point3="158.666666666667,39.5623100303951" />
-                  <mssgle:LineSegment
-                    End="158.666666666667,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Update Valor Homologado.Paths[OLE DB Source Output1]"
           TopLeft="328,47.5">
@@ -2651,6 +2585,78 @@ WHERE [Id_DW] is null</property>
                     Point3="57,34" />
                   <mssgle:LineSegment
                     End="57,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Update Valor Homologado\Merge Join"
+          TopLeft="263,209.5" />
+        <EdgeLayout
+          Id="Package\Update Valor Homologado.Paths[Sort Output]"
+          TopLeft="149,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="158.666666666667,60"
+              Start="0,0"
+              End="158.666666666667,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5623100303951" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.5623100303951"
+                    Point2="0,35.5623100303951"
+                    Point3="4,35.5623100303951" />
+                  <mssgle:LineSegment
+                    End="154.666666666667,35.5623100303951" />
+                  <mssgle:CubicBezierSegment
+                    Point1="154.666666666667,35.5623100303951"
+                    Point2="158.666666666667,35.5623100303951"
+                    Point3="158.666666666667,39.5623100303951" />
+                  <mssgle:LineSegment
+                    End="158.666666666667,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update Valor Homologado.Paths[Sort Output1]"
+          TopLeft="328,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="20.3333333333334,60"
+              Start="0,0"
+              End="20.3333333333334,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5623100303951" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.5623100303951"
+                    Point2="0,35.5623100303951"
+                    Point3="4,35.5623100303951" />
+                  <mssgle:LineSegment
+                    End="16.3333333333334,35.5623100303951" />
+                  <mssgle:CubicBezierSegment
+                    Point1="16.3333333333334,35.5623100303951"
+                    Point2="20.3333333333334,35.5623100303951"
+                    Point3="20.3333333333334,39.5623100303951" />
+                  <mssgle:LineSegment
+                    End="20.3333333333334,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
