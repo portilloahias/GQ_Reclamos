@@ -2,33 +2,33 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>SSIS_GQ_Reclamos</Name>
-    <LastWriteTime>2014-05-19T16:49:38.4504395Z</LastWriteTime>
+    <LastWriteTime>2014-05-19T18:10:06.0581545Z</LastWriteTime>
     <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>st_mdr_area.dtsx</Name>
-      <LastWriteTime>2014-05-16T20:07:01.9163866Z</LastWriteTime>
+      <LastWriteTime>2014-05-19T18:10:06.0269474Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_ban_sucursal.dtsx</Name>
-      <LastWriteTime>2014-05-16T20:07:01.9084148Z</LastWriteTime>
+      <LastWriteTime>2014-05-16T22:20:25.109075Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_marca.dtsx</Name>
-      <LastWriteTime>2014-05-16T20:07:01.9124022Z</LastWriteTime>
+      <LastWriteTime>2014-05-19T17:12:31.2730265Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_mdr_clasificacion_item.dtsx</Name>
-      <LastWriteTime>2014-05-16T20:07:01.9204097Z</LastWriteTime>
+      <LastWriteTime>2014-05-19T17:02:21.4366777Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_mdr_reclamo_asignado.dtsx</Name>
-      <LastWriteTime>2014-05-16T20:07:01.9283889Z</LastWriteTime>
+      <LastWriteTime>2014-05-19T16:54:31.8016744Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -38,27 +38,27 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_mdr_tipo_item.dtsx</Name>
-      <LastWriteTime>2014-05-16T20:07:01.9453922Z</LastWriteTime>
+      <LastWriteTime>2014-05-19T18:10:06.011348Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_mdr_transaccion.dtsx</Name>
-      <LastWriteTime>2014-05-16T20:07:01.9493936Z</LastWriteTime>
+      <LastWriteTime>2014-05-16T22:56:37.6642876Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_mdr_usuario.dtsx</Name>
-      <LastWriteTime>2014-05-16T22:14:35.0347123Z</LastWriteTime>
+      <LastWriteTime>2014-05-16T22:51:53.2765238Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_mdr_reclamo.dtsx</Name>
-      <LastWriteTime>2014-05-16T20:07:01.9243884Z</LastWriteTime>
+      <LastWriteTime>2014-05-16T22:44:10.0328233Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_vendedor.dtsx</Name>
-      <LastWriteTime>2014-05-16T22:14:35.0417128Z</LastWriteTime>
+      <LastWriteTime>2014-05-19T17:46:34.8033423Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -73,7 +73,12 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Dim_Severidad.dtsx</Name>
-      <LastWriteTime>2014-05-19T17:04:54.8909637Z</LastWriteTime>
+      <LastWriteTime>2014-05-19T17:07:43.8082211Z</LastWriteTime>
+      <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Dim_TipoSituacionReclamo.dtsx</Name>
+      <LastWriteTime>2014-05-19T20:32:57.5978958Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

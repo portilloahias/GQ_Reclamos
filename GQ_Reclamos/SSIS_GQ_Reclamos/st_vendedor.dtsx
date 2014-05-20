@@ -13,8 +13,8 @@
   DTS:ObjectName="st_vendedor"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="34"
-  DTS:VersionGUID="{ED4802A0-9C39-4BF5-A311-33940D39CC86}">
+  DTS:VersionBuild="41"
+  DTS:VersionGUID="{4F8A93DD-8F4F-42D1-88C8-D2C7606BE72A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -313,7 +313,66 @@
                       dataType="System.String"
                       description="The SQL command to be executed."
                       expressionType="Notify"
-                      name="SqlCommand">select id_vendedor, nombre, identificacion, usuario, clave, correo, estado, puesto, telefono, celular, celular2, id_form, fax, id_department, tipo, id_oficial_credito, ligar_a_marca, fk_id_sucursal, vende, acceso_cotizador, acceso_pommo, acceso_encuestas, acceso_ipad_expo, acceso_call_center_expo, acceso_cotizador_repuestos, editar_vendedor_cotizacion_repuestos, version_navegador, primer_ingreso, pertenece_flotas, actualiza_cliente, ultimo_cambio_clave, ultimo_ingreso, verifica_cambio_de_clave, codigo_empleado, codigo_crediq, tipo_logistica, id_gestor_credito_asignado, id_centro_alistamiento, id_sala_entrega, id_encargado, usuario_sap, rol_isc, regional, id_regional, canal, id_gerente, fecha_control_preorden, cantidad_vhcle_z300, avaluos, id_rol_gerente, acceso_taller, canal_taller, extension, acceso_serviq, alistamiento, fk_id_rol_general, cliente_relacionado, firma_vendedor, filtro_sucursal_vendedor, rolesAgenda, acceso_campana, estado_verificacion, fk_id_prv_usuario_rol, fk_id_ssa_logistica_rol_descuento from vendedor</property>
+                      name="SqlCommand">select id_vendedor, nombre, 
+ identificacion, usuario, clave, 
+correo, 
+estado, 
+puesto, 
+telefono, 
+celular, 
+celular2, 
+id_form, 
+ fax,
+ id_department, 
+tipo, 
+id_oficial_credito, 
+ligar_a_marca, 
+fk_id_sucursal, 
+vende, 
+acceso_cotizador,
+ acceso_pommo, 
+acceso_encuestas, 
+acceso_ipad_expo, 
+acceso_call_center_expo,
+ acceso_cotizador_repuestos, 
+ version_navegador, 
+primer_ingreso, 
+pertenece_flotas, 
+actualiza_cliente, 
+ultimo_cambio_clave, 
+ultimo_ingreso, 
+verifica_cambio_de_clave, 
+codigo_empleado, 
+codigo_crediq, 
+tipo_logistica, 
+id_gestor_credito_asignado, 
+id_centro_alistamiento,
+ id_sala_entrega, 
+id_encargado,
+ usuario_sap,
+ rol_isc,
+ regional, 
+id_regional, 
+canal, 
+id_gerente,
+ fecha_control_preorden, 
+cantidad_vhcle_z300, 
+avaluos, 
+id_rol_gerente, 
+acceso_taller, 
+canal_taller, 
+extension, 
+acceso_serviq, 
+alistamiento, 
+fk_id_rol_general,
+cliente_relacionado,
+ firma_vendedor, 
+filtro_sucursal_vendedor, 
+rolesAgenda, 
+acceso_campana, 
+estado_verificacion, 
+fk_id_prv_usuario_rol
+ from vendedor</property>
                     <property
                       dataType="System.Int32"
                       description="Specify the number of rows fetched per batch."
@@ -570,14 +629,6 @@
                           length="3"
                           lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[acceso_cotizador_repuestos]"
                           name="acceso_cotizador_repuestos" />
-                        <outputColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[editar_vendedor_cotizacion_repuestos]"
-                          codePage="1252"
-                          dataType="str"
-                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[editar_vendedor_cotizacion_repuestos]"
-                          length="3"
-                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[editar_vendedor_cotizacion_repuestos]"
-                          name="editar_vendedor_cotizacion_repuestos" />
                         <outputColumn
                           refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[version_navegador]"
                           codePage="1252"
@@ -840,12 +891,6 @@
                           externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[fk_id_prv_usuario_rol]"
                           lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[fk_id_prv_usuario_rol]"
                           name="fk_id_prv_usuario_rol" />
-                        <outputColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[fk_id_ssa_logistica_rol_descuento]"
-                          dataType="i4"
-                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[fk_id_ssa_logistica_rol_descuento]"
-                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[fk_id_ssa_logistica_rol_descuento]"
-                          name="fk_id_ssa_logistica_rol_descuento" />
                       </outputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -991,12 +1036,6 @@
                           dataType="str"
                           length="3"
                           name="acceso_cotizador_repuestos" />
-                        <externalMetadataColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[editar_vendedor_cotizacion_repuestos]"
-                          codePage="1252"
-                          dataType="str"
-                          length="3"
-                          name="editar_vendedor_cotizacion_repuestos" />
                         <externalMetadataColumn
                           refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[version_navegador]"
                           codePage="1252"
@@ -1185,10 +1224,6 @@
                           refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[fk_id_prv_usuario_rol]"
                           dataType="i4"
                           name="fk_id_prv_usuario_rol" />
-                        <externalMetadataColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[fk_id_ssa_logistica_rol_descuento]"
-                          dataType="i4"
-                          name="fk_id_ssa_logistica_rol_descuento" />
                       </externalMetadataColumns>
                     </output>
                     <output
@@ -1388,14 +1423,6 @@
                           length="3"
                           lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[acceso_cotizador_repuestos]"
                           name="acceso_cotizador_repuestos" />
-                        <outputColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[editar_vendedor_cotizacion_repuestos]"
-                          codePage="1252"
-                          dataType="str"
-                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[editar_vendedor_cotizacion_repuestos]"
-                          length="3"
-                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[editar_vendedor_cotizacion_repuestos]"
-                          name="editar_vendedor_cotizacion_repuestos" />
                         <outputColumn
                           refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[version_navegador]"
                           codePage="1252"
@@ -1658,12 +1685,6 @@
                           externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[fk_id_prv_usuario_rol]"
                           lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[fk_id_prv_usuario_rol]"
                           name="fk_id_prv_usuario_rol" />
-                        <outputColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[fk_id_ssa_logistica_rol_descuento]"
-                          dataType="i4"
-                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[fk_id_ssa_logistica_rol_descuento]"
-                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[fk_id_ssa_logistica_rol_descuento]"
-                          name="fk_id_ssa_logistica_rol_descuento" />
                         <outputColumn
                           refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
                           dataType="i4"
@@ -1954,14 +1975,6 @@
                           externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[acceso_cotizador_repuestos]"
                           lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[acceso_cotizador_repuestos]" />
                         <inputColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].Columns[editar_vendedor_cotizacion_repuestos]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="3"
-                          cachedName="editar_vendedor_cotizacion_repuestos"
-                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[editar_vendedor_cotizacion_repuestos]"
-                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[editar_vendedor_cotizacion_repuestos]" />
-                        <inputColumn
                           refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].Columns[version_navegador]"
                           cachedCodepage="1252"
                           cachedDataType="str"
@@ -2223,12 +2236,6 @@
                           cachedName="fk_id_prv_usuario_rol"
                           externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[fk_id_prv_usuario_rol]"
                           lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[fk_id_prv_usuario_rol]" />
-                        <inputColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].Columns[fk_id_ssa_logistica_rol_descuento]"
-                          cachedDataType="i4"
-                          cachedName="fk_id_ssa_logistica_rol_descuento"
-                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[fk_id_ssa_logistica_rol_descuento]"
-                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[fk_id_ssa_logistica_rol_descuento]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -2785,16 +2792,16 @@
           Id="Package\Get Sources My Sql\LoadMySQL\MySqlSource"
           TopLeft="9.00000000000001,5.5" />
         <NodeLayout
-          Size="145,42"
-          Id="Package\Get Sources My Sql\LoadMySQL\Add Sociedad"
-          TopLeft="7.00000000000003,107.5" />
-        <NodeLayout
           Size="148,42"
           Id="Package\Get Sources My Sql\LoadMySQL\SqlDestination"
           TopLeft="5.50000000000003,209.5" />
+        <NodeLayout
+          Size="145,42"
+          Id="Package\Get Sources My Sql\LoadMySQL\Add Sociedad"
+          TopLeft="7.00000000000003,107.5" />
         <EdgeLayout
-          Id="Package\Get Sources My Sql\LoadMySQL.Paths[Derived Column Output]"
-          TopLeft="79.5,149.5">
+          Id="Package\Get Sources My Sql\LoadMySQL.Paths[ODBC Source Output]"
+          TopLeft="79.5,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2815,8 +2822,8 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Get Sources My Sql\LoadMySQL.Paths[ODBC Source Output]"
-          TopLeft="79.5,47.5">
+          Id="Package\Get Sources My Sql\LoadMySQL.Paths[Derived Column Output]"
+          TopLeft="79.5,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"

@@ -13,8 +13,8 @@
   DTS:ObjectName="st_mdr_severidad"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="38"
-  DTS:VersionGUID="{057C3FA8-89AC-4B46-9743-C2DA30678387}">
+  DTS:VersionBuild="39"
+  DTS:VersionGUID="{C3E48CB4-3A0E-47BD-8729-B9BA6C618984}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>

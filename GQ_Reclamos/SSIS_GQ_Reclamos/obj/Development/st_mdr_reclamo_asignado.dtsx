@@ -13,8 +13,8 @@
   DTS:ObjectName="st_mdr_reclamo_asignado"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="33"
-  DTS:VersionGUID="{B7C23F80-67EB-4533-B2FF-7140EA2F9B18}">
+  DTS:VersionBuild="36"
+  DTS:VersionGUID="{102D82A7-B2DB-4529-AD55-8F57763235C4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -181,7 +181,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{0E79ACC2-1D6D-4F90-8F04-DCCF70758554}"
-          SQLTask:SqlStatementSource="truncate table [dbo].[st_mdr_area]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="truncate table [dbo].[st_mdr_reclamo_asignado]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -313,15 +313,9 @@
                       dataType="System.String"
                       description="The SQL command to be executed."
                       expressionType="Notify"
-                      name="SqlCommand">select 
-	id_mdr_area, 
-	fk_id_mdr_clasificacion_item, 
-	descripcion, 
-	codigo_homologacion_isc, 
-	estado, 
-	identificador, 
-	consecutivo 
-from mdr_area</property>
+                      name="SqlCommand">select id_mdr_reclamo_asignado, fk_id_mdr_reclamo, fk_id_mdr_usuario, 
+fecha_asignado, escalado, reasignado, fecha_cierre, fecha_congelado,fecha_descongelado, nivel, estado, escalamiento 
+from mdr_reclamo_asignado</property>
                     <property
                       dataType="System.Int32"
                       description="Specify the number of rows fetched per batch."
@@ -387,33 +381,69 @@ from mdr_area</property>
                       truncationRowDisposition="FailComponent">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[id_mdr_area]"
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[id_mdr_reclamo_asignado]"
                           dataType="i4"
-                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[id_mdr_area]"
-                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[id_mdr_area]"
-                          name="id_mdr_area" />
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[id_mdr_reclamo_asignado]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[id_mdr_reclamo_asignado]"
+                          name="id_mdr_reclamo_asignado" />
                         <outputColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[fk_id_mdr_clasificacion_item]"
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[fk_id_mdr_reclamo]"
                           dataType="i4"
-                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[fk_id_mdr_clasificacion_item]"
-                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[fk_id_mdr_clasificacion_item]"
-                          name="fk_id_mdr_clasificacion_item" />
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[fk_id_mdr_reclamo]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[fk_id_mdr_reclamo]"
+                          name="fk_id_mdr_reclamo" />
                         <outputColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[descripcion]"
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[fk_id_mdr_usuario]"
+                          dataType="i4"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[fk_id_mdr_usuario]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[fk_id_mdr_usuario]"
+                          name="fk_id_mdr_usuario" />
+                        <outputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[fecha_asignado]"
+                          dataType="dbTimeStamp"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[fecha_asignado]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[fecha_asignado]"
+                          name="fecha_asignado" />
+                        <outputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[escalado]"
                           codePage="1252"
                           dataType="str"
-                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[descripcion]"
-                          length="51"
-                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[descripcion]"
-                          name="descripcion" />
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[escalado]"
+                          length="3"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[escalado]"
+                          name="escalado" />
                         <outputColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[codigo_homologacion_isc]"
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[reasignado]"
+                          dataType="i4"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[reasignado]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[reasignado]"
+                          name="reasignado" />
+                        <outputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[fecha_cierre]"
+                          dataType="dbTimeStamp"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[fecha_cierre]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[fecha_cierre]"
+                          name="fecha_cierre" />
+                        <outputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[fecha_congelado]"
+                          dataType="dbTimeStamp"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[fecha_congelado]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[fecha_congelado]"
+                          name="fecha_congelado" />
+                        <outputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[fecha_descongelado]"
+                          dataType="dbTimeStamp"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[fecha_descongelado]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[fecha_descongelado]"
+                          name="fecha_descongelado" />
+                        <outputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[nivel]"
                           codePage="1252"
                           dataType="str"
-                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[codigo_homologacion_isc]"
-                          length="11"
-                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[codigo_homologacion_isc]"
-                          name="codigo_homologacion_isc" />
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[nivel]"
+                          length="2"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[nivel]"
+                          name="nivel" />
                         <outputColumn
                           refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[estado]"
                           codePage="1252"
@@ -423,58 +453,72 @@ from mdr_area</property>
                           lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[estado]"
                           name="estado" />
                         <outputColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[identificador]"
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[escalamiento]"
                           codePage="1252"
                           dataType="str"
-                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[identificador]"
-                          length="6"
-                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[identificador]"
-                          name="identificador" />
-                        <outputColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[consecutivo]"
-                          dataType="i4"
-                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[consecutivo]"
-                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[consecutivo]"
-                          name="consecutivo" />
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[escalamiento]"
+                          length="18"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[escalamiento]"
+                          name="escalamiento" />
                       </outputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[id_mdr_area]"
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[id_mdr_reclamo_asignado]"
                           dataType="i4"
-                          name="id_mdr_area" />
+                          name="id_mdr_reclamo_asignado" />
                         <externalMetadataColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[fk_id_mdr_clasificacion_item]"
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[fk_id_mdr_reclamo]"
                           dataType="i4"
-                          name="fk_id_mdr_clasificacion_item" />
+                          name="fk_id_mdr_reclamo" />
                         <externalMetadataColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[descripcion]"
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[fk_id_mdr_usuario]"
+                          dataType="i4"
+                          name="fk_id_mdr_usuario" />
+                        <externalMetadataColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[fecha_asignado]"
+                          dataType="dbTimeStamp"
+                          name="fecha_asignado" />
+                        <externalMetadataColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[escalado]"
                           codePage="1252"
                           dataType="str"
-                          length="51"
-                          name="descripcion" />
+                          length="3"
+                          name="escalado" />
                         <externalMetadataColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[codigo_homologacion_isc]"
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[reasignado]"
+                          dataType="i4"
+                          name="reasignado" />
+                        <externalMetadataColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[fecha_cierre]"
+                          dataType="dbTimeStamp"
+                          name="fecha_cierre" />
+                        <externalMetadataColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[fecha_congelado]"
+                          dataType="dbTimeStamp"
+                          name="fecha_congelado" />
+                        <externalMetadataColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[fecha_descongelado]"
+                          dataType="dbTimeStamp"
+                          name="fecha_descongelado" />
+                        <externalMetadataColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[nivel]"
                           codePage="1252"
                           dataType="str"
-                          length="11"
-                          name="codigo_homologacion_isc" />
+                          length="2"
+                          name="nivel" />
                         <externalMetadataColumn
                           refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[estado]"
                           codePage="1252"
                           dataType="str"
-                          length="9"
+                          length="10"
                           name="estado" />
                         <externalMetadataColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[identificador]"
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[escalamiento]"
                           codePage="1252"
                           dataType="str"
-                          length="6"
-                          name="identificador" />
-                        <externalMetadataColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[consecutivo]"
-                          dataType="i4"
-                          name="consecutivo" />
+                          length="18"
+                          name="escalamiento" />
                       </externalMetadataColumns>
                     </output>
                     <output
@@ -483,33 +527,69 @@ from mdr_area</property>
                       name="ODBC Source Error Output">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[id_mdr_area]"
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[id_mdr_reclamo_asignado]"
                           dataType="i4"
-                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[id_mdr_area]"
-                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[id_mdr_area]"
-                          name="id_mdr_area" />
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[id_mdr_reclamo_asignado]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[id_mdr_reclamo_asignado]"
+                          name="id_mdr_reclamo_asignado" />
                         <outputColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[fk_id_mdr_clasificacion_item]"
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[fk_id_mdr_reclamo]"
                           dataType="i4"
-                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[fk_id_mdr_clasificacion_item]"
-                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[fk_id_mdr_clasificacion_item]"
-                          name="fk_id_mdr_clasificacion_item" />
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[fk_id_mdr_reclamo]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[fk_id_mdr_reclamo]"
+                          name="fk_id_mdr_reclamo" />
                         <outputColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[descripcion]"
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[fk_id_mdr_usuario]"
+                          dataType="i4"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[fk_id_mdr_usuario]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[fk_id_mdr_usuario]"
+                          name="fk_id_mdr_usuario" />
+                        <outputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[fecha_asignado]"
+                          dataType="dbTimeStamp"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[fecha_asignado]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[fecha_asignado]"
+                          name="fecha_asignado" />
+                        <outputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[escalado]"
                           codePage="1252"
                           dataType="str"
-                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[descripcion]"
-                          length="51"
-                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[descripcion]"
-                          name="descripcion" />
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[escalado]"
+                          length="3"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[escalado]"
+                          name="escalado" />
                         <outputColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[codigo_homologacion_isc]"
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[reasignado]"
+                          dataType="i4"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[reasignado]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[reasignado]"
+                          name="reasignado" />
+                        <outputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[fecha_cierre]"
+                          dataType="dbTimeStamp"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[fecha_cierre]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[fecha_cierre]"
+                          name="fecha_cierre" />
+                        <outputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[fecha_congelado]"
+                          dataType="dbTimeStamp"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[fecha_congelado]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[fecha_congelado]"
+                          name="fecha_congelado" />
+                        <outputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[fecha_descongelado]"
+                          dataType="dbTimeStamp"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[fecha_descongelado]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[fecha_descongelado]"
+                          name="fecha_descongelado" />
+                        <outputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[nivel]"
                           codePage="1252"
                           dataType="str"
-                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[codigo_homologacion_isc]"
-                          length="11"
-                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[codigo_homologacion_isc]"
-                          name="codigo_homologacion_isc" />
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[nivel]"
+                          length="2"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[nivel]"
+                          name="nivel" />
                         <outputColumn
                           refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[estado]"
                           codePage="1252"
@@ -519,19 +599,13 @@ from mdr_area</property>
                           lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[estado]"
                           name="estado" />
                         <outputColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[identificador]"
+                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[escalamiento]"
                           codePage="1252"
                           dataType="str"
-                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[identificador]"
-                          length="6"
-                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[identificador]"
-                          name="identificador" />
-                        <outputColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[consecutivo]"
-                          dataType="i4"
-                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[consecutivo]"
-                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[consecutivo]"
-                          name="consecutivo" />
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[escalamiento]"
+                          length="18"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[escalamiento]"
+                          name="escalamiento" />
                         <outputColumn
                           refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
                           dataType="i4"
@@ -565,7 +639,7 @@ from mdr_area</property>
                     <property
                       dataType="System.String"
                       description="Specifies the name of the database object used to open a rowset."
-                      name="OpenRowset">[dbo].[st_mdr_area]</property>
+                      name="OpenRowset">[dbo].[st_mdr_reclamo_asignado]</property>
                     <property
                       dataType="System.String"
                       description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -622,34 +696,6 @@ from mdr_area</property>
                       name="OLE DB Destination Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].Columns[id_mdr_area]"
-                          cachedDataType="i4"
-                          cachedName="id_mdr_area"
-                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[id_mdr_area]"
-                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[id_mdr_area]" />
-                        <inputColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].Columns[fk_id_mdr_clasificacion_item]"
-                          cachedDataType="i4"
-                          cachedName="fk_id_mdr_clasificacion_item"
-                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[fk_id_mdr_clasificacion_item]"
-                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[fk_id_mdr_clasificacion_item]" />
-                        <inputColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].Columns[descripcion]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="51"
-                          cachedName="descripcion"
-                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[descripcion]"
-                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[descripcion]" />
-                        <inputColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].Columns[codigo_homologacion_isc]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="11"
-                          cachedName="codigo_homologacion_isc"
-                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[codigo_homologacion_isc]"
-                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[codigo_homologacion_isc]" />
-                        <inputColumn
                           refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].Columns[estado]"
                           cachedCodepage="1252"
                           cachedDataType="str"
@@ -658,20 +704,6 @@ from mdr_area</property>
                           externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[estado]"
                           lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[estado]" />
                         <inputColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].Columns[identificador]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="6"
-                          cachedName="identificador"
-                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[identificador]"
-                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[identificador]" />
-                        <inputColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].Columns[consecutivo]"
-                          cachedDataType="i4"
-                          cachedName="consecutivo"
-                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[consecutivo]"
-                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[consecutivo]" />
-                        <inputColumn
                           refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].Columns[codigo_sociedad]"
                           cachedCodepage="1252"
                           cachedDataType="str"
@@ -679,6 +711,78 @@ from mdr_area</property>
                           cachedName="codigo_sociedad"
                           externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[codigo_sociedad]"
                           lineageId="Package\Get Sources My Sql\LoadMySQL\Add Sociedad.Outputs[Derived Column Output].Columns[codigo_sociedad]" />
+                        <inputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].Columns[fk_id_mdr_reclamo]"
+                          cachedDataType="i4"
+                          cachedName="fk_id_mdr_reclamo"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[fk_id_st_reclamo]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[fk_id_mdr_reclamo]" />
+                        <inputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].Columns[fk_id_mdr_usuario]"
+                          cachedDataType="i4"
+                          cachedName="fk_id_mdr_usuario"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[fk_id_st_usuario]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[fk_id_mdr_usuario]" />
+                        <inputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].Columns[fecha_asignado]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="fecha_asignado"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[fecha_asignado]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[fecha_asignado]" />
+                        <inputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].Columns[escalado]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="3"
+                          cachedName="escalado"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[escalado]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[escalado]" />
+                        <inputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].Columns[reasignado]"
+                          cachedDataType="i4"
+                          cachedName="reasignado"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[reasignado]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[reasignado]" />
+                        <inputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].Columns[fecha_cierre]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="fecha_cierre"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[fecha_cierre]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[fecha_cierre]" />
+                        <inputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].Columns[fecha_congelado]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="fecha_congelado"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[fecha_congelado]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[fecha_congelado]" />
+                        <inputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].Columns[fecha_descongelado]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="fecha_descongelado"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[fecha_descongelado]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[fecha_descongelado]" />
+                        <inputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].Columns[nivel]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="2"
+                          cachedName="nivel"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[nivel]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[nivel]" />
+                        <inputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].Columns[escalamiento]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="18"
+                          cachedName="escalamiento"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[escalamiento]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[escalamiento]" />
+                        <inputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].Columns[id_mdr_reclamo_asignado]"
+                          cachedDataType="i4"
+                          cachedName="id_mdr_reclamo_asignado"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[id_st_reclamo_asignado]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[id_mdr_reclamo_asignado]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -689,45 +793,61 @@ from mdr_area</property>
                           length="4"
                           name="codigo_sociedad" />
                         <externalMetadataColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[id_mdr_area]"
-                          dataType="i4"
-                          name="id_mdr_area" />
-                        <externalMetadataColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[fk_id_mdr_clasificacion_item]"
-                          dataType="i4"
-                          name="fk_id_mdr_clasificacion_item" />
-                        <externalMetadataColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[descripcion]"
-                          codePage="1252"
-                          dataType="str"
-                          length="60"
-                          name="descripcion" />
-                        <externalMetadataColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[codigo_homologacion_isc]"
-                          codePage="1252"
-                          dataType="str"
-                          length="11"
-                          name="codigo_homologacion_isc" />
-                        <externalMetadataColumn
                           refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[estado]"
                           codePage="1252"
                           dataType="str"
-                          length="20"
+                          length="10"
                           name="estado" />
                         <externalMetadataColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[identificador]"
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[id_st_reclamo_asignado]"
+                          dataType="i4"
+                          name="id_st_reclamo_asignado" />
+                        <externalMetadataColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[fk_id_st_reclamo]"
+                          dataType="i4"
+                          name="fk_id_st_reclamo" />
+                        <externalMetadataColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[fk_id_st_usuario]"
+                          dataType="i4"
+                          name="fk_id_st_usuario" />
+                        <externalMetadataColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[fecha_asignado]"
+                          dataType="dbTimeStamp"
+                          name="fecha_asignado" />
+                        <externalMetadataColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[escalado]"
                           codePage="1252"
                           dataType="str"
-                          length="6"
-                          name="identificador" />
+                          length="2"
+                          name="escalado" />
                         <externalMetadataColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[consecutivo]"
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[reasignado]"
                           dataType="i4"
-                          name="consecutivo" />
+                          name="reasignado" />
                         <externalMetadataColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[Id_DW]"
-                          dataType="i4"
-                          name="Id_DW" />
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[fecha_cierre]"
+                          dataType="dbTimeStamp"
+                          name="fecha_cierre" />
+                        <externalMetadataColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[fecha_congelado]"
+                          dataType="dbTimeStamp"
+                          name="fecha_congelado" />
+                        <externalMetadataColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[fecha_descongelado]"
+                          dataType="dbTimeStamp"
+                          name="fecha_descongelado" />
+                        <externalMetadataColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[nivel]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          name="nivel" />
+                        <externalMetadataColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[escalamiento]"
+                          codePage="1252"
+                          dataType="str"
+                          length="20"
+                          name="escalamiento" />
                       </externalMetadataColumns>
                     </input>
                   </inputs>
@@ -848,14 +968,14 @@ from mdr_area</property>
           Id="Package\Clear ST"
           TopLeft="34,107.5" />
         <NodeLayout
-          Size="136,42"
+          Size="134,42"
           Id="Package\Get Sources My Sql\LoadMySQL"
           TopLeft="35.5,28.5" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="199,126"
-          Size="199,168"
+          Size="199,169"
           Id="Package\Get Sources My Sql"
           TopLeft="20.5,209.5" />
         <NodeLayout
@@ -927,20 +1047,20 @@ from mdr_area</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="141,42"
+          Size="139,42"
           Id="Package\Get Sources My Sql\LoadMySQL\MySqlSource"
           TopLeft="9.00000000000001,5.5" />
-        <NodeLayout
-          Size="148,42"
-          Id="Package\Get Sources My Sql\LoadMySQL\SqlDestination"
-          TopLeft="5.50000000000003,209.5" />
         <NodeLayout
           Size="145,42"
           Id="Package\Get Sources My Sql\LoadMySQL\Add Sociedad"
           TopLeft="7.00000000000003,107.5" />
+        <NodeLayout
+          Size="148,42"
+          Id="Package\Get Sources My Sql\LoadMySQL\SqlDestination"
+          TopLeft="5.50000000000003,209.5" />
         <EdgeLayout
-          Id="Package\Get Sources My Sql\LoadMySQL.Paths[ODBC Source Output]"
-          TopLeft="79.5,47.5">
+          Id="Package\Get Sources My Sql\LoadMySQL.Paths[Derived Column Output]"
+          TopLeft="79.5,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -961,8 +1081,8 @@ from mdr_area</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Get Sources My Sql\LoadMySQL.Paths[Derived Column Output]"
-          TopLeft="79.5,149.5">
+          Id="Package\Get Sources My Sql\LoadMySQL.Paths[ODBC Source Output]"
+          TopLeft="79,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"

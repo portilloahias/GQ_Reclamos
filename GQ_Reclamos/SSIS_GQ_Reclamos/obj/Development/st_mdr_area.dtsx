@@ -13,8 +13,8 @@
   DTS:ObjectName="st_mdr_area"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="33"
-  DTS:VersionGUID="{C3FE3942-00BC-4515-AB0D-1405CDAFC9D0}">
+  DTS:VersionBuild="34"
+  DTS:VersionGUID="{E396E7D1-91A6-4E55-A960-841680C339F0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
