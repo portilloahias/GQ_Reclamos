@@ -13,8 +13,8 @@
   DTS:ObjectName="st_vendedor"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="41"
-  DTS:VersionGUID="{4F8A93DD-8F4F-42D1-88C8-D2C7606BE72A}">
+  DTS:VersionBuild="49"
+  DTS:VersionGUID="{2F53E7E5-83F6-406C-9CE6-295EFFD1BD56}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -302,6 +302,7 @@
                   description="ODBC Source"
                   name="MySqlSource"
                   usesDispositions="true"
+                  validateExternalMetadata="False"
                   version="1">
                   <properties>
                     <property
@@ -1709,6 +1710,7 @@ fk_id_prv_usuario_rol
                   description="OLE DB Destination"
                   name="SqlDestination"
                   usesDispositions="true"
+                  validateExternalMetadata="False"
                   version="4">
                   <properties>
                     <property
@@ -2720,12 +2722,12 @@ fk_id_prv_usuario_rol
           Id="Package\Get Sources My Sql"
           TopLeft="20.5,209.5" />
         <NodeLayout
-          Size="177,42"
+          Size="175,42"
           Id="Package\GetConnectionString"
           TopLeft="5.5,5.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="93.5,47.5">
+          TopLeft="93,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2788,13 +2790,13 @@ fk_id_prv_usuario_rol
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="141,42"
-          Id="Package\Get Sources My Sql\LoadMySQL\MySqlSource"
-          TopLeft="9.00000000000001,5.5" />
-        <NodeLayout
           Size="148,42"
           Id="Package\Get Sources My Sql\LoadMySQL\SqlDestination"
           TopLeft="5.50000000000003,209.5" />
+        <NodeLayout
+          Size="141,42"
+          Id="Package\Get Sources My Sql\LoadMySQL\MySqlSource"
+          TopLeft="9.00000000000001,5.5" />
         <NodeLayout
           Size="145,42"
           Id="Package\Get Sources My Sql\LoadMySQL\Add Sociedad"
@@ -2847,8 +2849,11 @@ fk_id_prv_usuario_rol
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Get Sources My Sql\LoadMySQL\MySqlSource">
+    design-time-name="Package\Get Sources My Sql\LoadMySQL\SqlDestination">
     <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
@@ -2857,11 +2862,8 @@ fk_id_prv_usuario_rol
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Get Sources My Sql\LoadMySQL\SqlDestination">
+    design-time-name="Package\Get Sources My Sql\LoadMySQL\MySqlSource">
     <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value

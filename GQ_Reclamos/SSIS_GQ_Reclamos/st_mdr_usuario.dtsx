@@ -13,8 +13,8 @@
   DTS:ObjectName="st_mdr_usuario"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="37"
-  DTS:VersionGUID="{36689A98-FED5-4C8B-8072-7F43682EBC56}">
+  DTS:VersionBuild="40"
+  DTS:VersionGUID="{E43A3ED6-F909-44FC-B0A7-D26D4B0EDE10}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -302,6 +302,7 @@
                   description="ODBC Source"
                   name="MySqlSource"
                   usesDispositions="true"
+                  validateExternalMetadata="False"
                   version="1">
                   <properties>
                     <property
@@ -514,6 +515,7 @@
                   description="OLE DB Destination"
                   name="SqlDestination"
                   usesDispositions="true"
+                  validateExternalMetadata="False"
                   version="4">
                   <properties>
                     <property
@@ -736,7 +738,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{F4938C76-10B7-4699-9662-14EDED85B811}"
-          SQLTask:SqlStatementSource="select id_mdr_usuario, fk_id_vendedor, fk_id_area, fk_id_sucursal, fk_id_mdr_tipo_usuario_area, estado from mdr_usuario"
+          SQLTask:SqlStatementSource="SELECT [CodigoSociedad],&#xA;       [ConnectionString]&#xA;FROM [dbo].[Conf_Conexiones]"
           SQLTask:ResultType="ResultSetType_Rowset" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
             SQLTask:ResultName="0"

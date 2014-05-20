@@ -13,8 +13,8 @@
   DTS:ObjectName="st_mdr_tipo_item"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="35"
-  DTS:VersionGUID="{427E4013-AADF-42D1-95E5-EEB8F22583C1}">
+  DTS:VersionBuild="37"
+  DTS:VersionGUID="{71C1C7E8-04BA-4722-A2B7-D8443E913823}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -302,6 +302,7 @@
                   description="ODBC Source"
                   name="MySqlSource"
                   usesDispositions="true"
+                  validateExternalMetadata="False"
                   version="1">
                   <properties>
                     <property
@@ -472,6 +473,7 @@
                   description="OLE DB Destination"
                   name="SqlDestination"
                   usesDispositions="true"
+                  validateExternalMetadata="False"
                   version="4">
                   <properties>
                     <property
@@ -807,8 +809,8 @@
           Id="Package\Get Sources My Sql\LoadMySQL\SqlDestination"
           TopLeft="5.50000000000003,209.5" />
         <EdgeLayout
-          Id="Package\Get Sources My Sql\LoadMySQL.Paths[Derived Column Output]"
-          TopLeft="79.5,149.5">
+          Id="Package\Get Sources My Sql\LoadMySQL.Paths[ODBC Source Output]"
+          TopLeft="79.5,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -829,8 +831,8 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Get Sources My Sql\LoadMySQL.Paths[ODBC Source Output]"
-          TopLeft="79.5,47.5">
+          Id="Package\Get Sources My Sql\LoadMySQL.Paths[Derived Column Output]"
+          TopLeft="79.5,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"

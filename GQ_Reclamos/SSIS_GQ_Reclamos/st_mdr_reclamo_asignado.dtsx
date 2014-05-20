@@ -13,8 +13,8 @@
   DTS:ObjectName="st_mdr_reclamo_asignado"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="36"
-  DTS:VersionGUID="{102D82A7-B2DB-4529-AD55-8F57763235C4}">
+  DTS:VersionBuild="37"
+  DTS:VersionGUID="{29F535A6-E5E5-4553-B91B-927AAB963252}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1059,8 +1059,8 @@ from mdr_reclamo_asignado</property>
           Id="Package\Get Sources My Sql\LoadMySQL\SqlDestination"
           TopLeft="5.50000000000003,209.5" />
         <EdgeLayout
-          Id="Package\Get Sources My Sql\LoadMySQL.Paths[Derived Column Output]"
-          TopLeft="79.5,149.5">
+          Id="Package\Get Sources My Sql\LoadMySQL.Paths[ODBC Source Output]"
+          TopLeft="79,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1081,8 +1081,8 @@ from mdr_reclamo_asignado</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Get Sources My Sql\LoadMySQL.Paths[ODBC Source Output]"
-          TopLeft="79,47.5">
+          Id="Package\Get Sources My Sql\LoadMySQL.Paths[Derived Column Output]"
+          TopLeft="79.5,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"

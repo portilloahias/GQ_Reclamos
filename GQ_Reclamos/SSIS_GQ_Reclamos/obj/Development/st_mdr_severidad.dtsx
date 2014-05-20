@@ -13,8 +13,8 @@
   DTS:ObjectName="st_mdr_severidad"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="38"
-  DTS:VersionGUID="{057C3FA8-89AC-4B46-9743-C2DA30678387}">
+  DTS:VersionBuild="40"
+  DTS:VersionGUID="{75627D46-0DF3-4E5A-9A75-B731A531EFC7}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -302,6 +302,7 @@
                   description="ODBC Source"
                   name="MySqlSource"
                   usesDispositions="true"
+                  validateExternalMetadata="False"
                   version="1">
                   <properties>
                     <property
@@ -580,6 +581,7 @@
                   description="OLE DB Destination"
                   name="SqlDestination"
                   usesDispositions="true"
+                  validateExternalMetadata="False"
                   version="4">
                   <properties>
                     <property
