@@ -13,8 +13,8 @@
   DTS:ObjectName="st_mdr_reclamo_asignado"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="37"
-  DTS:VersionGUID="{29F535A6-E5E5-4553-B91B-927AAB963252}">
+  DTS:VersionBuild="39"
+  DTS:VersionGUID="{4E503A46-9F8A-444A-B9DD-F119B0E4C9F9}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -302,13 +302,14 @@
                   description="ODBC Source"
                   name="MySqlSource"
                   usesDispositions="true"
+                  validateExternalMetadata="False"
                   version="1">
                   <properties>
                     <property
                       dataType="System.String"
                       description="The name of the table to be fetched."
                       expressionType="Notify"
-                      name="TableName"></property>
+                      name="TableName">`mdr_reclamo_asignado`</property>
                     <property
                       dataType="System.String"
                       description="The SQL command to be executed."
@@ -345,7 +346,7 @@ from mdr_reclamo_asignado</property>
                       dataType="System.Int32"
                       description="The mode used to access the database."
                       name="AccessMode"
-                      typeConverter="AccessMode">1</property>
+                      typeConverter="AccessMode">0</property>
                     <property
                       dataType="System.Int32"
                       description="The method used for fetching data."
@@ -444,14 +445,6 @@ from mdr_reclamo_asignado</property>
                           length="2"
                           lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[nivel]"
                           name="nivel" />
-                        <outputColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[estado]"
-                          codePage="1252"
-                          dataType="str"
-                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[estado]"
-                          length="9"
-                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[estado]"
-                          name="estado" />
                         <outputColumn
                           refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[escalamiento]"
                           codePage="1252"
@@ -591,14 +584,6 @@ from mdr_reclamo_asignado</property>
                           lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[nivel]"
                           name="nivel" />
                         <outputColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[estado]"
-                          codePage="1252"
-                          dataType="str"
-                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].ExternalColumns[estado]"
-                          length="9"
-                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[estado]"
-                          name="estado" />
-                        <outputColumn
                           refId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Error Output].Columns[escalamiento]"
                           codePage="1252"
                           dataType="str"
@@ -630,6 +615,7 @@ from mdr_reclamo_asignado</property>
                   description="OLE DB Destination"
                   name="SqlDestination"
                   usesDispositions="true"
+                  validateExternalMetadata="False"
                   version="4">
                   <properties>
                     <property
@@ -695,14 +681,6 @@ from mdr_reclamo_asignado</property>
                       hasSideEffects="true"
                       name="OLE DB Destination Input">
                       <inputColumns>
-                        <inputColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].Columns[estado]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="9"
-                          cachedName="estado"
-                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[estado]"
-                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[estado]" />
                         <inputColumn
                           refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].Columns[codigo_sociedad]"
                           cachedCodepage="1252"
@@ -796,7 +774,7 @@ from mdr_reclamo_asignado</property>
                           refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[estado]"
                           codePage="1252"
                           dataType="str"
-                          length="10"
+                          length="20"
                           name="estado" />
                         <externalMetadataColumn
                           refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[id_st_reclamo_asignado]"
@@ -818,7 +796,7 @@ from mdr_reclamo_asignado</property>
                           refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[escalado]"
                           codePage="1252"
                           dataType="str"
-                          length="2"
+                          length="10"
                           name="escalado" />
                         <externalMetadataColumn
                           refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[reasignado]"
@@ -840,7 +818,7 @@ from mdr_reclamo_asignado</property>
                           refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[nivel]"
                           codePage="1252"
                           dataType="str"
-                          length="1"
+                          length="10"
                           name="nivel" />
                         <externalMetadataColumn
                           refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[escalamiento]"
