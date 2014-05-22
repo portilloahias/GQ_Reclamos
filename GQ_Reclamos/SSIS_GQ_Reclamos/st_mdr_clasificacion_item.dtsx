@@ -13,8 +13,8 @@
   DTS:ObjectName="st_mdr_clasificacion_item"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="40"
-  DTS:VersionGUID="{B1D2B14B-6FA6-416B-885D-755DA8A7E530}">
+  DTS:VersionBuild="41"
+  DTS:VersionGUID="{4BCC7B90-D14B-4BA4-8F3B-6F8C86052B5D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>

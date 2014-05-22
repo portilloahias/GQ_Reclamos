@@ -13,8 +13,8 @@
   DTS:ObjectName="st_marca"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="39"
-  DTS:VersionGUID="{9C89402B-46AC-4512-94A4-83A8A4D9DB44}">
+  DTS:VersionBuild="40"
+  DTS:VersionGUID="{32F94013-FE32-4648-97B8-50EEE8065E41}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>

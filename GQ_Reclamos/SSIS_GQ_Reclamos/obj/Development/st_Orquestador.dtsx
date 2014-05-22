@@ -1,0 +1,351 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/22/2014 3:06:22 PM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="GQSV-BI"
+  DTS:CreatorName="GQSV\gqservicios"
+  DTS:DTSID="{851F3B0E-4E48-4807-90C2-86ED0B7E2944}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.3402.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="st_Orquestador"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{EC0A235E-E410-417D-87A7-2734EE80038D}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Catalogos"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{DC313BE2-5EEF-46A9-8FAC-3AA9243D3904}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Catalogos">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Catalogos\st_ban_sucursal"
+          DTS:CreationName="SSIS.ExecutePackageTask.3"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{48C37041-97FF-41F6-B241-777EDF1254CF}"
+          DTS:ExecutableType="SSIS.ExecutePackageTask.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="st_ban_sucursal"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>st_ban_sucursal.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Catalogos\st_marca"
+          DTS:CreationName="SSIS.ExecutePackageTask.3"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{90064237-cb22-47e5-b265-350b7c742146}"
+          DTS:ExecutableType="SSIS.ExecutePackageTask.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="st_marca"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>st_marca.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Catalogos\st_mdr_area"
+          DTS:CreationName="SSIS.ExecutePackageTask.3"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{a5116e50-fcd5-49f4-9f90-d7c2db01370e}"
+          DTS:ExecutableType="SSIS.ExecutePackageTask.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="st_mdr_area"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>st_mdr_area.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Catalogos\st_mdr_clasificacion_item"
+          DTS:CreationName="SSIS.ExecutePackageTask.3"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{f5565a39-a394-4c7e-9cac-186ba7eb8834}"
+          DTS:ExecutableType="SSIS.ExecutePackageTask.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="st_mdr_clasificacion_item"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>st_mdr_clasificacion_item.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Catalogos\st_mdr_severidad"
+          DTS:CreationName="SSIS.ExecutePackageTask.3"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{31f08424-90dd-42c9-9621-589132d83230}"
+          DTS:ExecutableType="SSIS.ExecutePackageTask.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="st_mdr_severidad"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>st_mdr_severidad.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Catalogos\st_mdr_tipo_item"
+          DTS:CreationName="SSIS.ExecutePackageTask.3"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{ff0496a2-2bfe-4ca4-8992-303e9ef6a859}"
+          DTS:ExecutableType="SSIS.ExecutePackageTask.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="st_mdr_tipo_item"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>st_mdr_tipo_item.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Catalogos\st_mdr_transaccion"
+          DTS:CreationName="SSIS.ExecutePackageTask.3"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{d65c1c38-238a-48c7-9d77-4eee455dfa0d}"
+          DTS:ExecutableType="SSIS.ExecutePackageTask.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="st_mdr_transaccion"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>st_mdr_transaccion.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Catalogos\st_mdr_usuario"
+          DTS:CreationName="SSIS.ExecutePackageTask.3"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{38b67e5e-5223-47e7-a9e0-3742aa591800}"
+          DTS:ExecutableType="SSIS.ExecutePackageTask.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="st_mdr_usuario"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>st_mdr_usuario.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Catalogos\st_vendedor"
+          DTS:CreationName="SSIS.ExecutePackageTask.3"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{48eb619d-48bc-4f17-9f4d-e83c49b41915}"
+          DTS:ExecutableType="SSIS.ExecutePackageTask.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="st_vendedor"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>st_vendedor.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Transaccionales"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{5FB721EC-F762-4A12-82E8-B8913969E3B0}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Transaccionales">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Transaccionales\st_mdr_reclamo"
+          DTS:CreationName="SSIS.ExecutePackageTask.3"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{B500EA38-79C6-4A1A-94E6-9DD2B4C56E20}"
+          DTS:ExecutableType="SSIS.ExecutePackageTask.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="st_mdr_reclamo"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>st_mdr_reclamo.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Transaccionales\st_mdr_reclamo_asignado"
+          DTS:CreationName="SSIS.ExecutePackageTask.3"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{2E18EBAC-66DD-419A-938F-4CFE54751551}"
+          DTS:ExecutableType="SSIS.ExecutePackageTask.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="st_mdr_reclamo_asignado"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>st_mdr_reclamo_asignado.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{32CA9DCA-9EB0-454B-BB5B-F436286DC4D8}"
+      DTS:From="Package\Catalogos"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Transaccionales" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Catalogos\st_ban_sucursal"
+          TopLeft="18,8.5" />
+        <NodeLayout
+          Size="140,42"
+          Id="Package\Catalogos\st_mdr_area"
+          TopLeft="12,60.5" />
+        <NodeLayout
+          Size="202,42"
+          Id="Package\Catalogos\st_mdr_clasificacion_item"
+          TopLeft="223,63.5" />
+        <NodeLayout
+          Size="165,42"
+          Id="Package\Catalogos\st_mdr_severidad"
+          TopLeft="15,109.5" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Catalogos\st_mdr_tipo_item"
+          TopLeft="225,113.5" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Catalogos\st_mdr_transaccion"
+          TopLeft="17,160.5" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Catalogos\st_mdr_usuario"
+          TopLeft="228,165.5" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Catalogos\st_vendedor"
+          TopLeft="18,212.5" />
+        <NodeLayout
+          Size="124,42"
+          Id="Package\Catalogos\st_marca"
+          TopLeft="220,10.5" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="442,326"
+          Size="442,370"
+          Id="Package\Catalogos"
+          TopLeft="106,191" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Transaccionales\st_mdr_reclamo"
+          TopLeft="35,18" />
+        <NodeLayout
+          Size="205,42"
+          Id="Package\Transaccionales\st_mdr_reclamo_asignado"
+          TopLeft="34,78" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="295,175"
+          Size="295,218"
+          Id="Package\Transaccionales"
+          TopLeft="255,596" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="327,561">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="75.5,35"
+              Start="0,0"
+              End="75.5,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.5"
+                    Point2="0,17.5"
+                    Point3="4,17.5" />
+                  <mssgle:LineSegment
+                    End="71.5,17.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="71.5,17.5"
+                    Point2="75.5,17.5"
+                    Point3="75.5,21.5" />
+                  <mssgle:LineSegment
+                    End="75.5,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

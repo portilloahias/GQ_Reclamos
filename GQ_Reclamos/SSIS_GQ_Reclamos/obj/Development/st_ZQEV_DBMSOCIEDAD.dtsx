@@ -1,26 +1,26 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="5/20/2014 2:17:04 PM"
   DTS:CreationName="SSIS.Package.3"
   DTS:CreatorComputerName="LARISA"
   DTS:CreatorName="Larisa\Capacitaciones"
-  DTS:DTSID="{9AFB5F9E-BF40-464D-8497-E12F79EE9290}"
+  DTS:DTSID="{F4865F73-CF45-46A3-B169-440268D2CCA2}"
   DTS:ExecutableType="SSIS.Package.3"
   DTS:LastModifiedProductVersion="11.0.3402.0"
   DTS:LocaleID="1033"
-  DTS:ObjectName="st_ZQEV_BO_SECTORES"
+  DTS:ObjectName="st_ZQEV_DBMSOCIEDAD"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{7CD31C74-E506-439D-990C-1F2FB2F1DEB6}">
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{6A6C35F6-9EDC-4426-B97A-6A59CC078B4A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[cnOLEDBSqlServerST]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{E90DAF0A-CCA7-41AA-B698-E995AB755E55}"
+      DTS:DTSID="{CA6023B6-1612-4B93-AC71-7FCA6E66503C}"
       DTS:ObjectName="cnOLEDBSqlServerST">
       <DTS:PropertyExpression
         DTS:Name="Password">"@hias2006"</DTS:PropertyExpression>
@@ -36,7 +36,7 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[connectionSAP]"
       DTS:CreationName="ADO.NET:Microsoft.Data.SAPClient.SAPConnection, Microsoft.Data.SAPClient, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
-      DTS:DTSID="{65E56768-5976-426A-9A70-FC70684E32E5}"
+      DTS:DTSID="{2D93B994-C895-4767-994E-FDD199183122}"
       DTS:ObjectName="connectionSAP">
       <DTS:PropertyExpression
         DTS:Name="Password">"Pruebas00"</DTS:PropertyExpression>
@@ -56,7 +56,7 @@
       DTS:refId="Package\Clear SQL"
       DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{629598B1-135C-411B-AD9C-CD415268E0D0}"
+      DTS:DTSID="{68F04865-AF4A-4B1C-A610-BEA93A5F8227}"
       DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
       DTS:LocaleID="-1"
       DTS:ObjectName="Clear SQL"
@@ -65,15 +65,15 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{E90DAF0A-CCA7-41AA-B698-E995AB755E55}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE [dbo].[st_ZQEV_BO_SECTORES]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:Connection="{CA6023B6-1612-4B93-AC71-7FCA6E66503C}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE [dbo].[st_ZQEV_DBMSOCIEDAD]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Load SAP"
       DTS:CreationName="{5918251B-2970-45A4-AB5F-01C3C588FE5A}"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{61B3A8D4-1291-4F33-B945-F220F1358767}"
+      DTS:DTSID="{6FC4F5C7-5508-426C-BDD0-5FAAB1770B58}"
       DTS:ExecutableType="{5918251B-2970-45A4-AB5F-01C3C588FE5A}"
       DTS:LocaleID="-1"
       DTS:ObjectName="Load SAP">
@@ -89,6 +89,7 @@
               description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
               name="GetSapConnection"
               usesDispositions="true"
+              validateExternalMetadata="False"
               version="4">
               <properties>
                 <property
@@ -96,13 +97,18 @@
                   description="Specifies the SQL statement used by the component to extract data."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select
-spart , 
-matkl , 
-sector_desc , 
-sector_unif, 
-sector_fina 
-from ZQEV_BO_SECTORES</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT 
+BUKRS,
+BUTXT,
+NOMBREM,
+NOMBREC,
+ORT01,
+LAND1, 
+WAERS,
+SPRAS, 
+FECHATASA, 
+VALIDO 
+FROM ZQEV_DBMSOCIEDAD</property>
                 <property
                   dataType="System.Int32"
                   description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
@@ -140,83 +146,156 @@ from ZQEV_BO_SECTORES</property>
                   name="ADO NET Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[SPART]"
+                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[BUKRS]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].ExternalColumns[SPART]"
+                      externalMetadataColumnId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].ExternalColumns[BUKRS]"
+                      length="4"
+                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[BUKRS]"
+                      name="BUKRS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[BUTXT]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].ExternalColumns[BUTXT]"
+                      length="25"
+                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[BUTXT]"
+                      name="BUTXT"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[NOMBREM]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].ExternalColumns[NOMBREM]"
+                      length="30"
+                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[NOMBREM]"
+                      name="NOMBREM"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[NOMBREC]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].ExternalColumns[NOMBREC]"
+                      length="7"
+                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[NOMBREC]"
+                      name="NOMBREC"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[ORT01]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].ExternalColumns[ORT01]"
+                      length="25"
+                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[ORT01]"
+                      name="ORT01"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[LAND1]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].ExternalColumns[LAND1]"
+                      length="3"
+                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[LAND1]"
+                      name="LAND1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[WAERS]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].ExternalColumns[WAERS]"
+                      length="5"
+                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[WAERS]"
+                      name="WAERS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[SPRAS]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].ExternalColumns[SPRAS]"
                       length="2"
-                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[SPART]"
-                      name="SPART"
+                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[SPRAS]"
+                      name="SPRAS"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[MATKL]"
+                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[FECHATASA]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].ExternalColumns[FECHATASA]"
+                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[FECHATASA]"
+                      name="FECHATASA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[VALIDO]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].ExternalColumns[MATKL]"
-                      length="9"
-                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[MATKL]"
-                      name="MATKL"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[SECTOR_DESC]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].ExternalColumns[SECTOR_DESC]"
-                      length="20"
-                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[SECTOR_DESC]"
-                      name="SECTOR_DESC"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[SECTOR_UNIF]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].ExternalColumns[SECTOR_UNIF]"
-                      length="60"
-                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[SECTOR_UNIF]"
-                      name="SECTOR_UNIF"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[SECTOR_FINA]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].ExternalColumns[SECTOR_FINA]"
-                      length="60"
-                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[SECTOR_FINA]"
-                      name="SECTOR_FINA"
+                      externalMetadataColumnId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].ExternalColumns[VALIDO]"
+                      length="1"
+                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[VALIDO]"
+                      name="VALIDO"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].ExternalColumns[SPART]"
+                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].ExternalColumns[BUKRS]"
+                      dataType="wstr"
+                      length="4"
+                      name="BUKRS" />
+                    <externalMetadataColumn
+                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].ExternalColumns[BUTXT]"
+                      dataType="wstr"
+                      length="25"
+                      name="BUTXT" />
+                    <externalMetadataColumn
+                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].ExternalColumns[NOMBREM]"
+                      dataType="wstr"
+                      length="30"
+                      name="NOMBREM" />
+                    <externalMetadataColumn
+                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].ExternalColumns[NOMBREC]"
+                      dataType="wstr"
+                      length="7"
+                      name="NOMBREC" />
+                    <externalMetadataColumn
+                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].ExternalColumns[ORT01]"
+                      dataType="wstr"
+                      length="25"
+                      name="ORT01" />
+                    <externalMetadataColumn
+                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].ExternalColumns[LAND1]"
+                      dataType="wstr"
+                      length="3"
+                      name="LAND1" />
+                    <externalMetadataColumn
+                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].ExternalColumns[WAERS]"
+                      dataType="wstr"
+                      length="5"
+                      name="WAERS" />
+                    <externalMetadataColumn
+                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].ExternalColumns[SPRAS]"
                       dataType="wstr"
                       length="2"
-                      name="SPART" />
+                      name="SPRAS" />
                     <externalMetadataColumn
-                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].ExternalColumns[MATKL]"
-                      dataType="wstr"
-                      length="9"
-                      name="MATKL" />
+                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].ExternalColumns[FECHATASA]"
+                      dataType="dbTimeStamp"
+                      name="FECHATASA" />
                     <externalMetadataColumn
-                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].ExternalColumns[SECTOR_DESC]"
+                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].ExternalColumns[VALIDO]"
                       dataType="wstr"
-                      length="20"
-                      name="SECTOR_DESC" />
-                    <externalMetadataColumn
-                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].ExternalColumns[SECTOR_UNIF]"
-                      dataType="wstr"
-                      length="60"
-                      name="SECTOR_UNIF" />
-                    <externalMetadataColumn
-                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].ExternalColumns[SECTOR_FINA]"
-                      dataType="wstr"
-                      length="60"
-                      name="SECTOR_FINA" />
+                      length="1"
+                      name="VALIDO" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -225,35 +304,64 @@ from ZQEV_BO_SECTORES</property>
                   name="ADO NET Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Error Output].Columns[SPART]"
+                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Error Output].Columns[BUKRS]"
+                      dataType="wstr"
+                      length="4"
+                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Error Output].Columns[BUKRS]"
+                      name="BUKRS" />
+                    <outputColumn
+                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Error Output].Columns[BUTXT]"
+                      dataType="wstr"
+                      length="25"
+                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Error Output].Columns[BUTXT]"
+                      name="BUTXT" />
+                    <outputColumn
+                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Error Output].Columns[NOMBREM]"
+                      dataType="wstr"
+                      length="30"
+                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Error Output].Columns[NOMBREM]"
+                      name="NOMBREM" />
+                    <outputColumn
+                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Error Output].Columns[NOMBREC]"
+                      dataType="wstr"
+                      length="7"
+                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Error Output].Columns[NOMBREC]"
+                      name="NOMBREC" />
+                    <outputColumn
+                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Error Output].Columns[ORT01]"
+                      dataType="wstr"
+                      length="25"
+                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Error Output].Columns[ORT01]"
+                      name="ORT01" />
+                    <outputColumn
+                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Error Output].Columns[LAND1]"
+                      dataType="wstr"
+                      length="3"
+                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Error Output].Columns[LAND1]"
+                      name="LAND1" />
+                    <outputColumn
+                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Error Output].Columns[WAERS]"
+                      dataType="wstr"
+                      length="5"
+                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Error Output].Columns[WAERS]"
+                      name="WAERS" />
+                    <outputColumn
+                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Error Output].Columns[SPRAS]"
                       dataType="wstr"
                       length="2"
-                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Error Output].Columns[SPART]"
-                      name="SPART" />
+                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Error Output].Columns[SPRAS]"
+                      name="SPRAS" />
                     <outputColumn
-                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Error Output].Columns[MATKL]"
-                      dataType="wstr"
-                      length="9"
-                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Error Output].Columns[MATKL]"
-                      name="MATKL" />
+                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Error Output].Columns[FECHATASA]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Error Output].Columns[FECHATASA]"
+                      name="FECHATASA" />
                     <outputColumn
-                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Error Output].Columns[SECTOR_DESC]"
+                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Error Output].Columns[VALIDO]"
                       dataType="wstr"
-                      length="20"
-                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Error Output].Columns[SECTOR_DESC]"
-                      name="SECTOR_DESC" />
-                    <outputColumn
-                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Error Output].Columns[SECTOR_UNIF]"
-                      dataType="wstr"
-                      length="60"
-                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Error Output].Columns[SECTOR_UNIF]"
-                      name="SECTOR_UNIF" />
-                    <outputColumn
-                      refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Error Output].Columns[SECTOR_FINA]"
-                      dataType="wstr"
-                      length="60"
-                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Error Output].Columns[SECTOR_FINA]"
-                      name="SECTOR_FINA" />
+                      length="1"
+                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Error Output].Columns[VALIDO]"
+                      name="VALIDO" />
                     <outputColumn
                       refId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -278,6 +386,7 @@ from ZQEV_BO_SECTORES</property>
               description="OLE DB Destination"
               name="SqlDestination"
               usesDispositions="true"
+              validateExternalMetadata="False"
               version="4">
               <properties>
                 <property
@@ -287,7 +396,7 @@ from ZQEV_BO_SECTORES</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[st_ZQEV_BO_SECTORES]</property>
+                  name="OpenRowset">[dbo].[st_ZQEV_DBMSOCIEDAD]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -344,72 +453,126 @@ from ZQEV_BO_SECTORES</property>
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].Columns[SPART]"
+                      refId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].Columns[BUKRS]"
+                      cachedDataType="wstr"
+                      cachedLength="4"
+                      cachedName="BUKRS"
+                      externalMetadataColumnId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[BUKRS]"
+                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[BUKRS]" />
+                    <inputColumn
+                      refId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].Columns[BUTXT]"
+                      cachedDataType="wstr"
+                      cachedLength="25"
+                      cachedName="BUTXT"
+                      externalMetadataColumnId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[BUTXT]"
+                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[BUTXT]" />
+                    <inputColumn
+                      refId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].Columns[NOMBREM]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="NOMBREM"
+                      externalMetadataColumnId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[NOMBREM]"
+                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[NOMBREM]" />
+                    <inputColumn
+                      refId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].Columns[NOMBREC]"
+                      cachedDataType="wstr"
+                      cachedLength="7"
+                      cachedName="NOMBREC"
+                      externalMetadataColumnId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[NOMBREC]"
+                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[NOMBREC]" />
+                    <inputColumn
+                      refId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].Columns[ORT01]"
+                      cachedDataType="wstr"
+                      cachedLength="25"
+                      cachedName="ORT01"
+                      externalMetadataColumnId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[ORT01]"
+                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[ORT01]" />
+                    <inputColumn
+                      refId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].Columns[LAND1]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="LAND1"
+                      externalMetadataColumnId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[LAND1]"
+                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[LAND1]" />
+                    <inputColumn
+                      refId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].Columns[WAERS]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="WAERS"
+                      externalMetadataColumnId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[WAERS]"
+                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[WAERS]" />
+                    <inputColumn
+                      refId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].Columns[SPRAS]"
                       cachedDataType="wstr"
                       cachedLength="2"
-                      cachedName="SPART"
-                      externalMetadataColumnId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[spart]"
-                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[SPART]" />
+                      cachedName="SPRAS"
+                      externalMetadataColumnId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[SPRAS]"
+                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[SPRAS]" />
                     <inputColumn
-                      refId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].Columns[MATKL]"
-                      cachedDataType="wstr"
-                      cachedLength="9"
-                      cachedName="MATKL"
-                      externalMetadataColumnId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[matkl]"
-                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[MATKL]" />
+                      refId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].Columns[FECHATASA]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="FECHATASA"
+                      externalMetadataColumnId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[FECHATASA]"
+                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[FECHATASA]" />
                     <inputColumn
-                      refId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].Columns[SECTOR_DESC]"
+                      refId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].Columns[VALIDO]"
                       cachedDataType="wstr"
-                      cachedLength="20"
-                      cachedName="SECTOR_DESC"
-                      externalMetadataColumnId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[sector_desc]"
-                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[SECTOR_DESC]" />
-                    <inputColumn
-                      refId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].Columns[SECTOR_UNIF]"
-                      cachedDataType="wstr"
-                      cachedLength="60"
-                      cachedName="SECTOR_UNIF"
-                      externalMetadataColumnId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[sector_unif]"
-                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[SECTOR_UNIF]" />
-                    <inputColumn
-                      refId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].Columns[SECTOR_FINA]"
-                      cachedDataType="wstr"
-                      cachedLength="60"
-                      cachedName="SECTOR_FINA"
-                      externalMetadataColumnId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[sector_fina]"
-                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[SECTOR_FINA]" />
+                      cachedLength="1"
+                      cachedName="VALIDO"
+                      externalMetadataColumnId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[VALIDO]"
+                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[VALIDO]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[spart]"
+                      refId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[BUKRS]"
                       dataType="wstr"
                       length="10"
-                      name="spart" />
+                      name="BUKRS" />
                     <externalMetadataColumn
-                      refId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[matkl]"
+                      refId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[BUTXT]"
                       dataType="wstr"
                       length="50"
-                      name="matkl" />
+                      name="BUTXT" />
                     <externalMetadataColumn
-                      refId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[sector_desc]"
+                      refId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[NOMBREM]"
                       dataType="wstr"
                       length="50"
-                      name="sector_desc" />
+                      name="NOMBREM" />
                     <externalMetadataColumn
-                      refId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[sector_unif]"
+                      refId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[NOMBREC]"
                       dataType="wstr"
-                      length="60"
-                      name="sector_unif" />
+                      length="50"
+                      name="NOMBREC" />
                     <externalMetadataColumn
-                      refId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[sector_fina]"
+                      refId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[ORT01]"
                       dataType="wstr"
-                      length="60"
-                      name="sector_fina" />
+                      length="50"
+                      name="ORT01" />
                     <externalMetadataColumn
-                      refId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[ID_DW]"
-                      dataType="i4"
-                      name="ID_DW" />
+                      refId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[LAND1]"
+                      dataType="wstr"
+                      length="10"
+                      name="LAND1" />
+                    <externalMetadataColumn
+                      refId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[WAERS]"
+                      dataType="wstr"
+                      length="50"
+                      name="WAERS" />
+                    <externalMetadataColumn
+                      refId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[SPRAS]"
+                      dataType="wstr"
+                      length="10"
+                      name="SPRAS" />
+                    <externalMetadataColumn
+                      refId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[FECHATASA]"
+                      dataType="dbTimeStamp"
+                      name="FECHATASA" />
+                    <externalMetadataColumn
+                      refId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[VALIDO]"
+                      dataType="wstr"
+                      length="50"
+                      name="VALIDO" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -454,7 +617,7 @@ from ZQEV_BO_SECTORES</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{AFB43B12-5D04-41F0-BCCA-219792764C88}"
+      DTS:DTSID="{BEEB10EC-25E1-4BBA-8F0D-546D556D091D}"
       DTS:From="Package\Clear SQL"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -473,13 +636,13 @@ from ZQEV_BO_SECTORES</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="125,42"
-          Id="Package\Load SAP"
-          TopLeft="6.50000000000001,107.5" />
-        <NodeLayout
           Size="127,42"
           Id="Package\Clear SQL"
           TopLeft="5.50000000000001,5.5" />
+        <NodeLayout
+          Size="125,42"
+          Id="Package\Load SAP"
+          TopLeft="6.50000000000001,107.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="69,47.5">

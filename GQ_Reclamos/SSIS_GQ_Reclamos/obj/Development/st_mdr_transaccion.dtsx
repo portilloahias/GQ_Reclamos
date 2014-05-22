@@ -13,8 +13,8 @@
   DTS:ObjectName="st_mdr_transaccion"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="42"
-  DTS:VersionGUID="{998F4642-AE5C-4AAF-9D2A-3E92C4C67429}">
+  DTS:VersionBuild="43"
+  DTS:VersionGUID="{0E116074-13B9-4718-BFA6-FFBF9565A09D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>

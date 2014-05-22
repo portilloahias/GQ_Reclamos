@@ -4,10 +4,11 @@
     <Configuration>
       <Name>Development</Name>
       <Options>
-        <Run64BitRuntime>true</Run64BitRuntime>
+        <ServerName>GQSV-BI\BIGQ</ServerName>
+        <PathOnServer>/SSISDB/GQ_Reclamos/SSIS_GQ_Reclamos</PathOnServer>
         <UserIDs />
         <UserPasswords />
-        <OfflineMode>true</OfflineMode>
+        <OfflineMode>false</OfflineMode>
         <ProgressReporting>true</ProgressReporting>
         <ParameterConfigurationSensitiveValues>
           <ConfigurationSetting>
