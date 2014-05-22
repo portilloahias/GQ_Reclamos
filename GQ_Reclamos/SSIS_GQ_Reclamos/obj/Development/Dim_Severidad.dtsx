@@ -13,8 +13,8 @@
   DTS:ObjectName="Dim_Severidad"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="72"
-  DTS:VersionGUID="{78077B8C-CD17-412E-940D-5F999B37328B}">
+  DTS:VersionBuild="74"
+  DTS:VersionGUID="{73F53A82-6275-4212-9FA1-04951F5AD75C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -23,6 +23,8 @@
       DTS:CreationName="OLEDB"
       DTS:DTSID="{609B8543-F9BC-45BC-BFAD-8B47C672D1C6}"
       DTS:ObjectName="cnOLEDBSqlServerDW">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::connectionDWOLEDB]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="Data Source=gqsv-bi\BIGQ;User ID=sapbi;Initial Catalog=BIDWGQCAL;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
@@ -37,9 +39,11 @@
       DTS:CreationName="OLEDB"
       DTS:DTSID="{4759F7C3-1CD1-41A7-B5D9-336AD74958AE}"
       DTS:ObjectName="cnOLEDBSqlServerST">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::connectionSTOLEDB]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=GQSV-BI\BIGQ;User ID=sapbi;Initial Catalog=STADWCAL;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          DTS:ConnectionString="Data Source=GQSV-BI\BIGQ;User ID=sapbi;Initial Catalog=STADWCAL;Provider=SQLNCLI11.1;Auto Translate=False;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"></DTS:Password>
@@ -47,14 +51,6 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
-  <DTS:Configurations>
-    <DTS:Configuration
-      DTS:ConfigurationString="C:\SSIS_Config\SSIS_GQ_Reclamos_DW.dtsConfig"
-      DTS:ConfigurationType="1"
-      DTS:CreationName=""
-      DTS:DTSID="{80F76831-4084-43C5-AE2E-461FF14CF20F}"
-      DTS:ObjectName="SSIS_GQ_Reclamos_DW" />
-  </DTS:Configurations>
   <DTS:LogProviders>
     <DTS:LogProvider
       DTS:ConfigString="cnOLEDBSqlServerST"

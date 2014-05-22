@@ -1,0 +1,527 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/20/2014 2:17:04 PM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="LARISA"
+  DTS:CreatorName="Larisa\Capacitaciones"
+  DTS:DTSID="{9AFB5F9E-BF40-464D-8497-E12F79EE9290}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.3402.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="st_ZQEV_BO_SECTORES"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{E5F0813D-535D-4003-96A1-C08F49F43120}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[cnOLEDBSqlServerST]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{E90DAF0A-CCA7-41AA-B698-E995AB755E55}"
+      DTS:ObjectName="cnOLEDBSqlServerST">
+      <DTS:PropertyExpression
+        DTS:Name="Password">"@hias2006"</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=GQSV-BI\BIGQ;User ID=sapbi;Initial Catalog=STADWCAL;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"></DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[connectionSAP]"
+      DTS:CreationName="ADO.NET:Microsoft.Data.SAPClient.SAPConnection, Microsoft.Data.SAPClient, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+      DTS:DTSID="{65E56768-5976-426A-9A70-FC70684E32E5}"
+      DTS:ObjectName="connectionSAP">
+      <DTS:PropertyExpression
+        DTS:Name="Password">"Pruebas00"</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="ASHOST=5.121.25.3;SYSNR=03;CLIENT=300;USER=interfacesbi;LANG=EN;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"></DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="{5918251B-2970-45A4-AB5F-01C3C588FE5A}"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{61B3A8D4-1291-4F33-B945-F220F1358767}"
+      DTS:ExecutableType="{5918251B-2970-45A4-AB5F-01C3C588FE5A}"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\GetSap"
+              componentClassID="{874F7595-FB5F-40FF-96AF-FBFF8250E3EF}"
+              contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
+              name="GetSap"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement used by the component to extract data."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select
+spart , 
+matkl , 
+sector_desc , 
+sector_unif, 
+sector_fina 
+from ZQEV_BO_SECTORES</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="The Source database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version= 11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the mode to retrieve external column information"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter, Microsoft.SqlServer.ADONETSrc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter, Microsoft.SqlServer.ADONETSrc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\GetSap.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[connectionSAP]"
+                  connectionManagerRefId="Package.ConnectionManagers[connectionSAP]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Output]"
+                  name="ADO NET Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Output].Columns[SPART]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Output].ExternalColumns[SPART]"
+                      length="2"
+                      lineageId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Output].Columns[SPART]"
+                      name="SPART"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Output].Columns[MATKL]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Output].ExternalColumns[MATKL]"
+                      length="9"
+                      lineageId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Output].Columns[MATKL]"
+                      name="MATKL"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Output].Columns[SECTOR_DESC]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Output].ExternalColumns[SECTOR_DESC]"
+                      length="20"
+                      lineageId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Output].Columns[SECTOR_DESC]"
+                      name="SECTOR_DESC"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Output].Columns[SECTOR_UNIF]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Output].ExternalColumns[SECTOR_UNIF]"
+                      length="60"
+                      lineageId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Output].Columns[SECTOR_UNIF]"
+                      name="SECTOR_UNIF"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Output].Columns[SECTOR_FINA]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Output].ExternalColumns[SECTOR_FINA]"
+                      length="60"
+                      lineageId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Output].Columns[SECTOR_FINA]"
+                      name="SECTOR_FINA"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Output].ExternalColumns[SPART]"
+                      dataType="wstr"
+                      length="2"
+                      name="SPART" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Output].ExternalColumns[MATKL]"
+                      dataType="wstr"
+                      length="9"
+                      name="MATKL" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Output].ExternalColumns[SECTOR_DESC]"
+                      dataType="wstr"
+                      length="20"
+                      name="SECTOR_DESC" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Output].ExternalColumns[SECTOR_UNIF]"
+                      dataType="wstr"
+                      length="60"
+                      name="SECTOR_UNIF" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Output].ExternalColumns[SECTOR_FINA]"
+                      dataType="wstr"
+                      length="60"
+                      name="SECTOR_FINA" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Error Output]"
+                  isErrorOut="true"
+                  name="ADO NET Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Error Output].Columns[SPART]"
+                      dataType="wstr"
+                      length="2"
+                      lineageId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Error Output].Columns[SPART]"
+                      name="SPART" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Error Output].Columns[MATKL]"
+                      dataType="wstr"
+                      length="9"
+                      lineageId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Error Output].Columns[MATKL]"
+                      name="MATKL" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Error Output].Columns[SECTOR_DESC]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Error Output].Columns[SECTOR_DESC]"
+                      name="SECTOR_DESC" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Error Output].Columns[SECTOR_UNIF]"
+                      dataType="wstr"
+                      length="60"
+                      lineageId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Error Output].Columns[SECTOR_UNIF]"
+                      name="SECTOR_UNIF" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Error Output].Columns[SECTOR_FINA]"
+                      dataType="wstr"
+                      length="60"
+                      lineageId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Error Output].Columns[SECTOR_FINA]"
+                      name="SECTOR_FINA" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\OLE DB Destination"
+              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[st_ZQEV_BO_SECTORES]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[cnOLEDBSqlServerST]"
+                  connectionManagerRefId="Package.ConnectionManagers[cnOLEDBSqlServerST]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SPART]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="SPART"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[spart]"
+                      lineageId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Output].Columns[SPART]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MATKL]"
+                      cachedDataType="wstr"
+                      cachedLength="9"
+                      cachedName="MATKL"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[matkl]"
+                      lineageId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Output].Columns[MATKL]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SECTOR_DESC]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="SECTOR_DESC"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sector_desc]"
+                      lineageId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Output].Columns[SECTOR_DESC]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SECTOR_UNIF]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="SECTOR_UNIF"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sector_unif]"
+                      lineageId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Output].Columns[SECTOR_UNIF]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SECTOR_FINA]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="SECTOR_FINA"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sector_fina]"
+                      lineageId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Output].Columns[SECTOR_FINA]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[spart]"
+                      dataType="wstr"
+                      length="10"
+                      name="spart" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[matkl]"
+                      dataType="wstr"
+                      length="50"
+                      name="matkl" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sector_desc]"
+                      dataType="wstr"
+                      length="50"
+                      name="sector_desc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sector_unif]"
+                      dataType="wstr"
+                      length="60"
+                      name="sector_unif" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sector_fina]"
+                      dataType="wstr"
+                      length="60"
+                      name="sector_fina" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID_DW]"
+                      dataType="i4"
+                      name="ID_DW" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[ADO NET Source Output]"
+              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="ADO NET Source Output"
+              startId="Package\Data Flow Task\GetSap.Outputs[ADO NET Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Data Flow Task"
+          TopLeft="169.5,192.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="113,42"
+          Id="Package\Data Flow Task\GetSap"
+          TopLeft="5.5,5.5" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="156,130" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[ADO NET Source Output]"
+          TopLeft="62,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="179.5,82.5"
+              Start="0,0"
+              End="179.5,75">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,37.25"
+                    Point2="0,41.25"
+                    Point3="4,41.25" />
+                  <mssgle:LineSegment
+                    End="175.5,41.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="175.5,41.25"
+                    Point2="179.5,41.25"
+                    Point3="179.5,45.25" />
+                  <mssgle:LineSegment
+                    End="179.5,75" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\GetSap">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

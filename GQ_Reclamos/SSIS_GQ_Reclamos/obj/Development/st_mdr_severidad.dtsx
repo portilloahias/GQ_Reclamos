@@ -13,8 +13,8 @@
   DTS:ObjectName="st_mdr_severidad"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="40"
-  DTS:VersionGUID="{75627D46-0DF3-4E5A-9A75-B731A531EFC7}">
+  DTS:VersionBuild="41"
+  DTS:VersionGUID="{B907FB17-7272-420C-8228-E5465111D7F5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -23,9 +23,11 @@
       DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
       DTS:DTSID="{06354929-7234-4257-87FB-88DBED3B43D9}"
       DTS:ObjectName="cnADOSqlServerST">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::connectionSTADO]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=GQSV-BI\BIGQ;User ID=sapbi;Initial Catalog=STADWCAL;Persist Security Info=True;Application Name=SSIS-Package-{D84B850A-A69F-4409-AA56-714C3C1B5B83}GQSV-BI\BIGQ.STADWCAL.sapbi;">
+          DTS:ConnectionString="Data Source=GQSV-BI\BIGQ;User ID=sapbi;Initial Catalog=STADWCAL;Persist Security Info=True;Application Name=SSIS_GQ;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"></DTS:Password>
@@ -53,6 +55,8 @@
       DTS:CreationName="OLEDB"
       DTS:DTSID="{F2A39B33-7C7F-4186-88DD-BE9E5F6E5BD3}"
       DTS:ObjectName="cnOLEDBSqlServerST">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::connectionSTOLEDB]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="Data Source=GQSV-BI\BIGQ;User ID=sapbi;Initial Catalog=STADWCAL;Provider=SQLNCLI11.1;Auto Translate=False;">
@@ -63,14 +67,6 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
-  <DTS:Configurations>
-    <DTS:Configuration
-      DTS:ConfigurationString="C:\SSIS_Config\SSIS_GQ_Reclamos.dtsConfig"
-      DTS:ConfigurationType="1"
-      DTS:CreationName=""
-      DTS:DTSID="{460CC3C5-FC5D-4676-A5DF-892B79C06F47}"
-      DTS:ObjectName="SSIS_GQ_Reclamos" />
-  </DTS:Configurations>
   <DTS:LogProviders>
     <DTS:LogProvider
       DTS:ConfigString="cnOLEDBSqlServerST"

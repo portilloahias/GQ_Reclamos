@@ -13,8 +13,8 @@
   DTS:ObjectName="st_mdr_reclamo_asignado"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="39"
-  DTS:VersionGUID="{4E503A46-9F8A-444A-B9DD-F119B0E4C9F9}">
+  DTS:VersionBuild="41"
+  DTS:VersionGUID="{ED45085C-D1C1-4526-8ECD-ECB0491FD97F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -23,9 +23,11 @@
       DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
       DTS:DTSID="{0E79ACC2-1D6D-4F90-8F04-DCCF70758554}"
       DTS:ObjectName="cnADOSqlServerST">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::connectionSTADO]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=GQSV-BI\BIGQ;User ID=sapbi;Initial Catalog=STADWCAL;Persist Security Info=True;Application Name=SSIS-Package-{D84B850A-A69F-4409-AA56-714C3C1B5B83}GQSV-BI\BIGQ.STADWCAL.sapbi;">
+          DTS:ConnectionString="Data Source=GQSV-BI\BIGQ;User ID=sapbi;Initial Catalog=STADWCAL;Persist Security Info=True;Application Name=SSIS_GQ;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"></DTS:Password>
@@ -53,6 +55,8 @@
       DTS:CreationName="OLEDB"
       DTS:DTSID="{DC2C0E1E-CD2C-439F-9251-E87AB6AB4D63}"
       DTS:ObjectName="cnOLEDBSqlServerST">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::connectionSTOLEDB]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="Data Source=GQSV-BI\BIGQ;User ID=sapbi;Initial Catalog=STADWCAL;Provider=SQLNCLI11.1;Auto Translate=False;">
@@ -63,14 +67,6 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
-  <DTS:Configurations>
-    <DTS:Configuration
-      DTS:ConfigurationString="C:\SSIS_Config\SSIS_GQ_Reclamos.dtsConfig"
-      DTS:ConfigurationType="1"
-      DTS:CreationName=""
-      DTS:DTSID="{78DAD656-5630-4218-B423-E4CE528465B6}"
-      DTS:ObjectName="SSIS_GQ_Reclamos" />
-  </DTS:Configurations>
   <DTS:LogProviders>
     <DTS:LogProvider
       DTS:ConfigString="cnOLEDBSqlServerST"
@@ -1084,8 +1080,11 @@ from mdr_reclamo_asignado</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Get Sources My Sql\LoadMySQL\MySqlSource">
+    design-time-name="Package\Get Sources My Sql\LoadMySQL\SqlDestination">
     <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
@@ -1094,11 +1093,8 @@ from mdr_reclamo_asignado</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Get Sources My Sql\LoadMySQL\SqlDestination">
+    design-time-name="Package\Get Sources My Sql\LoadMySQL\MySqlSource">
     <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
