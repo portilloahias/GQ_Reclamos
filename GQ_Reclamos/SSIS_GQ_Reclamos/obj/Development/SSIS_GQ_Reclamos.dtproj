@@ -2677,10 +2677,10 @@
                 <SSIS:Property SSIS:Name="Name">Dim_Area</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">63</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">64</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{E8F1988E-A82E-44F2-8EFC-C36281DAAC45}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{15022149-0EBB-4E04-95B0-C053B6F4AAAB}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">6</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -3341,10 +3341,10 @@
                 <SSIS:Property SSIS:Name="Name">Dim_DetalleTipoSituacionReclamo</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">79</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">83</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{893AA61E-3BBF-4E95-8CDA-09888B574D26}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{932A7A29-0D7B-4DEC-AF0B-7F644C355C8E}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">6</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

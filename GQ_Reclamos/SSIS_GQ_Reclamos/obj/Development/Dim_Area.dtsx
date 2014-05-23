@@ -13,8 +13,8 @@
   DTS:ObjectName="Dim_Area"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="63"
-  DTS:VersionGUID="{E8F1988E-A82E-44F2-8EFC-C36281DAAC45}">
+  DTS:VersionBuild="64"
+  DTS:VersionGUID="{15022149-0EBB-4E04-95B0-C053B6F4AAAB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1069,7 +1069,7 @@ FROM [dbo].[st_mdr_area]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[DIMArea]</property>
+                  name="OpenRowset">[dbo].[DimArea]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1330,7 +1330,7 @@ WHERE [Id_DW] is null</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[DIMArea]</property>
+                  name="OpenRowset">[dbo].[DimArea]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -2457,7 +2457,7 @@ WHERE [Id_DW] is null</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="152,42"
+          Size="154,42"
           Id="Package\Insertar Nuevos Valores DW\Destination DW"
           TopLeft="5.50000000000001,107.5" />
         <NodeLayout
@@ -2466,7 +2466,7 @@ WHERE [Id_DW] is null</property>
           TopLeft="18,5.5" />
         <EdgeLayout
           Id="Package\Insertar Nuevos Valores DW.Paths[OLE DB Source Output]"
-          TopLeft="81.5,47.5">
+          TopLeft="82,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"

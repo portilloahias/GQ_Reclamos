@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>SSIS_GQ_Reclamos</Name>
-    <LastWriteTime>2014-05-22T21:23:20.926098Z</LastWriteTime>
+    <LastWriteTime>2014-05-22T21:56:17.6587515Z</LastWriteTime>
     <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -63,7 +63,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Dim_Area.dtsx</Name>
-      <LastWriteTime>2014-05-22T17:07:35.9377338Z</LastWriteTime>
+      <LastWriteTime>2014-05-22T21:40:46.6446594Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -83,7 +83,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Dim_DetalleTipoSituacionReclamo.dtsx</Name>
-      <LastWriteTime>2014-05-22T16:50:18.6227115Z</LastWriteTime>
+      <LastWriteTime>2014-05-23T16:19:38.3193624Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -98,7 +98,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_Orquestador.dtsx</Name>
-      <LastWriteTime>2014-05-22T21:34:08.1278117Z</LastWriteTime>
+      <LastWriteTime>2014-05-22T21:39:31.4711428Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
