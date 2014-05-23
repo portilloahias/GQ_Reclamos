@@ -6,6 +6,7 @@
       <Options>
         <ServerName>GQSV-BI\BIGQ</ServerName>
         <PathOnServer>/SSISDB/GQ_Reclamos/SSIS_GQ_Reclamos</PathOnServer>
+        <Run64BitRuntime>true</Run64BitRuntime>
         <UserIDs />
         <UserPasswords />
         <OfflineMode>false</OfflineMode>

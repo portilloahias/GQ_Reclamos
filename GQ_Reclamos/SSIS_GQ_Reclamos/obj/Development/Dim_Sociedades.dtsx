@@ -1,0 +1,3095 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/15/2014 10:25:09 AM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="GQSV-BI"
+  DTS:CreatorName="GQSV\gqservicios"
+  DTS:DTSID="{68B81270-DE7E-4986-A04E-7AAF139EBB69}"
+  DTS:EnableConfig="True"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.3402.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Dim_Sociedades"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="88"
+  DTS:VersionGUID="{3D2C212C-DB7A-47C3-91D6-23A9B05E07D6}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[cnOLEDBSqlServerDW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{B5A0956E-2355-43E5-A07D-7EA6E4A855C5}"
+      DTS:ObjectName="cnOLEDBSqlServerDW">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::connectionDWOLEDB]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=gqsv-bi\BIGQ;User ID=sapbi;Initial Catalog=BIDWGQCAL;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"></DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[cnOLEDBSqlServerST]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{E1C5324F-2CAD-45DF-8D28-EF9FC7F6A229}"
+      DTS:ObjectName="cnOLEDBSqlServerST">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::connectionSTOLEDB]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=GQSV-BI\BIGQ;User ID=sapbi;Initial Catalog=STADWCAL;Provider=SQLNCLI11.1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"></DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:LogProviders>
+    <DTS:LogProvider
+      DTS:ConfigString="cnOLEDBSqlServerST"
+      DTS:CreationName="DTS.LogProviderSQLServer.3"
+      DTS:Description="Writes log entries for events to a SQL Server database"
+      DTS:DTSID="{8672D900-F4C0-4A87-B120-1A85A42BF3D6}"
+      DTS:ObjectName="SSIS log provider for SQL Server">
+      <DTS:ObjectData>
+        <InnerObject />
+      </DTS:ObjectData>
+    </DTS:LogProvider>
+  </DTS:LogProviders>
+  <DTS:Variables />
+  <DTS:LoggingOptions
+    DTS:FilterKind="0"
+    DTS:LoggingMode="1">
+    <DTS:Property
+      DTS:DataType="8"
+      DTS:Name="EventFilter">2,7,OnError,12,OnTaskFailed</DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnError"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnTaskFailed"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+  </DTS:LoggingOptions>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Get Valor Homologado"
+      DTS:CreationName="SSIS.Pipeline.3"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{8DBDC950-E136-42A8-90C9-5600542EE1E4}"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Get Valor Homologado"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Get Valor Homologado\Conditional Split"
+              componentClassID="{7F88F654-4E20-4D14-84F4-AF9C925D3087}"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Get Valor Homologado\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Get Valor Homologado\Conditional Split.Inputs[Conditional Split Input].Columns[Id_Sociedad]"
+                      cachedDataType="i4"
+                      cachedName="Id_Sociedad"
+                      lineageId="Package\Get Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[Id_Sociedad]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Get Valor Homologado\Conditional Split.Outputs[Value DW]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Value DW"
+                  synchronousInputId="Package\Get Valor Homologado\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">![ISNULL](#{Package\Get Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[Id_Sociedad]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">!ISNULL(Id_Sociedad)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Get Valor Homologado\Conditional Split.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Get Valor Homologado\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Get Valor Homologado\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Get Valor Homologado\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Get Valor Homologado\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Get Valor Homologado\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Get Valor Homologado\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Get Valor Homologado\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Get Valor Homologado\Get DW Homologado"
+              componentClassID="{165A526D-D5DE-47FF-96A6-F8274C19826B}"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Get DW Homologado"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimSociedad]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Get Valor Homologado\Get DW Homologado.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[cnOLEDBSqlServerDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[cnOLEDBSqlServerDW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[Id_Sociedad]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[Id_Sociedad]"
+                      lineageId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[Id_Sociedad]"
+                      name="Id_Sociedad"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[CodigoSociedad]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[CodigoSociedad]"
+                      length="10"
+                      lineageId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[CodigoSociedad]"
+                      name="CodigoSociedad"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[DescripcionSociedad]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[DescripcionSociedad]"
+                      length="60"
+                      lineageId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[DescripcionSociedad]"
+                      name="DescripcionSociedad"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[NombreCorto]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[NombreCorto]"
+                      length="60"
+                      lineageId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[NombreCorto]"
+                      name="NombreCorto"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[Pais]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[Pais]"
+                      length="60"
+                      lineageId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[Pais]"
+                      name="Pais"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[CodigoPais]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[CodigoPais]"
+                      length="60"
+                      lineageId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[CodigoPais]"
+                      name="CodigoPais"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[Id_Sociedad]"
+                      dataType="i4"
+                      name="Id_Sociedad" />
+                    <externalMetadataColumn
+                      refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[CodigoSociedad]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="CodigoSociedad" />
+                    <externalMetadataColumn
+                      refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[DescripcionSociedad]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="DescripcionSociedad" />
+                    <externalMetadataColumn
+                      refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[NombreCorto]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="NombreCorto" />
+                    <externalMetadataColumn
+                      refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[Pais]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="Pais" />
+                    <externalMetadataColumn
+                      refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[CodigoPais]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="CodigoPais" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[Id_Sociedad]"
+                      dataType="i4"
+                      lineageId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[Id_Sociedad]"
+                      name="Id_Sociedad" />
+                    <outputColumn
+                      refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[CodigoSociedad]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[CodigoSociedad]"
+                      name="CodigoSociedad" />
+                    <outputColumn
+                      refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[DescripcionSociedad]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      lineageId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[DescripcionSociedad]"
+                      name="DescripcionSociedad" />
+                    <outputColumn
+                      refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[NombreCorto]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      lineageId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[NombreCorto]"
+                      name="NombreCorto" />
+                    <outputColumn
+                      refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[Pais]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      lineageId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[Pais]"
+                      name="Pais" />
+                    <outputColumn
+                      refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[CodigoPais]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      lineageId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[CodigoPais]"
+                      name="CodigoPais" />
+                    <outputColumn
+                      refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Get Valor Homologado\Get ST Homologado"
+              componentClassID="{165A526D-D5DE-47FF-96A6-F8274C19826B}"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Get ST Homologado"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT 
+       CodigoSociedad=[BUKRS] 
+FROM [STADWCAL].[dbo].[st_ZQEV_DBMSOCIEDAD]
+WHERE left([BUKRS],1) !='0' AND Valido ='S'</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Get Valor Homologado\Get ST Homologado.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[cnOLEDBSqlServerST]"
+                  connectionManagerRefId="Package.ConnectionManagers[cnOLEDBSqlServerST]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].Columns[CodigoSociedad]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].ExternalColumns[CodigoSociedad]"
+                      length="10"
+                      lineageId="Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].Columns[CodigoSociedad]"
+                      name="CodigoSociedad"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].ExternalColumns[CodigoSociedad]"
+                      dataType="wstr"
+                      length="10"
+                      name="CodigoSociedad" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Error Output].Columns[CodigoSociedad]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Error Output].Columns[CodigoSociedad]"
+                      name="CodigoSociedad" />
+                    <outputColumn
+                      refId="Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Get Valor Homologado\Merge Join"
+              componentClassID="{14D43A4F-D7BD-489D-829E-6DE35750CFE4}"
+              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+              name="Merge Join"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of join to perform."
+                  name="JoinType"
+                  typeConverter="JoinType">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of columns in the ordering key."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the null values are treated as equal values."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates the requested maximum buffers per input before blocking."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Get Valor Homologado\Merge Join.Inputs[Merge Join Left Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Left Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Get Valor Homologado\Merge Join.Inputs[Merge Join Left Input].Columns[CodigoSociedad]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="CodigoSociedad"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Get Valor Homologado\Sort ST.Outputs[Sort Output].Columns[CodigoSociedad]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Get Valor Homologado\Merge Join.Inputs[Merge Join Right Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Right Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Get Valor Homologado\Merge Join.Inputs[Merge Join Right Input].Columns[CodigoSociedad]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="CodigoSociedad"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Get Valor Homologado\Sort DW.Outputs[Sort Output].Columns[CodigoSociedad]" />
+                    <inputColumn
+                      refId="Package\Get Valor Homologado\Merge Join.Inputs[Merge Join Right Input].Columns[Id_Sociedad]"
+                      cachedDataType="i4"
+                      cachedName="Id_Sociedad"
+                      lineageId="Package\Get Valor Homologado\Sort DW.Outputs[Sort Output].Columns[Id_Sociedad]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Get Valor Homologado\Merge Join.Outputs[Merge Join Output]"
+                  isSorted="true"
+                  name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Get Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[CodigoSociedad]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Get Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[CodigoSociedad]"
+                      name="CodigoSociedad"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Get Valor Homologado\Merge Join.Inputs[Merge Join Left Input].Columns[CodigoSociedad]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[Id_Sociedad]"
+                      dataType="i4"
+                      lineageId="Package\Get Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[Id_Sociedad]"
+                      name="Id_Sociedad">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Get Valor Homologado\Merge Join.Inputs[Merge Join Right Input].Columns[Id_Sociedad]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Get Valor Homologado\Set Id Homologado"
+              componentClassID="{93FFEC66-CBC8-4C7F-9C6A-CB1C17A7567D}"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="Set Id Homologado"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [dbo].[st_ZQEV_DBMSOCIEDAD]
+   SET 
+       [Id_DW] = ?
+ WHERE [BUKRS] = ? </property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Get Valor Homologado\Set Id Homologado.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[cnOLEDBSqlServerST]"
+                  connectionManagerRefId="Package.ConnectionManagers[cnOLEDBSqlServerST]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Get Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Get Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input].Columns[Id_Sociedad]"
+                      cachedDataType="i4"
+                      cachedName="Id_Sociedad"
+                      externalMetadataColumnId="Package\Get Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Get Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[Id_Sociedad]" />
+                    <inputColumn
+                      refId="Package\Get Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input].Columns[CodigoSociedad]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="CodigoSociedad"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Get Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Get Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[CodigoSociedad]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Get Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="i4"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Get Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="wstr"
+                      length="10"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Get Valor Homologado\Set Id Homologado.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Get Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Get Valor Homologado\Set Id Homologado.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Get Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Get Valor Homologado\Set Id Homologado.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Get Valor Homologado\Set Id Homologado.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Get Valor Homologado\Set Id Homologado.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Get Valor Homologado\Set Id Homologado.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Get Valor Homologado\Sort DW"
+              componentClassID="{5B1A3FF5-D366-4D75-AD1F-F19A36FCBEDB}"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort DW"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Get Valor Homologado\Sort DW.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Get Valor Homologado\Sort DW.Inputs[Sort Input].Columns[Id_Sociedad]"
+                      cachedDataType="i4"
+                      cachedName="Id_Sociedad"
+                      lineageId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[Id_Sociedad]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Get Valor Homologado\Sort DW.Inputs[Sort Input].Columns[CodigoSociedad]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="CodigoSociedad"
+                      lineageId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[CodigoSociedad]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Get Valor Homologado\Sort DW.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Get Valor Homologado\Sort DW.Outputs[Sort Output].Columns[Id_Sociedad]"
+                      dataType="i4"
+                      lineageId="Package\Get Valor Homologado\Sort DW.Outputs[Sort Output].Columns[Id_Sociedad]"
+                      name="Id_Sociedad">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[Id_Sociedad]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Valor Homologado\Sort DW.Outputs[Sort Output].Columns[CodigoSociedad]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Get Valor Homologado\Sort DW.Outputs[Sort Output].Columns[CodigoSociedad]"
+                      name="CodigoSociedad"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[CodigoSociedad]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Get Valor Homologado\Sort ST"
+              componentClassID="{5B1A3FF5-D366-4D75-AD1F-F19A36FCBEDB}"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort ST"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Get Valor Homologado\Sort ST.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Get Valor Homologado\Sort ST.Inputs[Sort Input].Columns[CodigoSociedad]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="CodigoSociedad"
+                      lineageId="Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].Columns[CodigoSociedad]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Get Valor Homologado\Sort ST.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Get Valor Homologado\Sort ST.Outputs[Sort Output].Columns[CodigoSociedad]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Get Valor Homologado\Sort ST.Outputs[Sort Output].Columns[CodigoSociedad]"
+                      name="CodigoSociedad"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].Columns[CodigoSociedad]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Get Valor Homologado.Paths[Merge Join Output]"
+              endId="Package\Get Valor Homologado\Conditional Split.Inputs[Conditional Split Input]"
+              name="Merge Join Output"
+              startId="Package\Get Valor Homologado\Merge Join.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\Get Valor Homologado.Paths[OLE DB Source Output]"
+              endId="Package\Get Valor Homologado\Sort ST.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Get Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Get Valor Homologado.Paths[OLE DB Source Output1]"
+              endId="Package\Get Valor Homologado\Sort DW.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Get Valor Homologado.Paths[Sort Output]"
+              endId="Package\Get Valor Homologado\Merge Join.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Get Valor Homologado\Sort ST.Outputs[Sort Output]" />
+            <path
+              refId="Package\Get Valor Homologado.Paths[Sort Output1]"
+              endId="Package\Get Valor Homologado\Merge Join.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\Get Valor Homologado\Sort DW.Outputs[Sort Output]" />
+            <path
+              refId="Package\Get Valor Homologado.Paths[Value DW]"
+              endId="Package\Get Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input]"
+              name="Value DW"
+              startId="Package\Get Valor Homologado\Conditional Split.Outputs[Value DW]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Insertar Nuevos Valores DW"
+      DTS:CreationName="SSIS.Pipeline.3"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{3A326280-2816-4575-B4D4-2C33D96063EF}"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Insertar Nuevos Valores DW"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Insertar Nuevos Valores DW\Data Conversion"
+              componentClassID="{62B1106C-7DB8-4EC8-ADD6-4C664DFFC54A}"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Insertar Nuevos Valores DW\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Data Conversion.Inputs[Data Conversion Input].Columns[CodigoSociedad]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="CodigoSociedad"
+                      lineageId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[CodigoSociedad]" />
+                    <inputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Data Conversion.Inputs[Data Conversion Input].Columns[Descripcion]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Descripcion"
+                      lineageId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[Descripcion]" />
+                    <inputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Data Conversion.Inputs[Data Conversion Input].Columns[NombreCorto]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="NombreCorto"
+                      lineageId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[NombreCorto]" />
+                    <inputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Data Conversion.Inputs[Data Conversion Input].Columns[Pais]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Pais"
+                      lineageId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[Pais]" />
+                    <inputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Data Conversion.Inputs[Data Conversion Input].Columns[CodigoPais]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="CodigoPais"
+                      lineageId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[CodigoPais]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Insertar Nuevos Valores DW\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Insertar Nuevos Valores DW\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Data Conversion.Outputs[Data Conversion Output].Columns[CCodigoSociedad]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Insertar Nuevos Valores DW\Data Conversion.Outputs[Data Conversion Output].Columns[CCodigoSociedad]"
+                      name="CCodigoSociedad"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[CodigoSociedad]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Data Conversion.Outputs[Data Conversion Output].Columns[CDescripcion]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Insertar Nuevos Valores DW\Data Conversion.Outputs[Data Conversion Output].Columns[CDescripcion]"
+                      name="CDescripcion"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[Descripcion]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Data Conversion.Outputs[Data Conversion Output].Columns[CNombreCorto]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Insertar Nuevos Valores DW\Data Conversion.Outputs[Data Conversion Output].Columns[CNombreCorto]"
+                      name="CNombreCorto"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[NombreCorto]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Data Conversion.Outputs[Data Conversion Output].Columns[CPais]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Insertar Nuevos Valores DW\Data Conversion.Outputs[Data Conversion Output].Columns[CPais]"
+                      name="CPais"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[Pais]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Data Conversion.Outputs[Data Conversion Output].Columns[CCodigoPais]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Insertar Nuevos Valores DW\Data Conversion.Outputs[Data Conversion Output].Columns[CCodigoPais]"
+                      name="CCodigoPais"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[CodigoPais]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Insertar Nuevos Valores DW\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Insertar Nuevos Valores DW\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Insertar Nuevos Valores DW\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Insertar Nuevos Valores DW\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Insertar Nuevos Valores DW\Destination DW"
+              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Destination DW"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimSociedad]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Insertar Nuevos Valores DW\Destination DW.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[cnOLEDBSqlServerDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[cnOLEDBSqlServerDW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Insertar Nuevos Valores DW\Destination DW.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Destination DW.Inputs[OLE DB Destination Input].Columns[CCodigoSociedad]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="CCodigoSociedad"
+                      externalMetadataColumnId="Package\Insertar Nuevos Valores DW\Destination DW.Inputs[OLE DB Destination Input].ExternalColumns[CodigoSociedad]"
+                      lineageId="Package\Insertar Nuevos Valores DW\Data Conversion.Outputs[Data Conversion Output].Columns[CCodigoSociedad]" />
+                    <inputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Destination DW.Inputs[OLE DB Destination Input].Columns[CDescripcion]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CDescripcion"
+                      externalMetadataColumnId="Package\Insertar Nuevos Valores DW\Destination DW.Inputs[OLE DB Destination Input].ExternalColumns[DescripcionSociedad]"
+                      lineageId="Package\Insertar Nuevos Valores DW\Data Conversion.Outputs[Data Conversion Output].Columns[CDescripcion]" />
+                    <inputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Destination DW.Inputs[OLE DB Destination Input].Columns[CNombreCorto]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CNombreCorto"
+                      externalMetadataColumnId="Package\Insertar Nuevos Valores DW\Destination DW.Inputs[OLE DB Destination Input].ExternalColumns[NombreCorto]"
+                      lineageId="Package\Insertar Nuevos Valores DW\Data Conversion.Outputs[Data Conversion Output].Columns[CNombreCorto]" />
+                    <inputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Destination DW.Inputs[OLE DB Destination Input].Columns[CPais]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CPais"
+                      externalMetadataColumnId="Package\Insertar Nuevos Valores DW\Destination DW.Inputs[OLE DB Destination Input].ExternalColumns[Pais]"
+                      lineageId="Package\Insertar Nuevos Valores DW\Data Conversion.Outputs[Data Conversion Output].Columns[CPais]" />
+                    <inputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Destination DW.Inputs[OLE DB Destination Input].Columns[CCodigoPais]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="CCodigoPais"
+                      externalMetadataColumnId="Package\Insertar Nuevos Valores DW\Destination DW.Inputs[OLE DB Destination Input].ExternalColumns[CodigoPais]"
+                      lineageId="Package\Insertar Nuevos Valores DW\Data Conversion.Outputs[Data Conversion Output].Columns[CCodigoPais]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Insertar Nuevos Valores DW\Destination DW.Inputs[OLE DB Destination Input].ExternalColumns[Id_Sociedad]"
+                      dataType="i4"
+                      name="Id_Sociedad" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Nuevos Valores DW\Destination DW.Inputs[OLE DB Destination Input].ExternalColumns[CodigoSociedad]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="CodigoSociedad" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Nuevos Valores DW\Destination DW.Inputs[OLE DB Destination Input].ExternalColumns[DescripcionSociedad]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="DescripcionSociedad" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Nuevos Valores DW\Destination DW.Inputs[OLE DB Destination Input].ExternalColumns[NombreCorto]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="NombreCorto" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Nuevos Valores DW\Destination DW.Inputs[OLE DB Destination Input].ExternalColumns[Pais]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="Pais" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Nuevos Valores DW\Destination DW.Inputs[OLE DB Destination Input].ExternalColumns[CodigoPais]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="CodigoPais" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Insertar Nuevos Valores DW\Destination DW.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Insertar Nuevos Valores DW\Destination DW.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Destination DW.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Insertar Nuevos Valores DW\Destination DW.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Destination DW.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Insertar Nuevos Valores DW\Destination DW.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Insertar Nuevos Valores DW\Source ST"
+              componentClassID="{165A526D-D5DE-47FF-96A6-F8274C19826B}"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Source ST"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT 
+       CodigoSociedad=[BUKRS]
+      ,Descripcion=[BUTXT]
+      ,NombreCorto=[NOMBREC]
+      ,Pais=[ORT01]
+      ,CodigoPais=[LAND1]   
+FROM [STADWCAL].[dbo].[st_ZQEV_DBMSOCIEDAD]
+WHERE left([BUKRS],1) !='0' AND Valido ='S' And
+      id_dw is null</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Insertar Nuevos Valores DW\Source ST.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[cnOLEDBSqlServerST]"
+                  connectionManagerRefId="Package.ConnectionManagers[cnOLEDBSqlServerST]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[CodigoSociedad]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].ExternalColumns[CodigoSociedad]"
+                      length="10"
+                      lineageId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[CodigoSociedad]"
+                      name="CodigoSociedad"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[Descripcion]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].ExternalColumns[Descripcion]"
+                      length="50"
+                      lineageId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[Descripcion]"
+                      name="Descripcion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[NombreCorto]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].ExternalColumns[NombreCorto]"
+                      length="50"
+                      lineageId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[NombreCorto]"
+                      name="NombreCorto"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[Pais]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].ExternalColumns[Pais]"
+                      length="50"
+                      lineageId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[Pais]"
+                      name="Pais"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[CodigoPais]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].ExternalColumns[CodigoPais]"
+                      length="10"
+                      lineageId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[CodigoPais]"
+                      name="CodigoPais"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].ExternalColumns[CodigoSociedad]"
+                      dataType="wstr"
+                      length="10"
+                      name="CodigoSociedad" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].ExternalColumns[Descripcion]"
+                      dataType="wstr"
+                      length="50"
+                      name="Descripcion" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].ExternalColumns[NombreCorto]"
+                      dataType="wstr"
+                      length="50"
+                      name="NombreCorto" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].ExternalColumns[Pais]"
+                      dataType="wstr"
+                      length="50"
+                      name="Pais" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].ExternalColumns[CodigoPais]"
+                      dataType="wstr"
+                      length="10"
+                      name="CodigoPais" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Error Output].Columns[CodigoSociedad]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Error Output].Columns[CodigoSociedad]"
+                      name="CodigoSociedad" />
+                    <outputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Error Output].Columns[Descripcion]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Error Output].Columns[Descripcion]"
+                      name="Descripcion" />
+                    <outputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Error Output].Columns[NombreCorto]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Error Output].Columns[NombreCorto]"
+                      name="NombreCorto" />
+                    <outputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Error Output].Columns[Pais]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Error Output].Columns[Pais]"
+                      name="Pais" />
+                    <outputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Error Output].Columns[CodigoPais]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Error Output].Columns[CodigoPais]"
+                      name="CodigoPais" />
+                    <outputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Insertar Nuevos Valores DW.Paths[Data Conversion Output]"
+              endId="Package\Insertar Nuevos Valores DW\Destination DW.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Insertar Nuevos Valores DW\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Insertar Nuevos Valores DW.Paths[OLE DB Source Output]"
+              endId="Package\Insertar Nuevos Valores DW\Data Conversion.Inputs[Data Conversion Input]"
+              name="OLE DB Source Output"
+              startId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update Valor Homologado"
+      DTS:CreationName="SSIS.Pipeline.3"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{9c9fb305-13ff-4644-97d9-ecd4495fe650}"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Valor Homologado"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Update Valor Homologado\Conditional Split"
+              componentClassID="{7F88F654-4E20-4D14-84F4-AF9C925D3087}"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Update Valor Homologado\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Update Valor Homologado\Conditional Split.Inputs[Conditional Split Input].Columns[Id_Sociedad]"
+                      cachedDataType="i4"
+                      cachedName="Id_Sociedad"
+                      lineageId="Package\Update Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[Id_Sociedad]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Update Valor Homologado\Conditional Split.Outputs[Value DW]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Value DW"
+                  synchronousInputId="Package\Update Valor Homologado\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">![ISNULL](#{Package\Update Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[Id_Sociedad]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">!ISNULL(Id_Sociedad)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Update Valor Homologado\Conditional Split.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Update Valor Homologado\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Update Valor Homologado\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Update Valor Homologado\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update Valor Homologado\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Update Valor Homologado\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Update Valor Homologado\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Update Valor Homologado\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Update Valor Homologado\Get DW Homologado"
+              componentClassID="{165A526D-D5DE-47FF-96A6-F8274C19826B}"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Get DW Homologado"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimSociedad]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Update Valor Homologado\Get DW Homologado.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[cnOLEDBSqlServerDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[cnOLEDBSqlServerDW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[Id_Sociedad]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[Id_Sociedad]"
+                      lineageId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[Id_Sociedad]"
+                      name="Id_Sociedad"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[CodigoSociedad]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[CodigoSociedad]"
+                      length="10"
+                      lineageId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[CodigoSociedad]"
+                      name="CodigoSociedad"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[DescripcionSociedad]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[DescripcionSociedad]"
+                      length="60"
+                      lineageId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[DescripcionSociedad]"
+                      name="DescripcionSociedad"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[NombreCorto]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[NombreCorto]"
+                      length="60"
+                      lineageId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[NombreCorto]"
+                      name="NombreCorto"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[Pais]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[Pais]"
+                      length="60"
+                      lineageId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[Pais]"
+                      name="Pais"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[CodigoPais]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[CodigoPais]"
+                      length="60"
+                      lineageId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[CodigoPais]"
+                      name="CodigoPais"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[Id_Sociedad]"
+                      dataType="i4"
+                      name="Id_Sociedad" />
+                    <externalMetadataColumn
+                      refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[CodigoSociedad]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="CodigoSociedad" />
+                    <externalMetadataColumn
+                      refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[DescripcionSociedad]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="DescripcionSociedad" />
+                    <externalMetadataColumn
+                      refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[NombreCorto]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="NombreCorto" />
+                    <externalMetadataColumn
+                      refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[Pais]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="Pais" />
+                    <externalMetadataColumn
+                      refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[CodigoPais]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="CodigoPais" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[Id_Sociedad]"
+                      dataType="i4"
+                      lineageId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[Id_Sociedad]"
+                      name="Id_Sociedad" />
+                    <outputColumn
+                      refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[CodigoSociedad]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[CodigoSociedad]"
+                      name="CodigoSociedad" />
+                    <outputColumn
+                      refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[DescripcionSociedad]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      lineageId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[DescripcionSociedad]"
+                      name="DescripcionSociedad" />
+                    <outputColumn
+                      refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[NombreCorto]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      lineageId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[NombreCorto]"
+                      name="NombreCorto" />
+                    <outputColumn
+                      refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[Pais]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      lineageId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[Pais]"
+                      name="Pais" />
+                    <outputColumn
+                      refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[CodigoPais]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      lineageId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[CodigoPais]"
+                      name="CodigoPais" />
+                    <outputColumn
+                      refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Update Valor Homologado\Get ST Homologado"
+              componentClassID="{165A526D-D5DE-47FF-96A6-F8274C19826B}"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Get ST Homologado"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT 
+       CodigoSociedad=[BUKRS] 
+FROM [STADWCAL].[dbo].[st_ZQEV_DBMSOCIEDAD]
+WHERE left([BUKRS],1) !='0' AND Valido ='S'  And
+      id_dw is null</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Update Valor Homologado\Get ST Homologado.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[cnOLEDBSqlServerST]"
+                  connectionManagerRefId="Package.ConnectionManagers[cnOLEDBSqlServerST]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].Columns[CodigoSociedad]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].ExternalColumns[CodigoSociedad]"
+                      length="10"
+                      lineageId="Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].Columns[CodigoSociedad]"
+                      name="CodigoSociedad"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].ExternalColumns[CodigoSociedad]"
+                      dataType="wstr"
+                      length="10"
+                      name="CodigoSociedad" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Error Output].Columns[CodigoSociedad]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Error Output].Columns[CodigoSociedad]"
+                      name="CodigoSociedad" />
+                    <outputColumn
+                      refId="Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Update Valor Homologado\Merge Join"
+              componentClassID="{14D43A4F-D7BD-489D-829E-6DE35750CFE4}"
+              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+              name="Merge Join"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of join to perform."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of columns in the ordering key."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the null values are treated as equal values."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates the requested maximum buffers per input before blocking."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Update Valor Homologado\Merge Join.Inputs[Merge Join Left Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Left Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Update Valor Homologado\Merge Join.Inputs[Merge Join Left Input].Columns[CodigoSociedad]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="CodigoSociedad"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Update Valor Homologado\Sort ST.Outputs[Sort Output].Columns[CodigoSociedad]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Update Valor Homologado\Merge Join.Inputs[Merge Join Right Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Right Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Update Valor Homologado\Merge Join.Inputs[Merge Join Right Input].Columns[CodigoSociedad]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="CodigoSociedad"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Update Valor Homologado\Sort DW.Outputs[Sort Output].Columns[CodigoSociedad]" />
+                    <inputColumn
+                      refId="Package\Update Valor Homologado\Merge Join.Inputs[Merge Join Right Input].Columns[Id_Sociedad]"
+                      cachedDataType="i4"
+                      cachedName="Id_Sociedad"
+                      lineageId="Package\Update Valor Homologado\Sort DW.Outputs[Sort Output].Columns[Id_Sociedad]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Update Valor Homologado\Merge Join.Outputs[Merge Join Output]"
+                  isSorted="true"
+                  name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[CodigoSociedad]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Update Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[CodigoSociedad]"
+                      name="CodigoSociedad"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Update Valor Homologado\Merge Join.Inputs[Merge Join Left Input].Columns[CodigoSociedad]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[Id_Sociedad]"
+                      dataType="i4"
+                      lineageId="Package\Update Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[Id_Sociedad]"
+                      name="Id_Sociedad">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Update Valor Homologado\Merge Join.Inputs[Merge Join Right Input].Columns[Id_Sociedad]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Update Valor Homologado\Set Id Homologado"
+              componentClassID="{93FFEC66-CBC8-4C7F-9C6A-CB1C17A7567D}"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="Set Id Homologado"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [dbo].[st_ZQEV_DBMSOCIEDAD]
+   SET 
+       [Id_DW] = ?
+ WHERE [BUKRS] = ? </property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Update Valor Homologado\Set Id Homologado.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[cnOLEDBSqlServerST]"
+                  connectionManagerRefId="Package.ConnectionManagers[cnOLEDBSqlServerST]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Update Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Update Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input].Columns[Id_Sociedad]"
+                      cachedDataType="i4"
+                      cachedName="Id_Sociedad"
+                      externalMetadataColumnId="Package\Update Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Update Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[Id_Sociedad]" />
+                    <inputColumn
+                      refId="Package\Update Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input].Columns[CodigoSociedad]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="CodigoSociedad"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Update Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Update Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[CodigoSociedad]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Update Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="i4"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Update Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="wstr"
+                      length="10"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Update Valor Homologado\Set Id Homologado.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Update Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Update Valor Homologado\Set Id Homologado.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Update Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update Valor Homologado\Set Id Homologado.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Update Valor Homologado\Set Id Homologado.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Update Valor Homologado\Set Id Homologado.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Update Valor Homologado\Set Id Homologado.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Update Valor Homologado\Sort DW"
+              componentClassID="{5B1A3FF5-D366-4D75-AD1F-F19A36FCBEDB}"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort DW"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Update Valor Homologado\Sort DW.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Update Valor Homologado\Sort DW.Inputs[Sort Input].Columns[Id_Sociedad]"
+                      cachedDataType="i4"
+                      cachedName="Id_Sociedad"
+                      lineageId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[Id_Sociedad]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Update Valor Homologado\Sort DW.Inputs[Sort Input].Columns[CodigoSociedad]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="CodigoSociedad"
+                      lineageId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[CodigoSociedad]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Update Valor Homologado\Sort DW.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update Valor Homologado\Sort DW.Outputs[Sort Output].Columns[Id_Sociedad]"
+                      dataType="i4"
+                      lineageId="Package\Update Valor Homologado\Sort DW.Outputs[Sort Output].Columns[Id_Sociedad]"
+                      name="Id_Sociedad">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[Id_Sociedad]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update Valor Homologado\Sort DW.Outputs[Sort Output].Columns[CodigoSociedad]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Update Valor Homologado\Sort DW.Outputs[Sort Output].Columns[CodigoSociedad]"
+                      name="CodigoSociedad"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].Columns[CodigoSociedad]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Update Valor Homologado\Sort ST"
+              componentClassID="{5B1A3FF5-D366-4D75-AD1F-F19A36FCBEDB}"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort ST"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Update Valor Homologado\Sort ST.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Update Valor Homologado\Sort ST.Inputs[Sort Input].Columns[CodigoSociedad]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="CodigoSociedad"
+                      lineageId="Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].Columns[CodigoSociedad]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Update Valor Homologado\Sort ST.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update Valor Homologado\Sort ST.Outputs[Sort Output].Columns[CodigoSociedad]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Update Valor Homologado\Sort ST.Outputs[Sort Output].Columns[CodigoSociedad]"
+                      name="CodigoSociedad"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output].Columns[CodigoSociedad]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Update Valor Homologado.Paths[Merge Join Output]"
+              endId="Package\Update Valor Homologado\Conditional Split.Inputs[Conditional Split Input]"
+              name="Merge Join Output"
+              startId="Package\Update Valor Homologado\Merge Join.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\Update Valor Homologado.Paths[OLE DB Source Output]"
+              endId="Package\Update Valor Homologado\Sort ST.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Update Valor Homologado\Get ST Homologado.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Update Valor Homologado.Paths[OLE DB Source Output1]"
+              endId="Package\Update Valor Homologado\Sort DW.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Update Valor Homologado.Paths[Sort Output]"
+              endId="Package\Update Valor Homologado\Merge Join.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Update Valor Homologado\Sort ST.Outputs[Sort Output]" />
+            <path
+              refId="Package\Update Valor Homologado.Paths[Sort Output1]"
+              endId="Package\Update Valor Homologado\Merge Join.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\Update Valor Homologado\Sort DW.Outputs[Sort Output]" />
+            <path
+              refId="Package\Update Valor Homologado.Paths[Value DW]"
+              endId="Package\Update Valor Homologado\Set Id Homologado.Inputs[OLE DB Command Input]"
+              name="Value DW"
+              startId="Package\Update Valor Homologado\Conditional Split.Outputs[Value DW]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{7F6CDF19-589C-4409-ADC6-5DF7749B1EC9}"
+      DTS:From="Package\Get Valor Homologado"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Insertar Nuevos Valores DW" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{C4D5145C-9FB8-4214-BB67-DF7723EC73F9}"
+      DTS:From="Package\Insertar Nuevos Valores DW"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Update Valor Homologado" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Get Valor Homologado"
+          TopLeft="19,5.5" />
+        <NodeLayout
+          Size="212,42"
+          Id="Package\Insertar Nuevos Valores DW"
+          TopLeft="5.50000000000003,107.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="111.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="204,42"
+          Id="Package\Update Valor Homologado"
+          TopLeft="9.50000000000003,209.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="111.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Get Valor Homologado">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="178,42"
+          Id="Package\Get Valor Homologado\Get DW Homologado"
+          TopLeft="5.5,5.5" />
+        <NodeLayout
+          Size="118,42"
+          Id="Package\Get Valor Homologado\Sort DW"
+          TopLeft="94.5,107.5" />
+        <NodeLayout
+          Size="114,42"
+          Id="Package\Get Valor Homologado\Sort ST"
+          TopLeft="273.5,107.5" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Get Valor Homologado\Set Id Homologado"
+          TopLeft="245.5,413.5" />
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Get Valor Homologado\Conditional Split"
+          TopLeft="253,311.5" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Get Valor Homologado\Get ST Homologado"
+          TopLeft="244,5.5" />
+        <EdgeLayout
+          Id="Package\Get Valor Homologado.Paths[OLE DB Source Output1]"
+          TopLeft="94.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="59,60"
+              Start="0,0"
+              End="59,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="4,30" />
+                  <mssgle:LineSegment
+                    End="55,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="55,30"
+                    Point2="59,30"
+                    Point3="59,34" />
+                  <mssgle:LineSegment
+                    End="59,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Get Valor Homologado.Paths[OLE DB Source Output]"
+          TopLeft="330.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Get Valor Homologado.Paths[Value DW]"
+          TopLeft="330.5,353.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-22.59533203125,21.37548828125,45.1906640625,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="132,42"
+          Id="Package\Get Valor Homologado\Merge Join"
+          TopLeft="234,199" />
+        <EdgeLayout
+          Id="Package\Get Valor Homologado.Paths[Sort Output]"
+          TopLeft="330.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-9.83333333333337,49.5"
+              Start="0,0"
+              End="-9.83333333333337,42">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.3443113772455" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.3443113772455"
+                    Point2="0,29.3443113772455"
+                    Point3="-4,29.3443113772455" />
+                  <mssgle:LineSegment
+                    End="-5.83333333333337,29.3443113772455" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-5.83333333333337,29.3443113772455"
+                    Point2="-9.83333333333337,29.3443113772455"
+                    Point3="-9.83333333333337,33.3443113772455" />
+                  <mssgle:LineSegment
+                    End="-9.83333333333337,42" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Get Valor Homologado.Paths[Sort Output1]"
+          TopLeft="153.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="125.833333333333,49.5"
+              Start="0,0"
+              End="125.833333333333,42">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.3443113772455" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.3443113772455"
+                    Point2="0,29.3443113772455"
+                    Point3="4,29.3443113772455" />
+                  <mssgle:LineSegment
+                    End="121.833333333333,29.3443113772455" />
+                  <mssgle:CubicBezierSegment
+                    Point1="121.833333333333,29.3443113772455"
+                    Point2="125.833333333333,29.3443113772455"
+                    Point3="125.833333333333,33.3443113772455" />
+                  <mssgle:LineSegment
+                    End="125.833333333333,42" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Get Valor Homologado.Paths[Merge Join Output]"
+          TopLeft="300,241">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="30.5,70.5"
+              Start="0,0"
+              End="30.5,63">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.25"
+                    Point2="0,35.25"
+                    Point3="4,35.25" />
+                  <mssgle:LineSegment
+                    End="26.5,35.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="26.5,35.25"
+                    Point2="30.5,35.25"
+                    Point3="30.5,39.25" />
+                  <mssgle:LineSegment
+                    End="30.5,63" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Get Valor Homologado\Get DW Homologado">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Get Valor Homologado\Get ST Homologado">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Insertar Nuevos Valores DW">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Insertar Nuevos Valores DW\Destination DW"
+          TopLeft="7.50000000000003,209.5" />
+        <NodeLayout
+          Size="127,42"
+          Id="Package\Insertar Nuevos Valores DW\Source ST"
+          TopLeft="21,5.5" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Insertar Nuevos Valores DW\Data Conversion"
+          TopLeft="5.50000000000003,107.5" />
+        <EdgeLayout
+          Id="Package\Insertar Nuevos Valores DW.Paths[OLE DB Source Output]"
+          TopLeft="84.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Insertar Nuevos Valores DW.Paths[Data Conversion Output]"
+          TopLeft="84.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Insertar Nuevos Valores DW\Destination DW">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Insertar Nuevos Valores DW\Source ST">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Update Valor Homologado">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="178,42"
+          Id="Package\Update Valor Homologado\Get DW Homologado"
+          TopLeft="5.5,5.5" />
+        <NodeLayout
+          Size="118,42"
+          Id="Package\Update Valor Homologado\Sort DW"
+          TopLeft="94.5,107.5" />
+        <NodeLayout
+          Size="114,42"
+          Id="Package\Update Valor Homologado\Sort ST"
+          TopLeft="273.5,107.5" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Update Valor Homologado\Set Id Homologado"
+          TopLeft="245.5,413.5" />
+        <NodeLayout
+          Size="132,42"
+          Id="Package\Update Valor Homologado\Merge Join"
+          TopLeft="234,199" />
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Update Valor Homologado\Conditional Split"
+          TopLeft="253,311.5" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Update Valor Homologado\Get ST Homologado"
+          TopLeft="244,5.5" />
+        <EdgeLayout
+          Id="Package\Update Valor Homologado.Paths[Sort Output1]"
+          TopLeft="153.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="125.833333333333,49.5"
+              Start="0,0"
+              End="125.833333333333,42">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.3443113772455" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.3443113772455"
+                    Point2="0,29.3443113772455"
+                    Point3="4,29.3443113772455" />
+                  <mssgle:LineSegment
+                    End="121.833333333333,29.3443113772455" />
+                  <mssgle:CubicBezierSegment
+                    Point1="121.833333333333,29.3443113772455"
+                    Point2="125.833333333333,29.3443113772455"
+                    Point3="125.833333333333,33.3443113772455" />
+                  <mssgle:LineSegment
+                    End="125.833333333333,42" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update Valor Homologado.Paths[OLE DB Source Output1]"
+          TopLeft="94.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="59,60"
+              Start="0,0"
+              End="59,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="4,30" />
+                  <mssgle:LineSegment
+                    End="55,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="55,30"
+                    Point2="59,30"
+                    Point3="59,34" />
+                  <mssgle:LineSegment
+                    End="59,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update Valor Homologado.Paths[OLE DB Source Output]"
+          TopLeft="330.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update Valor Homologado.Paths[Merge Join Output]"
+          TopLeft="300,241">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="30.5,70.5"
+              Start="0,0"
+              End="30.5,63">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.25"
+                    Point2="0,35.25"
+                    Point3="4,35.25" />
+                  <mssgle:LineSegment
+                    End="26.5,35.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="26.5,35.25"
+                    Point2="30.5,35.25"
+                    Point3="30.5,39.25" />
+                  <mssgle:LineSegment
+                    End="30.5,63" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update Valor Homologado.Paths[Sort Output]"
+          TopLeft="330.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-9.83333333333337,49.5"
+              Start="0,0"
+              End="-9.83333333333337,42">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.3443113772455" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.3443113772455"
+                    Point2="0,29.3443113772455"
+                    Point3="-4,29.3443113772455" />
+                  <mssgle:LineSegment
+                    End="-5.83333333333337,29.3443113772455" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-5.83333333333337,29.3443113772455"
+                    Point2="-9.83333333333337,29.3443113772455"
+                    Point3="-9.83333333333337,33.3443113772455" />
+                  <mssgle:LineSegment
+                    End="-9.83333333333337,42" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update Valor Homologado.Paths[Value DW]"
+          TopLeft="330.5,353.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-22.59533203125,21.37548828125,45.1906640625,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Update Valor Homologado\Get ST Homologado">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

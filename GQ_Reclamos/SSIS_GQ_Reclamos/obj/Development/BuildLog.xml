@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>SSIS_GQ_Reclamos</Name>
-    <LastWriteTime>2014-05-22T21:56:17.6587515Z</LastWriteTime>
+    <LastWriteTime>2014-05-23T21:15:01.5955551Z</LastWriteTime>
     <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -83,7 +83,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Dim_DetalleTipoSituacionReclamo.dtsx</Name>
-      <LastWriteTime>2014-05-23T16:19:38.3193624Z</LastWriteTime>
+      <LastWriteTime>2014-05-23T16:25:52.302757Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -99,6 +99,21 @@
     <ProjectBuildItemInfo>
       <Name>st_Orquestador.dtsx</Name>
       <LastWriteTime>2014-05-22T21:39:31.4711428Z</LastWriteTime>
+      <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Dim_TransaccionOrigen.dtsx</Name>
+      <LastWriteTime>2014-05-23T16:52:52.0337139Z</LastWriteTime>
+      <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Dim_Sociedades.dtsx</Name>
+      <LastWriteTime>2014-05-23T20:19:57.6001886Z</LastWriteTime>
+      <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Dim_Sucursal.dtsx</Name>
+      <LastWriteTime>2014-05-23T21:16:25.7769724Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
