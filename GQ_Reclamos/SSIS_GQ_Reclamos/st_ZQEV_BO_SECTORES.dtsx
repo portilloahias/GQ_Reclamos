@@ -12,8 +12,8 @@
   DTS:ObjectName="st_ZQEV_BO_SECTORES"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{7CD31C74-E506-439D-990C-1F2FB2F1DEB6}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{64BEA721-4C6E-4498-90C2-8B11D7FD332B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -82,6 +82,88 @@
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\Load SAP\Derived Column"
+              componentClassID="{49928E82-9C4E-49F0-AABE-3812B82707EC}"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load SAP\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load SAP\Derived Column.Inputs[Derived Column Input].Columns[SPART]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="SPART"
+                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[SPART]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load SAP\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Load SAP\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load SAP\Derived Column.Outputs[Derived Column Output].Columns[SPART_Homologado]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Load SAP\Derived Column.Outputs[Derived Column Output].Columns[SPART_Homologado]"
+                      name="SPART_Homologado"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_WSTR,10)([LEN]([TRIM](#{Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[SPART]})) &gt; 0 ? "000" + #{Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[SPART]} : #{Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[SPART]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,10)(LEN(TRIM(SPART)) &gt; 0 ? "000" + SPART : SPART)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load SAP\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Load SAP\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load SAP\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load SAP\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load SAP\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load SAP\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\Load SAP\GetSapConnection"
               componentClassID="{874F7595-FB5F-40FF-96AF-FBFF8250E3EF}"
@@ -344,13 +426,6 @@ from ZQEV_BO_SECTORES</property>
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].Columns[SPART]"
-                      cachedDataType="wstr"
-                      cachedLength="2"
-                      cachedName="SPART"
-                      externalMetadataColumnId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[spart]"
-                      lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[SPART]" />
-                    <inputColumn
                       refId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].Columns[MATKL]"
                       cachedDataType="wstr"
                       cachedLength="9"
@@ -378,6 +453,13 @@ from ZQEV_BO_SECTORES</property>
                       cachedName="SECTOR_FINA"
                       externalMetadataColumnId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[sector_fina]"
                       lineageId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output].Columns[SECTOR_FINA]" />
+                    <inputColumn
+                      refId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].Columns[SPART_Homologado]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="SPART_Homologado"
+                      externalMetadataColumnId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[spart]"
+                      lineageId="Package\Load SAP\Derived Column.Outputs[Derived Column Output].Columns[SPART_Homologado]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -442,9 +524,14 @@ from ZQEV_BO_SECTORES</property>
           <paths>
             <path
               refId="Package\Load SAP.Paths[ADO NET Source Output]"
-              endId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input]"
+              endId="Package\Load SAP\Derived Column.Inputs[Derived Column Input]"
               name="ADO NET Source Output"
               startId="Package\Load SAP\GetSapConnection.Outputs[ADO NET Source Output]" />
+            <path
+              refId="Package\Load SAP.Paths[Derived Column Output]"
+              endId="Package\Load SAP\SqlDestination.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Load SAP\Derived Column.Outputs[Derived Column Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -473,13 +560,13 @@ from ZQEV_BO_SECTORES</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="125,42"
-          Id="Package\Load SAP"
-          TopLeft="6.50000000000001,107.5" />
-        <NodeLayout
           Size="127,42"
           Id="Package\Clear SQL"
           TopLeft="5.50000000000001,5.5" />
+        <NodeLayout
+          Size="125,42"
+          Id="Package\Load SAP"
+          TopLeft="6.50000000000001,107.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="69,47.5">
@@ -509,7 +596,7 @@ from ZQEV_BO_SECTORES</property>
     design-time-name="Package\Load SAP">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="167,42"
           Id="Package\Load SAP\GetSapConnection"
@@ -517,10 +604,36 @@ from ZQEV_BO_SECTORES</property>
         <NodeLayout
           Size="148,42"
           Id="Package\Load SAP\SqlDestination"
-          TopLeft="15,107.5" />
+          TopLeft="15,209.5" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Load SAP\Derived Column"
+          TopLeft="11,107.5" />
         <EdgeLayout
           Id="Package\Load SAP.Paths[ADO NET Source Output]"
           TopLeft="89,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load SAP.Paths[Derived Column Output]"
+          TopLeft="89,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"

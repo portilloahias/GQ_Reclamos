@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>SSIS_GQ_Reclamos</Name>
-    <LastWriteTime>2014-05-23T21:15:01.5955551Z</LastWriteTime>
+    <LastWriteTime>2014-05-26T20:29:16.013779Z</LastWriteTime>
     <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -18,7 +18,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_marca.dtsx</Name>
-      <LastWriteTime>2014-05-22T21:22:21.1651225Z</LastWriteTime>
+      <LastWriteTime>2014-05-26T17:26:52.6415512Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -68,7 +68,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Dim_Marcas.dtsx</Name>
-      <LastWriteTime>2014-05-22T17:06:28.4589866Z</LastWriteTime>
+      <LastWriteTime>2014-05-26T19:46:32.7624795Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -88,7 +88,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_ZQEV_BO_SECTORES.dtsx</Name>
-      <LastWriteTime>2014-05-22T20:42:29.9250224Z</LastWriteTime>
+      <LastWriteTime>2014-05-26T17:26:51.8314702Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -112,8 +112,13 @@
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
+      <Name>Dim_Vendedor.dtsx</Name>
+      <LastWriteTime>2014-05-26T20:28:20.4772259Z</LastWriteTime>
+      <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
       <Name>Dim_Sucursal.dtsx</Name>
-      <LastWriteTime>2014-05-23T21:16:25.7769724Z</LastWriteTime>
+      <LastWriteTime>2014-05-26T20:25:28.0719871Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

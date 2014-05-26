@@ -13,8 +13,8 @@
   DTS:ObjectName="st_marca"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="40"
-  DTS:VersionGUID="{32F94013-FE32-4648-97B8-50EEE8065E41}">
+  DTS:VersionBuild="46"
+  DTS:VersionGUID="{DBAB6D92-FE63-44BC-902F-805D04CC41C1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -228,6 +228,15 @@
                       refId="Package\Get Sources My Sql\LoadMySQL\Add Sociedad.Inputs[Derived Column Input]"
                       description="Input to the Derived Column Transformation"
                       name="Derived Column Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\Add Sociedad.Inputs[Derived Column Input].Columns[codigo_marca_sap]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="4"
+                          cachedName="codigo_marca_sap"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[codigo_marca_sap]" />
+                      </inputColumns>
                       <externalMetadataColumns />
                     </input>
                   </inputs>
@@ -261,6 +270,30 @@
                               description="Derived Column Friendly Expression"
                               expressionType="Notify"
                               name="FriendlyExpression">(DT_STR,4,1252)@[User::codigo_sociedad]</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\Add Sociedad.Outputs[Derived Column Output].Columns[codigo_marca_homologado]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="10"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\Add Sociedad.Outputs[Derived Column Output].Columns[codigo_marca_homologado]"
+                          name="codigo_marca_homologado"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_STR,10,1252)([LEN]([TRIM](#{Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[codigo_marca_sap]})) &gt; 0 ? ("000" + #{Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[codigo_marca_sap]}) : #{Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[codigo_marca_sap]})</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_STR,10,1252)(LEN(TRIM(codigo_marca_sap)) &gt; 0 ? ("000" + codigo_marca_sap) : codigo_marca_sap)</property>
                           </properties>
                         </outputColumn>
                       </outputColumns>
@@ -853,14 +886,6 @@
                           externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[id_marca]"
                           lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[id_marca]" />
                         <inputColumn
-                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].Columns[codigo_marca_sap]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="4"
-                          cachedName="codigo_marca_sap"
-                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[codigo_marca_sap]"
-                          lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[codigo_marca_sap]" />
-                        <inputColumn
                           refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].Columns[nombre]"
                           cachedCodepage="1252"
                           cachedDataType="str"
@@ -968,6 +993,14 @@
                           cachedName="expo_cantidad_semana"
                           externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[expo_cantidad_semana]"
                           lineageId="Package\Get Sources My Sql\LoadMySQL\MySqlSource.Outputs[ODBC Source Output].Columns[expo_cantidad_semana]" />
+                        <inputColumn
+                          refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].Columns[codigo_marca_homologado]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="10"
+                          cachedName="codigo_marca_homologado"
+                          externalMetadataColumnId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[codigo_marca_sap]"
+                          lineageId="Package\Get Sources My Sql\LoadMySQL\Add Sociedad.Outputs[Derived Column Output].Columns[codigo_marca_homologado]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -991,7 +1024,7 @@
                           refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[codigo_marca_sap]"
                           codePage="1252"
                           dataType="str"
-                          length="4"
+                          length="10"
                           name="codigo_marca_sap" />
                         <externalMetadataColumn
                           refId="Package\Get Sources My Sql\LoadMySQL\SqlDestination.Inputs[OLE DB Destination Input].ExternalColumns[nombre]"
