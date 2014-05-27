@@ -13,8 +13,8 @@
   DTS:ObjectName="st_mdr_reclamo"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="45"
-  DTS:VersionGUID="{B97F66EE-5C3C-4F6E-911D-005674069F5F}">
+  DTS:VersionBuild="46"
+  DTS:VersionGUID="{2AF7F998-2A87-4AFD-BAA0-4BAB014B2F75}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>

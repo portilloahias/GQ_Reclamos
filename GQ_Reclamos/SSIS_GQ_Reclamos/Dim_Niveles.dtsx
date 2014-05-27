@@ -1,27 +1,27 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="5/15/2014 10:25:09 AM"
   DTS:CreationName="SSIS.Package.3"
   DTS:CreatorComputerName="GQSV-BI"
   DTS:CreatorName="GQSV\gqservicios"
-  DTS:DTSID="{078523F3-F995-49DD-A4A2-A9542A3CC3B5}"
+  DTS:DTSID="{93D18EEC-C01D-4A61-B142-B5A38BA922CF}"
   DTS:EnableConfig="True"
   DTS:ExecutableType="SSIS.Package.3"
   DTS:LastModifiedProductVersion="11.0.3402.0"
   DTS:LocaleID="1033"
-  DTS:ObjectName="Dim_Vendedor"
+  DTS:ObjectName="Dim_Niveles"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="108"
-  DTS:VersionGUID="{C037EA2F-445A-473A-9BE5-BB1D6D2081BF}">
+  DTS:VersionBuild="109"
+  DTS:VersionGUID="{13C2E9FE-0CB9-402A-8D7B-794547AE7756}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[cnOLEDBSqlServerDW]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{57E93814-5574-499D-BEB1-D46C3BAE0861}"
+      DTS:DTSID="{28DEF6A3-6946-411E-B0A2-4F477FCB7116}"
       DTS:ObjectName="cnOLEDBSqlServerDW">
       <DTS:PropertyExpression
         DTS:Name="ConnectionString">@[$Project::connectionDWOLEDB]</DTS:PropertyExpression>
@@ -37,7 +37,7 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[cnOLEDBSqlServerST]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{84FBDEEA-D7E8-4918-BC10-E5E9D7825F55}"
+      DTS:DTSID="{8DC1A945-C96F-4205-8CC5-68B3A38611CB}"
       DTS:ObjectName="cnOLEDBSqlServerST">
       <DTS:PropertyExpression
         DTS:Name="ConnectionString">@[$Project::connectionSTOLEDB]</DTS:PropertyExpression>
@@ -56,7 +56,7 @@
       DTS:ConfigString="cnOLEDBSqlServerST"
       DTS:CreationName="DTS.LogProviderSQLServer.3"
       DTS:Description="Writes log entries for events to a SQL Server database"
-      DTS:DTSID="{6253F054-A2C3-483F-B13D-E614792B5A14}"
+      DTS:DTSID="{4042A8A9-1375-4182-837F-84268CC9DCBE}"
       DTS:ObjectName="SSIS log provider for SQL Server">
       <DTS:ObjectData>
         <InnerObject />
@@ -112,7 +112,7 @@
       DTS:refId="Package\Get Valor Homologado"
       DTS:CreationName="SSIS.Pipeline.3"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{91F612FB-42AB-47C6-9B01-F62BF395F0D8}"
+      DTS:DTSID="{F21F9AC1-67D4-4178-950F-31A5F4E4E505}"
       DTS:ExecutableType="SSIS.Pipeline.3"
       DTS:LocaleID="-1"
       DTS:ObjectName="Get Valor Homologado"
@@ -1062,7 +1062,7 @@ INNER JOIN [dbo].[st_ZQEV_DBMSOCIEDAD] as soc
       DTS:refId="Package\Insertar Nuevos Valores DW"
       DTS:CreationName="SSIS.Pipeline.3"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{2D0589A5-25B1-4DD9-B1D0-BE9221CAF1C3}"
+      DTS:DTSID="{FA868256-2E2C-4241-B4AA-CA831C553D7F}"
       DTS:ExecutableType="SSIS.Pipeline.3"
       DTS:LocaleID="-1"
       DTS:ObjectName="Insertar Nuevos Valores DW"
@@ -1448,7 +1448,7 @@ WHERE
       DTS:refId="Package\Update Valor Homologado"
       DTS:CreationName="SSIS.Pipeline.3"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{885bef62-ef2d-4f19-986d-38367567055d}"
+      DTS:DTSID="{D844FF3D-3188-4F75-9134-278BF22A1485}"
       DTS:ExecutableType="SSIS.Pipeline.3"
       DTS:LocaleID="-1"
       DTS:ObjectName="Update Valor Homologado"
@@ -2306,7 +2306,7 @@ WHERE ven.Id_DW is null</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{5C89F128-EC38-49D3-AC92-EDAF9CA2CDA8}"
+      DTS:DTSID="{120CBDD4-14A6-4804-8903-A75BE41E879D}"
       DTS:From="Package\Get Valor Homologado"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -2314,7 +2314,7 @@ WHERE ven.Id_DW is null</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{164FFC84-075B-4B37-9E5C-78BDD59136A5}"
+      DTS:DTSID="{F09A6286-ED3F-4651-9415-11769C32D20E}"
       DTS:From="Package\Insertar Nuevos Valores DW"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"

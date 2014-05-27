@@ -2,18 +2,18 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>SSIS_GQ_Reclamos</Name>
-    <LastWriteTime>2014-05-27T17:06:01.1557439Z</LastWriteTime>
+    <LastWriteTime>2014-05-27T21:02:37.9573808Z</LastWriteTime>
     <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>st_mdr_area.dtsx</Name>
-      <LastWriteTime>2014-05-22T21:22:21.1861246Z</LastWriteTime>
+      <LastWriteTime>2014-05-27T20:24:45.3711449Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_ban_sucursal.dtsx</Name>
-      <LastWriteTime>2014-05-22T21:22:21.0841144Z</LastWriteTime>
+      <LastWriteTime>2014-05-27T20:24:45.3901468Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -23,17 +23,17 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_mdr_clasificacion_item.dtsx</Name>
-      <LastWriteTime>2014-05-22T21:22:21.1041164Z</LastWriteTime>
+      <LastWriteTime>2014-05-27T20:24:45.3501428Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_mdr_reclamo_asignado.dtsx</Name>
-      <LastWriteTime>2014-05-22T21:22:20.9771037Z</LastWriteTime>
+      <LastWriteTime>2014-05-27T20:24:45.2171295Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_mdr_severidad.dtsx</Name>
-      <LastWriteTime>2014-05-22T21:22:21.1451205Z</LastWriteTime>
+      <LastWriteTime>2014-05-27T20:24:45.3301408Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -43,22 +43,22 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_mdr_transaccion.dtsx</Name>
-      <LastWriteTime>2014-05-22T21:22:21.0641124Z</LastWriteTime>
+      <LastWriteTime>2014-05-27T20:24:45.3091387Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_mdr_usuario.dtsx</Name>
-      <LastWriteTime>2014-05-22T21:22:21.0431103Z</LastWriteTime>
+      <LastWriteTime>2014-05-27T20:24:45.2881366Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_mdr_reclamo.dtsx</Name>
-      <LastWriteTime>2014-05-22T21:22:20.9991059Z</LastWriteTime>
+      <LastWriteTime>2014-05-27T20:24:45.2401318Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_vendedor.dtsx</Name>
-      <LastWriteTime>2014-05-22T21:22:21.0211081Z</LastWriteTime>
+      <LastWriteTime>2014-05-27T20:24:45.2651343Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -98,7 +98,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_Orquestador.dtsx</Name>
-      <LastWriteTime>2014-05-27T17:05:51.6107895Z</LastWriteTime>
+      <LastWriteTime>2014-05-27T17:07:59.4675739Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -113,12 +113,17 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Dim_Vendedor.dtsx</Name>
-      <LastWriteTime>2014-05-27T17:06:01.1007384Z</LastWriteTime>
+      <LastWriteTime>2014-05-27T20:56:45.1120998Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Dim_Sucursal.dtsx</Name>
       <LastWriteTime>2014-05-26T20:25:28.0719871Z</LastWriteTime>
+      <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Dim_Reclamos.dtsx</Name>
+      <LastWriteTime>2014-05-27T21:16:56.7432508Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

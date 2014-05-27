@@ -13,8 +13,8 @@
   DTS:ObjectName="Dim_Vendedor"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="106"
-  DTS:VersionGUID="{4391B457-76DF-45CF-B0D7-5537D56EE346}">
+  DTS:VersionBuild="108"
+  DTS:VersionGUID="{C037EA2F-445A-473A-9BE5-BB1D6D2081BF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -138,10 +138,10 @@
                   name="Conditional Split Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Get Valor Homologado\Conditional Split.Inputs[Conditional Split Input].Columns[id_vendedorST]"
+                      refId="Package\Get Valor Homologado\Conditional Split.Inputs[Conditional Split Input].Columns[Id_Vendedor]"
                       cachedDataType="i4"
-                      cachedName="id_vendedorST"
-                      lineageId="Package\Get Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[id_vendedorST]" />
+                      cachedName="Id_Vendedor"
+                      lineageId="Package\Get Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[Id_Vendedor]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -161,13 +161,13 @@
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">![ISNULL](#{Package\Get Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[id_vendedorST]})</property>
+                      name="Expression">![ISNULL](#{Package\Get Valor Homologado\Merge Join.Outputs[Merge Join Output].Columns[Id_Vendedor]})</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the friendly version of the expression. This expression version uses column names."
                       expressionType="Notify"
-                      name="FriendlyExpression">!ISNULL(id_vendedorST)</property>
+                      name="FriendlyExpression">!ISNULL(Id_Vendedor)</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
@@ -2621,7 +2621,7 @@ WHERE ven.Id_DW is null</property>
     design-time-name="Package\Insertar Nuevos Valores DW">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="127,42"
           Id="Package\Insertar Nuevos Valores DW\Source ST"
@@ -2634,30 +2634,6 @@ WHERE ven.Id_DW is null</property>
           Size="158,42"
           Id="Package\Insertar Nuevos Valores DW\Data Conversion"
           TopLeft="5.50000000000003,107.5" />
-        <EdgeLayout
-          Id="Package\Insertar Nuevos Valores DW.Paths[OLE DB Source Output]"
-          TopLeft="84.5,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Insertar Nuevos Valores DW.Paths[Data Conversion Output]"
           TopLeft="84.5,149.5">
@@ -2677,46 +2653,12 @@ WHERE ven.Id_DW is null</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\Update Valor Homologado">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="170,42"
-          Id="Package\Update Valor Homologado\Set Id Homologado"
-          TopLeft="245.5,311.5" />
-        <NodeLayout
-          Size="178,42"
-          Id="Package\Update Valor Homologado\Get DW Homologado"
-          TopLeft="5.5,5.5" />
-        <NodeLayout
-          Size="114,42"
-          Id="Package\Update Valor Homologado\Sort ST"
-          TopLeft="273.5,107.5" />
-        <NodeLayout
-          Size="132,42"
-          Id="Package\Update Valor Homologado\Merge Join"
-          TopLeft="264.5,209.5" />
-        <NodeLayout
-          Size="173,42"
-          Id="Package\Update Valor Homologado\Get ST Homologado"
-          TopLeft="244,5.5" />
-        <NodeLayout
-          Size="118,42"
-          Id="Package\Update Valor Homologado\Sort DW"
-          TopLeft="94.5,107.5" />
         <EdgeLayout
-          Id="Package\Update Valor Homologado.Paths[OLE DB Source Output]"
-          TopLeft="330.5,47.5">
+          Id="Package\Insertar Nuevos Valores DW.Paths[OLE DB Source Output]"
+          TopLeft="84.5,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2733,9 +2675,73 @@ WHERE ven.Id_DW is null</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Update Valor Homologado">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="132,42"
+          Id="Package\Update Valor Homologado\Merge Join"
+          TopLeft="264.5,209.5" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Update Valor Homologado\Get ST Homologado"
+          TopLeft="244,5.5" />
+        <NodeLayout
+          Size="114,42"
+          Id="Package\Update Valor Homologado\Sort ST"
+          TopLeft="273.5,107.5" />
+        <NodeLayout
+          Size="118,42"
+          Id="Package\Update Valor Homologado\Sort DW"
+          TopLeft="94.5,107.5" />
+        <NodeLayout
+          Size="178,42"
+          Id="Package\Update Valor Homologado\Get DW Homologado"
+          TopLeft="5.5,5.5" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Update Valor Homologado\Set Id Homologado"
+          TopLeft="245.5,311.5" />
+        <EdgeLayout
+          Id="Package\Update Valor Homologado.Paths[Sort Output1]"
+          TopLeft="153.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="156.333333333333,60"
+              Start="0,0"
+              End="156.333333333333,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5688622754491" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.5688622754491"
+                    Point2="0,35.5688622754491"
+                    Point3="4,35.5688622754491" />
+                  <mssgle:LineSegment
+                    End="152.333333333333,35.5688622754491" />
+                  <mssgle:CubicBezierSegment
+                    Point1="152.333333333333,35.5688622754491"
+                    Point2="156.333333333333,35.5688622754491"
+                    Point3="156.333333333333,39.5688622754491" />
+                  <mssgle:LineSegment
+                    End="156.333333333333,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2769,69 +2775,7 @@ WHERE ven.Id_DW is null</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Update Valor Homologado.Paths[Merge Join Output]"
-          TopLeft="330.5,251.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Update Valor Homologado.Paths[Sort Output1]"
-          TopLeft="153.5,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="156.333333333333,60"
-              Start="0,0"
-              End="156.333333333333,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.5688622754491" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.5688622754491"
-                    Point2="0,35.5688622754491"
-                    Point3="4,35.5688622754491" />
-                  <mssgle:LineSegment
-                    End="152.333333333333,35.5688622754491" />
-                  <mssgle:CubicBezierSegment
-                    Point1="152.333333333333,35.5688622754491"
-                    Point2="156.333333333333,35.5688622754491"
-                    Point3="156.333333333333,39.5688622754491" />
-                  <mssgle:LineSegment
-                    End="156.333333333333,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2865,9 +2809,51 @@ WHERE ven.Id_DW is null</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update Valor Homologado.Paths[OLE DB Source Output]"
+          TopLeft="330.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update Valor Homologado.Paths[Merge Join Output]"
+          TopLeft="330.5,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

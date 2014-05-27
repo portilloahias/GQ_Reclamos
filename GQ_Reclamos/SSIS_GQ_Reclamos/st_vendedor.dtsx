@@ -13,8 +13,8 @@
   DTS:ObjectName="st_vendedor"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="52"
-  DTS:VersionGUID="{A1865C5A-F9C9-4D89-B943-F1D5258E4628}">
+  DTS:VersionBuild="53"
+  DTS:VersionGUID="{C8426211-FD33-49FB-98AE-8B07840EA19B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>

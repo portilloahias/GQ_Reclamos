@@ -13,8 +13,8 @@
   DTS:ObjectName="st_ban_sucursal"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="39"
-  DTS:VersionGUID="{083FA973-CFA9-4EFC-856C-624A4BEB831B}">
+  DTS:VersionBuild="40"
+  DTS:VersionGUID="{59BD3810-F314-4C71-BB97-BE75802E2701}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
