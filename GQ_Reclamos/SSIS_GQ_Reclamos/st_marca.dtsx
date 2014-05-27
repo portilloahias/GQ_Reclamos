@@ -13,8 +13,8 @@
   DTS:ObjectName="st_marca"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="46"
-  DTS:VersionGUID="{DBAB6D92-FE63-44BC-902F-805D04CC41C1}">
+  DTS:VersionBuild="47"
+  DTS:VersionGUID="{BE874EFB-FFE4-4186-9B86-2EC051E820B1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1373,8 +1373,11 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Get Sources My Sql\LoadMySQL\MySqlSource">
+    design-time-name="Package\Get Sources My Sql\LoadMySQL\SqlDestination">
     <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
@@ -1383,11 +1386,8 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Get Sources My Sql\LoadMySQL\SqlDestination">
+    design-time-name="Package\Get Sources My Sql\LoadMySQL\MySqlSource">
     <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value

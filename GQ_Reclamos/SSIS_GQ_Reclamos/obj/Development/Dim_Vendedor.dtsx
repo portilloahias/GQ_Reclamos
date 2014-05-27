@@ -13,8 +13,8 @@
   DTS:ObjectName="Dim_Vendedor"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="105"
-  DTS:VersionGUID="{24C87644-8680-4D63-B2B3-3B131E054798}">
+  DTS:VersionBuild="106"
+  DTS:VersionGUID="{4391B457-76DF-45CF-B0D7-5537D56EE346}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2333,17 +2333,17 @@ WHERE ven.Id_DW is null</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="204,42"
-          Id="Package\Update Valor Homologado"
-          TopLeft="9.50000000000003,209.5" />
+          Size="185,42"
+          Id="Package\Get Valor Homologado"
+          TopLeft="19,5.5" />
         <NodeLayout
           Size="212,42"
           Id="Package\Insertar Nuevos Valores DW"
           TopLeft="5.50000000000003,107.5" />
         <NodeLayout
-          Size="185,42"
-          Id="Package\Get Valor Homologado"
-          TopLeft="19,5.5" />
+          Size="204,42"
+          Id="Package\Update Valor Homologado"
+          TopLeft="9.50000000000003,209.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="111.5,47.5">
@@ -2391,6 +2391,300 @@ WHERE ven.Id_DW is null</property>
       </GraphLayout>
     </LayoutInfo>
   </Package>
+  <TaskHost
+    design-time-name="Package\Get Valor Homologado">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="118,42"
+          Id="Package\Get Valor Homologado\Sort DW"
+          TopLeft="94.5,107.5" />
+        <NodeLayout
+          Size="178,42"
+          Id="Package\Get Valor Homologado\Get DW Homologado"
+          TopLeft="5.5,5.5" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Get Valor Homologado\Set Id Homologado"
+          TopLeft="245.5,413.5" />
+        <NodeLayout
+          Size="114,42"
+          Id="Package\Get Valor Homologado\Sort ST"
+          TopLeft="273.5,107.5" />
+        <NodeLayout
+          Size="132,42"
+          Id="Package\Get Valor Homologado\Merge Join"
+          TopLeft="241,211" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Get Valor Homologado\Get ST Homologado"
+          TopLeft="244,5.5" />
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Get Valor Homologado\Conditional Split"
+          TopLeft="253,311.5" />
+        <EdgeLayout
+          Id="Package\Get Valor Homologado.Paths[Merge Join Output]"
+          TopLeft="307,253">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="23.5,58.5"
+              Start="0,0"
+              End="23.5,51">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.25"
+                    Point2="0,29.25"
+                    Point3="4,29.25" />
+                  <mssgle:LineSegment
+                    End="19.5,29.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="19.5,29.25"
+                    Point2="23.5,29.25"
+                    Point3="23.5,33.25" />
+                  <mssgle:LineSegment
+                    End="23.5,51" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Get Valor Homologado.Paths[Value DW]"
+          TopLeft="330.5,353.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-22.59533203125,21.37548828125,45.1906640625,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Get Valor Homologado.Paths[Sort Output1]"
+          TopLeft="153.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="132.833333333333,61.5"
+              Start="0,0"
+              End="132.833333333333,54">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.4580838323353" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32.4580838323353"
+                    Point2="0,36.4580838323353"
+                    Point3="4,36.4580838323353" />
+                  <mssgle:LineSegment
+                    End="128.833333333333,36.4580838323353" />
+                  <mssgle:CubicBezierSegment
+                    Point1="128.833333333333,36.4580838323353"
+                    Point2="132.833333333333,36.4580838323353"
+                    Point3="132.833333333333,40.4580838323353" />
+                  <mssgle:LineSegment
+                    End="132.833333333333,54" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Get Valor Homologado.Paths[Sort Output]"
+          TopLeft="330.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-23.5,61.5"
+              Start="0,0"
+              End="-23.5,54">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.75"
+                    Point2="0,30.75"
+                    Point3="-4,30.75" />
+                  <mssgle:LineSegment
+                    End="-19.5,30.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-19.5,30.75"
+                    Point2="-23.5,30.75"
+                    Point3="-23.5,34.75" />
+                  <mssgle:LineSegment
+                    End="-23.5,54" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Get Valor Homologado.Paths[OLE DB Source Output1]"
+          TopLeft="94.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="59,60"
+              Start="0,0"
+              End="59,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="4,30" />
+                  <mssgle:LineSegment
+                    End="55,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="55,30"
+                    Point2="59,30"
+                    Point3="59,34" />
+                  <mssgle:LineSegment
+                    End="59,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Get Valor Homologado.Paths[OLE DB Source Output]"
+          TopLeft="330.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Get Valor Homologado\Get ST Homologado">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Insertar Nuevos Valores DW">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="127,42"
+          Id="Package\Insertar Nuevos Valores DW\Source ST"
+          TopLeft="21,5.5" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Insertar Nuevos Valores DW\Destination DW"
+          TopLeft="7.50000000000003,209.5" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Insertar Nuevos Valores DW\Data Conversion"
+          TopLeft="5.50000000000003,107.5" />
+        <EdgeLayout
+          Id="Package\Insertar Nuevos Valores DW.Paths[OLE DB Source Output]"
+          TopLeft="84.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Insertar Nuevos Valores DW.Paths[Data Conversion Output]"
+          TopLeft="84.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
   <TaskHost
     design-time-name="Package\Update Valor Homologado">
     <LayoutInfo>
@@ -2566,302 +2860,6 @@ WHERE ven.Id_DW is null</property>
                     Point3="59,34" />
                   <mssgle:LineSegment
                     End="59,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\Insertar Nuevos Valores DW">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="127,42"
-          Id="Package\Insertar Nuevos Valores DW\Source ST"
-          TopLeft="21,5.5" />
-        <NodeLayout
-          Size="154,42"
-          Id="Package\Insertar Nuevos Valores DW\Destination DW"
-          TopLeft="7.50000000000003,209.5" />
-        <NodeLayout
-          Size="158,42"
-          Id="Package\Insertar Nuevos Valores DW\Data Conversion"
-          TopLeft="5.50000000000003,107.5" />
-        <EdgeLayout
-          Id="Package\Insertar Nuevos Valores DW.Paths[OLE DB Source Output]"
-          TopLeft="84.5,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Insertar Nuevos Valores DW.Paths[Data Conversion Output]"
-          TopLeft="84.5,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\Get Valor Homologado">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="170,42"
-          Id="Package\Get Valor Homologado\Set Id Homologado"
-          TopLeft="245.5,413.5" />
-        <NodeLayout
-          Size="178,42"
-          Id="Package\Get Valor Homologado\Get DW Homologado"
-          TopLeft="5.5,5.5" />
-        <NodeLayout
-          Size="114,42"
-          Id="Package\Get Valor Homologado\Sort ST"
-          TopLeft="273.5,107.5" />
-        <NodeLayout
-          Size="132,42"
-          Id="Package\Get Valor Homologado\Merge Join"
-          TopLeft="241,211" />
-        <NodeLayout
-          Size="173,42"
-          Id="Package\Get Valor Homologado\Get ST Homologado"
-          TopLeft="244,5.5" />
-        <NodeLayout
-          Size="155,42"
-          Id="Package\Get Valor Homologado\Conditional Split"
-          TopLeft="253,311.5" />
-        <NodeLayout
-          Size="118,42"
-          Id="Package\Get Valor Homologado\Sort DW"
-          TopLeft="94.5,107.5" />
-        <EdgeLayout
-          Id="Package\Get Valor Homologado.Paths[Merge Join Output]"
-          TopLeft="307,253">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="23.5,58.5"
-              Start="0,0"
-              End="23.5,51">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.25"
-                    Point2="0,29.25"
-                    Point3="4,29.25" />
-                  <mssgle:LineSegment
-                    End="19.5,29.25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="19.5,29.25"
-                    Point2="23.5,29.25"
-                    Point3="23.5,33.25" />
-                  <mssgle:LineSegment
-                    End="23.5,51" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Get Valor Homologado.Paths[OLE DB Source Output]"
-          TopLeft="330.5,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Get Valor Homologado.Paths[Value DW]"
-          TopLeft="330.5,353.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-22.59533203125,21.37548828125,45.1906640625,9.7490234375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Get Valor Homologado.Paths[OLE DB Source Output1]"
-          TopLeft="94.5,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="59,60"
-              Start="0,0"
-              End="59,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26"
-                    Point2="0,30"
-                    Point3="4,30" />
-                  <mssgle:LineSegment
-                    End="55,30" />
-                  <mssgle:CubicBezierSegment
-                    Point1="55,30"
-                    Point2="59,30"
-                    Point3="59,34" />
-                  <mssgle:LineSegment
-                    End="59,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Get Valor Homologado.Paths[Sort Output1]"
-          TopLeft="153.5,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="132.833333333333,61.5"
-              Start="0,0"
-              End="132.833333333333,54">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.4580838323353" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,32.4580838323353"
-                    Point2="0,36.4580838323353"
-                    Point3="4,36.4580838323353" />
-                  <mssgle:LineSegment
-                    End="128.833333333333,36.4580838323353" />
-                  <mssgle:CubicBezierSegment
-                    Point1="128.833333333333,36.4580838323353"
-                    Point2="132.833333333333,36.4580838323353"
-                    Point3="132.833333333333,40.4580838323353" />
-                  <mssgle:LineSegment
-                    End="132.833333333333,54" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Get Valor Homologado.Paths[Sort Output]"
-          TopLeft="330.5,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-23.5,61.5"
-              Start="0,0"
-              End="-23.5,54">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.75" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26.75"
-                    Point2="0,30.75"
-                    Point3="-4,30.75" />
-                  <mssgle:LineSegment
-                    End="-19.5,30.75" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-19.5,30.75"
-                    Point2="-23.5,30.75"
-                    Point3="-23.5,34.75" />
-                  <mssgle:LineSegment
-                    End="-23.5,54" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
