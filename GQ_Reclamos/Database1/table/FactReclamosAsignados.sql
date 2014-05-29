@@ -1,0 +1,21 @@
+﻿CREATE TABLE [dbo].[FactReclamosAsignados](
+	[Id_Area] [int] NOT NULL,
+	[Id_Severidad] [int] NOT NULL,
+	[Id_TipoSituacionReclamo] [int] NOT NULL,
+	[Id_DetalleTipoSituacionReclamo] [int] NOT NULL,
+	[Id_TransaccionOrigen] [int] NOT NULL,
+	[Id_SucursalCreacion] [int] NOT NULL,
+	[Id_Sociedad] [int] NOT NULL,
+	[Id_Marca] [int] NOT NULL,
+	[Id_Reclamo] [int] NOT NULL,
+	[Id_VendedorCreacion] [int] NOT NULL,
+	[Id_FechaCreacionReclamo] [int] NOT NULL,
+	[Id_SucursalAsignacion] [int] NOT NULL,
+	[Id_Vendedor_Asignado] [int] NOT NULL,
+	[Id_FechaAsignacion] [int] NOT NULL,
+	[Id_FechaCierre] [int] NOT NULL,
+	[Id_FechaCongelado] [int] NOT NULL,
+	[Id_FechaDescongelado] [int] NOT NULL,
+	[Id_Nivel] [int] NOT NULL,
+	[Conteo] [int] NOT NULL
+) 

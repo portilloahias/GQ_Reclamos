@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>DW_GQ_Reclamos</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{5516867b-f8bb-4203-8932-7817485c6136}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>DW_GQ_Reclamos</RootNamespace>
+    <AssemblyName>DW_GQ_Reclamos</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <!-- VS10 without SP1 will not have VisualStudioVersion set, so do that here -->
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <!-- Default to the v10.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Sequence" />
+    <Folder Include="table" />
+    <Folder Include="procedure" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="table\DimDetalleTipoSituacionReclamo.sql" />
+    <Build Include="table\DimFecha.sql" />
+    <Build Include="table\DimMarca.sql" />
+    <Build Include="table\DimNivel.sql" />
+    <Build Include="table\DimReclamo.sql" />
+    <Build Include="table\DimSeveridad.sql" />
+    <Build Include="table\DimSociedad.sql" />
+    <Build Include="table\DimSucursal.sql" />
+    <Build Include="table\DimTipoSituacionReclamo.sql" />
+    <Build Include="table\DimTransaccionOrigen.sql" />
+    <Build Include="table\DimVendedor.sql" />
+    <Build Include="table\FactReclamos.sql" />
+    <Build Include="table\FactReclamosAsignados.sql" />
+    <Build Include="table\DimArea.sql" />
+    <Build Include="procedure\spCargarDimFecha.sql" />
+    <Build Include="Sequence\Seq_Dim_Area.sql" />
+    <Build Include="Sequence\Seq_Dim_Detalle_Tipo_Situacion_Reclamo.sql" />
+    <Build Include="Sequence\Seq_Dim_Marca.sql" />
+    <Build Include="Sequence\Seq_Dim_Reclamo.sql" />
+    <Build Include="Sequence\Seq_Dim_Severidad.sql" />
+    <Build Include="Sequence\Seq_Dim_Sociedad.sql" />
+    <Build Include="Sequence\Seq_Dim_Sucursal.sql" />
+    <Build Include="Sequence\Seq_Dim_Tipo_Situacion_Reclamo.sql" />
+    <Build Include="Sequence\Seq_Dim_TransaccionOrigen.sql" />
+    <Build Include="Sequence\Seq_Dim_Vendedor.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="procedure\spDefaultValue.sql" />
+  </ItemGroup>
+</Project>

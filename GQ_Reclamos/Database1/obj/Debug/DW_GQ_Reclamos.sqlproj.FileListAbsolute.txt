@@ -1,0 +1,5 @@
+C:\Users\gqservicios\Desktop\GQ_Reclamos\Database1\bin\Debug\DW_GQ_Reclamos.dacpac
+C:\Users\gqservicios\Desktop\GQ_Reclamos\Database1\bin\Debug\DW_GQ_Reclamos.dll
+C:\Users\gqservicios\Desktop\GQ_Reclamos\Database1\bin\Debug\DW_GQ_Reclamos.pdb
+C:\Users\gqservicios\Desktop\GQ_Reclamos\Database1\obj\Debug\DW_GQ_Reclamos.dll
+C:\Users\gqservicios\Desktop\GQ_Reclamos\Database1\obj\Debug\DW_GQ_Reclamos.pdb

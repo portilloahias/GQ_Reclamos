@@ -5101,10 +5101,10 @@
                 <SSIS:Property SSIS:Name="Name">DW_Orquestador</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">26</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">27</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{6899FDFB-843E-435C-BAD7-E81CA1ADD13E}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{A28FF658-977C-4BA1-BCAE-9CD4CEDA9939}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">6</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

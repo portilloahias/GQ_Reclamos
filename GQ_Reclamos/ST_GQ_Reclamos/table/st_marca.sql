@@ -1,0 +1,22 @@
+﻿CREATE TABLE [dbo].[st_marca](
+	[codigo_sociedad] [char](4) NULL,
+	[id_marca] [int] NULL,
+	[codigo_marca_sap] [varchar](10) NULL,
+	[nombre] [varchar](41) NULL,
+	[estado] [varchar](10) NULL,
+	[observaciones] [varchar](256) NULL,
+	[id_form] [varchar](21) NULL,
+	[tipo] [varchar](10) NULL,
+	[admin_marca] [varchar](76) NULL,
+	[admin_marca_telefono] [varchar](50) NULL,
+	[plantilla] [varchar](12) NULL,
+	[codigo_crediq] [varchar](11) NULL,
+	[taller] [varchar](51) NULL,
+	[gerente_marca] [varchar](81) NULL,
+	[email_gerente] [text] NULL,
+	[solicitud_precio] [varchar](10) NULL,
+	[expo_incio_entrega] [datetime] NULL,
+	[infografia] [varchar](256) NULL,
+	[expo_cantidad_semana] [int] NULL,
+	[id_DW] [int] NULL
+)

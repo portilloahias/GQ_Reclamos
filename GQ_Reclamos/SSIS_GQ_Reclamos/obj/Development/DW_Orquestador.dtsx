@@ -12,8 +12,8 @@
   DTS:ObjectName="DW_Orquestador"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="26"
-  DTS:VersionGUID="{6899FDFB-843E-435C-BAD7-E81CA1ADD13E}">
+  DTS:VersionBuild="27"
+  DTS:VersionGUID="{A28FF658-977C-4BA1-BCAE-9CD4CEDA9939}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -501,7 +501,7 @@
           PanelSize="258,176"
           Size="258,219"
           Id="Package\Fact Tables"
-          TopLeft="243,474" />
+          TopLeft="248,433" />
         <NodeLayout
           Size="127,42"
           Id="Package\Procesamiento Dimensiones\Dim_Area"
@@ -559,30 +559,18 @@
           TopLeft="0.0555555555555429,109.277777777777" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="380.555555555556,397.277777777777">
+          TopLeft="378.777777777778,397.277777777777">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-8.55555555555554,76.7222222222226"
+              EndConnector="0,35.722222222223"
               Start="0,0"
-              End="-8.55555555555554,69.2222222222226">
+              End="0,28.222222222223">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,34.3611111111113" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,34.3611111111113"
-                    Point2="0,38.3611111111113"
-                    Point3="-4,38.3611111111113" />
-                  <mssgle:LineSegment
-                    End="-4.55555555555554,38.3611111111113" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-4.55555555555554,38.3611111111113"
-                    Point2="-8.55555555555554,38.3611111111113"
-                    Point3="-8.55555555555554,42.3611111111113" />
-                  <mssgle:LineSegment
-                    End="-8.55555555555554,69.2222222222226" />
+                    End="0,28.222222222223" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
