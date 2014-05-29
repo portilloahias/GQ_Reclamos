@@ -13,8 +13,8 @@
   DTS:ObjectName="Dim_Reclamos"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="119"
-  DTS:VersionGUID="{45390E05-18B0-43CD-AEDE-3B18ADD43D96}">
+  DTS:VersionBuild="120"
+  DTS:VersionGUID="{A48A1725-2957-4E9C-84A1-9DB290E02210}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -106,6 +106,10 @@
       <DTS:Property
         DTS:Name="DataBytes">-1</DTS:Property>
     </DTS:Property>
+    <DTS:SelectedLogProviders>
+      <DTS:SelectedLogProvider
+        DTS:InstanceID="{5AFD57BC-CFE1-4B3A-8588-972173098E8E}" />
+    </DTS:SelectedLogProviders>
   </DTS:LoggingOptions>
   <DTS:Executables>
     <DTS:Executable
@@ -3069,6 +3073,10 @@ WHERE Id_dw is not null</property>
           Id="Package\Insertar Nuevos Valores DW"
           TopLeft="5.50000000000003,209.5" />
         <NodeLayout
+          Size="204,42"
+          Id="Package\Update Valor Homologado"
+          TopLeft="9.50000000000003,311.5" />
+        <NodeLayout
           Size="172,42"
           Id="Package\Update Valores DW"
           TopLeft="25.5,107.5" />
@@ -3095,8 +3103,8 @@ WHERE Id_dw is not null</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="111.5,149.5">
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="111.5,251.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3116,13 +3124,9 @@ WHERE Id_dw is not null</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="204,42"
-          Id="Package\Update Valor Homologado"
-          TopLeft="9.50000000000003,311.5" />
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="111.5,251.5">
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="111.5,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3423,14 +3427,6 @@ WHERE Id_dw is not null</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Insertar Nuevos Valores DW\Source ST">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Insertar Nuevos Valores DW\Destination DW">
     <Properties>
       <Property>
@@ -3443,46 +3439,8 @@ WHERE Id_dw is not null</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Update Valores DW">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="127,42"
-          Id="Package\Update Valores DW\Source ST"
-          TopLeft="9.50000000000001,5.5" />
-        <NodeLayout
-          Size="135,42"
-          Id="Package\Update Valores DW\Update DW"
-          TopLeft="5.50000000000001,107.5" />
-        <EdgeLayout
-          Id="Package\Update Valores DW.Paths[OLE DB Source Output]"
-          TopLeft="73,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Update Valores DW\Source ST">
+    design-time-name="Package\Insertar Nuevos Valores DW\Source ST">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3669,6 +3627,52 @@ WHERE Id_dw is not null</property>
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Update Valor Homologado\Get ST Homologado">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Update Valores DW">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="127,42"
+          Id="Package\Update Valores DW\Source ST"
+          TopLeft="9.50000000000001,5.5" />
+        <NodeLayout
+          Size="135,42"
+          Id="Package\Update Valores DW\Update DW"
+          TopLeft="5.50000000000001,107.5" />
+        <EdgeLayout
+          Id="Package\Update Valores DW.Paths[OLE DB Source Output]"
+          TopLeft="73,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Update Valores DW\Source ST">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

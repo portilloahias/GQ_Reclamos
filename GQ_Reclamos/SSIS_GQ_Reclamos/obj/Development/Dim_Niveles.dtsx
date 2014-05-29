@@ -13,8 +13,8 @@
   DTS:ObjectName="Dim_Niveles"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="115"
-  DTS:VersionGUID="{D1F83339-B425-42E0-9798-137F8C5ED0B6}">
+  DTS:VersionBuild="116"
+  DTS:VersionGUID="{25759421-02BC-482C-A674-2DEF9428B25A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -106,6 +106,10 @@
       <DTS:Property
         DTS:Name="DataBytes">-1</DTS:Property>
     </DTS:Property>
+    <DTS:SelectedLogProviders>
+      <DTS:SelectedLogProvider
+        DTS:InstanceID="{4042A8A9-1375-4182-837F-84268CC9DCBE}" />
+    </DTS:SelectedLogProviders>
   </DTS:LoggingOptions>
   <DTS:Executables>
     <DTS:Executable
@@ -1198,14 +1202,6 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Niveles\Get ST Homologado">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Niveles\OLE DB Destination DW">
     <Properties>
       <Property>
@@ -1215,6 +1211,14 @@
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Niveles\Get ST Homologado">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

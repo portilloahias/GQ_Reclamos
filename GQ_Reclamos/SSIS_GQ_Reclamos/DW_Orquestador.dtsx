@@ -12,15 +12,31 @@
   DTS:ObjectName="DW_Orquestador"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="18"
-  DTS:VersionGUID="{A35AF30B-9825-4712-87E9-AF85E01593AD}">
+  DTS:VersionBuild="26"
+  DTS:VersionGUID="{6899FDFB-843E-435C-BAD7-E81CA1ADD13E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[cnOLEDBSqlServerDW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{609B8543-F9BC-45BC-BFAD-8B47C672D1C6}"
+      DTS:ObjectName="cnOLEDBSqlServerDW">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::connectionDWOLEDB]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=gqsv-bi\BIGQ;User ID=sapbi;Initial Catalog=BIDWGQCAL;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"></DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[cnOLEDBSqlServerST]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{0194BA05-7099-4745-B4DA-B899B34EB302}"
+      DTS:DTSID="{4759F7C3-1CD1-41A7-B5D9-336AD74958AE}"
       DTS:ObjectName="cnOLEDBSqlServerST">
       <DTS:PropertyExpression
         DTS:Name="ConnectionString">@[$Project::connectionSTOLEDB]</DTS:PropertyExpression>
@@ -34,20 +50,158 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
+  <DTS:LogProviders>
+    <DTS:LogProvider
+      DTS:ConfigString="cnOLEDBSqlServerST"
+      DTS:CreationName="DTS.LogProviderSQLServer.3"
+      DTS:Description="Writes log entries for events to a SQL Server database"
+      DTS:DTSID="{17555EA3-2F0B-4956-8619-167F0F6462CF}"
+      DTS:ObjectName="SSIS log provider for SQL Server">
+      <DTS:ObjectData>
+        <InnerObject />
+      </DTS:ObjectData>
+    </DTS:LogProvider>
+  </DTS:LogProviders>
   <DTS:Variables />
+  <DTS:LoggingOptions
+    DTS:FilterKind="0"
+    DTS:LoggingMode="1">
+    <DTS:Property
+      DTS:DataType="8"
+      DTS:Name="EventFilter">2,7,OnError,12,OnTaskFailed</DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnError"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnTaskFailed"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+  </DTS:LoggingOptions>
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Sequence Container"
+      DTS:refId="Package\Default Value"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{AD8425AD-CD10-4454-AE39-4C901350B165}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Default Value"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{609B8543-F9BC-45BC-BFAD-8B47C672D1C6}"
+          SQLTask:SqlStatementSource="exec spDefaultValue" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Fact Tables"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{306DA6F6-917A-4770-ACE9-80F34698C465}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Fact Tables">
+      <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Fact Tables\Fact_Reclamos"
+          DTS:CreationName="SSIS.ExecutePackageTask.3"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{8FE2CE71-5C77-4A3F-B554-770F8879BDB8}"
+          DTS:ExecutableType="SSIS.ExecutePackageTask.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Fact_Reclamos"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0" />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>Fact_Reclamos.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Fact Tables\Fact_ReclamosAsignados"
+          DTS:CreationName="SSIS.ExecutePackageTask.3"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{36A68A84-6765-4648-BC2E-56D5B94EBEC8}"
+          DTS:ExecutableType="SSIS.ExecutePackageTask.3"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Fact_ReclamosAsignados"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0" />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>Fact_ReclamosAsignados.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Fact Tables.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{76452C36-2A9A-43BC-8617-D8F7889318B6}"
+          DTS:From="Package\Fact Tables\Fact_Reclamos"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Fact Tables\Fact_ReclamosAsignados" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Procesamiento Dimensiones"
       DTS:CreationName="STOCK:SEQUENCE"
       DTS:Description="Sequence Container"
       DTS:DTSID="{AC209DA3-7B8D-41FA-82B5-C75E275380C3}"
       DTS:ExecutableType="STOCK:SEQUENCE"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Sequence Container">
+      DTS:ObjectName="Procesamiento Dimensiones">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
       <DTS:Executables>
         <DTS:Executable
-          DTS:refId="Package\Sequence Container\Dim_Area"
+          DTS:refId="Package\Procesamiento Dimensiones\Dim_Area"
           DTS:CreationName="SSIS.ExecutePackageTask.3"
           DTS:Description="Execute Package Task"
           DTS:DTSID="{03998902-759B-42C7-888E-AA2CF6FA640E}"
@@ -56,6 +210,8 @@
           DTS:ObjectName="Dim_Area"
           DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0" />
           <DTS:ObjectData>
             <ExecutePackageTask>
               <UseProjectReference>True</UseProjectReference>
@@ -64,7 +220,7 @@
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Sequence Container\Dim_DetalleTipoSituacionReclamo"
+          DTS:refId="Package\Procesamiento Dimensiones\Dim_DetalleTipoSituacionReclamo"
           DTS:CreationName="SSIS.ExecutePackageTask.3"
           DTS:Description="Execute Package Task"
           DTS:DTSID="{A105EE4B-C431-4541-AD32-F9A5B5A9BB1C}"
@@ -73,6 +229,8 @@
           DTS:ObjectName="Dim_DetalleTipoSituacionReclamo"
           DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0" />
           <DTS:ObjectData>
             <ExecutePackageTask>
               <UseProjectReference>True</UseProjectReference>
@@ -81,7 +239,7 @@
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Sequence Container\Dim_Fecha"
+          DTS:refId="Package\Procesamiento Dimensiones\Dim_Fecha"
           DTS:CreationName="SSIS.ExecutePackageTask.3"
           DTS:Description="Execute Package Task"
           DTS:DTSID="{091E95C1-2C89-48FA-8585-BD41A00F7B52}"
@@ -90,6 +248,8 @@
           DTS:ObjectName="Dim_Fecha"
           DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0" />
           <DTS:ObjectData>
             <ExecutePackageTask>
               <UseProjectReference>True</UseProjectReference>
@@ -98,7 +258,7 @@
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Sequence Container\Dim_Marcas"
+          DTS:refId="Package\Procesamiento Dimensiones\Dim_Marcas"
           DTS:CreationName="SSIS.ExecutePackageTask.3"
           DTS:Description="Execute Package Task"
           DTS:DTSID="{5322EFEF-286A-43A3-ADA2-CB77381B93FF}"
@@ -107,6 +267,8 @@
           DTS:ObjectName="Dim_Marcas"
           DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0" />
           <DTS:ObjectData>
             <ExecutePackageTask>
               <UseProjectReference>True</UseProjectReference>
@@ -115,7 +277,7 @@
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Sequence Container\Dim_Niveles"
+          DTS:refId="Package\Procesamiento Dimensiones\Dim_Niveles"
           DTS:CreationName="SSIS.ExecutePackageTask.3"
           DTS:Description="Execute Package Task"
           DTS:DTSID="{94F4ACD6-FE41-42B6-9475-26377FFFEDB6}"
@@ -124,6 +286,8 @@
           DTS:ObjectName="Dim_Niveles"
           DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0" />
           <DTS:ObjectData>
             <ExecutePackageTask>
               <UseProjectReference>True</UseProjectReference>
@@ -132,7 +296,7 @@
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Sequence Container\Dim_Reclamos"
+          DTS:refId="Package\Procesamiento Dimensiones\Dim_Reclamos"
           DTS:CreationName="SSIS.ExecutePackageTask.3"
           DTS:Description="Execute Package Task"
           DTS:DTSID="{907D208E-476D-4E2D-A86E-F0F26BC50106}"
@@ -141,6 +305,8 @@
           DTS:ObjectName="Dim_Reclamos"
           DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0" />
           <DTS:ObjectData>
             <ExecutePackageTask>
               <UseProjectReference>True</UseProjectReference>
@@ -149,7 +315,7 @@
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Sequence Container\Dim_Severidad"
+          DTS:refId="Package\Procesamiento Dimensiones\Dim_Severidad"
           DTS:CreationName="SSIS.ExecutePackageTask.3"
           DTS:Description="Execute Package Task"
           DTS:DTSID="{8784EA77-5B2A-43E6-99C8-906420700829}"
@@ -158,6 +324,8 @@
           DTS:ObjectName="Dim_Severidad"
           DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0" />
           <DTS:ObjectData>
             <ExecutePackageTask>
               <UseProjectReference>True</UseProjectReference>
@@ -166,7 +334,7 @@
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Sequence Container\Dim_Sociedades"
+          DTS:refId="Package\Procesamiento Dimensiones\Dim_Sociedades"
           DTS:CreationName="SSIS.ExecutePackageTask.3"
           DTS:Description="Execute Package Task"
           DTS:DTSID="{35474CFB-8C16-46D7-A246-FA5421A76629}"
@@ -175,6 +343,8 @@
           DTS:ObjectName="Dim_Sociedades"
           DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0" />
           <DTS:ObjectData>
             <ExecutePackageTask>
               <UseProjectReference>True</UseProjectReference>
@@ -183,7 +353,7 @@
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Sequence Container\Dim_Sucursal"
+          DTS:refId="Package\Procesamiento Dimensiones\Dim_Sucursal"
           DTS:CreationName="SSIS.ExecutePackageTask.3"
           DTS:Description="Execute Package Task"
           DTS:DTSID="{6B8419A2-0B8F-4959-BCD0-80999F6725A3}"
@@ -192,6 +362,8 @@
           DTS:ObjectName="Dim_Sucursal"
           DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0" />
           <DTS:ObjectData>
             <ExecutePackageTask>
               <UseProjectReference>True</UseProjectReference>
@@ -200,7 +372,7 @@
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Sequence Container\Dim_TipoSituacionReclamo"
+          DTS:refId="Package\Procesamiento Dimensiones\Dim_TipoSituacionReclamo"
           DTS:CreationName="SSIS.ExecutePackageTask.3"
           DTS:Description="Execute Package Task"
           DTS:DTSID="{9469AEDD-2EF1-48B8-946F-FF32DBB0ABA3}"
@@ -209,6 +381,8 @@
           DTS:ObjectName="Dim_TipoSituacionReclamo"
           DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0" />
           <DTS:ObjectData>
             <ExecutePackageTask>
               <UseProjectReference>True</UseProjectReference>
@@ -217,7 +391,7 @@
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Sequence Container\Dim_TransaccionOrigen"
+          DTS:refId="Package\Procesamiento Dimensiones\Dim_TransaccionOrigen"
           DTS:CreationName="SSIS.ExecutePackageTask.3"
           DTS:Description="Execute Package Task"
           DTS:DTSID="{596F951D-9652-4323-8EBD-BDD08008AFF7}"
@@ -226,6 +400,8 @@
           DTS:ObjectName="Dim_TransaccionOrigen"
           DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0" />
           <DTS:ObjectData>
             <ExecutePackageTask>
               <UseProjectReference>True</UseProjectReference>
@@ -234,7 +410,7 @@
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Sequence Container\Dim_Vendedor"
+          DTS:refId="Package\Procesamiento Dimensiones\Dim_Vendedor"
           DTS:CreationName="SSIS.ExecutePackageTask.3"
           DTS:Description="Execute Package Task"
           DTS:DTSID="{2CB9A1F7-AA80-4E93-9DB4-82297A3954C7}"
@@ -243,6 +419,8 @@
           DTS:ObjectName="Dim_Vendedor"
           DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0" />
           <DTS:ObjectData>
             <ExecutePackageTask>
               <UseProjectReference>True</UseProjectReference>
@@ -253,6 +431,24 @@
       </DTS:Executables>
     </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{D417187E-6414-4112-939A-3E5E80B28DB0}"
+      DTS:From="Package\Procesamiento Dimensiones"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Fact Tables" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{5EF42470-2EBB-4741-88FB-1ECD38389471}"
+      DTS:From="Package\Default Value"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Procesamiento Dimensiones" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -264,62 +460,171 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="193,42"
-          Id="Package\Sequence Container\Dim_TransaccionOrigen"
-          TopLeft="5.5,5.50000000000011" />
+          Size="144,42"
+          Id="Package\Default Value"
+          TopLeft="198,32" />
         <NodeLayout
-          Size="200,42"
-          Id="Package\Sequence Container\Dim_TipoSituacionReclamo"
-          TopLeft="259,5.50000000000011" />
+          Size="185,42"
+          Id="Package\Fact Tables\Fact_Reclamos"
+          TopLeft="39,8" />
         <NodeLayout
-          Size="150,42"
-          Id="Package\Sequence Container\Dim_Vendedor"
-          TopLeft="520,5.5" />
+          Size="199,42"
+          Id="Package\Fact Tables\Fact_ReclamosAsignados"
+          TopLeft="35,79" />
+        <EdgeLayout
+          Id="Package\Fact Tables.PrecedenceConstraints[Constraint]"
+          TopLeft="131.75,50">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,29"
+              Start="0,0"
+              End="0,21.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="258,176"
+          Size="258,219"
+          Id="Package\Fact Tables"
+          TopLeft="243,474" />
         <NodeLayout
           Size="127,42"
-          Id="Package\Sequence Container\Dim_Area"
+          Id="Package\Procesamiento Dimensiones\Dim_Area"
           TopLeft="35.8333333333332,55.2777777777778" />
         <NodeLayout
-          Size="138,42"
-          Id="Package\Sequence Container\Dim_Marcas"
-          TopLeft="223.333333333333,55.2777777777778" />
+          Size="241,42"
+          Id="Package\Procesamiento Dimensiones\Dim_DetalleTipoSituacionReclamo"
+          TopLeft="5.5,147.611111111111" />
         <NodeLayout
           Size="133,42"
-          Id="Package\Sequence Container\Dim_Fecha"
+          Id="Package\Procesamiento Dimensiones\Dim_Fecha"
           TopLeft="421.833333333333,55.2777777777778" />
         <NodeLayout
+          Size="138,42"
+          Id="Package\Procesamiento Dimensiones\Dim_Marcas"
+          TopLeft="223.333333333333,55.2777777777778" />
+        <NodeLayout
           Size="194,42"
-          Id="Package\Sequence Container\Dim_Niveles"
+          Id="Package\Procesamiento Dimensiones\Dim_Niveles"
           TopLeft="5.5,102.388888888889" />
         <NodeLayout
           Size="194,42"
-          Id="Package\Sequence Container\Dim_Sociedades"
+          Id="Package\Procesamiento Dimensiones\Dim_Reclamos"
+          TopLeft="562,147.611111111111" />
+        <NodeLayout
+          Size="194,42"
+          Id="Package\Procesamiento Dimensiones\Dim_Severidad"
+          TopLeft="515.5,102.388888888889" />
+        <NodeLayout
+          Size="194,42"
+          Id="Package\Procesamiento Dimensiones\Dim_Sociedades"
           TopLeft="260.5,102.388888888889" />
         <NodeLayout
           Size="194,42"
-          Id="Package\Sequence Container\Dim_Severidad"
-          TopLeft="515.5,102.388888888889" />
-        <NodeLayout
-          Size="241,42"
-          Id="Package\Sequence Container\Dim_DetalleTipoSituacionReclamo"
-          TopLeft="5.5,147.611111111111" />
-        <NodeLayout
-          Size="194,42"
-          Id="Package\Sequence Container\Dim_Sucursal"
+          Id="Package\Procesamiento Dimensiones\Dim_Sucursal"
           TopLeft="307,147.611111111111" />
         <NodeLayout
-          Size="194,42"
-          Id="Package\Sequence Container\Dim_Reclamos"
-          TopLeft="562,147.611111111111" />
+          Size="200,42"
+          Id="Package\Procesamiento Dimensiones\Dim_TipoSituacionReclamo"
+          TopLeft="259,5.50000000000011" />
+        <NodeLayout
+          Size="193,42"
+          Id="Package\Procesamiento Dimensiones\Dim_TransaccionOrigen"
+          TopLeft="5.5,5.50000000000011" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Procesamiento Dimensiones\Dim_Vendedor"
+          TopLeft="520,5.5" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="761,245"
           Size="761,288"
-          Id="Package\Sequence Container"
-          TopLeft="1.05555555555554,3.27777777777743" />
+          Id="Package\Procesamiento Dimensiones"
+          TopLeft="0.0555555555555429,109.277777777777" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="380.555555555556,397.277777777777">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-8.55555555555554,76.7222222222226"
+              Start="0,0"
+              End="-8.55555555555554,69.2222222222226">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.3611111111113" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34.3611111111113"
+                    Point2="0,38.3611111111113"
+                    Point3="-4,38.3611111111113" />
+                  <mssgle:LineSegment
+                    End="-4.55555555555554,38.3611111111113" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4.55555555555554,38.3611111111113"
+                    Point2="-8.55555555555554,38.3611111111113"
+                    Point3="-8.55555555555554,42.3611111111113" />
+                  <mssgle:LineSegment
+                    End="-8.55555555555554,69.2222222222226" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="270,74">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="110.555555555556,35.2777777777774"
+              Start="0,0"
+              End="110.555555555556,27.7777777777774">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.6388888888887" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.6388888888887"
+                    Point2="0,17.6388888888887"
+                    Point3="4,17.6388888888887" />
+                  <mssgle:LineSegment
+                    End="106.555555555556,17.6388888888887" />
+                  <mssgle:CubicBezierSegment
+                    Point1="106.555555555556,17.6388888888887"
+                    Point2="110.555555555556,17.6388888888887"
+                    Point3="110.555555555556,21.6388888888887" />
+                  <mssgle:LineSegment
+                    End="110.555555555556,27.7777777777774" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>

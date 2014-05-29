@@ -13,8 +13,8 @@
   DTS:ObjectName="st_mdr_reclamo"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="46"
-  DTS:VersionGUID="{2AF7F998-2A87-4AFD-BAA0-4BAB014B2F75}">
+  DTS:VersionBuild="47"
+  DTS:VersionGUID="{B0983B78-87ED-423F-A3D4-829B9BE9427C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -159,6 +159,10 @@
       <DTS:Property
         DTS:Name="DataBytes">-1</DTS:Property>
     </DTS:Property>
+    <DTS:SelectedLogProviders>
+      <DTS:SelectedLogProvider
+        DTS:InstanceID="{FF393C8A-4F96-47B9-BB91-329399D7E880}" />
+    </DTS:SelectedLogProviders>
   </DTS:LoggingOptions>
   <DTS:Executables>
     <DTS:Executable
@@ -212,6 +216,8 @@
           DTS:ObjectName="LoadMySQL"
           DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0" />
           <DTS:ObjectData>
             <pipeline
               version="1">

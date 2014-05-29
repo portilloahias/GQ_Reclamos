@@ -13,8 +13,8 @@
   DTS:ObjectName="Dim_Area"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="64"
-  DTS:VersionGUID="{15022149-0EBB-4E04-95B0-C053B6F4AAAB}">
+  DTS:VersionBuild="65"
+  DTS:VersionGUID="{5F69AC40-58FA-48E9-BCF9-19F466FB1500}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -106,6 +106,10 @@
       <DTS:Property
         DTS:Name="DataBytes">-1</DTS:Property>
     </DTS:Property>
+    <DTS:SelectedLogProviders>
+      <DTS:SelectedLogProvider
+        DTS:InstanceID="{234594EA-78CD-4A24-B3F0-49B353FD8D2F}" />
+    </DTS:SelectedLogProviders>
   </DTS:LoggingOptions>
   <DTS:Executables>
     <DTS:Executable
@@ -1310,6 +1314,8 @@ WHERE [Id_DW] is null</property>
       DTS:ObjectName="Update Valor Homologado"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
       <DTS:ObjectData>
         <pipeline
           version="1">

@@ -13,8 +13,8 @@
   DTS:ObjectName="st_mdr_tipo_item"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="40"
-  DTS:VersionGUID="{B451A90C-C9A8-450F-9F7E-D9F2113E91D6}">
+  DTS:VersionBuild="41"
+  DTS:VersionGUID="{D4901B08-6050-4834-B66B-4A57A2155F48}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -159,6 +159,10 @@
       <DTS:Property
         DTS:Name="DataBytes">-1</DTS:Property>
     </DTS:Property>
+    <DTS:SelectedLogProviders>
+      <DTS:SelectedLogProvider
+        DTS:InstanceID="{BC914D3C-FC06-4D95-9E21-850A80269A83}" />
+    </DTS:SelectedLogProviders>
   </DTS:LoggingOptions>
   <DTS:Executables>
     <DTS:Executable
@@ -212,6 +216,8 @@
           DTS:ObjectName="LoadMySQL"
           DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0" />
           <DTS:ObjectData>
             <pipeline
               version="1">

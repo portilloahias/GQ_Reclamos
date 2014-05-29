@@ -13,8 +13,8 @@
   DTS:ObjectName="Fact_ReclamosAsignados"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="116"
-  DTS:VersionGUID="{44D33491-B55B-426F-A72E-D970CE515F8A}">
+  DTS:VersionBuild="118"
+  DTS:VersionGUID="{13FA4E8D-EA58-4CC6-8F79-3DEE61B8390B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -106,6 +106,10 @@
       <DTS:Property
         DTS:Name="DataBytes">-1</DTS:Property>
     </DTS:Property>
+    <DTS:SelectedLogProviders>
+      <DTS:SelectedLogProvider
+        DTS:InstanceID="{439BB569-680F-4265-B979-CE92E753D097}" />
+    </DTS:SelectedLogProviders>
   </DTS:LoggingOptions>
   <DTS:Executables>
     <DTS:Executable
@@ -901,6 +905,8 @@ LEFT JOIN [dbo].[st_ban_sucursal] as sucursal
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{2E0475AA-B7B4-4198-A928-F9AF5C1C0C95}"

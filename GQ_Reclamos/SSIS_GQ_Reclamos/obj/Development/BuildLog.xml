@@ -2,153 +2,153 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>SSIS_GQ_Reclamos</Name>
-    <LastWriteTime>2014-05-28T21:20:38.9223602Z</LastWriteTime>
+    <LastWriteTime>2014-05-29T16:31:05.4124414Z</LastWriteTime>
     <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>st_mdr_area.dtsx</Name>
-      <LastWriteTime>2014-05-27T20:24:45.3711449Z</LastWriteTime>
+      <LastWriteTime>2014-05-29T16:25:17.2616915Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_ban_sucursal.dtsx</Name>
-      <LastWriteTime>2014-05-27T20:24:45.3901468Z</LastWriteTime>
+      <LastWriteTime>2014-05-29T16:24:45.473513Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_marca.dtsx</Name>
-      <LastWriteTime>2014-05-27T17:06:01.0797363Z</LastWriteTime>
+      <LastWriteTime>2014-05-29T16:25:04.7564411Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_mdr_clasificacion_item.dtsx</Name>
-      <LastWriteTime>2014-05-27T20:24:45.3501428Z</LastWriteTime>
+      <LastWriteTime>2014-05-29T16:25:36.9836635Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_mdr_reclamo_asignado.dtsx</Name>
-      <LastWriteTime>2014-05-27T20:24:45.2171295Z</LastWriteTime>
+      <LastWriteTime>2014-05-29T16:26:03.3563005Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_mdr_severidad.dtsx</Name>
-      <LastWriteTime>2014-05-27T20:24:45.3301408Z</LastWriteTime>
+      <LastWriteTime>2014-05-29T16:26:13.8463494Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_mdr_tipo_item.dtsx</Name>
-      <LastWriteTime>2014-05-27T17:06:01.0577341Z</LastWriteTime>
+      <LastWriteTime>2014-05-29T16:26:51.3951039Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_mdr_transaccion.dtsx</Name>
-      <LastWriteTime>2014-05-27T20:24:45.3091387Z</LastWriteTime>
+      <LastWriteTime>2014-05-29T16:27:03.4603103Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_mdr_usuario.dtsx</Name>
-      <LastWriteTime>2014-05-27T20:24:45.2881366Z</LastWriteTime>
+      <LastWriteTime>2014-05-29T16:27:46.8806519Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_mdr_reclamo.dtsx</Name>
-      <LastWriteTime>2014-05-27T20:24:45.2401318Z</LastWriteTime>
+      <LastWriteTime>2014-05-29T16:25:49.5909241Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_vendedor.dtsx</Name>
-      <LastWriteTime>2014-05-27T20:24:45.2651343Z</LastWriteTime>
+      <LastWriteTime>2014-05-29T16:28:46.6826315Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Dim_Area.dtsx</Name>
-      <LastWriteTime>2014-05-22T21:40:46.6446594Z</LastWriteTime>
+      <LastWriteTime>2014-05-29T16:20:15.0014685Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Dim_Marcas.dtsx</Name>
-      <LastWriteTime>2014-05-26T19:46:32.7624795Z</LastWriteTime>
+      <LastWriteTime>2014-05-29T16:20:51.610129Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Dim_Severidad.dtsx</Name>
-      <LastWriteTime>2014-05-22T17:05:30.9762389Z</LastWriteTime>
+      <LastWriteTime>2014-05-29T16:21:47.1266801Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Dim_TipoSituacionReclamo.dtsx</Name>
-      <LastWriteTime>2014-05-28T19:16:32.7262501Z</LastWriteTime>
+      <LastWriteTime>2014-05-29T16:22:47.4547123Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Dim_DetalleTipoSituacionReclamo.dtsx</Name>
-      <LastWriteTime>2014-05-23T16:25:52.302757Z</LastWriteTime>
+      <LastWriteTime>2014-05-29T16:20:26.4216104Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_ZQEV_BO_SECTORES.dtsx</Name>
-      <LastWriteTime>2014-05-26T17:26:51.8314702Z</LastWriteTime>
+      <LastWriteTime>2014-05-29T16:29:20.9280557Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_ZQEV_DBMSOCIEDAD.dtsx</Name>
-      <LastWriteTime>2014-05-22T21:04:29.4179585Z</LastWriteTime>
+      <LastWriteTime>2014-05-29T16:29:49.3398966Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_Orquestador.dtsx</Name>
-      <LastWriteTime>2014-05-27T17:07:59.4675739Z</LastWriteTime>
+      <LastWriteTime>2014-05-29T16:28:29.1038738Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Dim_TransaccionOrigen.dtsx</Name>
-      <LastWriteTime>2014-05-23T16:52:52.0337139Z</LastWriteTime>
+      <LastWriteTime>2014-05-29T16:23:10.4660132Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Dim_Sociedades.dtsx</Name>
-      <LastWriteTime>2014-05-23T20:19:57.6001886Z</LastWriteTime>
+      <LastWriteTime>2014-05-29T16:22:18.6718343Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Dim_Vendedor.dtsx</Name>
-      <LastWriteTime>2014-05-27T20:56:45.1120998Z</LastWriteTime>
+      <LastWriteTime>2014-05-29T16:23:23.705337Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Dim_Sucursal.dtsx</Name>
-      <LastWriteTime>2014-05-28T20:15:47.7403127Z</LastWriteTime>
+      <LastWriteTime>2014-05-29T16:22:32.6372307Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Dim_Reclamos.dtsx</Name>
-      <LastWriteTime>2014-05-27T21:18:07.1932951Z</LastWriteTime>
+      <LastWriteTime>2014-05-29T16:21:35.2054881Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Dim_Niveles.dtsx</Name>
-      <LastWriteTime>2014-05-28T17:12:06.8777399Z</LastWriteTime>
+      <LastWriteTime>2014-05-29T16:21:13.6413319Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Dim_Fecha.dtsx</Name>
-      <LastWriteTime>2014-05-28T16:42:16.969767Z</LastWriteTime>
+      <LastWriteTime>2014-05-29T16:20:39.7779459Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DW_Orquestador.dtsx</Name>
-      <LastWriteTime>2014-05-28T19:15:54.9644743Z</LastWriteTime>
+      <LastWriteTime>2014-05-29T16:23:49.3849047Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Fact_Reclamos.dtsx</Name>
-      <LastWriteTime>2014-05-28T21:04:38.9953771Z</LastWriteTime>
+      <LastWriteTime>2014-05-29T16:24:07.2366897Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Fact_ReclamosAsignados.dtsx</Name>
-      <LastWriteTime>2014-05-28T21:20:38.8693549Z</LastWriteTime>
+      <LastWriteTime>2014-05-29T16:24:30.1179776Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

@@ -13,8 +13,8 @@
   DTS:ObjectName="st_mdr_area"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="39"
-  DTS:VersionGUID="{D27218D6-B0C4-428E-A6B3-C99D647E4FF5}">
+  DTS:VersionBuild="40"
+  DTS:VersionGUID="{539DC863-8D58-4425-A62C-0F118F7CE4DD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -159,6 +159,10 @@
       <DTS:Property
         DTS:Name="DataBytes">-1</DTS:Property>
     </DTS:Property>
+    <DTS:SelectedLogProviders>
+      <DTS:SelectedLogProvider
+        DTS:InstanceID="{CDC0F8A8-0D21-424C-8CB5-14BE294034EF}" />
+    </DTS:SelectedLogProviders>
   </DTS:LoggingOptions>
   <DTS:Executables>
     <DTS:Executable
@@ -212,6 +216,8 @@
           DTS:ObjectName="LoadMySQL"
           DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0" />
           <DTS:ObjectData>
             <pipeline
               version="1">

@@ -13,8 +13,8 @@
   DTS:ObjectName="Fact_Reclamos"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="115"
-  DTS:VersionGUID="{04781C9E-9747-4506-AC45-B77F901AA8FC}">
+  DTS:VersionBuild="116"
+  DTS:VersionGUID="{1AE2BE07-07F9-4F44-B0AD-EB9D670B92E3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -106,6 +106,10 @@
       <DTS:Property
         DTS:Name="DataBytes">-1</DTS:Property>
     </DTS:Property>
+    <DTS:SelectedLogProviders>
+      <DTS:SelectedLogProvider
+        DTS:InstanceID="{BF711870-3A4D-493F-B460-E4259265E32B}" />
+    </DTS:SelectedLogProviders>
   </DTS:LoggingOptions>
   <DTS:Executables>
     <DTS:Executable
@@ -119,6 +123,8 @@
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{DB996F8B-C79C-4362-A138-68169AFD2478}"
@@ -731,6 +737,8 @@
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{BEEBD0A0-2F1D-4069-8215-A3B510496576}"
@@ -748,6 +756,8 @@
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{DB996F8B-C79C-4362-A138-68169AFD2478}"
@@ -794,6 +804,10 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="160,42"
+          Id="Package\Insert TMP FACT"
+          TopLeft="18,209.5" />
+        <NodeLayout
           Size="170,42"
           Id="Package\Insertar Fact Value"
           TopLeft="13,311.5" />
@@ -806,8 +820,8 @@
           Id="Package\Truncate TMP Fact ST"
           TopLeft="5.5,5.5" />
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="98,47.5">
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="98,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -827,13 +841,9 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="160,42"
-          Id="Package\Insert TMP FACT"
-          TopLeft="18,209.5" />
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="98,149.5">
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="98,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -917,7 +927,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Insertar Fact Value\Source ST">
+    design-time-name="Package\Insertar Fact Value\Destination DW">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -930,7 +940,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Insertar Fact Value\Destination DW">
+    design-time-name="Package\Insertar Fact Value\Source ST">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

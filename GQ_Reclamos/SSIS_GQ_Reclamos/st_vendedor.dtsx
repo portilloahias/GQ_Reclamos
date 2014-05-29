@@ -13,8 +13,8 @@
   DTS:ObjectName="st_vendedor"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="53"
-  DTS:VersionGUID="{C8426211-FD33-49FB-98AE-8B07840EA19B}">
+  DTS:VersionBuild="54"
+  DTS:VersionGUID="{56C9E7C1-01DB-4B42-881B-FC66F7D09976}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -159,6 +159,10 @@
       <DTS:Property
         DTS:Name="DataBytes">-1</DTS:Property>
     </DTS:Property>
+    <DTS:SelectedLogProviders>
+      <DTS:SelectedLogProvider
+        DTS:InstanceID="{1C266801-C5E0-4BCE-9541-6A2816213A4B}" />
+    </DTS:SelectedLogProviders>
   </DTS:LoggingOptions>
   <DTS:Executables>
     <DTS:Executable
@@ -212,6 +216,8 @@
           DTS:ObjectName="LoadMySQL"
           DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0" />
           <DTS:ObjectData>
             <pipeline
               version="1">

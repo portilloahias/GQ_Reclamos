@@ -13,8 +13,8 @@
   DTS:ObjectName="Dim_Marcas"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="81"
-  DTS:VersionGUID="{ACE89F41-4431-4871-89E5-8AC6CD99AAD8}">
+  DTS:VersionBuild="82"
+  DTS:VersionGUID="{391380A5-4D4D-4B6E-B26A-432C54EAC191}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -106,6 +106,10 @@
       <DTS:Property
         DTS:Name="DataBytes">-1</DTS:Property>
     </DTS:Property>
+    <DTS:SelectedLogProviders>
+      <DTS:SelectedLogProvider
+        DTS:InstanceID="{874FFD45-5E4F-49E1-864F-C7A65E2EA090}" />
+    </DTS:SelectedLogProviders>
   </DTS:LoggingOptions>
   <DTS:Executables>
     <DTS:Executable
@@ -1237,6 +1241,8 @@ WHERE [Id_DW] is null</property>
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{A5D634CA-65A2-4EB4-92A2-8E66DB0B974A}"
@@ -1973,6 +1979,10 @@ GROUP by sector_fina</property>
           Id="Package\Insertar Nuevos Valores DW"
           TopLeft="5.50000000000001,107.5" />
         <NodeLayout
+          Size="181,42"
+          Id="Package\Update Source MySql"
+          TopLeft="22,311.5" />
+        <NodeLayout
           Size="204,42"
           Id="Package\Update Valor Homologado"
           TopLeft="10.5,209.5" />
@@ -2020,10 +2030,6 @@ GROUP by sector_fina</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="181,42"
-          Id="Package\Update Source MySql"
-          TopLeft="22,311.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
           TopLeft="112.5,251.5">
@@ -2540,6 +2546,14 @@ GROUP by sector_fina</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\Update Valor Homologado\Get ST Homologado">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Update Valor Homologado\Get DW Homologado">
     <Properties>
       <Property>
@@ -2549,14 +2563,6 @@ GROUP by sector_fina</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Update Valor Homologado\Get ST Homologado">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

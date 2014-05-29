@@ -13,8 +13,8 @@
   DTS:ObjectName="Dim_Sucursal"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="94"
-  DTS:VersionGUID="{DAEADB53-3A64-4B76-9B35-CC688093D2AF}">
+  DTS:VersionBuild="95"
+  DTS:VersionGUID="{B4D4A246-976C-4075-9FF7-21F38D5EE47D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -106,6 +106,10 @@
       <DTS:Property
         DTS:Name="DataBytes">-1</DTS:Property>
     </DTS:Property>
+    <DTS:SelectedLogProviders>
+      <DTS:SelectedLogProvider
+        DTS:InstanceID="{6253F054-A2C3-483F-B13D-E614792B5A14}" />
+    </DTS:SelectedLogProviders>
   </DTS:LoggingOptions>
   <DTS:Executables>
     <DTS:Executable

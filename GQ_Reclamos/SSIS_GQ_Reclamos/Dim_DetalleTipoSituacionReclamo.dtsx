@@ -13,8 +13,8 @@
   DTS:ObjectName="Dim_DetalleTipoSituacionReclamo"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="83"
-  DTS:VersionGUID="{932A7A29-0D7B-4DEC-AF0B-7F644C355C8E}">
+  DTS:VersionBuild="84"
+  DTS:VersionGUID="{A07B8F7F-F349-4171-842C-28C32CA48AA9}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -106,6 +106,10 @@
       <DTS:Property
         DTS:Name="DataBytes">-1</DTS:Property>
     </DTS:Property>
+    <DTS:SelectedLogProviders>
+      <DTS:SelectedLogProvider
+        DTS:InstanceID="{0FFFCE95-6485-4EA2-94EA-4A33858811AE}" />
+    </DTS:SelectedLogProviders>
   </DTS:LoggingOptions>
   <DTS:Executables>
     <DTS:Executable
@@ -2267,6 +2271,10 @@ WHERE [Id_DW] is null</property>
           Size="212,42"
           Id="Package\Insertar Nuevos Valores DW"
           TopLeft="5.50000000000003,107.5" />
+        <NodeLayout
+          Size="204,42"
+          Id="Package\Update Valor Homologado"
+          TopLeft="5.50000000000003,209.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="112,47.5">
@@ -2289,10 +2297,6 @@ WHERE [Id_DW] is null</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="204,42"
-          Id="Package\Update Valor Homologado"
-          TopLeft="5.50000000000003,209.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="109.5,149.5">

@@ -13,8 +13,8 @@
   DTS:ObjectName="Dim_Fecha"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="109"
-  DTS:VersionGUID="{5309EA31-949F-4411-9522-D5DFBCF701F9}">
+  DTS:VersionBuild="110"
+  DTS:VersionGUID="{401E1451-C695-470A-9BA8-03F46A61F0EB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -106,6 +106,10 @@
       <DTS:Property
         DTS:Name="DataBytes">-1</DTS:Property>
     </DTS:Property>
+    <DTS:SelectedLogProviders>
+      <DTS:SelectedLogProvider
+        DTS:InstanceID="{8A1F223E-5363-4EBD-996E-4BA88F94BE78}" />
+    </DTS:SelectedLogProviders>
   </DTS:LoggingOptions>
   <DTS:Executables>
     <DTS:Executable
@@ -119,6 +123,8 @@
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{300E05F8-5741-48D1-9E4C-35609384ABAA}"

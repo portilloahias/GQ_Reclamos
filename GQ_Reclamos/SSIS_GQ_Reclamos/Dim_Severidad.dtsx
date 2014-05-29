@@ -13,8 +13,8 @@
   DTS:ObjectName="Dim_Severidad"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="74"
-  DTS:VersionGUID="{73F53A82-6275-4212-9FA1-04951F5AD75C}">
+  DTS:VersionBuild="75"
+  DTS:VersionGUID="{E98A84F3-CBB5-4FBC-BA0C-ED397795245F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -106,6 +106,10 @@
       <DTS:Property
         DTS:Name="DataBytes">-1</DTS:Property>
     </DTS:Property>
+    <DTS:SelectedLogProviders>
+      <DTS:SelectedLogProvider
+        DTS:InstanceID="{614080FC-A45C-464D-8993-68BD8D86932D}" />
+    </DTS:SelectedLogProviders>
   </DTS:LoggingOptions>
   <DTS:Executables>
     <DTS:Executable
@@ -1309,6 +1313,8 @@ WHERE [Id_DW] is null</property>
       DTS:ObjectName="Update Valor Homologado"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
       <DTS:ObjectData>
         <pipeline
           version="1">

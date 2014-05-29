@@ -13,8 +13,8 @@
   DTS:ObjectName="Dim_Vendedor"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="108"
-  DTS:VersionGUID="{C037EA2F-445A-473A-9BE5-BB1D6D2081BF}">
+  DTS:VersionBuild="109"
+  DTS:VersionGUID="{81FB6AFA-5D64-4416-874B-D6CF5359CC8E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -106,6 +106,10 @@
       <DTS:Property
         DTS:Name="DataBytes">-1</DTS:Property>
     </DTS:Property>
+    <DTS:SelectedLogProviders>
+      <DTS:SelectedLogProvider
+        DTS:InstanceID="{6253F054-A2C3-483F-B13D-E614792B5A14}" />
+    </DTS:SelectedLogProviders>
   </DTS:LoggingOptions>
   <DTS:Executables>
     <DTS:Executable

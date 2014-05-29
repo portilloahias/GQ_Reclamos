@@ -13,8 +13,8 @@
   DTS:ObjectName="Dim_Sociedades"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="88"
-  DTS:VersionGUID="{3D2C212C-DB7A-47C3-91D6-23A9B05E07D6}">
+  DTS:VersionBuild="90"
+  DTS:VersionGUID="{87D20B81-C4D5-48AD-8716-C0E9981A94E3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -106,6 +106,10 @@
       <DTS:Property
         DTS:Name="DataBytes">-1</DTS:Property>
     </DTS:Property>
+    <DTS:SelectedLogProviders>
+      <DTS:SelectedLogProvider
+        DTS:InstanceID="{8672D900-F4C0-4A87-B120-1A85A42BF3D6}" />
+    </DTS:SelectedLogProviders>
   </DTS:LoggingOptions>
   <DTS:Executables>
     <DTS:Executable
@@ -2490,6 +2494,10 @@ WHERE left([BUKRS],1) !='0' AND Valido ='S'  And
           Size="212,42"
           Id="Package\Insertar Nuevos Valores DW"
           TopLeft="5.50000000000003,107.5" />
+        <NodeLayout
+          Size="204,42"
+          Id="Package\Update Valor Homologado"
+          TopLeft="9.50000000000003,209.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="111.5,47.5">
@@ -2512,10 +2520,6 @@ WHERE left([BUKRS],1) !='0' AND Valido ='S'  And
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="204,42"
-          Id="Package\Update Valor Homologado"
-          TopLeft="9.50000000000003,209.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="111.5,149.5">
@@ -2845,6 +2849,14 @@ WHERE left([BUKRS],1) !='0' AND Valido ='S'  And
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\Insertar Nuevos Valores DW\Source ST">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Insertar Nuevos Valores DW\Destination DW">
     <Properties>
       <Property>
@@ -2854,14 +2866,6 @@ WHERE left([BUKRS],1) !='0' AND Valido ='S'  And
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Insertar Nuevos Valores DW\Source ST">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
