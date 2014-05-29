@@ -1,0 +1,243 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="dc467568-634e-41dd-90ca-1e3cf80f43f8" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Reclamo</ID>
+  <Name>Reclamo</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1779" scrolltop="-3836" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="10186" y="12091" backcolor="16185078" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimReclamo" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3175" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000a0000670c000043110000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimReclamo" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1779</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-3836</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="949b4950-5afe-4577-89a7-18151da7328d">
+    <DataSourceViewID>dsvDW_GQ_Reclamos</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="b3a63295-192f-46ed-9f30-5995bf9039d2">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="d5a86fd1-6135-4a00-854a-5cd155878310">
+      <ID>Id Reclamo</ID>
+      <Name>Id Reclamo</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9b824277-4085-4bc2-9f2d-fc4359983533">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8a96c6da-83f2-4161-8f53-ec6c2a652c48">
+            <TableID>dbo_DimReclamo</TableID>
+            <ColumnID>Id_Reclamo</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="d377f180-8cf9-4809-b391-2c97b5e0c8c0">
+          <AttributeID>Estado Reclamo</AttributeID>
+          <Name>Estado Reclamo</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="2275aab1-c16d-488c-aecc-463e9db09be2">
+          <AttributeID>Origen</AttributeID>
+          <Name>Origen</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="17bcb26c-7981-420e-8d70-98fc232dd165">
+          <AttributeID>Tipo Caso</AttributeID>
+          <Name>Tipo de Caso</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="59d0174d-f665-4b3d-b959-f6f86cc5fdc6">
+          <AttributeID>Dias Antiguedad</AttributeID>
+          <Name>Días de Antigüedad</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="fa2382e9-9b4b-415a-ae28-619d559184c9">
+          <AttributeID>Antiguedad</AttributeID>
+          <Name>Clasificación Antigüedad</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4d5b92e1-9cc3-4ff7-8ed0-f2c6c2a6e04b">
+          <AttributeID>Numero Caso</AttributeID>
+          <Name>Número de Caso</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9caef973-47ac-49df-93fc-05ef617f02ef">
+          <AttributeID>Codigo Reclamo</AttributeID>
+          <Name>Código Reclamo</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="cda4da9e-5a46-454c-962b-05e75567dc71">
+      <ID>Estado Reclamo</ID>
+      <Name>Estado Reclamo</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7eaed268-d51d-41bc-88a2-fecf2886e668">
+          <DataType>WChar</DataType>
+          <DataSize>60</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cb944768-9630-4c7e-96ec-9c1db6ca2522">
+            <TableID>dbo_DimReclamo</TableID>
+            <ColumnID>EstadoReclamo</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6ee78c71-7252-45ee-b0d1-0e3325aca121">
+      <ID>Origen</ID>
+      <Name>Origen</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="750e7f5e-9e76-4929-8b07-c96b6bc591df">
+          <DataType>WChar</DataType>
+          <DataSize>60</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9e6cfbe4-31a2-4140-a61f-086df098fc82">
+            <TableID>dbo_DimReclamo</TableID>
+            <ColumnID>Origen</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3a0a912e-91aa-450d-bd09-225c2911296f">
+      <ID>Tipo Caso</ID>
+      <Name>Tipo de Caso</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2d568f39-5fd4-4511-97d4-5516ffb00807">
+          <DataType>WChar</DataType>
+          <DataSize>60</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e650e53b-3d10-4351-bae4-d15c30b3482c">
+            <TableID>dbo_DimReclamo</TableID>
+            <ColumnID>TipoCaso</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3be21bda-7b48-42c6-84de-02e56b96d29d">
+      <ID>Dias Antiguedad</ID>
+      <Name>Días de Antigüedad</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="21931b3d-9d7b-41f8-8ab7-a7890fac4cfe">
+          <DataType>WChar</DataType>
+          <DataSize>60</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="641dc0c1-e966-472b-afad-d941664f871b">
+            <TableID>dbo_DimReclamo</TableID>
+            <ColumnID>DiasAntiguedad</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ee390eeb-0975-4c31-82bc-12382f732005">
+      <ID>Antiguedad</ID>
+      <Name>Clasificación Antigüedad</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c3cedd78-dfd0-484b-9082-0d71aa4b6ced">
+          <DataType>WChar</DataType>
+          <DataSize>60</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8beeeb37-5e2a-4d69-ba94-4d4565f64d98">
+            <TableID>dbo_DimReclamo</TableID>
+            <ColumnID>Antiguedad</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c1dafb1b-2919-48d0-9f00-3dbfd6d89401">
+      <ID>Numero Caso</ID>
+      <Name>Número de Caso</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="14c40790-fb76-486e-b4ee-bbb68810dc2a">
+          <DataType>WChar</DataType>
+          <DataSize>60</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d4423b34-1fc2-4b95-a1a4-8e57de3b9257">
+            <TableID>dbo_DimReclamo</TableID>
+            <ColumnID>NumeroCaso</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f47e2c33-aabb-432a-805c-b851a0d8f085">
+      <ID>Codigo Reclamo</ID>
+      <Name>Código Reclamo</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="64ebe655-bf5c-4427-a6d6-b08c8ce9a457">
+          <DataType>WChar</DataType>
+          <DataSize>60</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fdf91f02-e4b1-4ffe-b656-4604cd8d9786">
+            <TableID>dbo_DimReclamo</TableID>
+            <ColumnID>CodigoReclamo</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

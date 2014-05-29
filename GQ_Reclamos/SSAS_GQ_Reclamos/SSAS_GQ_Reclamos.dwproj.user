@@ -3,7 +3,7 @@
     <Configuration>
       <Name>Development</Name>
       <Options>
-        <TargetServer>localhost</TargetServer>
+        <TargetServer>GQSV-BI\BIGQ</TargetServer>
         <TargetDatabase>SSAS_GQ_Reclamos</TargetDatabase>
         <StartObject>
           <ObjectId></ObjectId>

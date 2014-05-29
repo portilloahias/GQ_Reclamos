@@ -6,11 +6,72 @@
         <ConnectionString>Provider=SQLNCLI11.1;Data Source=GQSV-BI\BIGQ;Integrated Security=SSPI;Initial Catalog=BIDWGQCAL</ConnectionString>
         <ImpersonationInfo>
           <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">ImpersonateAccount</ImpersonationMode>
-          <Account xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"></Account>
-          <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Unchanged</ImpersonationInfoSecurity>
+          <Account xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">GQSV\gqservicios</Account>
+          <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">PasswordRemoved</ImpersonationInfoSecurity>
         </ImpersonationInfo>
       </DataSource>
     </DataSources>
+    <Dimensions>
+      <Dimension>
+        <ID>Dim Area</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Severidad</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Tipo Situacion Reclamo</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Detalle Tipo Situacion Reclamo</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Transaccion Origen</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Sucursal</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Sociedad</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Marca</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Reclamo</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Vendedor</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Nivel</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Fecha</ID>
+      </Dimension>
+    </Dimensions>
+    <Cubes>
+      <Cube>
+        <ID>dsvDW_GQ_Reclamos</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fact Reclamos</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fact Reclamos</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+          <MeasureGroup>
+            <ID>Fact Reclamos Asignados</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fact Reclamos Asignados</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+    </Cubes>
     <DataSourceImpersonationInfo>
       <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Default</ImpersonationMode>
       <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Unchanged</ImpersonationInfoSecurity>

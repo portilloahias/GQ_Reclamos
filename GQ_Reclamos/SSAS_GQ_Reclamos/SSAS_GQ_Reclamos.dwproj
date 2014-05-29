@@ -6,12 +6,80 @@
     <Name>SSAS_GQ_Reclamos.database</Name>
     <FullPath>SSAS_GQ_Reclamos.database</FullPath>
   </Database>
+  <Cubes>
+    <ProjectItem>
+      <Name>dsvDW_GQ_Reclamos.cube</Name>
+      <FullPath>dsvDW_GQ_Reclamos.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>dsvDW_GQ_Reclamos.partitions</Name>
+          <FullPath>dsvDW_GQ_Reclamos.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+  </Cubes>
+  <Dimensions>
+    <ProjectItem>
+      <Name>Área.dim</Name>
+      <FullPath>Área.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Severidad.dim</Name>
+      <FullPath>Severidad.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Tipo Situación Reclamo.dim</Name>
+      <FullPath>Tipo Situación Reclamo.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Detalle Tipo Situación Reclamo.dim</Name>
+      <FullPath>Detalle Tipo Situación Reclamo.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Transacción Origen.dim</Name>
+      <FullPath>Transacción Origen.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Sucursal.dim</Name>
+      <FullPath>Sucursal.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Sociedad.dim</Name>
+      <FullPath>Sociedad.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Marca.dim</Name>
+      <FullPath>Marca.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Reclamo.dim</Name>
+      <FullPath>Reclamo.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Vendedor.dim</Name>
+      <FullPath>Vendedor.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Nivel.dim</Name>
+      <FullPath>Nivel.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Fecha.dim</Name>
+      <FullPath>Fecha.dim</FullPath>
+    </ProjectItem>
+  </Dimensions>
   <DataSources>
     <ProjectItem>
       <Name>dsDW_GQ_Reclamos.ds</Name>
       <FullPath>dsDW_GQ_Reclamos.ds</FullPath>
     </ProjectItem>
   </DataSources>
+  <DataSourceViews>
+    <ProjectItem>
+      <Name>dsvDW_GQ_Reclamos.dsv</Name>
+      <FullPath>dsvDW_GQ_Reclamos.dsv</FullPath>
+    </ProjectItem>
+  </DataSourceViews>
   <Configurations>
     <Configuration>
       <Name>Development</Name>

@@ -7,8 +7,8 @@
   <ConnectionStringSecurity>Unchanged</ConnectionStringSecurity>
   <ImpersonationInfo>
     <ImpersonationMode>ImpersonateAccount</ImpersonationMode>
-    <Account></Account>
-    <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
+    <Account>GQSV\gqservicios</Account>
+    <ImpersonationInfoSecurity>PasswordRemoved</ImpersonationInfoSecurity>
   </ImpersonationInfo>
   <Timeout>PT0S</Timeout>
 </DataSource>
