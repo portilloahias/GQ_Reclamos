@@ -1,0 +1,3220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataSchemaModel FileFormatVersion="1.2" SchemaVersion="2.4" DspName="Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider" CollationLcid="1033" CollationCaseSensitive="False" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+	<Header>
+		<CustomData Category="AnsiNulls">
+			<Metadata Name="AnsiNulls" Value="True" />
+		</CustomData>
+		<CustomData Category="QuotedIdentifier">
+			<Metadata Name="QuotedIdentifier" Value="True" />
+		</CustomData>
+		<CustomData Category="CompatibilityMode">
+			<Metadata Name="CompatibilityMode" Value="120" />
+		</CustomData>
+		<CustomData Category="Reference" Type="Assembly">
+			<Metadata Name="LogicalName" Value="DW_GQ_Reclamos.dll" />
+			<Metadata Name="FileName" Value="C:\USERS\GQSERVICIOS\DESKTOP\GQ_RECLAMOS\DW_GQ_RECLAMOS\OBJ\DEBUG\DW_GQ_RECLAMOS.DLL" />
+			<Metadata Name="AssemblyName" Value="DW_GQ_Reclamos" />
+			<Metadata Name="PermissionSet" Value="SAFE" />
+			<Metadata Name="Owner" Value="" />
+			<Metadata Name="GenerateSqlClrDdl" Value="True" />
+			<Metadata Name="IsVisible" Value="True" />
+			<Metadata Name="IsModelAware" Value="True" />
+			<Metadata Name="SkipCreationIfEmpty" Value="True" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\Users\gqservicios\Desktop\GQ_Reclamos\DW_GQ_Reclamos\obj\Debug\DW_GQ_Reclamos.pdb" />
+		</CustomData>
+		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
+	</Header>
+	<Model>
+		<Element Type="SqlDatabaseOptions">
+			<Property Name="Collation" Value="SQL_Latin1_General_CP1_CI_AS" />
+			<Property Name="IsAnsiNullDefaultOn" Value="True" />
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsAnsiWarningsOn" Value="True" />
+			<Property Name="IsArithAbortOn" Value="True" />
+			<Property Name="IsConcatNullYieldsNullOn" Value="True" />
+			<Property Name="IsTornPageProtectionOn" Value="False" />
+			<Property Name="IsFullTextEnabled" Value="True" />
+			<Property Name="PageVerifyMode" Value="3" />
+			<Property Name="DefaultLanguage" Value="" />
+			<Property Name="DefaultFullTextLanguage" Value="" />
+			<Relationship Name="DefaultFilegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlDefaultConstraint" Name="[dbo].[DF_DIMArea_Id_Area]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[(NEXT VALUE FOR [dbo].[Seq_Dim_Area])]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[DimArea]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ExpressionDependencies">
+				<Entry>
+					<References Name="[dbo].[Seq_Dim_Area]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[DimArea].[Id_Area]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="3" />
+		</Element>
+		<Element Type="SqlDefaultConstraint" Name="[dbo].[DF_DimDetalleTipoSituacionReclamo_DescripcionDetalleTipoSituacionReclamo]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[(NEXT VALUE FOR [dbo].[Seq_Dim_Detalle_Tipo_Situacion_Reclamo])]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[DimDetalleTipoSituacionReclamo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ExpressionDependencies">
+				<Entry>
+					<References Name="[dbo].[Seq_Dim_Detalle_Tipo_Situacion_Reclamo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[DimDetalleTipoSituacionReclamo].[DescripcionDetalleTipoSituacionReclamo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="4" />
+		</Element>
+		<Element Type="SqlDefaultConstraint" Name="[dbo].[DF_DimDetalleTipoSituacionReclamo_Id_DetalleTipoSituacionReclamo]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[(NEXT VALUE FOR [dbo].[Seq_Dim_Detalle_Tipo_Situacion_Reclamo])]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[DimDetalleTipoSituacionReclamo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ExpressionDependencies">
+				<Entry>
+					<References Name="[dbo].[Seq_Dim_Detalle_Tipo_Situacion_Reclamo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[DimDetalleTipoSituacionReclamo].[Id_DetalleTipoSituacionReclamo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="5" />
+		</Element>
+		<Element Type="SqlDefaultConstraint" Name="[dbo].[DF_DIMMarca_Id_Marca]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[(NEXT VALUE FOR [dbo].[Seq_Dim_Marca])]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[DimMarca]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ExpressionDependencies">
+				<Entry>
+					<References Name="[dbo].[Seq_Dim_Marca]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[DimMarca].[Id_Marca]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="6" />
+		</Element>
+		<Element Type="SqlDefaultConstraint" Name="[dbo].[DF_DimReclamo_Id_Reclamo]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[(NEXT VALUE FOR [dbo].[Seq_Dim_Reclamo])]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[DimReclamo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ExpressionDependencies">
+				<Entry>
+					<References Name="[dbo].[Seq_Dim_Reclamo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[DimReclamo].[Id_Reclamo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="7" />
+		</Element>
+		<Element Type="SqlDefaultConstraint" Name="[dbo].[DF_DIMSeveridad_Id_Severidad]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[(NEXT VALUE FOR [dbo].[Seq_Dim_Severidad])]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[DimSeveridad]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ExpressionDependencies">
+				<Entry>
+					<References Name="[dbo].[Seq_Dim_Severidad]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[DimSeveridad].[Id_Severidad]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="8" />
+		</Element>
+		<Element Type="SqlDefaultConstraint" Name="[dbo].[DF_DimSociedad_Id_Sociedad]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[(NEXT VALUE FOR [dbo].[Seq_Dim_Sociedad])]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[DimSociedad]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ExpressionDependencies">
+				<Entry>
+					<References Name="[dbo].[Seq_Dim_Sociedad]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[DimSociedad].[Id_Sociedad]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="9" />
+		</Element>
+		<Element Type="SqlDefaultConstraint" Name="[dbo].[DF_DimSucursal_Id_Sucursal]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[(NEXT VALUE FOR [dbo].[Seq_Dim_Sucursal])]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[DimSucursal]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ExpressionDependencies">
+				<Entry>
+					<References Name="[dbo].[Seq_Dim_Sucursal]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[DimSucursal].[Id_Sucursal]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="10" />
+		</Element>
+		<Element Type="SqlDefaultConstraint" Name="[dbo].[DF_DimTipoSituacionReclamo_Id_TipoSituacionReclamo]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[(NEXT VALUE FOR [dbo].[Seq_Dim_Tipo_Situacion_Reclamo])]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[DimTipoSituacionReclamo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ExpressionDependencies">
+				<Entry>
+					<References Name="[dbo].[Seq_Dim_Tipo_Situacion_Reclamo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[DimTipoSituacionReclamo].[Id_TipoSituacionReclamo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="11" />
+		</Element>
+		<Element Type="SqlDefaultConstraint" Name="[dbo].[DF_DimTransaccionOrigen_Id_TransaccionOrigen]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[(NEXT VALUE FOR [dbo].[Seq_Dim_TransaccionOrigen])]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[DimTransaccionOrigen]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ExpressionDependencies">
+				<Entry>
+					<References Name="[dbo].[Seq_Dim_TransaccionOrigen]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[DimTransaccionOrigen].[Id_TransaccionOrigen]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="12" />
+		</Element>
+		<Element Type="SqlDefaultConstraint" Name="[dbo].[DF_DimVendedor_Id_Vendedor]">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[(NEXT VALUE FOR [dbo].[Seq_Dim_Vendedor])]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[DimVendedor]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ExpressionDependencies">
+				<Entry>
+					<References Name="[dbo].[Seq_Dim_Vendedor]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[DimVendedor].[Id_Vendedor]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="13" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[DimArea]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimArea].[Id_Area]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="3" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimArea].[DescripcionArea]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="60" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="14" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[DimDetalleTipoSituacionReclamo]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimDetalleTipoSituacionReclamo].[Id_DetalleTipoSituacionReclamo]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="5" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimDetalleTipoSituacionReclamo].[DescripcionDetalleTipoSituacionReclamo]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="60" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="4" />
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="15" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[DimFecha]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimFecha].[IdFecha]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimFecha].[Fecha]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimFecha].[Anno]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimFecha].[Mes]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimFecha].[SemanaMes]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimFecha].[SemanaAnno]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimFecha].[DescripcionMes]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimFecha].[DescripcionDia]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimFecha].[Trimestre]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimFecha].[Semestre]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimFecha].[DiaSemana]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimFecha].[DiaMes]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimFecha].[DiaAnno]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimFecha].[AnnoMes]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="16" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[DimMarca]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimMarca].[Id_Marca]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="6" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimMarca].[DescripcionMarca]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="60" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="17" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[DimNivel]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimNivel].[Id_Nivel]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimNivel].[Nivel]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="18" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[DimReclamo]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimReclamo].[Id_Reclamo]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="7" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimReclamo].[EstadoReclamo]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="60" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimReclamo].[Origen]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="60" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimReclamo].[TipoCaso]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="60" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimReclamo].[DiasAntiguedad]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="60" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimReclamo].[Antiguedad]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="60" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimReclamo].[NumeroCaso]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="60" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimReclamo].[CodigoReclamo]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="60" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="19" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[DimSeveridad]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimSeveridad].[Id_Severidad]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="8" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimSeveridad].[DescripcionSeveridad]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="60" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="20" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[DimSociedad]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimSociedad].[Id_Sociedad]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="9" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimSociedad].[CodigoSociedad]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimSociedad].[DescripcionSociedad]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="60" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimSociedad].[NombreCorto]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="60" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimSociedad].[Pais]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="60" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimSociedad].[CodigoPais]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="60" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="21" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[DimSucursal]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimSucursal].[Id_Sucursal]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="10" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimSucursal].[Sucursal]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="200" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimSucursal].[SucursalPais]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="200" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimSucursal].[Pais]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="60" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="22" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[DimTipoSituacionReclamo]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimTipoSituacionReclamo].[Id_TipoSituacionReclamo]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="11" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimTipoSituacionReclamo].[DescripcionTipoSituacionReclamo]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="60" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="23" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[DimTransaccionOrigen]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimTransaccionOrigen].[Id_TransaccionOrigen]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="12" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimTransaccionOrigen].[DescripcionTransaccionOrigen]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="60" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="24" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[DimVendedor]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimVendedor].[Id_Vendedor]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="13" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimVendedor].[Vendedor]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[DimVendedor].[VendedorPais]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="25" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[FactReclamos]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[FactReclamos].[Id_Area]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[FactReclamos].[Id_Severidad]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[FactReclamos].[Id_TipoSituacionReclamo]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[FactReclamos].[Id_DetalleTipoSituacionReclamo]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[FactReclamos].[Id_TransaccionOrigen]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[FactReclamos].[Id_Sucursal]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[FactReclamos].[Id_Sociedad]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[FactReclamos].[Id_Marca]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[FactReclamos].[Id_Reclamo]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[FactReclamos].[Id_Vendedor]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[FactReclamos].[Id_FechaReclamo]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[FactReclamos].[ConteoReclamo]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[FactReclamos].[Dias]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="26" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[FactReclamosAsignados]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[FactReclamosAsignados].[Id_Area]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[FactReclamosAsignados].[Id_Severidad]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[FactReclamosAsignados].[Id_TipoSituacionReclamo]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[FactReclamosAsignados].[Id_DetalleTipoSituacionReclamo]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[FactReclamosAsignados].[Id_TransaccionOrigen]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[FactReclamosAsignados].[Id_SucursalCreacion]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[FactReclamosAsignados].[Id_Sociedad]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[FactReclamosAsignados].[Id_Marca]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[FactReclamosAsignados].[Id_Reclamo]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[FactReclamosAsignados].[Id_VendedorCreacion]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[FactReclamosAsignados].[Id_FechaCreacionReclamo]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[FactReclamosAsignados].[Id_SucursalAsignacion]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[FactReclamosAsignados].[Id_Vendedor_Asignado]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[FactReclamosAsignados].[Id_FechaAsignacion]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[FactReclamosAsignados].[Id_FechaCierre]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[FactReclamosAsignados].[Id_FechaCongelado]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[FactReclamosAsignados].[Id_FechaDescongelado]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[FactReclamosAsignados].[Id_Nivel]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[FactReclamosAsignados].[Conteo]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_DIMArea]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[DimArea].[Id_Area]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[DimArea]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="14" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_DimDetalleTipoSituacionReclamo]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[DimDetalleTipoSituacionReclamo].[Id_DetalleTipoSituacionReclamo]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[DimDetalleTipoSituacionReclamo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="15" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_DimFechaBaja]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[DimFecha].[IdFecha]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[DimFecha]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="16" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_DIMMarca]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[DimMarca].[Id_Marca]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[DimMarca]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="17" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_DimNivel]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[DimNivel].[Id_Nivel]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[DimNivel]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="18" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_DimOrigenTransaccion]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[DimTransaccionOrigen].[Id_TransaccionOrigen]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[DimTransaccionOrigen]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="24" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_DimReclamo]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[DimReclamo].[Id_Reclamo]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[DimReclamo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="19" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_DIMSeveridad]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[DimSeveridad].[Id_Severidad]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[DimSeveridad]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="20" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_DimSociedad]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[DimSociedad].[Id_Sociedad]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[DimSociedad]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="21" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_DimSucursal]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[DimSucursal].[Id_Sucursal]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[DimSucursal]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="22" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_DimTipoSituacionReclamo]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[DimTipoSituacionReclamo].[Id_TipoSituacionReclamo]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[DimTipoSituacionReclamo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="23" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_DimVendedor]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[DimVendedor].[Id_Vendedor]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[DimVendedor]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="25" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_Fact_Reclamos]">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[FactReclamos].[Id_Area]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[FactReclamos].[Id_Severidad]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[FactReclamos].[Id_TipoSituacionReclamo]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[FactReclamos].[Id_DetalleTipoSituacionReclamo]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[FactReclamos].[Id_TransaccionOrigen]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[FactReclamos].[Id_Sucursal]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[FactReclamos].[Id_Sociedad]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[FactReclamos].[Id_Marca]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[FactReclamos].[Id_Reclamo]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[FactReclamos].[Id_Vendedor]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[FactReclamos].[Id_FechaReclamo]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[FactReclamos]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Filegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="26" />
+		</Element>
+		<Element Type="SqlSequence" Name="[dbo].[Seq_Dim_Area]">
+			<Property Name="HasNoMaxValue" Value="False" />
+			<Property Name="HasNoMinValue" Value="False" />
+			<Property Name="MinValue" Value="0" />
+			<Property Name="MaxValue" Value="2147483647" />
+			<Property Name="Increment" Value="1" />
+			<Property Name="StartValue" Value="0" />
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="TypeSpecifier">
+				<Entry>
+					<Element Type="SqlTypeSpecifier">
+						<Relationship Name="Type">
+							<Entry>
+								<References ExternalSource="BuiltIns" Name="[int]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlSequence" Name="[dbo].[Seq_Dim_Detalle_Tipo_Situacion_Reclamo]">
+			<Property Name="HasNoMaxValue" Value="False" />
+			<Property Name="HasNoMinValue" Value="False" />
+			<Property Name="MinValue" Value="0" />
+			<Property Name="MaxValue" Value="2147483647" />
+			<Property Name="Increment" Value="1" />
+			<Property Name="StartValue" Value="0" />
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="TypeSpecifier">
+				<Entry>
+					<Element Type="SqlTypeSpecifier">
+						<Relationship Name="Type">
+							<Entry>
+								<References ExternalSource="BuiltIns" Name="[int]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlSequence" Name="[dbo].[Seq_Dim_Marca]">
+			<Property Name="HasNoMaxValue" Value="False" />
+			<Property Name="HasNoMinValue" Value="False" />
+			<Property Name="MinValue" Value="0" />
+			<Property Name="MaxValue" Value="2147483647" />
+			<Property Name="Increment" Value="1" />
+			<Property Name="StartValue" Value="0" />
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="TypeSpecifier">
+				<Entry>
+					<Element Type="SqlTypeSpecifier">
+						<Relationship Name="Type">
+							<Entry>
+								<References ExternalSource="BuiltIns" Name="[int]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlSequence" Name="[dbo].[Seq_Dim_Reclamo]">
+			<Property Name="HasNoMaxValue" Value="False" />
+			<Property Name="HasNoMinValue" Value="False" />
+			<Property Name="MinValue" Value="0" />
+			<Property Name="MaxValue" Value="2147483647" />
+			<Property Name="Increment" Value="1" />
+			<Property Name="StartValue" Value="0" />
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="TypeSpecifier">
+				<Entry>
+					<Element Type="SqlTypeSpecifier">
+						<Relationship Name="Type">
+							<Entry>
+								<References ExternalSource="BuiltIns" Name="[int]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlSequence" Name="[dbo].[Seq_Dim_Severidad]">
+			<Property Name="HasNoMaxValue" Value="False" />
+			<Property Name="HasNoMinValue" Value="False" />
+			<Property Name="MinValue" Value="0" />
+			<Property Name="MaxValue" Value="2147483647" />
+			<Property Name="Increment" Value="1" />
+			<Property Name="StartValue" Value="0" />
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="TypeSpecifier">
+				<Entry>
+					<Element Type="SqlTypeSpecifier">
+						<Relationship Name="Type">
+							<Entry>
+								<References ExternalSource="BuiltIns" Name="[int]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlSequence" Name="[dbo].[Seq_Dim_Sociedad]">
+			<Property Name="HasNoMaxValue" Value="False" />
+			<Property Name="HasNoMinValue" Value="False" />
+			<Property Name="MinValue" Value="0" />
+			<Property Name="MaxValue" Value="2147483647" />
+			<Property Name="Increment" Value="1" />
+			<Property Name="StartValue" Value="0" />
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="TypeSpecifier">
+				<Entry>
+					<Element Type="SqlTypeSpecifier">
+						<Relationship Name="Type">
+							<Entry>
+								<References ExternalSource="BuiltIns" Name="[int]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlSequence" Name="[dbo].[Seq_Dim_Sucursal]">
+			<Property Name="HasNoMaxValue" Value="False" />
+			<Property Name="HasNoMinValue" Value="False" />
+			<Property Name="MinValue" Value="0" />
+			<Property Name="MaxValue" Value="2147483647" />
+			<Property Name="Increment" Value="1" />
+			<Property Name="StartValue" Value="0" />
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="TypeSpecifier">
+				<Entry>
+					<Element Type="SqlTypeSpecifier">
+						<Relationship Name="Type">
+							<Entry>
+								<References ExternalSource="BuiltIns" Name="[int]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlSequence" Name="[dbo].[Seq_Dim_Tipo_Situacion_Reclamo]">
+			<Property Name="HasNoMaxValue" Value="False" />
+			<Property Name="HasNoMinValue" Value="False" />
+			<Property Name="MinValue" Value="0" />
+			<Property Name="MaxValue" Value="2147483647" />
+			<Property Name="Increment" Value="1" />
+			<Property Name="StartValue" Value="0" />
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="TypeSpecifier">
+				<Entry>
+					<Element Type="SqlTypeSpecifier">
+						<Relationship Name="Type">
+							<Entry>
+								<References ExternalSource="BuiltIns" Name="[int]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlSequence" Name="[dbo].[Seq_Dim_TransaccionOrigen]">
+			<Property Name="HasNoMaxValue" Value="False" />
+			<Property Name="HasNoMinValue" Value="False" />
+			<Property Name="MinValue" Value="0" />
+			<Property Name="MaxValue" Value="2147483647" />
+			<Property Name="Increment" Value="1" />
+			<Property Name="StartValue" Value="0" />
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="TypeSpecifier">
+				<Entry>
+					<Element Type="SqlTypeSpecifier">
+						<Relationship Name="Type">
+							<Entry>
+								<References ExternalSource="BuiltIns" Name="[int]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlSequence" Name="[dbo].[Seq_Dim_Vendedor]">
+			<Property Name="HasNoMaxValue" Value="False" />
+			<Property Name="HasNoMinValue" Value="False" />
+			<Property Name="MinValue" Value="0" />
+			<Property Name="MaxValue" Value="2147483647" />
+			<Property Name="Increment" Value="1" />
+			<Property Name="StartValue" Value="0" />
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="TypeSpecifier">
+				<Entry>
+					<Element Type="SqlTypeSpecifier">
+						<Relationship Name="Type">
+							<Entry>
+								<References ExternalSource="BuiltIns" Name="[int]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spCargarDimFecha]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+
+        --Varibales de procesamiento
+		DECLARE @FechaProcesamiento DATETIME;
+		DECLARE @strQuery nvarchar(max);
+		DECLARE @strParameters nvarchar(max);
+
+
+		--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		--Validar si las fecha ya fueron ingresadas
+		DECLARE @DimFechaInicio datetime;
+		DECLARE @DimFechaFin datetime;
+		SET @strParameters='@DimFechaInicio datetime OUTPUT,@DimFechaFin datetime OUTPUT';
+		
+		SET @strQuery='		SELECT @DimFechaInicio = Min([Fecha]),
+								   @DimFechaFin = Max ([Fecha])
+							FROM  [dbo].[DimFecha'+@strDimensionProcesamiento+']';
+        
+	    execute sp_executesql   @strQuery,
+		                        @strParameters,
+		                        @DimFechaInicio=@DimFechaInicio OUTPUT,
+								@DimFechaFin=@DimFechaFin OUTPUT;
+
+
+	   --Validar si es necesario agregar nuevos registros en la dimension de tiempo
+	   if @FechaFin <= @DimFechaFin
+	     BEGIN
+				return;
+		 END
+
+        --Modificar el rango de fecha si es necesario cargar ingrementalmente
+	    if @DimFechaFin is not null
+		 BEGIN
+			   SET @FechaInicio=CASE WHEN @FechaInicio<=@DimFechaFin
+			                            THEN DATEADD(day,1,@DimFechaFin)
+								ELSE @FechaInicio END;
+		 END
+		 
+		--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		SET @FechaProcesamiento=@FechaInicio;
+
+
+		SET @strQuery = 'INSERT INTO [dbo].[DimFecha'+@strDimensionProcesamiento+']
+												   ([IdFecha'+@strDimensionProcesamiento+']
+												   ,[Fecha]
+												   ,[Anno]
+												   ,[Mes]
+												   ,[SemanaMes]
+												   ,[SemanaAnno]
+												   ,[DescripcionMes]
+												   ,[DescripcionDia]
+												   ,[Trimestre]
+												   ,[Semestre]
+												   ,[DiaSemana]
+												   ,[DiaMes]
+												   ,[DiaAnno]
+												   ,[AnnoMes])
+											 VALUES
+												   (
+												     @IdFecha ,
+													 @FechaProcesamiento,
+													 @Anno ,
+													 @Mes ,
+													 @SemanaMes ,
+													 @SemanaAnno ,
+													 @DescripcionMes ,
+													 @DescripcionDia ,
+													 @Trimestre ,
+													 @Semestre ,
+													 @DiaSemana ,
+													 @DiaMes ,
+													 @DiaAnno ,
+													 @AnnoMes )';
+
+          SET @strParameters=	'@IdFecha int,
+								 @Anno int,
+								 @Mes int,
+								 @SemanaMes int,
+								 @SemanaAnno int,
+								 @DescripcionMes varchar(50),
+								 @DescripcionDia varchar(50),
+								 @Trimestre varchar(50),
+								 @Semestre varchar(50),
+								 @DiaSemana Varchar(50),
+								 @DiaMes int,
+								 @DiaAnno int,
+								 @AnnoMes int,
+								 @FechaProcesamiento DATETIME';
+
+		--Variables desnormalizadas de dimension de tiempo
+		DECLARE @IdFecha int;
+		DECLARE @Anno int;
+		DECLARE @Mes int;
+		DECLARE @SemanaMes int;
+		DECLARE @SemanaAnno int;
+		DECLARE @DescripcionMes varchar(50);
+		DECLARE @DescripcionDia varchar(50);
+		DECLARE @Trimestre varchar(50);
+		DECLARE @Semestre varchar(50);
+		DECLARE @DiaSemana Varchar(50);
+		DECLARE @DiaMes int;
+		DECLARE @DiaAnno int;
+		DECLARE @AnnoMes int;
+
+
+
+
+		WHILE @FechaFin>=@FechaProcesamiento
+		BEGIN
+	
+	
+			SET @IdFecha =CONVERT(int,CONVERT(VARCHAR(10),@FechaProcesamiento,112));
+			SET @Anno =YEAR(@FechaProcesamiento);
+			SET @Mes=Month(@FechaProcesamiento);
+			SET @SemanaMes=(DATEDIFF(week, DATEADD(MONTH, DATEDIFF(MONTH, 0, @FechaProcesamiento), 0), @FechaProcesamiento) +1) ;
+			SET @SemanaAnno=datepart(week,@FechaProcesamiento);
+			SET @DescripcionMes=CASE MONTH(@FechaProcesamiento)  
+								   WHEN 1 THEN 'ENERO'
+								   WHEN 2  THEN 'FEBRERO'
+								   WHEN 3  THEN 'MARZO'
+								   WHEN 4  THEN 'ABRIL'
+								   WHEN 5  THEN 'MAYO'
+								   WHEN 6  THEN 'JUNIO'
+								   WHEN 7  THEN 'JULIO'
+								   WHEN 8  THEN 'AGOSTO'
+								   WHEN 9  THEN 'SEPTIEMBRE'
+								   WHEN 10 THEN 'OCTUBRE'
+								   WHEN 11 THEN 'NOVIEMBRE'
+								   WHEN 12 THEN 'DICIEMBRE' END;
+			SET @DescripcionDia=CASE datepart(weekday,@FechaProcesamiento)
+								   WHEN 1 THEN 'DOMINGO'
+								   WHEN 2 THEN 'LUNES'
+								   WHEN 3 THEN 'MARTES'
+								   WHEN 4 THEN 'MIERCOLES'
+								   WHEN 5 THEN 'JUEVES'
+								   WHEN 6 THEN 'VIERNES'
+								   WHEN 7 THEN 'SABADO' END;
+			SET @Trimestre=CASE DATEPART(quarter,@FechaProcesamiento)
+								   WHEN 1 THEN CONVERT(VARCHAR(4),YEAR( @FechaProcesamiento)) + '-TRIMESTRE I'
+								   WHEN 2 THEN CONVERT(VARCHAR(4),YEAR( @FechaProcesamiento)) + '-TRIMESTRE II'
+								   WHEN 3 THEN CONVERT(VARCHAR(4),YEAR( @FechaProcesamiento)) + '-TRIMESTRE III'
+								   WHEN 4 THEN CONVERT(VARCHAR(4),YEAR( @FechaProcesamiento)) + '-TRIMESTRE IV' END;
+			SET @Semestre=CASE WHEN MONTH(@FechaProcesamiento)<=6 
+								   THEN (CONVERT(VARCHAR(4),YEAR( @FechaProcesamiento)) + '-SEMESTRE I' )
+								   ELSE (CONVERT(VARCHAR(4),YEAR( @FechaProcesamiento)) + '-SEMESTRE II' ) END;
+			SET @DiaSemana = DATEPART(weekday,@FechaProcesamiento);
+			SET @DiaMes = DAY(@FechaProcesamiento);
+			SET @DiaAnno =DATEPART (dayofyear,@FechaProcesamiento);
+			SET @AnnoMes =CONVERT(int,CONVERT(VARCHAR(6),@FechaProcesamiento,112));
+
+		
+			--realizar insert
+			 execute sp_executesql @strQuery,
+		                        @strParameters,
+		                        @IdFecha=@IdFecha ,
+								@FechaProcesamiento=@FechaProcesamiento,
+								@Anno=@Anno,
+								@Mes=@Mes,
+								@SemanaMes=@SemanaMes ,
+								@SemanaAnno=@SemanaAnno ,
+								@DescripcionMes=@DescripcionMes ,
+								@DescripcionDia= @DescripcionDia,
+								@Trimestre =@Trimestre,
+								@Semestre=@Semestre ,
+								@DiaSemana=@DiaSemana ,
+								@DiaMes=@DiaMes ,
+								@DiaAnno=@DiaAnno ,
+								@AnnoMes=@AnnoMes ;
+												   
+
+			--agregar un dia para continuar el procesamiento.
+			SET @FechaProcesamiento= DATEADD(day,1,@FechaProcesamiento);
+	     
+		END
+
+
+
+
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spCargarDimFecha].[@strDimensionProcesamiento]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[spCargarDimFecha].[@FechaFin]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spCargarDimFecha].[@FechaInicio]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spCargarDimFecha].[@FechaInicio]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spCargarDimFecha].[@FechaFin]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spCargarDimFecha].[@strDimensionProcesamiento]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="60" />
+				<Property Name="Length" Value="6268" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="--spCargarDimFecha '1999-01-02','2014-12-31', 'Nacimiento'&#xD;&#xA;CREATE PROCEDURE [dbo].[spCargarDimFecha]&#xD;&#xA;(&#xD;&#xA;&#x9; @FechaInicio DATETIME,&#xD;&#xA;     @FechaFin DATETIME,&#xD;&#xA;&#x9; @strDimensionProcesamiento VARCHAR(50)&#xD;&#xA;)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spDefaultValue]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+
+--********************************************************************************
+--********************************************************************************
+	IF (SELECT COUNT(1) 
+			FROM [dbo].[DimArea]
+				WHERE [Id_Area]=-1)<=0
+	BEGIN
+		INSERT INTO [dbo].[DimArea]
+			([Id_Area]
+			,[DescripcionArea])
+		VALUES
+			(-1
+			,'No Definido');
+	END
+
+--********************************************************************************
+--********************************************************************************
+	IF (SELECT COUNT(1) 
+			FROM [dbo].[DimDetalleTipoSituacionReclamo]
+				WHERE [Id_DetalleTipoSituacionReclamo]=-1)<=0
+	BEGIN
+
+		INSERT INTO [dbo].[DimDetalleTipoSituacionReclamo]
+			([Id_DetalleTipoSituacionReclamo]
+			,[DescripcionDetalleTipoSituacionReclamo])
+		VALUES
+			(-1
+			,'No Definido');
+
+	END
+
+
+--********************************************************************************
+--********************************************************************************
+	IF (SELECT COUNT(1) 
+			FROM [dbo].[DimFecha]
+				WHERE [IdFecha]=19000101)<=0
+	BEGIN
+
+		INSERT INTO [dbo].[DimFecha]	
+			([IdFecha]
+			,[Fecha]
+			,[Anno]
+			,[Mes]
+			,[SemanaMes]
+			,[SemanaAnno]
+			,[DescripcionMes]
+			,[DescripcionDia]
+			,[Trimestre]
+			,[Semestre]
+			,[DiaSemana]
+			,[DiaMes]
+			,[DiaAnno]
+			,[AnnoMes])
+		VALUES
+			(19000101
+			,'1900-01-01'
+			,-1
+			,'No Definido'
+			,-1
+			,-1
+			,'No Definido'
+			,'No Definido'
+			,'No Definido'
+			,'No Definido'
+			,-1
+			,-1
+			,-1
+			,-1);
+
+	END
+
+
+--********************************************************************************
+--********************************************************************************
+	IF (SELECT COUNT(1) 
+			FROM [dbo].[DimMarca]
+				WHERE [Id_Marca]=-1)<=0
+	BEGIN
+	
+		INSERT INTO [dbo].[DimMarca]
+			([Id_Marca]
+			,[DescripcionMarca])
+		VALUES
+			(-1
+			,'No Definido');
+		   
+	END
+
+
+--********************************************************************************
+--********************************************************************************
+	IF (SELECT COUNT(1) 
+			FROM  [dbo].[DimNivel]
+				WHERE [Id_Nivel]=-1)<=0
+	BEGIN
+
+		INSERT INTO [dbo].[DimNivel]
+			([Id_Nivel]
+			,[Nivel])
+		VALUES
+			(-1
+			,'N/D');
+					   
+	END
+
+--********************************************************************************
+--********************************************************************************
+	IF (SELECT COUNT(1) 
+			FROM  [dbo].[DimReclamo]
+				WHERE [Id_Reclamo]=-1)<=0
+	BEGIN
+
+		INSERT INTO [dbo].[DimReclamo]
+			([Id_Reclamo]
+			,[EstadoReclamo]
+			,[Origen]
+			,[TipoCaso]
+			,[DiasAntiguedad]
+			,[Antiguedad]
+			,[NumeroCaso]
+			,[CodigoReclamo])
+		VALUES
+			(-1
+			,'No Definido'
+			,'No Definido'
+			,'No Definido'
+			,'No Definido'
+			,'No Definido'
+			,'No Definido'
+			,'No Definido');
+
+	END
+
+
+--********************************************************************************
+--********************************************************************************
+	IF (SELECT COUNT(1) 
+			FROM  [dbo].[DimSeveridad]
+				WHERE [Id_Severidad]=-1)<=0
+	BEGIN
+
+		INSERT INTO [dbo].[DimSeveridad]
+			([Id_Severidad]
+			,[DescripcionSeveridad])
+		VALUES
+			(-1
+			,'No Definido');
+			   
+	END
+
+
+--********************************************************************************
+--********************************************************************************
+	IF (SELECT COUNT(1) 
+			FROM  [dbo].[DimSociedad]
+				WHERE [Id_Sociedad]=-1)<=0
+	BEGIN
+
+			INSERT INTO [dbo].[DimSociedad]
+				([Id_Sociedad]
+				,[CodigoSociedad]
+				,[DescripcionSociedad]
+				,[NombreCorto]
+				,[Pais]
+				,[CodigoPais])
+			VALUES
+				(-1
+				,'N/D'
+				,'No Definido'
+				,'No Definido'
+				,'No Definido'
+				,'No Definido');
+			   
+	END
+
+
+--********************************************************************************
+--********************************************************************************
+	IF (SELECT COUNT(1) 
+			FROM  [dbo].[DimSucursal]
+				WHERE [Id_Sucursal]=-1)<=0
+	BEGIN
+
+		INSERT INTO [dbo].[DimSucursal]
+			([Id_Sucursal]
+			,[Sucursal]
+			,[SucursalPais]
+			,[Pais])
+		VALUES
+			(-1
+			,'No Definido'
+			,'No Definido'
+			,'No Definido');
+			   
+	END
+
+
+--********************************************************************************
+--********************************************************************************
+	IF (SELECT COUNT(1) 
+			FROM  [dbo].[DimTipoSituacionReclamo]
+				WHERE [Id_TipoSituacionReclamo]=-1)<=0
+	BEGIN
+	
+		INSERT INTO [dbo].[DimTipoSituacionReclamo]
+			([Id_TipoSituacionReclamo]
+			,[DescripcionTipoSituacionReclamo])
+		VALUES
+			(-1
+			,'No Definido');
+
+			   
+	END
+
+
+--********************************************************************************
+--********************************************************************************
+	IF (SELECT COUNT(1) 
+			FROM  [dbo].[DimTransaccionOrigen]
+				WHERE [Id_TransaccionOrigen]=-1)<=0
+	BEGIN
+	
+		INSERT INTO [dbo].[DimTransaccionOrigen]
+			([Id_TransaccionOrigen]
+			,[DescripcionTransaccionOrigen])
+		VALUES
+			(-1
+			,'No Definido');
+
+		   
+	END
+
+
+--********************************************************************************
+--********************************************************************************
+	IF (SELECT COUNT(1) 
+			FROM  [dbo].[DimVendedor]
+				WHERE [Id_Vendedor]=-1)<=0
+	BEGIN
+
+		INSERT INTO [dbo].[DimVendedor]
+			([Id_Vendedor]
+			,[Vendedor]
+			,[VendedorPais])
+		VALUES
+			(-1
+			,'No Definido'
+			,'No Definido');
+	   
+	END
+
+
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[DimArea]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimArea].[Id_Area]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimArea].[Id_Area]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimArea].[DescripcionArea]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimDetalleTipoSituacionReclamo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimDetalleTipoSituacionReclamo].[Id_DetalleTipoSituacionReclamo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimDetalleTipoSituacionReclamo].[Id_DetalleTipoSituacionReclamo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimDetalleTipoSituacionReclamo].[DescripcionDetalleTipoSituacionReclamo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimFecha]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimFecha].[IdFecha]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimFecha].[IdFecha]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimFecha].[Fecha]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimFecha].[Anno]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimFecha].[Mes]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimFecha].[SemanaMes]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimFecha].[SemanaAnno]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimFecha].[DescripcionMes]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimFecha].[DescripcionDia]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimFecha].[Trimestre]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimFecha].[Semestre]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimFecha].[DiaSemana]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimFecha].[DiaMes]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimFecha].[DiaAnno]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimFecha].[AnnoMes]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimMarca]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimMarca].[Id_Marca]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimMarca].[Id_Marca]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimMarca].[DescripcionMarca]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimNivel]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimNivel].[Id_Nivel]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimNivel].[Id_Nivel]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimNivel].[Nivel]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimReclamo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimReclamo].[Id_Reclamo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimReclamo].[Id_Reclamo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimReclamo].[EstadoReclamo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimReclamo].[Origen]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimReclamo].[TipoCaso]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimReclamo].[DiasAntiguedad]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimReclamo].[Antiguedad]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimReclamo].[NumeroCaso]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimReclamo].[CodigoReclamo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimSeveridad]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimSeveridad].[Id_Severidad]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimSeveridad].[Id_Severidad]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimSeveridad].[DescripcionSeveridad]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimSociedad]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimSociedad].[Id_Sociedad]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimSociedad].[Id_Sociedad]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimSociedad].[CodigoSociedad]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimSociedad].[DescripcionSociedad]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimSociedad].[NombreCorto]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimSociedad].[Pais]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimSociedad].[CodigoPais]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimSucursal]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimSucursal].[Id_Sucursal]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimSucursal].[Id_Sucursal]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimSucursal].[Sucursal]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimSucursal].[SucursalPais]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimSucursal].[Pais]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimTipoSituacionReclamo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimTipoSituacionReclamo].[Id_TipoSituacionReclamo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimTipoSituacionReclamo].[Id_TipoSituacionReclamo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimTipoSituacionReclamo].[DescripcionTipoSituacionReclamo]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimTransaccionOrigen]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimTransaccionOrigen].[Id_TransaccionOrigen]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimTransaccionOrigen].[Id_TransaccionOrigen]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimTransaccionOrigen].[DescripcionTransaccionOrigen]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimVendedor]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimVendedor].[Id_Vendedor]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimVendedor].[Id_Vendedor]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimVendedor].[Vendedor]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DimVendedor].[VendedorPais]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="5770" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spDefaultValue]&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+	</Model>
+</DataSchemaModel>
