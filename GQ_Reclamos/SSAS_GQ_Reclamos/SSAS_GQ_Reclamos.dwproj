@@ -8,12 +8,12 @@
   </Database>
   <Cubes>
     <ProjectItem>
-      <Name>dsvDW_GQ_Reclamos.cube</Name>
-      <FullPath>dsvDW_GQ_Reclamos.cube</FullPath>
+      <Name>cube_GQ_Reclamos.cube</Name>
+      <FullPath>cube_GQ_Reclamos.cube</FullPath>
       <Dependencies>
         <ProjectItem>
-          <Name>dsvDW_GQ_Reclamos.partitions</Name>
-          <FullPath>dsvDW_GQ_Reclamos.partitions</FullPath>
+          <Name>cube_GQ_Reclamos.partitions</Name>
+          <FullPath>cube_GQ_Reclamos.partitions</FullPath>
         </ProjectItem>
       </Dependencies>
     </ProjectItem>
