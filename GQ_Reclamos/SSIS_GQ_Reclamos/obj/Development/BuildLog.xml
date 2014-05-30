@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>SSIS_GQ_Reclamos</Name>
-    <LastWriteTime>2014-05-29T17:17:15.5275057Z</LastWriteTime>
+    <LastWriteTime>2014-05-30T15:28:37.0069924Z</LastWriteTime>
     <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -149,6 +149,11 @@
     <ProjectBuildItemInfo>
       <Name>Fact_ReclamosAsignados.dtsx</Name>
       <LastWriteTime>2014-05-29T18:30:38.2597349Z</LastWriteTime>
+      <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Cube_Process.dtsx</Name>
+      <LastWriteTime>2014-05-30T15:28:35.2069924Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
