@@ -106,6 +106,17 @@
         <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
       </ErrorConfiguration>
       <CurrentStorageMode>Molap</CurrentStorageMode>
+      <DimensionPermissions>
+        <DimensionPermission>
+          <ID>DimensionPermission</ID>
+          <Name>DimensionPermission</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 1</RoleID>
+          <ReadDefinition>Allowed</ReadDefinition>
+          <Read>Allowed</Read>
+        </DimensionPermission>
+      </DimensionPermissions>
       <Attributes>
         <Attribute>
           <ID>Descripcion Area</ID>
@@ -230,6 +241,17 @@
         <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
       </ErrorConfiguration>
       <CurrentStorageMode>Molap</CurrentStorageMode>
+      <DimensionPermissions>
+        <DimensionPermission>
+          <ID>DimensionPermission</ID>
+          <Name>DimensionPermission</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 1</RoleID>
+          <ReadDefinition>Allowed</ReadDefinition>
+          <Read>Allowed</Read>
+        </DimensionPermission>
+      </DimensionPermissions>
       <Attributes>
         <Attribute>
           <ID>Id Severidad</ID>
@@ -353,6 +375,17 @@
         <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
       </ErrorConfiguration>
       <CurrentStorageMode>Molap</CurrentStorageMode>
+      <DimensionPermissions>
+        <DimensionPermission>
+          <ID>DimensionPermission</ID>
+          <Name>DimensionPermission</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 1</RoleID>
+          <ReadDefinition>Allowed</ReadDefinition>
+          <Read>Allowed</Read>
+        </DimensionPermission>
+      </DimensionPermissions>
       <Attributes>
         <Attribute>
           <ID>Id Tipo Situacion Reclamo</ID>
@@ -476,6 +509,17 @@
         <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
       </ErrorConfiguration>
       <CurrentStorageMode>Molap</CurrentStorageMode>
+      <DimensionPermissions>
+        <DimensionPermission>
+          <ID>DimensionPermission</ID>
+          <Name>DimensionPermission</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 1</RoleID>
+          <ReadDefinition>Allowed</ReadDefinition>
+          <Read>Allowed</Read>
+        </DimensionPermission>
+      </DimensionPermissions>
       <Attributes>
         <Attribute>
           <ID>Id Detalle Tipo Situacion Reclamo</ID>
@@ -599,6 +643,17 @@
         <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
       </ErrorConfiguration>
       <CurrentStorageMode>Molap</CurrentStorageMode>
+      <DimensionPermissions>
+        <DimensionPermission>
+          <ID>DimensionPermission</ID>
+          <Name>DimensionPermission</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 1</RoleID>
+          <ReadDefinition>Allowed</ReadDefinition>
+          <Read>Allowed</Read>
+        </DimensionPermission>
+      </DimensionPermissions>
       <Attributes>
         <Attribute>
           <ID>Id Transaccion Origen</ID>
@@ -722,6 +777,17 @@
         <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
       </ErrorConfiguration>
       <CurrentStorageMode>Molap</CurrentStorageMode>
+      <DimensionPermissions>
+        <DimensionPermission>
+          <ID>DimensionPermission</ID>
+          <Name>DimensionPermission</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 1</RoleID>
+          <ReadDefinition>Allowed</ReadDefinition>
+          <Read>Allowed</Read>
+        </DimensionPermission>
+      </DimensionPermissions>
       <Attributes>
         <Attribute>
           <ID>Id Sucursal</ID>
@@ -885,6 +951,17 @@
         <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
       </ErrorConfiguration>
       <CurrentStorageMode>Molap</CurrentStorageMode>
+      <DimensionPermissions>
+        <DimensionPermission>
+          <ID>DimensionPermission</ID>
+          <Name>DimensionPermission</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 1</RoleID>
+          <ReadDefinition>Allowed</ReadDefinition>
+          <Read>Allowed</Read>
+        </DimensionPermission>
+      </DimensionPermissions>
       <Attributes>
         <Attribute>
           <ID>Id Sociedad</ID>
@@ -1068,6 +1145,17 @@
         <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
       </ErrorConfiguration>
       <CurrentStorageMode>Molap</CurrentStorageMode>
+      <DimensionPermissions>
+        <DimensionPermission>
+          <ID>DimensionPermission</ID>
+          <Name>DimensionPermission</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 1</RoleID>
+          <ReadDefinition>Allowed</ReadDefinition>
+          <Read>Allowed</Read>
+        </DimensionPermission>
+      </DimensionPermissions>
       <Attributes>
         <Attribute>
           <ID>Id Marca</ID>
@@ -1191,6 +1279,17 @@
         <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
       </ErrorConfiguration>
       <CurrentStorageMode>Molap</CurrentStorageMode>
+      <DimensionPermissions>
+        <DimensionPermission>
+          <ID>DimensionPermission</ID>
+          <Name>DimensionPermission</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 1</RoleID>
+          <ReadDefinition>Allowed</ReadDefinition>
+          <Read>Allowed</Read>
+        </DimensionPermission>
+      </DimensionPermissions>
       <Attributes>
         <Attribute>
           <ID>Id Reclamo</ID>
@@ -1434,6 +1533,17 @@
         <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
       </ErrorConfiguration>
       <CurrentStorageMode>Molap</CurrentStorageMode>
+      <DimensionPermissions>
+        <DimensionPermission>
+          <ID>DimensionPermission</ID>
+          <Name>DimensionPermission</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 1</RoleID>
+          <ReadDefinition>Allowed</ReadDefinition>
+          <Read>Allowed</Read>
+        </DimensionPermission>
+      </DimensionPermissions>
       <Attributes>
         <Attribute>
           <ID>Id Vendedor</ID>
@@ -1577,6 +1687,17 @@
         <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
       </ErrorConfiguration>
       <CurrentStorageMode>Molap</CurrentStorageMode>
+      <DimensionPermissions>
+        <DimensionPermission>
+          <ID>DimensionPermission</ID>
+          <Name>DimensionPermission</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 1</RoleID>
+          <ReadDefinition>Allowed</ReadDefinition>
+          <Read>Allowed</Read>
+        </DimensionPermission>
+      </DimensionPermissions>
       <Attributes>
         <Attribute>
           <ID>Id Nivel</ID>
@@ -1754,6 +1875,17 @@
         <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
       </ErrorConfiguration>
       <CurrentStorageMode>Molap</CurrentStorageMode>
+      <DimensionPermissions>
+        <DimensionPermission>
+          <ID>DimensionPermission</ID>
+          <Name>DimensionPermission</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 1</RoleID>
+          <ReadDefinition>Allowed</ReadDefinition>
+          <Read>Allowed</Read>
+        </DimensionPermission>
+      </DimensionPermissions>
       <Attributes>
         <Attribute>
           <ID>Fecha</ID>
@@ -3556,6 +3688,18 @@
           </Attributes>
         </Dimension>
       </Dimensions>
+      <CubePermissions>
+        <CubePermission>
+          <ID>CubePermission</ID>
+          <Name>CubePermission</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 1</RoleID>
+          <ReadDefinition>Basic</ReadDefinition>
+          <Read>Allowed</Read>
+          <ReadSourceData>Allowed</ReadSourceData>
+        </CubePermission>
+      </CubePermissions>
       <MeasureGroups>
         <MeasureGroup>
           <ID>Fact Reclamos</ID>
@@ -4228,6 +4372,15 @@ VISIBLE = 1 ,  DISPLAY_FOLDER = 'Cálculos Reclamos'  ; </Text>
         <ImpersonationInfoSecurity>PasswordRemoved</ImpersonationInfoSecurity>
       </ImpersonationInfo>
       <Timeout>PT0S</Timeout>
+      <DataSourcePermissions>
+        <DataSourcePermission>
+          <ID>DataSourcePermission</ID>
+          <Name>DataSourcePermission</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 1</RoleID>
+        </DataSourcePermission>
+      </DataSourcePermissions>
     </DataSource>
   </DataSources>
   <DataSourceViews>
@@ -5462,4 +5615,55 @@ VISIBLE = 1 ,  DISPLAY_FOLDER = 'Cálculos Reclamos'  ; </Text>
       </Schema>
     </DataSourceView>
   </DataSourceViews>
+  <Roles>
+    <Role>
+      <ID>Role</ID>
+      <Name>Administrador</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Description></Description>
+      <Members>
+        <Member>
+          <Name>GQSV\gqservicios</Name>
+        </Member>
+        <Member>
+          <Name>GQSV\fescobar</Name>
+        </Member>
+      </Members>
+    </Role>
+    <Role>
+      <ID>Role 1</ID>
+      <Name>Usuarios</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Description></Description>
+      <Members>
+        <Member>
+          <Name>GQSV\ivalle</Name>
+        </Member>
+      </Members>
+    </Role>
+  </Roles>
+  <DatabasePermissions>
+    <DatabasePermission>
+      <ID>DatabasePermission</ID>
+      <Name>DatabasePermission</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <RoleID>Role</RoleID>
+      <Process>true</Process>
+      <ReadDefinition>Allowed</ReadDefinition>
+      <Read>Allowed</Read>
+      <Administer>true</Administer>
+    </DatabasePermission>
+    <DatabasePermission>
+      <ID>DatabasePermission 1</ID>
+      <Name>DatabasePermission 1</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <RoleID>Role 1</RoleID>
+      <ReadDefinition>Allowed</ReadDefinition>
+      <Read>Allowed</Read>
+    </DatabasePermission>
+  </DatabasePermissions>
 </Database>

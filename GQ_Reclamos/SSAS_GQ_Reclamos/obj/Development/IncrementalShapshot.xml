@@ -19,7 +19,7 @@
     <ObjectSnapshots>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
-        <TimeStamp>fbbTdqsBS6tMqu5sJZdKuemthgU=5/29/2014 11:57:57 AM5/29/2014 11:52:06 AM</TimeStamp>
+        <TimeStamp>amjQbNK1vscct21NaFML5GFVy3U=5/30/2014 12:01:05 PM5/29/2014 11:52:06 AM</TimeStamp>
         <ID>
           <String>dsDW_GQ_Reclamos</String>
         </ID>
@@ -33,99 +33,113 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>6NK7gZJxBsIDZpNZ9LQRAI1CwmU=5/29/2014 2:12:40 PM5/29/2014 12:05:11 PM</TimeStamp>
+        <TimeStamp>ytsGu/96lXUzVEdwNxgNj914H0M=5/30/2014 12:01:05 PM5/29/2014 12:05:11 PM</TimeStamp>
         <ID>
           <String>Dim Area</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>e6y/3Fgtw8625S/FVTsxr30uA3Q=5/29/2014 1:40:10 PM5/29/2014 12:05:11 PM</TimeStamp>
+        <TimeStamp>kT4t0WQ0pCmOcQ4+7vYKoGlyFYM=5/30/2014 12:01:05 PM5/29/2014 12:05:11 PM</TimeStamp>
         <ID>
           <String>Dim Severidad</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>RU9saHAEch0UsNIt71jds5EUlXg=5/29/2014 1:40:38 PM5/29/2014 12:05:11 PM</TimeStamp>
+        <TimeStamp>PHhYg1GawULkvZJOU5ZQHH+FNRo=5/30/2014 12:01:05 PM5/29/2014 12:05:11 PM</TimeStamp>
         <ID>
           <String>Dim Tipo Situacion Reclamo</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>SNojIL+kC3m1dD9SNic/TSX6RRI=5/29/2014 1:41:02 PM5/29/2014 12:05:11 PM</TimeStamp>
+        <TimeStamp>O8LQS4LAz07SBnUhMKgOpLU2e+k=5/30/2014 12:01:05 PM5/29/2014 12:05:11 PM</TimeStamp>
         <ID>
           <String>Dim Detalle Tipo Situacion Reclamo</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>0dP/02QpfJ2cran1H/bwM91hhPE=5/29/2014 1:41:43 PM5/29/2014 12:05:11 PM</TimeStamp>
+        <TimeStamp>HFvtS9bXDm+yLyz5FnepCOtRAiA=5/30/2014 12:01:05 PM5/29/2014 12:05:11 PM</TimeStamp>
         <ID>
           <String>Dim Transaccion Origen</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>myPTiGdwlUipOtYrMDA41ju/C6w=5/29/2014 1:45:00 PM5/29/2014 12:05:11 PM</TimeStamp>
+        <TimeStamp>0hCbeX65EULc6mD5ifJkBnzJiKo=5/30/2014 12:01:06 PM5/29/2014 12:05:11 PM</TimeStamp>
         <ID>
           <String>Dim Sucursal</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>XLHU9mhgNVoejqbZAZnUoM846fg=5/29/2014 1:46:41 PM5/29/2014 12:05:11 PM</TimeStamp>
+        <TimeStamp>B1CFwP+WpCs1Z2+tQkThW9KWjGg=5/30/2014 12:01:06 PM5/29/2014 12:05:11 PM</TimeStamp>
         <ID>
           <String>Dim Sociedad</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>vbWyDdg71B2+mk8seKxUC/lH77M=5/29/2014 1:47:19 PM5/29/2014 12:05:11 PM</TimeStamp>
+        <TimeStamp>1DslLWzekjN89b2cfIJTOe5lnuU=5/30/2014 12:01:06 PM5/29/2014 12:05:11 PM</TimeStamp>
         <ID>
           <String>Dim Marca</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>LsmpWtrfkCxet3BcRCMcXcEgoD8=5/29/2014 1:50:50 PM5/29/2014 12:05:11 PM</TimeStamp>
+        <TimeStamp>xXTRRlX0qdPCMMs1UZlBhNXq8Hg=5/30/2014 12:01:06 PM5/29/2014 12:05:11 PM</TimeStamp>
         <ID>
           <String>Dim Reclamo</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>2Fuz8N76gdNB9qlFZFPcMK+ZpJU=5/29/2014 1:51:46 PM5/29/2014 12:05:11 PM</TimeStamp>
+        <TimeStamp>N7ExSFjZlzPbh/bXCW63KOSgUK0=5/30/2014 12:01:06 PM5/29/2014 12:05:11 PM</TimeStamp>
         <ID>
           <String>Dim Vendedor</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>PSXnWRbSWgb5pQM93LrOUwW0+Ew=5/29/2014 1:51:55 PM5/29/2014 12:05:11 PM</TimeStamp>
+        <TimeStamp>rt3Ek9vBg2qj32qGHhKH0tcx4a4=5/30/2014 12:01:06 PM5/29/2014 12:05:11 PM</TimeStamp>
         <ID>
           <String>Dim Nivel</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>7DfIul1r5b8SBZ2x9YjDlcZnKeA=5/30/2014 10:53:41 AM5/29/2014 12:11:10 PM</TimeStamp>
+        <TimeStamp>EoZZTfIr2LdT4IdIGZkmmWmq9zM=5/30/2014 12:01:06 PM5/29/2014 12:11:10 PM</TimeStamp>
         <ID>
           <String>Dim Fecha</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>7L1e37j5TjrbVyoDy5RI3t6lGQQ=5/30/2014 10:46:22 AM5/29/2014 3:13:25 PMBGfHlcjp2L6SqepDbMDNxp3Ludg=5/30/2014 9:14:14 AM5/29/2014 3:13:25 PM</TimeStamp>
+        <TimeStamp>Xs4xRZFpC4B0jGxU2rtzzZ6OIJg=5/30/2014 12:03:41 PM5/29/2014 3:13:25 PMBGfHlcjp2L6SqepDbMDNxp3Ludg=5/30/2014 9:14:14 AM5/29/2014 3:13:25 PM</TimeStamp>
         <ID>
           <String>cube_GQ_Reclamos</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Role</Type>
+        <TimeStamp>dMb71dtjevNNaOixLadddJB0FBg=5/30/2014 12:02:15 PM5/30/2014 9:29:39 AM</TimeStamp>
+        <ID>
+          <String>Role</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Role</Type>
+        <TimeStamp>LSVGv9HO9Vbjw2P2LLnqItbiVPM=5/30/2014 12:05:16 PM5/30/2014 9:32:16 AM</TimeStamp>
+        <ID>
+          <String>Role 1</String>
         </ID>
       </ObjectSnapshot>
     </ObjectSnapshots>
     <DatabaseSnapshot>
       <Type>Microsoft.AnalysisServices.Database</Type>
-      <TimeStamp>VGuNFbtz/kbzW7lgudYlLErnBsA=5/30/2014 10:20:54 AM5/29/2014 11:17:08 AM</TimeStamp>
+      <TimeStamp>XwE8lV28rq89MPlCbVOYU8oUbCM=5/30/2014 12:01:05 PM5/29/2014 11:17:08 AM</TimeStamp>
       <ID>
         <String>SSAS_GQ_Reclamos</String>
       </ID>
@@ -134,5 +148,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2014-05-30T16:53:49.676667Z</LastDeployed>
+  <LastDeployed>2014-05-30T20:53:57.6Z</LastDeployed>
 </DeploymentSnapshot>

@@ -80,6 +80,16 @@
       <FullPath>dsvDW_GQ_Reclamos.dsv</FullPath>
     </ProjectItem>
   </DataSourceViews>
+  <Roles>
+    <ProjectItem>
+      <Name>Administrador.role</Name>
+      <FullPath>Administrador.role</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Usuarios.role</Name>
+      <FullPath>Usuarios.role</FullPath>
+    </ProjectItem>
+  </Roles>
   <Configurations>
     <Configuration>
       <Name>Development</Name>
