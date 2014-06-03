@@ -12,8 +12,8 @@
   DTS:ObjectName="st_Orquestador"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="14"
-  DTS:VersionGUID="{9344EAC6-3F1F-4915-99C8-56C77471819C}">
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{07D9E0B8-856C-45FE-8B27-43BC4412E856}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -367,7 +367,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{94358EDC-BC45-478E-AAB1-810BAF549417}"
-          SQLTask:SqlStatementSource="UPDATE rec&#xA;set rec.[DiasReclamo] = DAY(CASE WHEN  rec.[estado_reclamo]= 'Cerrada' THEN recAsi.fecha_cierre&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ELSE getdate() &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;END - rec.fecha_registro )&#xA;&#xA;        &#xA;                            &#xA;FROM  [dbo].[st_mdr_reclamo] as rec&#xA;INNER JOIN&#xA;  (SELECT MAX([fecha_cierre]) as fecha_cierre,&#xA;          codigo_sociedad,&#xA;&#x9;&#x9;  fk_id_st_reclamo&#xA;   FROM [dbo].[st_mdr_reclamo_asignado]&#xA;   GROUP BY  codigo_sociedad,&#xA;&#x9;&#x9;  fk_id_st_reclamo) as recAsi&#xA;ON rec.codigo_sociedad=recAsi.codigo_sociedad&#xA;AND rec.[id_mdr_reclamo]=recAsi.[fk_id_st_reclamo]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="UPDATE rec&#xA;set rec.[DiasReclamo] = DATEDIFF(day,rec.fecha_registro , CASE WHEN  rec.[estado_reclamo]= 'Cerrada' THEN recAsi.fecha_cierre&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ELSE getdate() &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;END  )&#xA;&#xA;        &#xA;                            &#xA;FROM  [dbo].[st_mdr_reclamo] as rec&#xA;INNER JOIN&#xA;  (SELECT MAX([fecha_cierre]) as fecha_cierre,&#xA;          codigo_sociedad,&#xA;&#x9;&#x9;  fk_id_st_reclamo&#xA;   FROM [dbo].[st_mdr_reclamo_asignado]&#xA;   GROUP BY  codigo_sociedad,&#xA;&#x9;&#x9;  fk_id_st_reclamo) as recAsi&#xA;ON rec.codigo_sociedad=recAsi.codigo_sociedad&#xA;AND rec.[id_mdr_reclamo]=recAsi.[fk_id_st_reclamo]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>

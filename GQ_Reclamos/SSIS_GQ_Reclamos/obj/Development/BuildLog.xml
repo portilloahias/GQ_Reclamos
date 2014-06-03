@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>SSIS_GQ_Reclamos</Name>
-    <LastWriteTime>2014-05-30T20:54:37.7604411Z</LastWriteTime>
+    <LastWriteTime>2014-06-03T22:30:11.3254104Z</LastWriteTime>
     <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -53,7 +53,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_mdr_reclamo.dtsx</Name>
-      <LastWriteTime>2014-05-29T16:25:49.5909241Z</LastWriteTime>
+      <LastWriteTime>2014-06-03T22:04:03.0505986Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -98,7 +98,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>st_Orquestador.dtsx</Name>
-      <LastWriteTime>2014-05-29T16:28:29.1038738Z</LastWriteTime>
+      <LastWriteTime>2014-06-03T22:10:55.5888483Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -153,7 +153,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Cube_Process.dtsx</Name>
-      <LastWriteTime>2014-05-30T20:54:46.1072757Z</LastWriteTime>
+      <LastWriteTime>2014-05-30T20:59:36.4123033Z</LastWriteTime>
       <LastKnownProtectionLevel>DontSaveSensitive</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
