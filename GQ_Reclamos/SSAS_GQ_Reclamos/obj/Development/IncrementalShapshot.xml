@@ -117,7 +117,7 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>Z9f97VQkztnbq32n0A7nHTjLO38=6/3/2014 11:15:37 AM5/29/2014 3:13:25 PMBGfHlcjp2L6SqepDbMDNxp3Ludg=5/30/2014 9:14:14 AM5/29/2014 3:13:25 PM</TimeStamp>
+        <TimeStamp>9cN+jVrp+ZUMHEHoKygF32DO04s=6/3/2014 5:08:05 PM5/29/2014 3:13:25 PMBGfHlcjp2L6SqepDbMDNxp3Ludg=5/30/2014 9:14:14 AM5/29/2014 3:13:25 PM</TimeStamp>
         <ID>
           <String>cube_GQ_Reclamos</String>
         </ID>
@@ -148,5 +148,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2014-06-03T17:15:38.273333Z</LastDeployed>
+  <LastDeployed>2014-06-03T23:08:15.46Z</LastDeployed>
 </DeploymentSnapshot>
