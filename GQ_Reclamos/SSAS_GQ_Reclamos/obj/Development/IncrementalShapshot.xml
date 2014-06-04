@@ -26,7 +26,7 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>8cKOd6n2OEoCpqtFfP4FK0PggyM=5/30/2014 10:13:05 AM5/29/2014 12:03:13 PM</TimeStamp>
+        <TimeStamp>IiLgMZQPuoABiHZc2o2/YG2IdCQ=6/4/2014 12:16:28 PM5/29/2014 12:03:13 PM</TimeStamp>
         <ID>
           <String>dsvDW_GQ_Reclamos</String>
         </ID>
@@ -89,7 +89,7 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>xXTRRlX0qdPCMMs1UZlBhNXq8Hg=5/30/2014 12:01:06 PM5/29/2014 12:05:11 PM</TimeStamp>
+        <TimeStamp>7WHmLlxH2SuOkcWipQqJ2TdOOng=6/4/2014 12:16:33 PM5/29/2014 12:05:11 PM</TimeStamp>
         <ID>
           <String>Dim Reclamo</String>
         </ID>
@@ -117,7 +117,7 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>9cN+jVrp+ZUMHEHoKygF32DO04s=6/3/2014 5:08:05 PM5/29/2014 3:13:25 PMBGfHlcjp2L6SqepDbMDNxp3Ludg=5/30/2014 9:14:14 AM5/29/2014 3:13:25 PM</TimeStamp>
+        <TimeStamp>CmtC28K5+BumDVyBKamDiEC8AG0=6/4/2014 12:16:28 PM5/29/2014 3:13:25 PMBGfHlcjp2L6SqepDbMDNxp3Ludg=5/30/2014 9:14:14 AM5/29/2014 3:13:25 PM</TimeStamp>
         <ID>
           <String>cube_GQ_Reclamos</String>
         </ID>
@@ -148,5 +148,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2014-06-03T23:08:15.46Z</LastDeployed>
+  <LastDeployed>2014-06-04T18:16:53.623333Z</LastDeployed>
 </DeploymentSnapshot>

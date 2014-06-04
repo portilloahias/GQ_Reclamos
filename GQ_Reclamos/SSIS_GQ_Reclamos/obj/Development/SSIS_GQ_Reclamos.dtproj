@@ -2212,10 +2212,10 @@
                 <SSIS:Property SSIS:Name="Name">st_mdr_reclamo</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">48</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">50</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{8B9B1362-9045-4164-95C5-6F9D0A3032F1}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{3789A08F-9A75-4FBB-9FEB-7DE8BA62E90C}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">6</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -3848,10 +3848,10 @@
                 <SSIS:Property SSIS:Name="Name">st_Orquestador</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">17</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">19</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{07D9E0B8-856C-45FE-8B27-43BC4412E856}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{EC4063C3-B6B9-4DA9-B4AB-6CF382313396}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">6</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -4604,10 +4604,10 @@
                 <SSIS:Property SSIS:Name="Name">Dim_Reclamos</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">120</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">126</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{A48A1725-2957-4E9C-84A1-9DB290E02210}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{CB69DE4F-E1EA-45FC-808C-B2DB3D0DFEE7}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">6</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

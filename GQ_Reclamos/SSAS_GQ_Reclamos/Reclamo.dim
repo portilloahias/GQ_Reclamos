@@ -1,14 +1,14 @@
 ﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="dc467568-634e-41dd-90ca-1e3cf80f43f8" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Dim Reclamo</ID>
   <Name>Reclamo</Name>
-  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
   <Annotations>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1779" scrolltop="-3836" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="10186" y="12091" backcolor="16185078" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1779" scrolltop="-3836" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="19950" y="12091" backcolor="16185078" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -19,9 +19,9 @@
           <layoutmanager>
             <ddsxmlobj />
           </layoutmanager>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimReclamo" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3175" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimReclamo" left="-1303" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="4498" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
-              <ddsxmlobjectstreaminitwrapper binary="000a0000670c000043110000" />
+              <ddsxmlobjectstreaminitwrapper binary="000a00009211000043110000" />
             </control>
             <layoutobject>
               <ddsxmlobj>
@@ -55,7 +55,7 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
-      <Value>20</Value>
+      <Value>-1303</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
@@ -66,7 +66,7 @@
       <Value>100</Value>
     </Annotation>
   </Annotations>
-  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <LastProcessed>0001-01-01T06:00:00Z</LastProcessed>
   <State>Unprocessed</State>
   <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="949b4950-5afe-4577-89a7-18151da7328d">
     <DataSourceViewID>dsvDW_GQ_Reclamos</DataSourceViewID>
@@ -81,8 +81,8 @@
     <DimensionPermission dwd:design-time-name="d36d2b54-127e-4cc1-a142-5643e2ccaf5a">
       <ID>DimensionPermission</ID>
       <Name>DimensionPermission</Name>
-      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
       <RoleID>Role 1</RoleID>
       <ReadDefinition>Allowed</ReadDefinition>
       <Read>Allowed</Read>
@@ -130,6 +130,14 @@
         <AttributeRelationship dwd:design-time-name="9caef973-47ac-49df-93fc-05ef617f02ef">
           <AttributeID>Codigo Reclamo</AttributeID>
           <Name>Código Reclamo</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="363f293f-c03e-4f49-b5bb-bb8cab2c5109">
+          <AttributeID>Horas Antiguedad</AttributeID>
+          <Name>Horas de Antigüedad</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="06537de8-fdc9-4ec4-a6c6-43454ba8988e">
+          <AttributeID>Antiguedad Horas</AttributeID>
+          <Name>Clasificación Antigüedad Horas</Name>
         </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
@@ -203,7 +211,7 @@
     </Attribute>
     <Attribute dwd:design-time-name="ee390eeb-0975-4c31-82bc-12382f732005">
       <ID>Antiguedad</ID>
-      <Name>Clasificación Antigüedad</Name>
+      <Name>Clasificación Antigüedad Días</Name>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="c3cedd78-dfd0-484b-9082-0d71aa4b6ced">
           <DataType>WChar</DataType>
@@ -243,6 +251,38 @@
           <Source xsi:type="ColumnBinding" dwd:design-time-name="fdf91f02-e4b1-4ffe-b656-4604cd8d9786">
             <TableID>dbo_DimReclamo</TableID>
             <ColumnID>CodigoReclamo</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9f458c0e-d2ca-4133-8967-100a758abedb">
+      <ID>Horas Antiguedad</ID>
+      <Name>Horas de Antigüedad</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d145db06-cdad-4557-9304-f4e17564d7e9">
+          <DataType>WChar</DataType>
+          <DataSize>60</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0a909168-e436-41f0-add0-e8db2f96494c">
+            <TableID>dbo_DimReclamo</TableID>
+            <ColumnID>HorasAntiguedad</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ff5f6c90-5bf1-4bc2-96d3-2c6eeeb5c5ff">
+      <ID>Antiguedad Horas</ID>
+      <Name>Clasificación Antigüedad Horas</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="22441594-323d-4cb3-85f2-a4cbb870ed80">
+          <DataType>WChar</DataType>
+          <DataSize>60</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4ea2a9c4-58f3-48a2-bf54-86aef232bea5">
+            <TableID>dbo_DimReclamo</TableID>
+            <ColumnID>AntiguedadHoras</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>

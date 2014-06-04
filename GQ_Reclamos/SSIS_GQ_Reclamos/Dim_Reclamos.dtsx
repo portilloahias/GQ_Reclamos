@@ -13,8 +13,8 @@
   DTS:ObjectName="Dim_Reclamos"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="120"
-  DTS:VersionGUID="{A48A1725-2957-4E9C-84A1-9DB290E02210}">
+  DTS:VersionBuild="126"
+  DTS:VersionGUID="{CB69DE4F-E1EA-45FC-808C-B2DB3D0DFEE7}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -347,6 +347,18 @@
                       dataType="str"
                       length="60"
                       name="CodigoReclamo" />
+                    <externalMetadataColumn
+                      refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[HorasAntiguedad]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="HorasAntiguedad" />
+                    <externalMetadataColumn
+                      refId="Package\Get Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[AntiguedadHoras]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="AntiguedadHoras" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1236,6 +1248,20 @@ FROM [dbo].[st_mdr_reclamo]</property>
                       cachedName="CodigoReclamo"
                       externalMetadataColumnId="Package\Insertar Nuevos Valores DW\Destination DW.Inputs[OLE DB Destination Input].ExternalColumns[CodigoReclamo]"
                       lineageId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[CodigoReclamo]" />
+                    <inputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Destination DW.Inputs[OLE DB Destination Input].Columns[HorasAntiguedad]"
+                      cachedDataType="i4"
+                      cachedName="HorasAntiguedad"
+                      externalMetadataColumnId="Package\Insertar Nuevos Valores DW\Destination DW.Inputs[OLE DB Destination Input].ExternalColumns[HorasAntiguedad]"
+                      lineageId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[HorasAntiguedad]" />
+                    <inputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Destination DW.Inputs[OLE DB Destination Input].Columns[AntiguedadHoras]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="AntiguedadHoras"
+                      externalMetadataColumnId="Package\Insertar Nuevos Valores DW\Destination DW.Inputs[OLE DB Destination Input].ExternalColumns[AntiguedadHoras]"
+                      lineageId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[AntiguedadHoras]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1285,6 +1311,18 @@ FROM [dbo].[st_mdr_reclamo]</property>
                       dataType="str"
                       length="60"
                       name="CodigoReclamo" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Nuevos Valores DW\Destination DW.Inputs[OLE DB Destination Input].ExternalColumns[HorasAntiguedad]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="HorasAntiguedad" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Nuevos Valores DW\Destination DW.Inputs[OLE DB Destination Input].ExternalColumns[AntiguedadHoras]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="AntiguedadHoras" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1345,7 +1383,9 @@ FROM [dbo].[st_mdr_reclamo]</property>
 	  DiasAntiguedad = [DiasReclamo],
 	  Antiguedad=[Antiguedad],
 	  NumeroCaso= numero_caso,
-	  CodigoReclamo = [codigo_sociedad]  + Right(('0000000000' + CAST([id_mdr_reclamo] as varchar(10))),10)
+	  CodigoReclamo = [codigo_sociedad]  + Right(('0000000000' + CAST([id_mdr_reclamo] as varchar(10))),10),
+      HorasAntiguedad= [HoraReclamo] ,
+      AntiguedadHoras=[AntiguedadHora]
 FROM [dbo].[st_mdr_reclamo]
 WHERE Id_dw is null</property>
                 <property
@@ -1458,6 +1498,26 @@ WHERE Id_dw is null</property>
                       lineageId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[CodigoReclamo]"
                       name="CodigoReclamo"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[HorasAntiguedad]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].ExternalColumns[HorasAntiguedad]"
+                      lineageId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[HorasAntiguedad]"
+                      name="HorasAntiguedad"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[AntiguedadHoras]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].ExternalColumns[AntiguedadHoras]"
+                      length="50"
+                      lineageId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[AntiguedadHoras]"
+                      name="AntiguedadHoras"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1501,6 +1561,16 @@ WHERE Id_dw is null</property>
                       dataType="str"
                       length="14"
                       name="CodigoReclamo" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].ExternalColumns[HorasAntiguedad]"
+                      dataType="i4"
+                      name="HorasAntiguedad" />
+                    <externalMetadataColumn
+                      refId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Output].ExternalColumns[AntiguedadHoras]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="AntiguedadHoras" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1555,6 +1625,18 @@ WHERE Id_dw is null</property>
                       length="14"
                       lineageId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Error Output].Columns[CodigoReclamo]"
                       name="CodigoReclamo" />
+                    <outputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Error Output].Columns[HorasAntiguedad]"
+                      dataType="i4"
+                      lineageId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Error Output].Columns[HorasAntiguedad]"
+                      name="HorasAntiguedad" />
+                    <outputColumn
+                      refId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Error Output].Columns[AntiguedadHoras]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Error Output].Columns[AntiguedadHoras]"
+                      name="AntiguedadHoras" />
                     <outputColumn
                       refId="Package\Insertar Nuevos Valores DW\Source ST.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -1729,6 +1811,18 @@ WHERE Id_dw is null</property>
                       dataType="str"
                       length="60"
                       name="CodigoReclamo" />
+                    <externalMetadataColumn
+                      refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[HorasAntiguedad]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="HorasAntiguedad" />
+                    <externalMetadataColumn
+                      refId="Package\Update Valor Homologado\Get DW Homologado.Outputs[OLE DB Source Output].ExternalColumns[AntiguedadHoras]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="AntiguedadHoras" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -2514,14 +2608,16 @@ WHERE Id_DW is null</property>
                   description="The SQL command to be executed."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT 
-                  EstadoReclamo= estado_reclamo,
+      EstadoReclamo= estado_reclamo,
 	  Origen = origen_reclamo,
 	  TipoCaso=tipo_caso,
 	  DiasAntiguedad = [DiasReclamo],
 	  Antiguedad=[Antiguedad],
 	  NumeroCaso= numero_caso,
 	  CodigoReclamo = [codigo_sociedad]  + Right(('0000000000' + CAST([id_mdr_reclamo] as varchar(10))),10),
-                Id_DW
+      HorasAntiguedad= [HoraReclamo] ,
+      AntiguedadHoras=[AntiguedadHora],
+       Id_dw
 FROM [dbo].[st_mdr_reclamo]
 WHERE Id_dw is not null</property>
                 <property
@@ -2635,13 +2731,33 @@ WHERE Id_dw is not null</property>
                       name="CodigoReclamo"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Update Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[Id_DW]"
+                      refId="Package\Update Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[HorasAntiguedad]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Update Valores DW\Source ST.Outputs[OLE DB Source Output].ExternalColumns[Id_DW]"
-                      lineageId="Package\Update Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[Id_DW]"
-                      name="Id_DW"
+                      externalMetadataColumnId="Package\Update Valores DW\Source ST.Outputs[OLE DB Source Output].ExternalColumns[HorasAntiguedad]"
+                      lineageId="Package\Update Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[HorasAntiguedad]"
+                      name="HorasAntiguedad"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[AntiguedadHoras]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Valores DW\Source ST.Outputs[OLE DB Source Output].ExternalColumns[AntiguedadHoras]"
+                      length="50"
+                      lineageId="Package\Update Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[AntiguedadHoras]"
+                      name="AntiguedadHoras"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[Id_dw]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Valores DW\Source ST.Outputs[OLE DB Source Output].ExternalColumns[Id_dw]"
+                      lineageId="Package\Update Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[Id_dw]"
+                      name="Id_dw"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -2687,9 +2803,19 @@ WHERE Id_dw is not null</property>
                       length="14"
                       name="CodigoReclamo" />
                     <externalMetadataColumn
-                      refId="Package\Update Valores DW\Source ST.Outputs[OLE DB Source Output].ExternalColumns[Id_DW]"
+                      refId="Package\Update Valores DW\Source ST.Outputs[OLE DB Source Output].ExternalColumns[HorasAntiguedad]"
                       dataType="i4"
-                      name="Id_DW" />
+                      name="HorasAntiguedad" />
+                    <externalMetadataColumn
+                      refId="Package\Update Valores DW\Source ST.Outputs[OLE DB Source Output].ExternalColumns[AntiguedadHoras]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="AntiguedadHoras" />
+                    <externalMetadataColumn
+                      refId="Package\Update Valores DW\Source ST.Outputs[OLE DB Source Output].ExternalColumns[Id_dw]"
+                      dataType="i4"
+                      name="Id_dw" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -2745,10 +2871,22 @@ WHERE Id_dw is not null</property>
                       lineageId="Package\Update Valores DW\Source ST.Outputs[OLE DB Source Error Output].Columns[CodigoReclamo]"
                       name="CodigoReclamo" />
                     <outputColumn
-                      refId="Package\Update Valores DW\Source ST.Outputs[OLE DB Source Error Output].Columns[Id_DW]"
+                      refId="Package\Update Valores DW\Source ST.Outputs[OLE DB Source Error Output].Columns[HorasAntiguedad]"
                       dataType="i4"
-                      lineageId="Package\Update Valores DW\Source ST.Outputs[OLE DB Source Error Output].Columns[Id_DW]"
-                      name="Id_DW" />
+                      lineageId="Package\Update Valores DW\Source ST.Outputs[OLE DB Source Error Output].Columns[HorasAntiguedad]"
+                      name="HorasAntiguedad" />
+                    <outputColumn
+                      refId="Package\Update Valores DW\Source ST.Outputs[OLE DB Source Error Output].Columns[AntiguedadHoras]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Update Valores DW\Source ST.Outputs[OLE DB Source Error Output].Columns[AntiguedadHoras]"
+                      name="AntiguedadHoras" />
+                    <outputColumn
+                      refId="Package\Update Valores DW\Source ST.Outputs[OLE DB Source Error Output].Columns[Id_dw]"
+                      dataType="i4"
+                      lineageId="Package\Update Valores DW\Source ST.Outputs[OLE DB Source Error Output].Columns[Id_dw]"
+                      name="Id_dw" />
                     <outputColumn
                       refId="Package\Update Valores DW\Source ST.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -2792,6 +2930,8 @@ WHERE Id_dw is not null</property>
       ,[Antiguedad] = ?
       ,[NumeroCaso] = ?
       ,[CodigoReclamo] = ?
+	  ,HorasAntiguedad= ?
+      ,AntiguedadHoras= ?
  WHERE [Id_Reclamo]=?</property>
                 <property
                   dataType="System.Int32"
@@ -2869,11 +3009,25 @@ WHERE Id_dw is not null</property>
                       externalMetadataColumnId="Package\Update Valores DW\Update DW.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
                       lineageId="Package\Update Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[CodigoReclamo]" />
                     <inputColumn
-                      refId="Package\Update Valores DW\Update DW.Inputs[OLE DB Command Input].Columns[Id_DW]"
+                      refId="Package\Update Valores DW\Update DW.Inputs[OLE DB Command Input].Columns[HorasAntiguedad]"
                       cachedDataType="i4"
-                      cachedName="Id_DW"
+                      cachedName="HorasAntiguedad"
                       externalMetadataColumnId="Package\Update Valores DW\Update DW.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
-                      lineageId="Package\Update Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[Id_DW]" />
+                      lineageId="Package\Update Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[HorasAntiguedad]" />
+                    <inputColumn
+                      refId="Package\Update Valores DW\Update DW.Inputs[OLE DB Command Input].Columns[AntiguedadHoras]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="AntiguedadHoras"
+                      externalMetadataColumnId="Package\Update Valores DW\Update DW.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      lineageId="Package\Update Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[AntiguedadHoras]" />
+                    <inputColumn
+                      refId="Package\Update Valores DW\Update DW.Inputs[OLE DB Command Input].Columns[Id_dw]"
+                      cachedDataType="i4"
+                      cachedName="Id_dw"
+                      externalMetadataColumnId="Package\Update Valores DW\Update DW.Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
+                      lineageId="Package\Update Valores DW\Source ST.Outputs[OLE DB Source Output].Columns[Id_dw]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2970,8 +3124,34 @@ WHERE Id_dw is not null</property>
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Update Valores DW\Update DW.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
-                      dataType="i4"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
                       name="Param_7">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Update Valores DW\Update DW.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="Param_8">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Update Valores DW\Update DW.Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
+                      dataType="i4"
+                      name="Param_9">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -3155,17 +3335,9 @@ WHERE Id_dw is not null</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="118,42"
-          Id="Package\Get Valor Homologado\Sort DW"
-          TopLeft="94.5,107.5" />
-        <NodeLayout
           Size="178,42"
           Id="Package\Get Valor Homologado\Get DW Homologado"
           TopLeft="5.5,5.5" />
-        <NodeLayout
-          Size="170,42"
-          Id="Package\Get Valor Homologado\Set Id Homologado"
-          TopLeft="245.5,413.5" />
         <NodeLayout
           Size="114,42"
           Id="Package\Get Valor Homologado\Sort ST"
@@ -3175,9 +3347,21 @@ WHERE Id_dw is not null</property>
           Id="Package\Get Valor Homologado\Get ST Homologado"
           TopLeft="244,5.5" />
         <NodeLayout
+          Size="132,42"
+          Id="Package\Get Valor Homologado\Merge Join"
+          TopLeft="237,194" />
+        <NodeLayout
           Size="155,42"
           Id="Package\Get Valor Homologado\Conditional Split"
           TopLeft="253,311.5" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Get Valor Homologado\Set Id Homologado"
+          TopLeft="245.5,413.5" />
+        <NodeLayout
+          Size="118,42"
+          Id="Package\Get Valor Homologado\Sort DW"
+          TopLeft="94.5,107.5" />
         <EdgeLayout
           Id="Package\Get Valor Homologado.Paths[Value DW]"
           TopLeft="330.5,353.5">
@@ -3200,6 +3384,74 @@ WHERE Id_dw is not null</property>
             <mssgm:EdgeLabel
               BoundingBox="-22.59533203125,21.37548828125,45.1906640625,9.7490234375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Get Valor Homologado.Paths[Sort Output1]"
+          TopLeft="153.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="128.833333333333,44.5"
+              Start="0,0"
+              End="128.833333333333,37">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.3802395209581" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.3802395209581"
+                    Point2="0,26.3802395209581"
+                    Point3="4,26.3802395209581" />
+                  <mssgle:LineSegment
+                    End="124.833333333333,26.3802395209581" />
+                  <mssgle:CubicBezierSegment
+                    Point1="124.833333333333,26.3802395209581"
+                    Point2="128.833333333333,26.3802395209581"
+                    Point3="128.833333333333,30.3802395209581" />
+                  <mssgle:LineSegment
+                    End="128.833333333333,37" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Get Valor Homologado.Paths[Sort Output]"
+          TopLeft="330.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-27.5,44.5"
+              Start="0,0"
+              End="-27.5,37">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.25"
+                    Point2="0,22.25"
+                    Point3="-4,22.25" />
+                  <mssgle:LineSegment
+                    End="-23.5,22.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-23.5,22.25"
+                    Point2="-27.5,22.25"
+                    Point3="-27.5,26.25" />
+                  <mssgle:LineSegment
+                    End="-27.5,37" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3250,78 +3502,6 @@ WHERE Id_dw is not null</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="132,42"
-          Id="Package\Get Valor Homologado\Merge Join"
-          TopLeft="237,194" />
-        <EdgeLayout
-          Id="Package\Get Valor Homologado.Paths[Sort Output]"
-          TopLeft="330.5,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-27.5,44.5"
-              Start="0,0"
-              End="-27.5,37">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.25"
-                    Point2="0,22.25"
-                    Point3="-4,22.25" />
-                  <mssgle:LineSegment
-                    End="-23.5,22.25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-23.5,22.25"
-                    Point2="-27.5,22.25"
-                    Point3="-27.5,26.25" />
-                  <mssgle:LineSegment
-                    End="-27.5,37" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Get Valor Homologado.Paths[Sort Output1]"
-          TopLeft="153.5,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="128.833333333333,44.5"
-              Start="0,0"
-              End="128.833333333333,37">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,22.3802395209581" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,22.3802395209581"
-                    Point2="0,26.3802395209581"
-                    Point3="4,26.3802395209581" />
-                  <mssgle:LineSegment
-                    End="124.833333333333,26.3802395209581" />
-                  <mssgle:CubicBezierSegment
-                    Point1="124.833333333333,26.3802395209581"
-                    Point2="128.833333333333,26.3802395209581"
-                    Point3="128.833333333333,30.3802395209581" />
-                  <mssgle:LineSegment
-                    End="128.833333333333,37" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3453,29 +3633,29 @@ WHERE Id_dw is not null</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="114,42"
+          Id="Package\Update Valor Homologado\Sort ST"
+          TopLeft="273.5,107.5" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Update Valor Homologado\Get ST Homologado"
+          TopLeft="244,5.5" />
+        <NodeLayout
           Size="118,42"
           Id="Package\Update Valor Homologado\Sort DW"
           TopLeft="94.5,107.5" />
-        <NodeLayout
-          Size="178,42"
-          Id="Package\Update Valor Homologado\Get DW Homologado"
-          TopLeft="5.5,5.5" />
         <NodeLayout
           Size="170,42"
           Id="Package\Update Valor Homologado\Set Id Homologado"
           TopLeft="245.5,311.5" />
         <NodeLayout
-          Size="114,42"
-          Id="Package\Update Valor Homologado\Sort ST"
-          TopLeft="273.5,107.5" />
-        <NodeLayout
           Size="132,42"
           Id="Package\Update Valor Homologado\Merge Join"
           TopLeft="264.5,209.5" />
         <NodeLayout
-          Size="173,42"
-          Id="Package\Update Valor Homologado\Get ST Homologado"
-          TopLeft="244,5.5" />
+          Size="178,42"
+          Id="Package\Update Valor Homologado\Get DW Homologado"
+          TopLeft="5.5,5.5" />
         <EdgeLayout
           Id="Package\Update Valor Homologado.Paths[Sort Output1]"
           TopLeft="153.5,149.5">
@@ -3633,19 +3813,32 @@ WHERE Id_dw is not null</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Update Valor Homologado\Get DW Homologado">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Update Valores DW">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="127,42"
-          Id="Package\Update Valores DW\Source ST"
-          TopLeft="9.50000000000001,5.5" />
-        <NodeLayout
           Size="135,42"
           Id="Package\Update Valores DW\Update DW"
           TopLeft="5.50000000000001,107.5" />
+        <NodeLayout
+          Size="127,42"
+          Id="Package\Update Valores DW\Source ST"
+          TopLeft="9.50000000000001,5.5" />
         <EdgeLayout
           Id="Package\Update Valores DW.Paths[OLE DB Source Output]"
           TopLeft="73,47.5">

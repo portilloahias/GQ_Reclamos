@@ -1216,7 +1216,7 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1779" scrolltop="-3836" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="10186" y="12091" backcolor="16185078" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1779" scrolltop="-3836" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="19950" y="12091" backcolor="16185078" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                 </font>
@@ -1227,9 +1227,9 @@
               <layoutmanager>
                 <ddsxmlobj />
               </layoutmanager>
-              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimReclamo" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3175" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimReclamo" left="-1303" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="4498" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
-                  <ddsxmlobjectstreaminitwrapper binary="000a0000670c000043110000" />
+                  <ddsxmlobjectstreaminitwrapper binary="000a00009211000043110000" />
                 </control>
                 <layoutobject>
                   <ddsxmlobj>
@@ -1263,7 +1263,7 @@
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
-          <Value>20</Value>
+          <Value>-1303</Value>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
@@ -1339,6 +1339,14 @@
               <AttributeID>Codigo Reclamo</AttributeID>
               <Name>Código Reclamo</Name>
             </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Horas Antiguedad</AttributeID>
+              <Name>Horas de Antigüedad</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Antiguedad Horas</AttributeID>
+              <Name>Clasificación Antigüedad Horas</Name>
+            </AttributeRelationship>
           </AttributeRelationships>
           <OrderBy>Key</OrderBy>
           <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
@@ -1411,7 +1419,7 @@
         </Attribute>
         <Attribute>
           <ID>Antiguedad</ID>
-          <Name>Clasificación Antigüedad</Name>
+          <Name>Clasificación Antigüedad Días</Name>
           <KeyColumns>
             <KeyColumn>
               <DataType>WChar</DataType>
@@ -1451,6 +1459,38 @@
               <Source xsi:type="ColumnBinding">
                 <TableID>dbo_DimReclamo</TableID>
                 <ColumnID>CodigoReclamo</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>Horas Antiguedad</ID>
+          <Name>Horas de Antigüedad</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>60</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DimReclamo</TableID>
+                <ColumnID>HorasAntiguedad</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>Antiguedad Horas</ID>
+          <Name>Clasificación Antigüedad Horas</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>60</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DimReclamo</TableID>
+                <ColumnID>AntiguedadHoras</ColumnID>
               </Source>
             </KeyColumn>
           </KeyColumns>
@@ -2397,7 +2437,7 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="88" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="12396" scrolltop="18867" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="22622" y="12091" backcolor="16185078" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="88" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="12396" scrolltop="18867" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="15187" y="12091" backcolor="16185078" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                 </font>
@@ -3307,6 +3347,12 @@
             </Attribute>
             <Attribute>
               <AttributeID>Codigo Reclamo</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Horas Antiguedad</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Antiguedad Horas</AttributeID>
             </Attribute>
           </Attributes>
         </Dimension>
@@ -5167,7 +5213,7 @@ VISIBLE = 1 ,  DISPLAY_FOLDER = 'Cálculos Reclamos Asignados' ,  ASSOCIATED_MEA
                       </connector>
                     </ddscontrol>
                   </dds>
-                </DiagramLayout>
+</DiagramLayout>
                 <ShowRelationshipNames>False</ShowRelationshipNames>
                 <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
                 <DiagramViewPortLeft>-3810</DiagramViewPortLeft>
@@ -5333,6 +5379,20 @@ VISIBLE = 1 ,  DISPLAY_FOLDER = 'Cálculos Reclamos Asignados' ,  ASSOCIATED_MEA
                         </xs:simpleType>
                       </xs:element>
                       <xs:element name="CodigoReclamo" msprop:design-time-name="41567638-6cb4-4dd8-b7a5-0126fae99c52" msprop:DbColumnName="CodigoReclamo" msprop:FriendlyName="CodigoReclamo" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="60" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="HorasAntiguedad" msprop:design-time-name="b00a0c5f-aee1-435e-8182-e7f7f2fa40a3" msprop:DbColumnName="HorasAntiguedad" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="60" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="AntiguedadHoras" msprop:design-time-name="7a1d254b-e179-45e5-9239-79986242ba45" msprop:DbColumnName="AntiguedadHoras" minOccurs="0">
                         <xs:simpleType>
                           <xs:restriction base="xs:string">
                             <xs:maxLength value="60" />
