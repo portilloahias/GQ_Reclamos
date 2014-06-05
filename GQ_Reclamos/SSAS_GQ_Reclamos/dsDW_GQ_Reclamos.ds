@@ -18,6 +18,39 @@
       <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
       <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
       <RoleID>Role 1</RoleID>
+      <Read>Allowed</Read>
+    </DataSourcePermission>
+    <DataSourcePermission dwd:design-time-name="3088f924-78c9-462b-9e53-13466c9f164d">
+      <ID>DataSourcePermission 1</ID>
+      <Name>DataSourcePermission 1</Name>
+      <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+      <RoleID>Role 3</RoleID>
+      <Read>Allowed</Read>
+    </DataSourcePermission>
+    <DataSourcePermission dwd:design-time-name="7a2c43fe-96be-4d06-addc-0feb94626b4c">
+      <ID>DataSourcePermission 2</ID>
+      <Name>DataSourcePermission 2</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <RoleID>Role 4</RoleID>
+      <Read>Allowed</Read>
+    </DataSourcePermission>
+    <DataSourcePermission dwd:design-time-name="0d5307df-764c-4639-a841-61c6b7c579f2">
+      <ID>DataSourcePermission 3</ID>
+      <Name>DataSourcePermission 3</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <RoleID>Role 5</RoleID>
+      <Read>Allowed</Read>
+    </DataSourcePermission>
+    <DataSourcePermission dwd:design-time-name="7f14547d-e765-4c13-9a55-681b5b48d826">
+      <ID>DataSourcePermission 4</ID>
+      <Name>DataSourcePermission 4</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <RoleID>Role 6</RoleID>
+      <Read>Allowed</Read>
     </DataSourcePermission>
   </DataSourcePermissions>
 </DataSource>

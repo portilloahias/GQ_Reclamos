@@ -3,3 +3,7 @@ C:\Users\gqservicios\Desktop\GQ_Reclamos\ST_GQ_Reclamos\bin\Debug\ST_GQ_Reclamos
 C:\Users\gqservicios\Desktop\GQ_Reclamos\ST_GQ_Reclamos\bin\Debug\ST_GQ_Reclamos.pdb
 C:\Users\gqservicios\Desktop\GQ_Reclamos\ST_GQ_Reclamos\obj\Debug\ST_GQ_Reclamos.dll
 C:\Users\gqservicios\Desktop\GQ_Reclamos\ST_GQ_Reclamos\obj\Debug\ST_GQ_Reclamos.pdb
+C:\Users\gqservicios\Desktop\GQ_Reclamos\ST_GQ_Reclamos\obj\Debug\Model.xml
+C:\Users\gqservicios\Desktop\GQ_Reclamos\ST_GQ_Reclamos\obj\Debug\refactor.xml
+C:\Users\gqservicios\Desktop\GQ_Reclamos\ST_GQ_Reclamos\obj\Debug\postdeploy.sql
+C:\Users\gqservicios\Desktop\GQ_Reclamos\ST_GQ_Reclamos\obj\Debug\predeploy.sql

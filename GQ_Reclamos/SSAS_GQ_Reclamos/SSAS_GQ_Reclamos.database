@@ -1,11 +1,11 @@
 ﻿<Database xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="89106d44-91e1-4af3-8a6d-9b0a216dec34" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>SSAS_GQ_Reclamos</ID>
   <Name>SSAS_GQ_Reclamos</Name>
-  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
-  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+  <LastProcessed>0001-01-01T06:00:00Z</LastProcessed>
   <State>Unprocessed</State>
-  <LastUpdate>0001-01-01T00:00:00Z</LastUpdate>
+  <LastUpdate>0001-01-01T06:00:00Z</LastUpdate>
   <DataSourceImpersonationInfo>
     <ImpersonationMode>Default</ImpersonationMode>
     <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
@@ -19,8 +19,8 @@
     <DatabasePermission dwd:design-time-name="7af09b7c-5d21-43eb-af86-b0b62b11f026">
       <ID>DatabasePermission</ID>
       <Name>DatabasePermission</Name>
-      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
       <RoleID>Role</RoleID>
       <Process>true</Process>
       <ReadDefinition>Allowed</ReadDefinition>
@@ -30,9 +30,54 @@
     <DatabasePermission dwd:design-time-name="8fb9c82e-f853-4fab-983e-11943a23c455">
       <ID>DatabasePermission 1</ID>
       <Name>DatabasePermission 1</Name>
+      <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+      <RoleID>Role 1</RoleID>
+      <ReadDefinition>Allowed</ReadDefinition>
+      <Read>Allowed</Read>
+    </DatabasePermission>
+    <DatabasePermission dwd:design-time-name="0941ad09-5712-44f9-833e-b584e2863ef8">
+      <ID>DatabasePermission 2</ID>
+      <Name>DatabasePermission 2</Name>
+      <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+      <RoleID>Role 2</RoleID>
+      <ReadDefinition>Allowed</ReadDefinition>
+      <Read>Allowed</Read>
+    </DatabasePermission>
+    <DatabasePermission dwd:design-time-name="96e746c3-eb5b-4dd0-943d-98b4593da984">
+      <ID>DatabasePermission 3</ID>
+      <Name>DatabasePermission 3</Name>
+      <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+      <RoleID>Role 3</RoleID>
+      <ReadDefinition>Allowed</ReadDefinition>
+      <Read>Allowed</Read>
+    </DatabasePermission>
+    <DatabasePermission dwd:design-time-name="61f35013-33ea-4af4-b5ba-c77cb55c6982">
+      <ID>DatabasePermission 4</ID>
+      <Name>DatabasePermission 4</Name>
       <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
       <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
-      <RoleID>Role 1</RoleID>
+      <RoleID>Role 4</RoleID>
+      <ReadDefinition>Allowed</ReadDefinition>
+      <Read>Allowed</Read>
+    </DatabasePermission>
+    <DatabasePermission dwd:design-time-name="ba79d9c9-724e-4b9d-b734-7fc6db8118c5">
+      <ID>DatabasePermission 5</ID>
+      <Name>DatabasePermission 5</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <RoleID>Role 5</RoleID>
+      <ReadDefinition>Allowed</ReadDefinition>
+      <Read>Allowed</Read>
+    </DatabasePermission>
+    <DatabasePermission dwd:design-time-name="77100e19-1f55-470a-bb02-5cc301cf076b">
+      <ID>DatabasePermission 6</ID>
+      <Name>DatabasePermission 6</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <RoleID>Role 6</RoleID>
       <ReadDefinition>Allowed</ReadDefinition>
       <Read>Allowed</Read>
     </DatabasePermission>

@@ -82,12 +82,32 @@
   </DataSourceViews>
   <Roles>
     <ProjectItem>
-      <Name>Administrador.role</Name>
-      <FullPath>Administrador.role</FullPath>
+      <Name>MdrAdministrador.role</Name>
+      <FullPath>MdrAdministrador.role</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Usuarios.role</Name>
-      <FullPath>Usuarios.role</FullPath>
+      <Name>MdrCorporativo.role</Name>
+      <FullPath>MdrCorporativo.role</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>MdrGuatemala.role</Name>
+      <FullPath>MdrGuatemala.role</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>MdrElSalvador.role</Name>
+      <FullPath>MdrElSalvador.role</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>MdrHonduras.role</Name>
+      <FullPath>MdrHonduras.role</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>MdrNicaragua.role</Name>
+      <FullPath>MdrNicaragua.role</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>MdrCostaRica.role</Name>
+      <FullPath>MdrCostaRica.role</FullPath>
     </ProjectItem>
   </Roles>
   <Configurations>

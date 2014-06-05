@@ -787,6 +787,120 @@
           <ReadDefinition>Allowed</ReadDefinition>
           <Read>Allowed</Read>
         </DimensionPermission>
+        <DimensionPermission>
+          <ID>DimensionPermission 1</ID>
+          <Name>DimensionPermission 1</Name>
+          <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 2</RoleID>
+          <Read>Allowed</Read>
+          <AttributePermissions>
+            <AttributePermission>
+              <AttributeID>Sucursal Pais</AttributeID>
+              <DeniedSet>{[Sucursal].[País-Sucursal].&amp;[CR-Barrio Mexico], [Sucursal].[País-Sucursal].&amp;[CR-Curridabat], [Sucursal].[País-Sucursal].&amp;[CR-La Paz], [Sucursal].[País-Sucursal].&amp;[CR-Liberia], [Sucursal].[País-Sucursal].&amp;[CR-Logistica], [Sucursal].[País-Sucursal].&amp;[CR-Proveedores], [Sucursal].[País-Sucursal].&amp;[CR-San Carlos], [Sucursal].[País-Sucursal].&amp;[CR-San Pedro], [Sucursal].[País-Sucursal].&amp;[CR-Santa Ana], [Sucursal].[País-Sucursal].&amp;[CR-Santa Ana Comercial], [Sucursal].[País-Sucursal].&amp;[CR-Santa Ana Online], [Sucursal].[País-Sucursal].&amp;[CR-Taller Curridabat], [Sucursal].[País-Sucursal].&amp;[CR-Taller Liberia], [Sucursal].[País-Sucursal].&amp;[CR-Taller San Carlos], [Sucursal].[País-Sucursal].&amp;[CR-Taller Uruca], [Sucursal].[País-Sucursal].&amp;[CR-Trigal], [Sucursal].[País-Sucursal].&amp;[CR-Uruca], [Sucursal].[País-Sucursal].&amp;[CR-Uruca Usados], [Sucursal].[País-Sucursal].&amp;[HN-CITY MALL], [Sucursal].[País-Sucursal].&amp;[HN-La Ceiba], [Sucursal].[País-Sucursal].&amp;[HN-La Ceiba Nuevos], [Sucursal].[País-Sucursal].&amp;[HN-La Ceiba Usados], [Sucursal].[País-Sucursal].&amp;[HN-N/A], [Sucursal].[País-Sucursal].&amp;[HN-Proveedores], [Sucursal].[País-Sucursal].&amp;[HN-Repuestos La Ceiba], [Sucursal].[País-Sucursal].&amp;[HN-Repuestos SPS], [Sucursal].[País-Sucursal].&amp;[HN-Repuestos TGU], [Sucursal].[País-Sucursal].&amp;[HN-San Pedro Sula], [Sucursal].[País-Sucursal].&amp;[HN-Sercor SPS], [Sucursal].[País-Sucursal].&amp;[HN-Sercor TGU], [Sucursal].[País-Sucursal].&amp;[HN-SPS Nuevos], [Sucursal].[País-Sucursal].&amp;[HN-SPS Usados], [Sucursal].[País-Sucursal].&amp;[HN-Tegucigalpa], [Sucursal].[País-Sucursal].&amp;[HN-Tegucigalpa Nuevos], [Sucursal].[País-Sucursal].&amp;[HN-Tegucigalpa Usados], [Sucursal].[País-Sucursal].&amp;[NI-Managua], [Sucursal].[País-Sucursal].&amp;[NI-N/A], [Sucursal].[País-Sucursal].&amp;[NI-Proveedores], [Sucursal].[País-Sucursal].&amp;[SV-Agromosa], [Sucursal].[País-Sucursal].&amp;[SV-Autopista Sur], [Sucursal].[País-Sucursal].&amp;[SV-Casa matriz autopista sur], [Sucursal].[País-Sucursal].&amp;[SV-Chinos Autopista Sur], [Sucursal].[País-Sucursal].&amp;[SV-N/A], [Sucursal].[País-Sucursal].&amp;[SV-Proveedores], [Sucursal].[País-Sucursal].&amp;[SV-San Miguel], [Sucursal].[País-Sucursal].&amp;[SV-Santa Elena], [Sucursal].[País-Sucursal].&amp;[SV-Santa Elena Gev], [Sucursal].[País-Sucursal].&amp;[SV-Sucursal Central]}</DeniedSet>
+            </AttributePermission>
+            <AttributePermission>
+              <AttributeID>Pais</AttributeID>
+              <DeniedSet>{[Sucursal].[País].&amp;[Costa Rica], [Sucursal].[País].&amp;[El Salvador], [Sucursal].[País].&amp;[Honduras], [Sucursal].[País].&amp;[Nicaragua], [Sucursal].[País].&amp;[No Definido]}</DeniedSet>
+            </AttributePermission>
+            <AttributePermission>
+              <AttributeID>Sucursal</AttributeID>
+              <DeniedSet>{[Sucursal].[Sucursal].&amp;[Agromosa], [Sucursal].[Sucursal].&amp;[Autopista Sur], [Sucursal].[Sucursal].&amp;[Barrio Mexico], [Sucursal].[Sucursal].&amp;[Casa matriz autopista sur], [Sucursal].[Sucursal].&amp;[Chinos Autopista Sur], [Sucursal].[Sucursal].&amp;[CITY MALL], [Sucursal].[Sucursal].&amp;[Curridabat], [Sucursal].[Sucursal].&amp;[La Ceiba], [Sucursal].[Sucursal].&amp;[La Ceiba Nuevos], [Sucursal].[Sucursal].&amp;[La Ceiba Usados], [Sucursal].[Sucursal].&amp;[La Paz], [Sucursal].[Sucursal].&amp;[Liberia], [Sucursal].[Sucursal].&amp;[Logistica], [Sucursal].[Sucursal].&amp;[Managua], [Sucursal].[Sucursal].&amp;[Repuestos La Ceiba], [Sucursal].[Sucursal].&amp;[Repuestos SPS], [Sucursal].[Sucursal].&amp;[Repuestos TGU], [Sucursal].[Sucursal].&amp;[San Carlos], [Sucursal].[Sucursal].&amp;[San Miguel], [Sucursal].[Sucursal].&amp;[San Pedro], [Sucursal].[Sucursal].&amp;[San Pedro Sula], [Sucursal].[Sucursal].&amp;[Santa Ana], [Sucursal].[Sucursal].&amp;[Santa Ana Comercial], [Sucursal].[Sucursal].&amp;[Santa Ana Online], [Sucursal].[Sucursal].&amp;[Santa Elena], [Sucursal].[Sucursal].&amp;[Santa Elena Gev], [Sucursal].[Sucursal].&amp;[Sercor SPS], [Sucursal].[Sucursal].&amp;[Sercor TGU], [Sucursal].[Sucursal].&amp;[SPS Nuevos], [Sucursal].[Sucursal].&amp;[SPS Usados], [Sucursal].[Sucursal].&amp;[Sucursal Central], [Sucursal].[Sucursal].&amp;[Taller Curridabat], [Sucursal].[Sucursal].&amp;[Taller Liberia], [Sucursal].[Sucursal].&amp;[Taller San Carlos], [Sucursal].[Sucursal].&amp;[Taller Uruca], [Sucursal].[Sucursal].&amp;[Tegucigalpa], [Sucursal].[Sucursal].&amp;[Tegucigalpa Nuevos], [Sucursal].[Sucursal].&amp;[Tegucigalpa Usados], [Sucursal].[Sucursal].&amp;[Trigal], [Sucursal].[Sucursal].&amp;[Uruca], [Sucursal].[Sucursal].&amp;[Uruca Usados]}</DeniedSet>
+            </AttributePermission>
+          </AttributePermissions>
+        </DimensionPermission>
+        <DimensionPermission>
+          <ID>DimensionPermission 2</ID>
+          <Name>DimensionPermission 2</Name>
+          <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 3</RoleID>
+          <Read>Allowed</Read>
+          <AttributePermissions>
+            <AttributePermission>
+              <AttributeID>Sucursal Pais</AttributeID>
+              <AllowedSet>{[Sucursal].[País-Sucursal].&amp;[No Definido], [Sucursal].[País-Sucursal].&amp;[SV-Agromosa], [Sucursal].[País-Sucursal].&amp;[SV-Autopista Sur], [Sucursal].[País-Sucursal].&amp;[SV-Casa matriz autopista sur], [Sucursal].[País-Sucursal].&amp;[SV-Chinos Autopista Sur], [Sucursal].[País-Sucursal].&amp;[SV-N/A], [Sucursal].[País-Sucursal].&amp;[SV-Proveedores], [Sucursal].[País-Sucursal].&amp;[SV-San Miguel], [Sucursal].[País-Sucursal].&amp;[SV-Santa Elena], [Sucursal].[País-Sucursal].&amp;[SV-Santa Elena Gev], [Sucursal].[País-Sucursal].&amp;[SV-Sucursal Central]}</AllowedSet>
+            </AttributePermission>
+            <AttributePermission>
+              <AttributeID>Pais</AttributeID>
+              <AllowedSet>{[Sucursal].[País].&amp;[El Salvador]}</AllowedSet>
+            </AttributePermission>
+            <AttributePermission>
+              <AttributeID>Sucursal</AttributeID>
+              <AllowedSet>{[Sucursal].[Sucursal].&amp;[Agromosa], [Sucursal].[Sucursal].&amp;[Autopista Sur], [Sucursal].[Sucursal].&amp;[Casa matriz autopista sur], [Sucursal].[Sucursal].&amp;[Chinos Autopista Sur], [Sucursal].[Sucursal].&amp;[N/A], [Sucursal].[Sucursal].&amp;[No Definido], [Sucursal].[Sucursal].&amp;[Proveedores], [Sucursal].[Sucursal].&amp;[San Miguel], [Sucursal].[Sucursal].&amp;[Santa Elena], [Sucursal].[Sucursal].&amp;[Santa Elena Gev], [Sucursal].[Sucursal].&amp;[Sucursal Central]}</AllowedSet>
+            </AttributePermission>
+          </AttributePermissions>
+        </DimensionPermission>
+        <DimensionPermission>
+          <ID>DimensionPermission 3</ID>
+          <Name>DimensionPermission 3</Name>
+          <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 4</RoleID>
+          <Read>Allowed</Read>
+          <AttributePermissions>
+            <AttributePermission>
+              <AttributeID>Pais</AttributeID>
+              <AllowedSet>{[Sucursal].[País].&amp;[Honduras]}</AllowedSet>
+            </AttributePermission>
+            <AttributePermission>
+              <AttributeID>Sucursal Pais</AttributeID>
+              <AllowedSet>{[Sucursal].[País-Sucursal].&amp;[HN-CITY MALL], [Sucursal].[País-Sucursal].&amp;[HN-La Ceiba], [Sucursal].[País-Sucursal].&amp;[HN-La Ceiba Nuevos], [Sucursal].[País-Sucursal].&amp;[HN-La Ceiba Usados], [Sucursal].[País-Sucursal].&amp;[HN-N/A], [Sucursal].[País-Sucursal].&amp;[HN-Proveedores], [Sucursal].[País-Sucursal].&amp;[HN-Repuestos La Ceiba], [Sucursal].[País-Sucursal].&amp;[HN-Repuestos SPS], [Sucursal].[País-Sucursal].&amp;[HN-Repuestos TGU], [Sucursal].[País-Sucursal].&amp;[HN-San Pedro Sula], [Sucursal].[País-Sucursal].&amp;[HN-Sercor SPS], [Sucursal].[País-Sucursal].&amp;[HN-Sercor TGU], [Sucursal].[País-Sucursal].&amp;[HN-SPS Nuevos], [Sucursal].[País-Sucursal].&amp;[HN-SPS Usados], [Sucursal].[País-Sucursal].&amp;[HN-Tegucigalpa], [Sucursal].[País-Sucursal].&amp;[HN-Tegucigalpa Nuevos], [Sucursal].[País-Sucursal].&amp;[HN-Tegucigalpa Usados], [Sucursal].[País-Sucursal].&amp;[No Definido]}</AllowedSet>
+            </AttributePermission>
+            <AttributePermission>
+              <AttributeID>Sucursal</AttributeID>
+              <AllowedSet>{[Sucursal].[Sucursal].&amp;[CITY MALL], [Sucursal].[Sucursal].&amp;[La Ceiba], [Sucursal].[Sucursal].&amp;[La Ceiba Nuevos], [Sucursal].[Sucursal].&amp;[La Ceiba Usados], [Sucursal].[Sucursal].&amp;[N/A], [Sucursal].[Sucursal].&amp;[No Definido], [Sucursal].[Sucursal].&amp;[Proveedores], [Sucursal].[Sucursal].&amp;[Repuestos La Ceiba], [Sucursal].[Sucursal].&amp;[Repuestos SPS], [Sucursal].[Sucursal].&amp;[Repuestos TGU], [Sucursal].[Sucursal].&amp;[San Pedro Sula], [Sucursal].[Sucursal].&amp;[Sercor SPS], [Sucursal].[Sucursal].&amp;[Sercor TGU], [Sucursal].[Sucursal].&amp;[SPS Nuevos], [Sucursal].[Sucursal].&amp;[SPS Usados], [Sucursal].[Sucursal].&amp;[Tegucigalpa], [Sucursal].[Sucursal].&amp;[Tegucigalpa Nuevos], [Sucursal].[Sucursal].&amp;[Tegucigalpa Usados]}</AllowedSet>
+            </AttributePermission>
+          </AttributePermissions>
+        </DimensionPermission>
+        <DimensionPermission>
+          <ID>DimensionPermission 4</ID>
+          <Name>DimensionPermission 4</Name>
+          <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 5</RoleID>
+          <Read>Allowed</Read>
+          <AttributePermissions>
+            <AttributePermission>
+              <AttributeID>Id Sucursal</AttributeID>
+              <DeniedSet>{}</DeniedSet>
+            </AttributePermission>
+            <AttributePermission>
+              <AttributeID>Pais</AttributeID>
+              <AllowedSet>{[Sucursal].[País].&amp;[Nicaragua]}</AllowedSet>
+            </AttributePermission>
+            <AttributePermission>
+              <AttributeID>Sucursal Pais</AttributeID>
+              <AllowedSet>{[Sucursal].[País-Sucursal].&amp;[NI-Managua], [Sucursal].[País-Sucursal].&amp;[NI-N/A], [Sucursal].[País-Sucursal].&amp;[NI-Proveedores], [Sucursal].[País-Sucursal].&amp;[No Definido]}</AllowedSet>
+            </AttributePermission>
+            <AttributePermission>
+              <AttributeID>Sucursal</AttributeID>
+              <AllowedSet>{[Sucursal].[Sucursal].&amp;[Managua], [Sucursal].[Sucursal].&amp;[N/A], [Sucursal].[Sucursal].&amp;[No Definido], [Sucursal].[Sucursal].&amp;[Proveedores]}</AllowedSet>
+            </AttributePermission>
+          </AttributePermissions>
+        </DimensionPermission>
+        <DimensionPermission>
+          <ID>DimensionPermission 5</ID>
+          <Name>DimensionPermission 5</Name>
+          <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 6</RoleID>
+          <Read>Allowed</Read>
+          <AttributePermissions>
+            <AttributePermission>
+              <AttributeID>Pais</AttributeID>
+              <AllowedSet>{[Sucursal].[País].&amp;[Costa Rica]}</AllowedSet>
+            </AttributePermission>
+            <AttributePermission>
+              <AttributeID>Sucursal Pais</AttributeID>
+              <AllowedSet>{[Sucursal].[País-Sucursal].&amp;[CR-Barrio Mexico], [Sucursal].[País-Sucursal].&amp;[CR-Curridabat], [Sucursal].[País-Sucursal].&amp;[CR-La Paz], [Sucursal].[País-Sucursal].&amp;[CR-Liberia], [Sucursal].[País-Sucursal].&amp;[CR-Logistica], [Sucursal].[País-Sucursal].&amp;[CR-Proveedores], [Sucursal].[País-Sucursal].&amp;[CR-San Carlos], [Sucursal].[País-Sucursal].&amp;[CR-San Pedro], [Sucursal].[País-Sucursal].&amp;[CR-Santa Ana], [Sucursal].[País-Sucursal].&amp;[CR-Santa Ana Comercial], [Sucursal].[País-Sucursal].&amp;[CR-Santa Ana Online], [Sucursal].[País-Sucursal].&amp;[CR-Taller Curridabat], [Sucursal].[País-Sucursal].&amp;[CR-Taller Liberia], [Sucursal].[País-Sucursal].&amp;[CR-Taller San Carlos], [Sucursal].[País-Sucursal].&amp;[CR-Taller Uruca], [Sucursal].[País-Sucursal].&amp;[CR-Trigal], [Sucursal].[País-Sucursal].&amp;[CR-Uruca], [Sucursal].[País-Sucursal].&amp;[CR-Uruca Usados], [Sucursal].[País-Sucursal].&amp;[No Definido]}</AllowedSet>
+            </AttributePermission>
+            <AttributePermission>
+              <AttributeID>Sucursal</AttributeID>
+              <AllowedSet>{[Sucursal].[Sucursal].&amp;[Barrio Mexico], [Sucursal].[Sucursal].&amp;[Curridabat], [Sucursal].[Sucursal].&amp;[La Paz], [Sucursal].[Sucursal].&amp;[Liberia], [Sucursal].[Sucursal].&amp;[Logistica], [Sucursal].[Sucursal].&amp;[No Definido], [Sucursal].[Sucursal].&amp;[Proveedores], [Sucursal].[Sucursal].&amp;[San Carlos], [Sucursal].[Sucursal].&amp;[San Pedro], [Sucursal].[Sucursal].&amp;[Santa Ana], [Sucursal].[Sucursal].&amp;[Santa Ana Comercial], [Sucursal].[Sucursal].&amp;[Santa Ana Online], [Sucursal].[Sucursal].&amp;[Taller Curridabat], [Sucursal].[Sucursal].&amp;[Taller Liberia], [Sucursal].[Sucursal].&amp;[Taller San Carlos], [Sucursal].[Sucursal].&amp;[Taller Uruca], [Sucursal].[Sucursal].&amp;[Trigal], [Sucursal].[Sucursal].&amp;[Uruca], [Sucursal].[Sucursal].&amp;[Uruca Usados]}</AllowedSet>
+            </AttributePermission>
+          </AttributePermissions>
+        </DimensionPermission>
       </DimensionPermissions>
       <Attributes>
         <Attribute>
@@ -963,7 +1077,136 @@
           <AttributePermissions>
             <AttributePermission>
               <AttributeID>Pais</AttributeID>
-              <DeniedSet>{[Sociedad].[País].&amp;[Costa Rica], [Sociedad].[País].&amp;[Guatemala], [Sociedad].[País].&amp;[Honduras], [Sociedad].[País].&amp;[Nicaragua], [Sociedad].[País].&amp;[No Definido], [Sociedad].[País].&amp;[Panamá],[Sociedad].[País].[All]}</DeniedSet>
+            </AttributePermission>
+          </AttributePermissions>
+        </DimensionPermission>
+        <DimensionPermission>
+          <ID>DimensionPermission 1</ID>
+          <Name>DimensionPermission 1</Name>
+          <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 2</RoleID>
+          <Read>Allowed</Read>
+          <AttributePermissions>
+            <AttributePermission>
+              <AttributeID>Codigo Pais</AttributeID>
+              <DeniedSet>{[Sociedad].[Código País].&amp;[CR], [Sociedad].[Código País].&amp;[HN], [Sociedad].[Código País].&amp;[NI], [Sociedad].[Código País].&amp;[No Definido], [Sociedad].[Código País].&amp;[PA], [Sociedad].[Código País].&amp;[SV]}</DeniedSet>
+            </AttributePermission>
+            <AttributePermission>
+              <AttributeID>Nombre Corto</AttributeID>
+              <DeniedSet>{[Sociedad].[Nombre Corto Sociedad].&amp;[], [Sociedad].[Nombre Corto Sociedad].&amp;[CPES], [Sociedad].[Nombre Corto Sociedad].&amp;[GEVE], [Sociedad].[Nombre Corto Sociedad].&amp;[GGEV], [Sociedad].[Nombre Corto Sociedad].&amp;[GQCR], [Sociedad].[Nombre Corto Sociedad].&amp;[GQES], [Sociedad].[Nombre Corto Sociedad].&amp;[GQHN], [Sociedad].[Nombre Corto Sociedad].&amp;[GQNI], [Sociedad].[Nombre Corto Sociedad].&amp;[GQPN], [Sociedad].[Nombre Corto Sociedad].&amp;[HON], [Sociedad].[Nombre Corto Sociedad].&amp;[IGEV], [Sociedad].[Nombre Corto Sociedad].&amp;[IMCR], [Sociedad].[Nombre Corto Sociedad].&amp;[IMES], [Sociedad].[Nombre Corto Sociedad].&amp;[INDO], [Sociedad].[Nombre Corto Sociedad].&amp;[INNI], [Sociedad].[Nombre Corto Sociedad].&amp;[No Definido], [Sociedad].[Nombre Corto Sociedad].&amp;[PAES], [Sociedad].[Nombre Corto Sociedad].&amp;[PAGT], [Sociedad].[Nombre Corto Sociedad].&amp;[PNAT], [Sociedad].[Nombre Corto Sociedad].&amp;[QMES], [Sociedad].[Nombre Corto Sociedad].&amp;[QMGT], [Sociedad].[Nombre Corto Sociedad].&amp;[RINV], [Sociedad].[Nombre Corto Sociedad].&amp;[SVES], [Sociedad].[Nombre Corto Sociedad].&amp;[SVGT], [Sociedad].[Nombre Corto Sociedad].&amp;[SVHN], [Sociedad].[Nombre Corto Sociedad].&amp;[TGGT], [Sociedad].[Nombre Corto Sociedad].&amp;[TQGT], [Sociedad].[Nombre Corto Sociedad].&amp;[TURI]}</DeniedSet>
+            </AttributePermission>
+            <AttributePermission>
+              <AttributeID>Pais</AttributeID>
+              <DeniedSet>{[Sociedad].[País].&amp;[Costa Rica], [Sociedad].[País].&amp;[El Salvador], [Sociedad].[País].&amp;[Honduras], [Sociedad].[País].&amp;[Nicaragua], [Sociedad].[País].&amp;[No Definido], [Sociedad].[País].&amp;[Panamá]}</DeniedSet>
+            </AttributePermission>
+            <AttributePermission>
+              <AttributeID>Descripcion Sociedad</AttributeID>
+              <DeniedSet>{[Sociedad].[Sociedad].&amp;[CORPORACION GRUPOQ CR], [Sociedad].[Sociedad].&amp;[GQCR INMOBILIARIA COSTA R], [Sociedad].[Sociedad].&amp;[GRAL.DE VEHICULOS SA CV], [Sociedad].[Sociedad].&amp;[GRUPO GEVESA, SA de CV], [Sociedad].[Sociedad].&amp;[GRUPO PANAUTO, S.A.], [Sociedad].[Sociedad].&amp;[GRUPO Q CORP.,S.A. de C.V], [Sociedad].[Sociedad].&amp;[GRUPO Q EL SALVADOR, S. A], [Sociedad].[Sociedad].&amp;[GRUPO Q HONDURAS, S.A.], [Sociedad].[Sociedad].&amp;[GRUPO Q INMOBILIARIA S.A.], [Sociedad].[Sociedad].&amp;[GRUPO Q NICARAGUA, S.A.], [Sociedad].[Sociedad].&amp;[GRUPO Q PANAMA, S.A.], [Sociedad].[Sociedad].&amp;[GRUPO Q PROD AUTOMOTRICES], [Sociedad].[Sociedad].&amp;[GRUPOQ INMOBILIARIA], [Sociedad].[Sociedad].&amp;[GRUPOQ PROD AUTOMOTRICES], [Sociedad].[Sociedad].&amp;[INMOBILIARIA], [Sociedad].[Sociedad].&amp;[INVERSIONES DOMINICANAS], [Sociedad].[Sociedad].&amp;[INVERSIONES GEVESA, S.A.], [Sociedad].[Sociedad].&amp;[No Definido], [Sociedad].[Sociedad].&amp;[PRODUCTOS AUTOMOTRICES CR], [Sociedad].[Sociedad].&amp;[Q  MOTORS GUATEMALA, S.A.], [Sociedad].[Sociedad].&amp;[Q  MOTORS, S.A. DE C.V.], [Sociedad].[Sociedad].&amp;[REDCOURT INVESTMENT, S.A.], [Sociedad].[Sociedad].&amp;[SERVI Q HONDURAS, S.A], [Sociedad].[Sociedad].&amp;[SERVICIAL, S.A. de C.V.], [Sociedad].[Sociedad].&amp;[SERVIFLOTAS S.A.], [Sociedad].[Sociedad].&amp;[TERRA Q, S.A.], [Sociedad].[Sociedad].&amp;[TRANSGROUP GUATEMALA], [Sociedad].[Sociedad].&amp;[TURIN MOTORS, SA de CV]}</DeniedSet>
+            </AttributePermission>
+          </AttributePermissions>
+        </DimensionPermission>
+        <DimensionPermission>
+          <ID>DimensionPermission 2</ID>
+          <Name>DimensionPermission 2</Name>
+          <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 3</RoleID>
+          <Read>Allowed</Read>
+          <AttributePermissions>
+            <AttributePermission>
+              <AttributeID>Codigo Pais</AttributeID>
+              <AllowedSet>{[Sociedad].[Código País].&amp;[SV]}</AllowedSet>
+            </AttributePermission>
+            <AttributePermission>
+              <AttributeID>Nombre Corto</AttributeID>
+              <AllowedSet>{[Sociedad].[Nombre Corto Sociedad].&amp;[GEVE], [Sociedad].[Nombre Corto Sociedad].&amp;[GQES]}</AllowedSet>
+            </AttributePermission>
+            <AttributePermission>
+              <AttributeID>Descripcion Sociedad</AttributeID>
+              <AllowedSet>{[Sociedad].[Sociedad].&amp;[GRUPO GEVESA, SA de CV], [Sociedad].[Sociedad].&amp;[GRUPO Q EL SALVADOR, S. A]}</AllowedSet>
+            </AttributePermission>
+            <AttributePermission>
+              <AttributeID>Pais</AttributeID>
+              <AllowedSet>{[Sociedad].[País].&amp;[El Salvador]}</AllowedSet>
+            </AttributePermission>
+          </AttributePermissions>
+        </DimensionPermission>
+        <DimensionPermission>
+          <ID>DimensionPermission 3</ID>
+          <Name>DimensionPermission 3</Name>
+          <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 4</RoleID>
+          <Read>Allowed</Read>
+          <AttributePermissions>
+            <AttributePermission>
+              <AttributeID>Codigo Pais</AttributeID>
+              <AllowedSet>{[Sociedad].[Código País].&amp;[HN]}</AllowedSet>
+            </AttributePermission>
+            <AttributePermission>
+              <AttributeID>Nombre Corto</AttributeID>
+              <AllowedSet>{[Sociedad].[Nombre Corto Sociedad].&amp;[GQHN]}</AllowedSet>
+            </AttributePermission>
+            <AttributePermission>
+              <AttributeID>Pais</AttributeID>
+              <AllowedSet>{[Sociedad].[País].&amp;[Honduras]}</AllowedSet>
+            </AttributePermission>
+            <AttributePermission>
+              <AttributeID>Descripcion Sociedad</AttributeID>
+              <AllowedSet>{[Sociedad].[Sociedad].&amp;[GRUPO Q HONDURAS, S.A.]}</AllowedSet>
+            </AttributePermission>
+          </AttributePermissions>
+        </DimensionPermission>
+        <DimensionPermission>
+          <ID>DimensionPermission 4</ID>
+          <Name>DimensionPermission 4</Name>
+          <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 5</RoleID>
+          <Read>Allowed</Read>
+          <AttributePermissions>
+            <AttributePermission>
+              <AttributeID>Codigo Pais</AttributeID>
+              <AllowedSet>{[Sociedad].[Código País].&amp;[NI]}</AllowedSet>
+            </AttributePermission>
+            <AttributePermission>
+              <AttributeID>Nombre Corto</AttributeID>
+              <AllowedSet>{[Sociedad].[Nombre Corto Sociedad].&amp;[GQNI]}</AllowedSet>
+            </AttributePermission>
+            <AttributePermission>
+              <AttributeID>Pais</AttributeID>
+              <AllowedSet>{[Sociedad].[País].&amp;[Nicaragua]}</AllowedSet>
+            </AttributePermission>
+            <AttributePermission>
+              <AttributeID>Descripcion Sociedad</AttributeID>
+              <AllowedSet>{[Sociedad].[Sociedad].&amp;[GRUPO Q NICARAGUA, S.A.]}</AllowedSet>
+            </AttributePermission>
+          </AttributePermissions>
+        </DimensionPermission>
+        <DimensionPermission>
+          <ID>DimensionPermission 5</ID>
+          <Name>DimensionPermission 5</Name>
+          <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 6</RoleID>
+          <Read>Allowed</Read>
+          <AttributePermissions>
+            <AttributePermission>
+              <AttributeID>Codigo Pais</AttributeID>
+              <AllowedSet>{[Sociedad].[Código País].&amp;[CR]}</AllowedSet>
+            </AttributePermission>
+            <AttributePermission>
+              <AttributeID>Nombre Corto</AttributeID>
+              <AllowedSet>{[Sociedad].[Nombre Corto Sociedad].&amp;[GQCR]}</AllowedSet>
+            </AttributePermission>
+            <AttributePermission>
+              <AttributeID>Pais</AttributeID>
+              <AllowedSet>{[Sociedad].[País].&amp;[Costa Rica]}</AllowedSet>
+            </AttributePermission>
+            <AttributePermission>
+              <AttributeID>Descripcion Sociedad</AttributeID>
+              <AllowedSet>{[Sociedad].[Sociedad].&amp;[CORPORACION GRUPOQ CR]}</AllowedSet>
             </AttributePermission>
           </AttributePermissions>
         </DimensionPermission>
@@ -1160,6 +1403,80 @@
           <RoleID>Role 1</RoleID>
           <ReadDefinition>Allowed</ReadDefinition>
           <Read>Allowed</Read>
+        </DimensionPermission>
+        <DimensionPermission>
+          <ID>DimensionPermission 1</ID>
+          <Name>DimensionPermission 1</Name>
+          <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 2</RoleID>
+          <Read>Allowed</Read>
+          <AttributePermissions>
+            <AttributePermission>
+              <AttributeID>Descripcion Marca</AttributeID>
+              <DeniedSet>{[Marca].[Marca].&amp;[CHEVROLET], [Marca].[Marca].&amp;[FERR / MASER], [Marca].[Marca].&amp;[FORD], [Marca].[Marca].&amp;[HONDA], [Marca].[Marca].&amp;[HYUNDAI], [Marca].[Marca].&amp;[ISUZU], [Marca].[Marca].&amp;[MAZDA], [Marca].[Marca].&amp;[NISSAN], [Marca].[Marca].&amp;[No Definido], [Marca].[Marca].&amp;[PEUGEOT], [Marca].[Marca].&amp;[PORSCHE], [Marca].[Marca].&amp;[UNIDADES DE APOYO]}</DeniedSet>
+            </AttributePermission>
+          </AttributePermissions>
+        </DimensionPermission>
+        <DimensionPermission>
+          <ID>DimensionPermission 2</ID>
+          <Name>DimensionPermission 2</Name>
+          <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 3</RoleID>
+          <Read>Allowed</Read>
+          <AttributePermissions>
+            <AttributePermission>
+              <AttributeID>Id Marca</AttributeID>
+              <DeniedSet>{[Marca].[Id Marca].[All]}</DeniedSet>
+            </AttributePermission>
+            <AttributePermission>
+              <AttributeID>Descripcion Marca</AttributeID>
+              <DeniedSet>{[Marca].[Marca].&amp;[CHEVROLET], [Marca].[Marca].&amp;[M BENZ], [Marca].[Marca].&amp;[MB COMERC], [Marca].[Marca].&amp;[UNIDADES DE APOYO]}</DeniedSet>
+            </AttributePermission>
+          </AttributePermissions>
+        </DimensionPermission>
+        <DimensionPermission>
+          <ID>DimensionPermission 3</ID>
+          <Name>DimensionPermission 3</Name>
+          <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 4</RoleID>
+          <Read>Allowed</Read>
+          <AttributePermissions>
+            <AttributePermission>
+              <AttributeID>Descripcion Marca</AttributeID>
+              <DeniedSet>{[Marca].[Marca].&amp;[FERR / MASER], [Marca].[Marca].&amp;[FORD], [Marca].[Marca].&amp;[HONDA], [Marca].[Marca].&amp;[HYUNDAI], [Marca].[Marca].&amp;[ISUZU], [Marca].[Marca].&amp;[M BENZ], [Marca].[Marca].&amp;[MB COMERC], [Marca].[Marca].&amp;[PEUGEOT], [Marca].[Marca].&amp;[PORSCHE], [Marca].[Marca].&amp;[RENAULT], [Marca].[Marca].&amp;[UNIDADES DE APOYO]}</DeniedSet>
+            </AttributePermission>
+          </AttributePermissions>
+        </DimensionPermission>
+        <DimensionPermission>
+          <ID>DimensionPermission 4</ID>
+          <Name>DimensionPermission 4</Name>
+          <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 5</RoleID>
+          <Read>Allowed</Read>
+          <AttributePermissions>
+            <AttributePermission>
+              <AttributeID>Descripcion Marca</AttributeID>
+              <AllowedSet>{[Marca].[Marca].&amp;[CHEVROLET], [Marca].[Marca].&amp;[CHINOS], [Marca].[Marca].&amp;[NISSAN], [Marca].[Marca].&amp;[No Definido], [Marca].[Marca].&amp;[USADOS], [Marca].[Marca].&amp;[Vacio]}</AllowedSet>
+            </AttributePermission>
+          </AttributePermissions>
+        </DimensionPermission>
+        <DimensionPermission>
+          <ID>DimensionPermission 5</ID>
+          <Name>DimensionPermission 5</Name>
+          <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 6</RoleID>
+          <Read>Allowed</Read>
+          <AttributePermissions>
+            <AttributePermission>
+              <AttributeID>Descripcion Marca</AttributeID>
+              <AllowedSet>{[Marca].[Marca].&amp;[CHEVROLET], [Marca].[Marca].&amp;[HYUNDAI], [Marca].[Marca].&amp;[ISUZU], [Marca].[Marca].&amp;[No Definido], [Marca].[Marca].&amp;[USADOS], [Marca].[Marca].&amp;[Vacio]}</AllowedSet>
+            </AttributePermission>
+          </AttributePermissions>
         </DimensionPermission>
       </DimensionPermissions>
       <Attributes>
@@ -1588,6 +1905,19 @@
           <RoleID>Role 1</RoleID>
           <ReadDefinition>Allowed</ReadDefinition>
           <Read>Allowed</Read>
+        </DimensionPermission>
+        <DimensionPermission>
+          <ID>DimensionPermission 1</ID>
+          <Name>DimensionPermission 1</Name>
+          <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 2</RoleID>
+          <Read>Allowed</Read>
+          <AttributePermissions>
+            <AttributePermission>
+              <AttributeID>Vendedor Pais</AttributeID>
+            </AttributePermission>
+          </AttributePermissions>
         </DimensionPermission>
       </DimensionPermissions>
       <Attributes>
@@ -3750,6 +4080,81 @@
           <Read>Allowed</Read>
           <ReadSourceData>None</ReadSourceData>
         </CubePermission>
+        <CubePermission>
+          <ID>CubePermission 1</ID>
+          <Name>CubePermission 1</Name>
+          <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 2</RoleID>
+          <Read>Allowed</Read>
+          <ReadSourceData>None</ReadSourceData>
+          <CellPermissions>
+            <CellPermission>
+              <Access>Read</Access>
+              <Expression>[Sociedad].[País].&amp;[Guatemala]</Expression>
+            </CellPermission>
+          </CellPermissions>
+        </CubePermission>
+        <CubePermission>
+          <ID>CubePermission 2</ID>
+          <Name>CubePermission 2</Name>
+          <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 3</RoleID>
+          <Read>Allowed</Read>
+          <ReadSourceData>None</ReadSourceData>
+          <CellPermissions>
+            <CellPermission>
+              <Access>Read</Access>
+              <Expression>[Sociedad].[País].&amp;[El Salvador]</Expression>
+            </CellPermission>
+          </CellPermissions>
+        </CubePermission>
+        <CubePermission>
+          <ID>CubePermission 3</ID>
+          <Name>CubePermission 3</Name>
+          <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 4</RoleID>
+          <Read>Allowed</Read>
+          <ReadSourceData>None</ReadSourceData>
+          <CellPermissions>
+            <CellPermission>
+              <Access>Read</Access>
+              <Expression>[Sociedad].[País].&amp;[Honduras]</Expression>
+            </CellPermission>
+          </CellPermissions>
+        </CubePermission>
+        <CubePermission>
+          <ID>CubePermission 4</ID>
+          <Name>CubePermission 4</Name>
+          <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 5</RoleID>
+          <Read>Allowed</Read>
+          <ReadSourceData>None</ReadSourceData>
+          <CellPermissions>
+            <CellPermission>
+              <Access>Read</Access>
+              <Expression>[Sociedad].[País].&amp;[Nicaragua]</Expression>
+            </CellPermission>
+          </CellPermissions>
+        </CubePermission>
+        <CubePermission>
+          <ID>CubePermission 5</ID>
+          <Name>CubePermission 5</Name>
+          <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 6</RoleID>
+          <Read>Allowed</Read>
+          <ReadSourceData>None</ReadSourceData>
+          <CellPermissions>
+            <CellPermission>
+              <Access>Read</Access>
+              <Expression>[Sociedad].[País].&amp;[Costa Rica]</Expression>
+            </CellPermission>
+          </CellPermissions>
+        </CubePermission>
       </CubePermissions>
       <MeasureGroups>
         <MeasureGroup>
@@ -4433,6 +4838,39 @@ VISIBLE = 1 ,  DISPLAY_FOLDER = 'Cálculos Reclamos Asignados' ,  ASSOCIATED_MEA
           <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
           <RoleID>Role 1</RoleID>
+          <Read>Allowed</Read>
+        </DataSourcePermission>
+        <DataSourcePermission>
+          <ID>DataSourcePermission 1</ID>
+          <Name>DataSourcePermission 1</Name>
+          <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 3</RoleID>
+          <Read>Allowed</Read>
+        </DataSourcePermission>
+        <DataSourcePermission>
+          <ID>DataSourcePermission 2</ID>
+          <Name>DataSourcePermission 2</Name>
+          <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 4</RoleID>
+          <Read>Allowed</Read>
+        </DataSourcePermission>
+        <DataSourcePermission>
+          <ID>DataSourcePermission 3</ID>
+          <Name>DataSourcePermission 3</Name>
+          <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 5</RoleID>
+          <Read>Allowed</Read>
+        </DataSourcePermission>
+        <DataSourcePermission>
+          <ID>DataSourcePermission 4</ID>
+          <Name>DataSourcePermission 4</Name>
+          <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+          <RoleID>Role 6</RoleID>
+          <Read>Allowed</Read>
         </DataSourcePermission>
       </DataSourcePermissions>
     </DataSource>
@@ -5213,7 +5651,7 @@ VISIBLE = 1 ,  DISPLAY_FOLDER = 'Cálculos Reclamos Asignados' ,  ASSOCIATED_MEA
                       </connector>
                     </ddscontrol>
                   </dds>
-</DiagramLayout>
+                </DiagramLayout>
                 <ShowRelationshipNames>False</ShowRelationshipNames>
                 <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
                 <DiagramViewPortLeft>-3810</DiagramViewPortLeft>
@@ -5685,7 +6123,7 @@ VISIBLE = 1 ,  DISPLAY_FOLDER = 'Cálculos Reclamos Asignados' ,  ASSOCIATED_MEA
   <Roles>
     <Role>
       <ID>Role</ID>
-      <Name>Administrador</Name>
+      <Name>MdrAdministrador</Name>
       <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
       <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
       <Description></Description>
@@ -5694,27 +6132,117 @@ VISIBLE = 1 ,  DISPLAY_FOLDER = 'Cálculos Reclamos Asignados' ,  ASSOCIATED_MEA
           <Name>GQSV\gqservicios</Name>
         </Member>
         <Member>
-          <Name>GQSV\calopez</Name>
+          <Name>GQSV\fescobar</Name>
         </Member>
         <Member>
-          <Name>GQSV\rfunes</Name>
+          <Name>GQSV\ivalle</Name>
         </Member>
       </Members>
     </Role>
     <Role>
       <ID>Role 1</ID>
-      <Name>Usuarios</Name>
+      <Name>MdrCorporativo</Name>
       <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
       <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
       <Description></Description>
       <Members>
         <Member>
-          <Name>GQSV\ivalle</Name>
+          <Name>GQSV\rfunes</Name>
         </Member>
         <Member>
-          <Name>GQSV\fescobar</Name>
+          <Name>GQSV\crojas</Name>
+        </Member>
+        <Member>
+          <Name>GQSV\calopez</Name>
         </Member>
       </Members>
+    </Role>
+    <Role>
+      <ID>Role 2</ID>
+      <Name>MdrGuatemala</Name>
+      <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+      <Description>Modulo de reclamos Guatemala</Description>
+      <Members>
+        <Member>
+          <Name>GQSV\camaldonado</Name>
+        </Member>
+        <Member>
+          <Name>GQSV\avignolo</Name>
+        </Member>
+        <Member>
+          <Name>GQSV\bchicas</Name>
+        </Member>
+        <Member>
+          <Name>GQSV\jveliz</Name>
+        </Member>
+        <Member>
+          <Name>GQSV\esflores</Name>
+        </Member>
+      </Members>
+    </Role>
+    <Role>
+      <ID>Role 3</ID>
+      <Name>MdrElSalvador</Name>
+      <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+      <Description>Mdr El Salvador</Description>
+      <Members>
+        <Member>
+          <Name>GQSV\rkopper</Name>
+        </Member>
+        <Member>
+          <Name>GQSV\rpanzacchi</Name>
+        </Member>
+        <Member>
+          <Name>GQSV\rdiaz</Name>
+        </Member>
+        <Member>
+          <Name>GQSV\jmartinezv</Name>
+        </Member>
+        <Member>
+          <Name>GQSV\aulloa</Name>
+        </Member>
+        <Member>
+          <Name>GQSV\hrivas</Name>
+        </Member>
+        <Member>
+          <Name>GQSV\hvides</Name>
+        </Member>
+        <Member>
+          <Name>GQSV\jschlageter</Name>
+        </Member>
+        <Member>
+          <Name>GQSV\jvizcarra</Name>
+        </Member>
+        <Member>
+          <Name>GQSV\llizama</Name>
+        </Member>
+        <Member>
+          <Name>GQSV\pduran</Name>
+        </Member>
+      </Members>
+    </Role>
+    <Role>
+      <ID>Role 4</ID>
+      <Name>MdrHonduras</Name>
+      <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+      <Description>Mdr Honduras</Description>
+    </Role>
+    <Role>
+      <ID>Role 5</ID>
+      <Name>MdrNicaragua</Name>
+      <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+      <Description>MdrNicaragua</Description>
+    </Role>
+    <Role>
+      <ID>Role 6</ID>
+      <Name>MdrCostaRica</Name>
+      <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+      <Description>Mdr Costa Rica</Description>
     </Role>
   </Roles>
   <DatabasePermissions>
@@ -5735,6 +6263,51 @@ VISIBLE = 1 ,  DISPLAY_FOLDER = 'Cálculos Reclamos Asignados' ,  ASSOCIATED_MEA
       <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
       <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
       <RoleID>Role 1</RoleID>
+      <ReadDefinition>Allowed</ReadDefinition>
+      <Read>Allowed</Read>
+    </DatabasePermission>
+    <DatabasePermission>
+      <ID>DatabasePermission 2</ID>
+      <Name>DatabasePermission 2</Name>
+      <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+      <RoleID>Role 2</RoleID>
+      <ReadDefinition>Allowed</ReadDefinition>
+      <Read>Allowed</Read>
+    </DatabasePermission>
+    <DatabasePermission>
+      <ID>DatabasePermission 3</ID>
+      <Name>DatabasePermission 3</Name>
+      <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+      <RoleID>Role 3</RoleID>
+      <ReadDefinition>Allowed</ReadDefinition>
+      <Read>Allowed</Read>
+    </DatabasePermission>
+    <DatabasePermission>
+      <ID>DatabasePermission 4</ID>
+      <Name>DatabasePermission 4</Name>
+      <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+      <RoleID>Role 4</RoleID>
+      <ReadDefinition>Allowed</ReadDefinition>
+      <Read>Allowed</Read>
+    </DatabasePermission>
+    <DatabasePermission>
+      <ID>DatabasePermission 5</ID>
+      <Name>DatabasePermission 5</Name>
+      <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+      <RoleID>Role 5</RoleID>
+      <ReadDefinition>Allowed</ReadDefinition>
+      <Read>Allowed</Read>
+    </DatabasePermission>
+    <DatabasePermission>
+      <ID>DatabasePermission 6</ID>
+      <Name>DatabasePermission 6</Name>
+      <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+      <RoleID>Role 6</RoleID>
       <ReadDefinition>Allowed</ReadDefinition>
       <Read>Allowed</Read>
     </DatabasePermission>

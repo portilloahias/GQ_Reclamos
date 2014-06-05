@@ -1,8 +1,8 @@
 ﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="3255cab5-cefe-46a2-8859-a2f59e9ffb66" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Dim Sucursal</ID>
   <Name>Sucursal</Name>
-  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
   <Annotations>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
@@ -66,7 +66,7 @@
       <Value>100</Value>
     </Annotation>
   </Annotations>
-  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <LastProcessed>0001-01-01T06:00:00Z</LastProcessed>
   <State>Unprocessed</State>
   <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="01fc756d-501f-4935-b83a-8ebca206279f">
     <DataSourceViewID>dsvDW_GQ_Reclamos</DataSourceViewID>
@@ -81,11 +81,125 @@
     <DimensionPermission dwd:design-time-name="0484ea30-f4b4-45b7-b659-5dddab9edfd0">
       <ID>DimensionPermission</ID>
       <Name>DimensionPermission</Name>
-      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
       <RoleID>Role 1</RoleID>
       <ReadDefinition>Allowed</ReadDefinition>
       <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="5a08f0f1-69d5-4990-aa66-d34123062c18">
+      <ID>DimensionPermission 1</ID>
+      <Name>DimensionPermission 1</Name>
+      <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+      <RoleID>Role 2</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="4348427b-8ff6-4648-8d43-59857b99ba61">
+          <AttributeID>Sucursal Pais</AttributeID>
+          <DeniedSet>{[Sucursal].[País-Sucursal].&amp;[CR-Barrio Mexico], [Sucursal].[País-Sucursal].&amp;[CR-Curridabat], [Sucursal].[País-Sucursal].&amp;[CR-La Paz], [Sucursal].[País-Sucursal].&amp;[CR-Liberia], [Sucursal].[País-Sucursal].&amp;[CR-Logistica], [Sucursal].[País-Sucursal].&amp;[CR-Proveedores], [Sucursal].[País-Sucursal].&amp;[CR-San Carlos], [Sucursal].[País-Sucursal].&amp;[CR-San Pedro], [Sucursal].[País-Sucursal].&amp;[CR-Santa Ana], [Sucursal].[País-Sucursal].&amp;[CR-Santa Ana Comercial], [Sucursal].[País-Sucursal].&amp;[CR-Santa Ana Online], [Sucursal].[País-Sucursal].&amp;[CR-Taller Curridabat], [Sucursal].[País-Sucursal].&amp;[CR-Taller Liberia], [Sucursal].[País-Sucursal].&amp;[CR-Taller San Carlos], [Sucursal].[País-Sucursal].&amp;[CR-Taller Uruca], [Sucursal].[País-Sucursal].&amp;[CR-Trigal], [Sucursal].[País-Sucursal].&amp;[CR-Uruca], [Sucursal].[País-Sucursal].&amp;[CR-Uruca Usados], [Sucursal].[País-Sucursal].&amp;[HN-CITY MALL], [Sucursal].[País-Sucursal].&amp;[HN-La Ceiba], [Sucursal].[País-Sucursal].&amp;[HN-La Ceiba Nuevos], [Sucursal].[País-Sucursal].&amp;[HN-La Ceiba Usados], [Sucursal].[País-Sucursal].&amp;[HN-N/A], [Sucursal].[País-Sucursal].&amp;[HN-Proveedores], [Sucursal].[País-Sucursal].&amp;[HN-Repuestos La Ceiba], [Sucursal].[País-Sucursal].&amp;[HN-Repuestos SPS], [Sucursal].[País-Sucursal].&amp;[HN-Repuestos TGU], [Sucursal].[País-Sucursal].&amp;[HN-San Pedro Sula], [Sucursal].[País-Sucursal].&amp;[HN-Sercor SPS], [Sucursal].[País-Sucursal].&amp;[HN-Sercor TGU], [Sucursal].[País-Sucursal].&amp;[HN-SPS Nuevos], [Sucursal].[País-Sucursal].&amp;[HN-SPS Usados], [Sucursal].[País-Sucursal].&amp;[HN-Tegucigalpa], [Sucursal].[País-Sucursal].&amp;[HN-Tegucigalpa Nuevos], [Sucursal].[País-Sucursal].&amp;[HN-Tegucigalpa Usados], [Sucursal].[País-Sucursal].&amp;[NI-Managua], [Sucursal].[País-Sucursal].&amp;[NI-N/A], [Sucursal].[País-Sucursal].&amp;[NI-Proveedores], [Sucursal].[País-Sucursal].&amp;[SV-Agromosa], [Sucursal].[País-Sucursal].&amp;[SV-Autopista Sur], [Sucursal].[País-Sucursal].&amp;[SV-Casa matriz autopista sur], [Sucursal].[País-Sucursal].&amp;[SV-Chinos Autopista Sur], [Sucursal].[País-Sucursal].&amp;[SV-N/A], [Sucursal].[País-Sucursal].&amp;[SV-Proveedores], [Sucursal].[País-Sucursal].&amp;[SV-San Miguel], [Sucursal].[País-Sucursal].&amp;[SV-Santa Elena], [Sucursal].[País-Sucursal].&amp;[SV-Santa Elena Gev], [Sucursal].[País-Sucursal].&amp;[SV-Sucursal Central]}</DeniedSet>
+        </AttributePermission>
+        <AttributePermission dwd:design-time-name="727cf0e3-7c03-476f-a3d2-8ed3b9996bf0">
+          <AttributeID>Pais</AttributeID>
+          <DeniedSet>{[Sucursal].[País].&amp;[Costa Rica], [Sucursal].[País].&amp;[El Salvador], [Sucursal].[País].&amp;[Honduras], [Sucursal].[País].&amp;[Nicaragua], [Sucursal].[País].&amp;[No Definido]}</DeniedSet>
+        </AttributePermission>
+        <AttributePermission dwd:design-time-name="660caeb2-9e86-45b4-91dc-947ab90fc3d0">
+          <AttributeID>Sucursal</AttributeID>
+          <DeniedSet>{[Sucursal].[Sucursal].&amp;[Agromosa], [Sucursal].[Sucursal].&amp;[Autopista Sur], [Sucursal].[Sucursal].&amp;[Barrio Mexico], [Sucursal].[Sucursal].&amp;[Casa matriz autopista sur], [Sucursal].[Sucursal].&amp;[Chinos Autopista Sur], [Sucursal].[Sucursal].&amp;[CITY MALL], [Sucursal].[Sucursal].&amp;[Curridabat], [Sucursal].[Sucursal].&amp;[La Ceiba], [Sucursal].[Sucursal].&amp;[La Ceiba Nuevos], [Sucursal].[Sucursal].&amp;[La Ceiba Usados], [Sucursal].[Sucursal].&amp;[La Paz], [Sucursal].[Sucursal].&amp;[Liberia], [Sucursal].[Sucursal].&amp;[Logistica], [Sucursal].[Sucursal].&amp;[Managua], [Sucursal].[Sucursal].&amp;[Repuestos La Ceiba], [Sucursal].[Sucursal].&amp;[Repuestos SPS], [Sucursal].[Sucursal].&amp;[Repuestos TGU], [Sucursal].[Sucursal].&amp;[San Carlos], [Sucursal].[Sucursal].&amp;[San Miguel], [Sucursal].[Sucursal].&amp;[San Pedro], [Sucursal].[Sucursal].&amp;[San Pedro Sula], [Sucursal].[Sucursal].&amp;[Santa Ana], [Sucursal].[Sucursal].&amp;[Santa Ana Comercial], [Sucursal].[Sucursal].&amp;[Santa Ana Online], [Sucursal].[Sucursal].&amp;[Santa Elena], [Sucursal].[Sucursal].&amp;[Santa Elena Gev], [Sucursal].[Sucursal].&amp;[Sercor SPS], [Sucursal].[Sucursal].&amp;[Sercor TGU], [Sucursal].[Sucursal].&amp;[SPS Nuevos], [Sucursal].[Sucursal].&amp;[SPS Usados], [Sucursal].[Sucursal].&amp;[Sucursal Central], [Sucursal].[Sucursal].&amp;[Taller Curridabat], [Sucursal].[Sucursal].&amp;[Taller Liberia], [Sucursal].[Sucursal].&amp;[Taller San Carlos], [Sucursal].[Sucursal].&amp;[Taller Uruca], [Sucursal].[Sucursal].&amp;[Tegucigalpa], [Sucursal].[Sucursal].&amp;[Tegucigalpa Nuevos], [Sucursal].[Sucursal].&amp;[Tegucigalpa Usados], [Sucursal].[Sucursal].&amp;[Trigal], [Sucursal].[Sucursal].&amp;[Uruca], [Sucursal].[Sucursal].&amp;[Uruca Usados]}</DeniedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="450f899f-0f75-4d16-8177-fa2f529b82ca">
+      <ID>DimensionPermission 2</ID>
+      <Name>DimensionPermission 2</Name>
+      <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+      <RoleID>Role 3</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="46e6fcaa-409b-4660-b7c2-26589ef9c604">
+          <AttributeID>Sucursal Pais</AttributeID>
+          <AllowedSet>{[Sucursal].[País-Sucursal].&amp;[No Definido], [Sucursal].[País-Sucursal].&amp;[SV-Agromosa], [Sucursal].[País-Sucursal].&amp;[SV-Autopista Sur], [Sucursal].[País-Sucursal].&amp;[SV-Casa matriz autopista sur], [Sucursal].[País-Sucursal].&amp;[SV-Chinos Autopista Sur], [Sucursal].[País-Sucursal].&amp;[SV-N/A], [Sucursal].[País-Sucursal].&amp;[SV-Proveedores], [Sucursal].[País-Sucursal].&amp;[SV-San Miguel], [Sucursal].[País-Sucursal].&amp;[SV-Santa Elena], [Sucursal].[País-Sucursal].&amp;[SV-Santa Elena Gev], [Sucursal].[País-Sucursal].&amp;[SV-Sucursal Central]}</AllowedSet>
+        </AttributePermission>
+        <AttributePermission dwd:design-time-name="77bbe3f8-94fe-4937-a339-ccedbe92ab63">
+          <AttributeID>Pais</AttributeID>
+          <AllowedSet>{[Sucursal].[País].&amp;[El Salvador]}</AllowedSet>
+        </AttributePermission>
+        <AttributePermission dwd:design-time-name="a4c7d873-75ab-4bb8-8313-897accf0a3ca">
+          <AttributeID>Sucursal</AttributeID>
+          <AllowedSet>{[Sucursal].[Sucursal].&amp;[Agromosa], [Sucursal].[Sucursal].&amp;[Autopista Sur], [Sucursal].[Sucursal].&amp;[Casa matriz autopista sur], [Sucursal].[Sucursal].&amp;[Chinos Autopista Sur], [Sucursal].[Sucursal].&amp;[N/A], [Sucursal].[Sucursal].&amp;[No Definido], [Sucursal].[Sucursal].&amp;[Proveedores], [Sucursal].[Sucursal].&amp;[San Miguel], [Sucursal].[Sucursal].&amp;[Santa Elena], [Sucursal].[Sucursal].&amp;[Santa Elena Gev], [Sucursal].[Sucursal].&amp;[Sucursal Central]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="492be660-cc06-455a-8200-0d49c4b764b9">
+      <ID>DimensionPermission 3</ID>
+      <Name>DimensionPermission 3</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <RoleID>Role 4</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="761f9abf-b430-4cd0-a187-ec7e27135468">
+          <AttributeID>Pais</AttributeID>
+          <AllowedSet>{[Sucursal].[País].&amp;[Honduras]}</AllowedSet>
+        </AttributePermission>
+        <AttributePermission dwd:design-time-name="dcd2ea1a-2673-4457-b4e3-872dd761f61a">
+          <AttributeID>Sucursal Pais</AttributeID>
+          <AllowedSet>{[Sucursal].[País-Sucursal].&amp;[HN-CITY MALL], [Sucursal].[País-Sucursal].&amp;[HN-La Ceiba], [Sucursal].[País-Sucursal].&amp;[HN-La Ceiba Nuevos], [Sucursal].[País-Sucursal].&amp;[HN-La Ceiba Usados], [Sucursal].[País-Sucursal].&amp;[HN-N/A], [Sucursal].[País-Sucursal].&amp;[HN-Proveedores], [Sucursal].[País-Sucursal].&amp;[HN-Repuestos La Ceiba], [Sucursal].[País-Sucursal].&amp;[HN-Repuestos SPS], [Sucursal].[País-Sucursal].&amp;[HN-Repuestos TGU], [Sucursal].[País-Sucursal].&amp;[HN-San Pedro Sula], [Sucursal].[País-Sucursal].&amp;[HN-Sercor SPS], [Sucursal].[País-Sucursal].&amp;[HN-Sercor TGU], [Sucursal].[País-Sucursal].&amp;[HN-SPS Nuevos], [Sucursal].[País-Sucursal].&amp;[HN-SPS Usados], [Sucursal].[País-Sucursal].&amp;[HN-Tegucigalpa], [Sucursal].[País-Sucursal].&amp;[HN-Tegucigalpa Nuevos], [Sucursal].[País-Sucursal].&amp;[HN-Tegucigalpa Usados], [Sucursal].[País-Sucursal].&amp;[No Definido]}</AllowedSet>
+        </AttributePermission>
+        <AttributePermission dwd:design-time-name="7eeb32bb-9880-4e94-b313-f91ee8cf6b4e">
+          <AttributeID>Sucursal</AttributeID>
+          <AllowedSet>{[Sucursal].[Sucursal].&amp;[CITY MALL], [Sucursal].[Sucursal].&amp;[La Ceiba], [Sucursal].[Sucursal].&amp;[La Ceiba Nuevos], [Sucursal].[Sucursal].&amp;[La Ceiba Usados], [Sucursal].[Sucursal].&amp;[N/A], [Sucursal].[Sucursal].&amp;[No Definido], [Sucursal].[Sucursal].&amp;[Proveedores], [Sucursal].[Sucursal].&amp;[Repuestos La Ceiba], [Sucursal].[Sucursal].&amp;[Repuestos SPS], [Sucursal].[Sucursal].&amp;[Repuestos TGU], [Sucursal].[Sucursal].&amp;[San Pedro Sula], [Sucursal].[Sucursal].&amp;[Sercor SPS], [Sucursal].[Sucursal].&amp;[Sercor TGU], [Sucursal].[Sucursal].&amp;[SPS Nuevos], [Sucursal].[Sucursal].&amp;[SPS Usados], [Sucursal].[Sucursal].&amp;[Tegucigalpa], [Sucursal].[Sucursal].&amp;[Tegucigalpa Nuevos], [Sucursal].[Sucursal].&amp;[Tegucigalpa Usados]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="259fd061-287f-40f2-aaf6-8c10f996c388">
+      <ID>DimensionPermission 4</ID>
+      <Name>DimensionPermission 4</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <RoleID>Role 5</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="c840e9b5-8fa4-4a57-883c-94fd33133b98">
+          <AttributeID>Id Sucursal</AttributeID>
+          <DeniedSet>{}</DeniedSet>
+        </AttributePermission>
+        <AttributePermission dwd:design-time-name="e2078aad-a44b-48f4-bc71-e94125756b44">
+          <AttributeID>Pais</AttributeID>
+          <AllowedSet>{[Sucursal].[País].&amp;[Nicaragua]}</AllowedSet>
+        </AttributePermission>
+        <AttributePermission dwd:design-time-name="aa143079-9f7e-4b9f-8ce2-5b4b204f8983">
+          <AttributeID>Sucursal Pais</AttributeID>
+          <AllowedSet>{[Sucursal].[País-Sucursal].&amp;[NI-Managua], [Sucursal].[País-Sucursal].&amp;[NI-N/A], [Sucursal].[País-Sucursal].&amp;[NI-Proveedores], [Sucursal].[País-Sucursal].&amp;[No Definido]}</AllowedSet>
+        </AttributePermission>
+        <AttributePermission dwd:design-time-name="69fdbc54-af62-4f68-85be-e17a2b61d192">
+          <AttributeID>Sucursal</AttributeID>
+          <AllowedSet>{[Sucursal].[Sucursal].&amp;[Managua], [Sucursal].[Sucursal].&amp;[N/A], [Sucursal].[Sucursal].&amp;[No Definido], [Sucursal].[Sucursal].&amp;[Proveedores]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="b30b0fce-6189-48d7-b15f-d676e68e0297">
+      <ID>DimensionPermission 5</ID>
+      <Name>DimensionPermission 5</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <RoleID>Role 6</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="76eb9ddd-9db8-4010-ae50-18d3aad373c0">
+          <AttributeID>Pais</AttributeID>
+          <AllowedSet>{[Sucursal].[País].&amp;[Costa Rica]}</AllowedSet>
+        </AttributePermission>
+        <AttributePermission dwd:design-time-name="b3d0503f-8569-4c86-bf15-73f56db47954">
+          <AttributeID>Sucursal Pais</AttributeID>
+          <AllowedSet>{[Sucursal].[País-Sucursal].&amp;[CR-Barrio Mexico], [Sucursal].[País-Sucursal].&amp;[CR-Curridabat], [Sucursal].[País-Sucursal].&amp;[CR-La Paz], [Sucursal].[País-Sucursal].&amp;[CR-Liberia], [Sucursal].[País-Sucursal].&amp;[CR-Logistica], [Sucursal].[País-Sucursal].&amp;[CR-Proveedores], [Sucursal].[País-Sucursal].&amp;[CR-San Carlos], [Sucursal].[País-Sucursal].&amp;[CR-San Pedro], [Sucursal].[País-Sucursal].&amp;[CR-Santa Ana], [Sucursal].[País-Sucursal].&amp;[CR-Santa Ana Comercial], [Sucursal].[País-Sucursal].&amp;[CR-Santa Ana Online], [Sucursal].[País-Sucursal].&amp;[CR-Taller Curridabat], [Sucursal].[País-Sucursal].&amp;[CR-Taller Liberia], [Sucursal].[País-Sucursal].&amp;[CR-Taller San Carlos], [Sucursal].[País-Sucursal].&amp;[CR-Taller Uruca], [Sucursal].[País-Sucursal].&amp;[CR-Trigal], [Sucursal].[País-Sucursal].&amp;[CR-Uruca], [Sucursal].[País-Sucursal].&amp;[CR-Uruca Usados], [Sucursal].[País-Sucursal].&amp;[No Definido]}</AllowedSet>
+        </AttributePermission>
+        <AttributePermission dwd:design-time-name="ce74bb00-2188-455e-9d94-380f32c4b5cc">
+          <AttributeID>Sucursal</AttributeID>
+          <AllowedSet>{[Sucursal].[Sucursal].&amp;[Barrio Mexico], [Sucursal].[Sucursal].&amp;[Curridabat], [Sucursal].[Sucursal].&amp;[La Paz], [Sucursal].[Sucursal].&amp;[Liberia], [Sucursal].[Sucursal].&amp;[Logistica], [Sucursal].[Sucursal].&amp;[No Definido], [Sucursal].[Sucursal].&amp;[Proveedores], [Sucursal].[Sucursal].&amp;[San Carlos], [Sucursal].[Sucursal].&amp;[San Pedro], [Sucursal].[Sucursal].&amp;[Santa Ana], [Sucursal].[Sucursal].&amp;[Santa Ana Comercial], [Sucursal].[Sucursal].&amp;[Santa Ana Online], [Sucursal].[Sucursal].&amp;[Taller Curridabat], [Sucursal].[Sucursal].&amp;[Taller Liberia], [Sucursal].[Sucursal].&amp;[Taller San Carlos], [Sucursal].[Sucursal].&amp;[Taller Uruca], [Sucursal].[Sucursal].&amp;[Trigal], [Sucursal].[Sucursal].&amp;[Uruca], [Sucursal].[Sucursal].&amp;[Uruca Usados]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
     </DimensionPermission>
   </DimensionPermissions>
   <Attributes>

@@ -89,7 +89,136 @@
       <AttributePermissions>
         <AttributePermission dwd:design-time-name="77e381e9-babb-4640-8726-4a62ed11b9d6">
           <AttributeID>Pais</AttributeID>
-          <DeniedSet>{[Sociedad].[País].&amp;[Costa Rica], [Sociedad].[País].&amp;[Guatemala], [Sociedad].[País].&amp;[Honduras], [Sociedad].[País].&amp;[Nicaragua], [Sociedad].[País].&amp;[No Definido], [Sociedad].[País].&amp;[Panamá],[Sociedad].[País].[All]}</DeniedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="ae185e4f-4cef-4de8-94e2-6befb0bb08b3">
+      <ID>DimensionPermission 1</ID>
+      <Name>DimensionPermission 1</Name>
+      <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+      <RoleID>Role 2</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="5591205e-b91f-4b8e-b7b0-d3066fb76e06">
+          <AttributeID>Codigo Pais</AttributeID>
+          <DeniedSet>{[Sociedad].[Código País].&amp;[CR], [Sociedad].[Código País].&amp;[HN], [Sociedad].[Código País].&amp;[NI], [Sociedad].[Código País].&amp;[No Definido], [Sociedad].[Código País].&amp;[PA], [Sociedad].[Código País].&amp;[SV]}</DeniedSet>
+        </AttributePermission>
+        <AttributePermission dwd:design-time-name="396c9b3d-6394-4f41-812e-40374989aa4b">
+          <AttributeID>Nombre Corto</AttributeID>
+          <DeniedSet>{[Sociedad].[Nombre Corto Sociedad].&amp;[], [Sociedad].[Nombre Corto Sociedad].&amp;[CPES], [Sociedad].[Nombre Corto Sociedad].&amp;[GEVE], [Sociedad].[Nombre Corto Sociedad].&amp;[GGEV], [Sociedad].[Nombre Corto Sociedad].&amp;[GQCR], [Sociedad].[Nombre Corto Sociedad].&amp;[GQES], [Sociedad].[Nombre Corto Sociedad].&amp;[GQHN], [Sociedad].[Nombre Corto Sociedad].&amp;[GQNI], [Sociedad].[Nombre Corto Sociedad].&amp;[GQPN], [Sociedad].[Nombre Corto Sociedad].&amp;[HON], [Sociedad].[Nombre Corto Sociedad].&amp;[IGEV], [Sociedad].[Nombre Corto Sociedad].&amp;[IMCR], [Sociedad].[Nombre Corto Sociedad].&amp;[IMES], [Sociedad].[Nombre Corto Sociedad].&amp;[INDO], [Sociedad].[Nombre Corto Sociedad].&amp;[INNI], [Sociedad].[Nombre Corto Sociedad].&amp;[No Definido], [Sociedad].[Nombre Corto Sociedad].&amp;[PAES], [Sociedad].[Nombre Corto Sociedad].&amp;[PAGT], [Sociedad].[Nombre Corto Sociedad].&amp;[PNAT], [Sociedad].[Nombre Corto Sociedad].&amp;[QMES], [Sociedad].[Nombre Corto Sociedad].&amp;[QMGT], [Sociedad].[Nombre Corto Sociedad].&amp;[RINV], [Sociedad].[Nombre Corto Sociedad].&amp;[SVES], [Sociedad].[Nombre Corto Sociedad].&amp;[SVGT], [Sociedad].[Nombre Corto Sociedad].&amp;[SVHN], [Sociedad].[Nombre Corto Sociedad].&amp;[TGGT], [Sociedad].[Nombre Corto Sociedad].&amp;[TQGT], [Sociedad].[Nombre Corto Sociedad].&amp;[TURI]}</DeniedSet>
+        </AttributePermission>
+        <AttributePermission dwd:design-time-name="1ab0dd45-4d77-4730-a631-acd7e85d7069">
+          <AttributeID>Pais</AttributeID>
+          <DeniedSet>{[Sociedad].[País].&amp;[Costa Rica], [Sociedad].[País].&amp;[El Salvador], [Sociedad].[País].&amp;[Honduras], [Sociedad].[País].&amp;[Nicaragua], [Sociedad].[País].&amp;[No Definido], [Sociedad].[País].&amp;[Panamá]}</DeniedSet>
+        </AttributePermission>
+        <AttributePermission dwd:design-time-name="eb806b7f-d009-4afb-a4ba-96d9fa91f9ee">
+          <AttributeID>Descripcion Sociedad</AttributeID>
+          <DeniedSet>{[Sociedad].[Sociedad].&amp;[CORPORACION GRUPOQ CR], [Sociedad].[Sociedad].&amp;[GQCR INMOBILIARIA COSTA R], [Sociedad].[Sociedad].&amp;[GRAL.DE VEHICULOS SA CV], [Sociedad].[Sociedad].&amp;[GRUPO GEVESA, SA de CV], [Sociedad].[Sociedad].&amp;[GRUPO PANAUTO, S.A.], [Sociedad].[Sociedad].&amp;[GRUPO Q CORP.,S.A. de C.V], [Sociedad].[Sociedad].&amp;[GRUPO Q EL SALVADOR, S. A], [Sociedad].[Sociedad].&amp;[GRUPO Q HONDURAS, S.A.], [Sociedad].[Sociedad].&amp;[GRUPO Q INMOBILIARIA S.A.], [Sociedad].[Sociedad].&amp;[GRUPO Q NICARAGUA, S.A.], [Sociedad].[Sociedad].&amp;[GRUPO Q PANAMA, S.A.], [Sociedad].[Sociedad].&amp;[GRUPO Q PROD AUTOMOTRICES], [Sociedad].[Sociedad].&amp;[GRUPOQ INMOBILIARIA], [Sociedad].[Sociedad].&amp;[GRUPOQ PROD AUTOMOTRICES], [Sociedad].[Sociedad].&amp;[INMOBILIARIA], [Sociedad].[Sociedad].&amp;[INVERSIONES DOMINICANAS], [Sociedad].[Sociedad].&amp;[INVERSIONES GEVESA, S.A.], [Sociedad].[Sociedad].&amp;[No Definido], [Sociedad].[Sociedad].&amp;[PRODUCTOS AUTOMOTRICES CR], [Sociedad].[Sociedad].&amp;[Q  MOTORS GUATEMALA, S.A.], [Sociedad].[Sociedad].&amp;[Q  MOTORS, S.A. DE C.V.], [Sociedad].[Sociedad].&amp;[REDCOURT INVESTMENT, S.A.], [Sociedad].[Sociedad].&amp;[SERVI Q HONDURAS, S.A], [Sociedad].[Sociedad].&amp;[SERVICIAL, S.A. de C.V.], [Sociedad].[Sociedad].&amp;[SERVIFLOTAS S.A.], [Sociedad].[Sociedad].&amp;[TERRA Q, S.A.], [Sociedad].[Sociedad].&amp;[TRANSGROUP GUATEMALA], [Sociedad].[Sociedad].&amp;[TURIN MOTORS, SA de CV]}</DeniedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="6bc5f0b8-75ca-40d0-a9bf-f2def1cdec94">
+      <ID>DimensionPermission 2</ID>
+      <Name>DimensionPermission 2</Name>
+      <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+      <RoleID>Role 3</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="f989f96a-c352-405b-b3e8-bdb42cb3bb57">
+          <AttributeID>Codigo Pais</AttributeID>
+          <AllowedSet>{[Sociedad].[Código País].&amp;[SV]}</AllowedSet>
+        </AttributePermission>
+        <AttributePermission dwd:design-time-name="9acd41fa-6450-474a-aa19-e0f7aaedd14e">
+          <AttributeID>Nombre Corto</AttributeID>
+          <AllowedSet>{[Sociedad].[Nombre Corto Sociedad].&amp;[GEVE], [Sociedad].[Nombre Corto Sociedad].&amp;[GQES]}</AllowedSet>
+        </AttributePermission>
+        <AttributePermission dwd:design-time-name="3415d389-57da-4603-a0df-c337b292263b">
+          <AttributeID>Descripcion Sociedad</AttributeID>
+          <AllowedSet>{[Sociedad].[Sociedad].&amp;[GRUPO GEVESA, SA de CV], [Sociedad].[Sociedad].&amp;[GRUPO Q EL SALVADOR, S. A]}</AllowedSet>
+        </AttributePermission>
+        <AttributePermission dwd:design-time-name="29909f5b-6dd5-406e-bfde-369e0f6fc0ed">
+          <AttributeID>Pais</AttributeID>
+          <AllowedSet>{[Sociedad].[País].&amp;[El Salvador]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="e050d699-8fcf-4fd5-8025-be463fcf5202">
+      <ID>DimensionPermission 3</ID>
+      <Name>DimensionPermission 3</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <RoleID>Role 4</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="aba93ad8-d01f-4489-b213-e808992e14af">
+          <AttributeID>Codigo Pais</AttributeID>
+          <AllowedSet>{[Sociedad].[Código País].&amp;[HN]}</AllowedSet>
+        </AttributePermission>
+        <AttributePermission dwd:design-time-name="8b7f1894-8cdc-43e8-af3c-74bba0bcab93">
+          <AttributeID>Nombre Corto</AttributeID>
+          <AllowedSet>{[Sociedad].[Nombre Corto Sociedad].&amp;[GQHN]}</AllowedSet>
+        </AttributePermission>
+        <AttributePermission dwd:design-time-name="78a072ff-fc38-4cde-886a-fdf601c44ae1">
+          <AttributeID>Pais</AttributeID>
+          <AllowedSet>{[Sociedad].[País].&amp;[Honduras]}</AllowedSet>
+        </AttributePermission>
+        <AttributePermission dwd:design-time-name="b6779b9c-0c8b-4e4f-a43c-a7b21f800f01">
+          <AttributeID>Descripcion Sociedad</AttributeID>
+          <AllowedSet>{[Sociedad].[Sociedad].&amp;[GRUPO Q HONDURAS, S.A.]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="afa51f7e-427f-4597-a74e-b0ecb5303861">
+      <ID>DimensionPermission 4</ID>
+      <Name>DimensionPermission 4</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <RoleID>Role 5</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="a6040a0c-7d91-43e0-b85a-f8f82799556c">
+          <AttributeID>Codigo Pais</AttributeID>
+          <AllowedSet>{[Sociedad].[Código País].&amp;[NI]}</AllowedSet>
+        </AttributePermission>
+        <AttributePermission dwd:design-time-name="837f5068-526c-4091-abdd-3303f87b489a">
+          <AttributeID>Nombre Corto</AttributeID>
+          <AllowedSet>{[Sociedad].[Nombre Corto Sociedad].&amp;[GQNI]}</AllowedSet>
+        </AttributePermission>
+        <AttributePermission dwd:design-time-name="b288fec5-3e8e-4d74-b5b1-9054aa71ca8d">
+          <AttributeID>Pais</AttributeID>
+          <AllowedSet>{[Sociedad].[País].&amp;[Nicaragua]}</AllowedSet>
+        </AttributePermission>
+        <AttributePermission dwd:design-time-name="19090de1-393e-4e61-92ab-68f87e6eda28">
+          <AttributeID>Descripcion Sociedad</AttributeID>
+          <AllowedSet>{[Sociedad].[Sociedad].&amp;[GRUPO Q NICARAGUA, S.A.]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="47323ec7-954f-469b-8e6b-9aa55d7afb28">
+      <ID>DimensionPermission 5</ID>
+      <Name>DimensionPermission 5</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <RoleID>Role 6</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="bc20c842-e72c-4724-8aeb-9b9db443166e">
+          <AttributeID>Codigo Pais</AttributeID>
+          <AllowedSet>{[Sociedad].[Código País].&amp;[CR]}</AllowedSet>
+        </AttributePermission>
+        <AttributePermission dwd:design-time-name="0e9eef09-bf82-4a2c-9758-0bd8577920bc">
+          <AttributeID>Nombre Corto</AttributeID>
+          <AllowedSet>{[Sociedad].[Nombre Corto Sociedad].&amp;[GQCR]}</AllowedSet>
+        </AttributePermission>
+        <AttributePermission dwd:design-time-name="b810ffd3-46df-4642-9976-558ceb61a5fc">
+          <AttributeID>Pais</AttributeID>
+          <AllowedSet>{[Sociedad].[País].&amp;[Costa Rica]}</AllowedSet>
+        </AttributePermission>
+        <AttributePermission dwd:design-time-name="be2a8825-3720-4db3-bbf7-866a2c3828b5">
+          <AttributeID>Descripcion Sociedad</AttributeID>
+          <AllowedSet>{[Sociedad].[Sociedad].&amp;[CORPORACION GRUPOQ CR]}</AllowedSet>
         </AttributePermission>
       </AttributePermissions>
     </DimensionPermission>

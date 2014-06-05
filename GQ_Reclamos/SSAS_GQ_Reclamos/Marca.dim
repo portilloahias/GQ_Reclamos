@@ -1,8 +1,8 @@
 ﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="ad25777a-e2ca-4101-87bd-a75e109b299b" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Dim Marca</ID>
   <Name>Marca</Name>
-  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
   <Annotations>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
@@ -66,7 +66,7 @@
       <Value>100</Value>
     </Annotation>
   </Annotations>
-  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <LastProcessed>0001-01-01T06:00:00Z</LastProcessed>
   <State>Unprocessed</State>
   <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="08acb3a6-8981-442d-8b63-eed5fdb59b77">
     <DataSourceViewID>dsvDW_GQ_Reclamos</DataSourceViewID>
@@ -81,11 +81,85 @@
     <DimensionPermission dwd:design-time-name="8e96d58e-276a-494b-bf03-efe78a149458">
       <ID>DimensionPermission</ID>
       <Name>DimensionPermission</Name>
-      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
       <RoleID>Role 1</RoleID>
       <ReadDefinition>Allowed</ReadDefinition>
       <Read>Allowed</Read>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="06f35883-8032-4a2c-8ed1-c428415aa652">
+      <ID>DimensionPermission 1</ID>
+      <Name>DimensionPermission 1</Name>
+      <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+      <RoleID>Role 2</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="c629a92f-23af-4834-bfa1-ced7d0791f0a">
+          <AttributeID>Descripcion Marca</AttributeID>
+          <DeniedSet>{[Marca].[Marca].&amp;[CHEVROLET], [Marca].[Marca].&amp;[FERR / MASER], [Marca].[Marca].&amp;[FORD], [Marca].[Marca].&amp;[HONDA], [Marca].[Marca].&amp;[HYUNDAI], [Marca].[Marca].&amp;[ISUZU], [Marca].[Marca].&amp;[MAZDA], [Marca].[Marca].&amp;[NISSAN], [Marca].[Marca].&amp;[No Definido], [Marca].[Marca].&amp;[PEUGEOT], [Marca].[Marca].&amp;[PORSCHE], [Marca].[Marca].&amp;[UNIDADES DE APOYO]}</DeniedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="8d29a60e-c39b-4732-83b1-eea851b2dea8">
+      <ID>DimensionPermission 2</ID>
+      <Name>DimensionPermission 2</Name>
+      <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+      <RoleID>Role 3</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="c36203e0-846b-4868-adb1-599217700ab1">
+          <AttributeID>Id Marca</AttributeID>
+          <DeniedSet>{[Marca].[Id Marca].[All]}</DeniedSet>
+        </AttributePermission>
+        <AttributePermission dwd:design-time-name="c4f72fc6-255c-463b-874d-d8211847fe4c">
+          <AttributeID>Descripcion Marca</AttributeID>
+          <DeniedSet>{[Marca].[Marca].&amp;[CHEVROLET], [Marca].[Marca].&amp;[M BENZ], [Marca].[Marca].&amp;[MB COMERC], [Marca].[Marca].&amp;[UNIDADES DE APOYO]}</DeniedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="96bb683d-25e9-4f5e-8b0d-7bc21cca426f">
+      <ID>DimensionPermission 3</ID>
+      <Name>DimensionPermission 3</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <RoleID>Role 4</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="299b9a67-594c-42a9-8a3b-0f227e1965d2">
+          <AttributeID>Descripcion Marca</AttributeID>
+          <DeniedSet>{[Marca].[Marca].&amp;[FERR / MASER], [Marca].[Marca].&amp;[FORD], [Marca].[Marca].&amp;[HONDA], [Marca].[Marca].&amp;[HYUNDAI], [Marca].[Marca].&amp;[ISUZU], [Marca].[Marca].&amp;[M BENZ], [Marca].[Marca].&amp;[MB COMERC], [Marca].[Marca].&amp;[PEUGEOT], [Marca].[Marca].&amp;[PORSCHE], [Marca].[Marca].&amp;[RENAULT], [Marca].[Marca].&amp;[UNIDADES DE APOYO]}</DeniedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="d87612f5-4acc-4a62-9a98-6fade51de3e6">
+      <ID>DimensionPermission 4</ID>
+      <Name>DimensionPermission 4</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <RoleID>Role 5</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="490f70d3-1e94-4cbf-8157-73e8db54a830">
+          <AttributeID>Descripcion Marca</AttributeID>
+          <AllowedSet>{[Marca].[Marca].&amp;[CHEVROLET], [Marca].[Marca].&amp;[CHINOS], [Marca].[Marca].&amp;[NISSAN], [Marca].[Marca].&amp;[No Definido], [Marca].[Marca].&amp;[USADOS], [Marca].[Marca].&amp;[Vacio]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
+    </DimensionPermission>
+    <DimensionPermission dwd:design-time-name="e93660c5-56fb-4119-97b0-6ca1128f8cf3">
+      <ID>DimensionPermission 5</ID>
+      <Name>DimensionPermission 5</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <RoleID>Role 6</RoleID>
+      <Read>Allowed</Read>
+      <AttributePermissions>
+        <AttributePermission dwd:design-time-name="b7e54297-5726-4459-b56b-6c27c6480479">
+          <AttributeID>Descripcion Marca</AttributeID>
+          <AllowedSet>{[Marca].[Marca].&amp;[CHEVROLET], [Marca].[Marca].&amp;[HYUNDAI], [Marca].[Marca].&amp;[ISUZU], [Marca].[Marca].&amp;[No Definido], [Marca].[Marca].&amp;[USADOS], [Marca].[Marca].&amp;[Vacio]}</AllowedSet>
+        </AttributePermission>
+      </AttributePermissions>
     </DimensionPermission>
   </DimensionPermissions>
   <Attributes>
