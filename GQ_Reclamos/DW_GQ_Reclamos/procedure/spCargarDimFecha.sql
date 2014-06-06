@@ -1,5 +1,4 @@
-﻿--spCargarDimFecha '1999-01-02','2014-12-31', 'Nacimiento'
-CREATE PROCEDURE [dbo].[spCargarDimFecha]
+﻿CREATE  PROCEDURE [dbo].[spCargarDimFecha]
 (
 	 @FechaInicio DATETIME,
      @FechaFin DATETIME,
@@ -188,9 +187,5 @@ END
 
 
 
-
-
-
-GO
 
 

@@ -147,8 +147,8 @@
     <DimensionPermission dwd:design-time-name="e050d699-8fcf-4fd5-8025-be463fcf5202">
       <ID>DimensionPermission 3</ID>
       <Name>DimensionPermission 3</Name>
-      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
       <RoleID>Role 4</RoleID>
       <Read>Allowed</Read>
       <AttributePermissions>
@@ -173,8 +173,8 @@
     <DimensionPermission dwd:design-time-name="afa51f7e-427f-4597-a74e-b0ecb5303861">
       <ID>DimensionPermission 4</ID>
       <Name>DimensionPermission 4</Name>
-      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
       <RoleID>Role 5</RoleID>
       <Read>Allowed</Read>
       <AttributePermissions>
@@ -199,8 +199,8 @@
     <DimensionPermission dwd:design-time-name="47323ec7-954f-469b-8e6b-9aa55d7afb28">
       <ID>DimensionPermission 5</ID>
       <Name>DimensionPermission 5</Name>
-      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
       <RoleID>Role 6</RoleID>
       <Read>Allowed</Read>
       <AttributePermissions>

@@ -2,7 +2,7 @@
 	[IdFecha] [int] NOT NULL,
 	[Fecha] [datetime] NULL,
 	[Anno] [int] NULL,
-	[Mes] [varchar](50) NULL,
+	[Mes] [int] NULL,
 	[SemanaMes] [int] NULL,
 	[SemanaAnno] [int] NULL,
 	[DescripcionMes] [varchar](50) NULL,

@@ -4088,12 +4088,6 @@
           <RoleID>Role 2</RoleID>
           <Read>Allowed</Read>
           <ReadSourceData>None</ReadSourceData>
-          <CellPermissions>
-            <CellPermission>
-              <Access>Read</Access>
-              <Expression>[Sociedad].[País].&amp;[Guatemala]</Expression>
-            </CellPermission>
-          </CellPermissions>
         </CubePermission>
         <CubePermission>
           <ID>CubePermission 2</ID>
@@ -4103,12 +4097,6 @@
           <RoleID>Role 3</RoleID>
           <Read>Allowed</Read>
           <ReadSourceData>None</ReadSourceData>
-          <CellPermissions>
-            <CellPermission>
-              <Access>Read</Access>
-              <Expression>[Sociedad].[País].&amp;[El Salvador]</Expression>
-            </CellPermission>
-          </CellPermissions>
         </CubePermission>
         <CubePermission>
           <ID>CubePermission 3</ID>
@@ -4118,12 +4106,6 @@
           <RoleID>Role 4</RoleID>
           <Read>Allowed</Read>
           <ReadSourceData>None</ReadSourceData>
-          <CellPermissions>
-            <CellPermission>
-              <Access>Read</Access>
-              <Expression>[Sociedad].[País].&amp;[Honduras]</Expression>
-            </CellPermission>
-          </CellPermissions>
         </CubePermission>
         <CubePermission>
           <ID>CubePermission 4</ID>
@@ -4133,12 +4115,6 @@
           <RoleID>Role 5</RoleID>
           <Read>Allowed</Read>
           <ReadSourceData>None</ReadSourceData>
-          <CellPermissions>
-            <CellPermission>
-              <Access>Read</Access>
-              <Expression>[Sociedad].[País].&amp;[Nicaragua]</Expression>
-            </CellPermission>
-          </CellPermissions>
         </CubePermission>
         <CubePermission>
           <ID>CubePermission 5</ID>
@@ -4148,12 +4124,6 @@
           <RoleID>Role 6</RoleID>
           <Read>Allowed</Read>
           <ReadSourceData>None</ReadSourceData>
-          <CellPermissions>
-            <CellPermission>
-              <Access>Read</Access>
-              <Expression>[Sociedad].[País].&amp;[Costa Rica]</Expression>
-            </CellPermission>
-          </CellPermissions>
         </CubePermission>
       </CubePermissions>
       <MeasureGroups>
@@ -6129,13 +6099,13 @@ VISIBLE = 1 ,  DISPLAY_FOLDER = 'Cálculos Reclamos Asignados' ,  ASSOCIATED_MEA
       <Description></Description>
       <Members>
         <Member>
-          <Name>GQSV\gqservicios</Name>
-        </Member>
-        <Member>
           <Name>GQSV\fescobar</Name>
         </Member>
         <Member>
           <Name>GQSV\ivalle</Name>
+        </Member>
+        <Member>
+          <Name>GQSV\gqservicios</Name>
         </Member>
       </Members>
     </Role>

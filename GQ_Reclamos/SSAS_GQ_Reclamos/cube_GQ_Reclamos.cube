@@ -1329,12 +1329,6 @@
       <RoleID>Role 2</RoleID>
       <Read>Allowed</Read>
       <ReadSourceData>None</ReadSourceData>
-      <CellPermissions>
-        <CellPermission dwd:design-time-name="9669da85-bc1e-4669-8cf6-cf1f3b7d98c4">
-          <Access>Read</Access>
-          <Expression>[Sociedad].[País].&amp;[Guatemala]</Expression>
-        </CellPermission>
-      </CellPermissions>
     </CubePermission>
     <CubePermission dwd:design-time-name="d9ef8039-b6d2-45e0-8f48-3d31db5ddbb2">
       <ID>CubePermission 2</ID>
@@ -1344,12 +1338,6 @@
       <RoleID>Role 3</RoleID>
       <Read>Allowed</Read>
       <ReadSourceData>None</ReadSourceData>
-      <CellPermissions>
-        <CellPermission dwd:design-time-name="150cee7a-5c1f-43c3-afaa-0452a04112ee">
-          <Access>Read</Access>
-          <Expression>[Sociedad].[País].&amp;[El Salvador]</Expression>
-        </CellPermission>
-      </CellPermissions>
     </CubePermission>
     <CubePermission dwd:design-time-name="a0011821-bc3a-4a46-bb12-472b85c0f0ce">
       <ID>CubePermission 3</ID>
@@ -1359,12 +1347,6 @@
       <RoleID>Role 4</RoleID>
       <Read>Allowed</Read>
       <ReadSourceData>None</ReadSourceData>
-      <CellPermissions>
-        <CellPermission dwd:design-time-name="6e65909f-6cfc-4573-8795-817e6b67200c">
-          <Access>Read</Access>
-          <Expression>[Sociedad].[País].&amp;[Honduras]</Expression>
-        </CellPermission>
-      </CellPermissions>
     </CubePermission>
     <CubePermission dwd:design-time-name="7ba76cf8-7580-4d8d-ad7b-92485ba4e8cf">
       <ID>CubePermission 4</ID>
@@ -1374,12 +1356,6 @@
       <RoleID>Role 5</RoleID>
       <Read>Allowed</Read>
       <ReadSourceData>None</ReadSourceData>
-      <CellPermissions>
-        <CellPermission dwd:design-time-name="db830bd3-5b61-4f98-a529-ddb3ad0b7a48">
-          <Access>Read</Access>
-          <Expression>[Sociedad].[País].&amp;[Nicaragua]</Expression>
-        </CellPermission>
-      </CellPermissions>
     </CubePermission>
     <CubePermission dwd:design-time-name="5f539c4e-f319-45e6-bbe5-e9a3776112fd">
       <ID>CubePermission 5</ID>
@@ -1389,12 +1365,6 @@
       <RoleID>Role 6</RoleID>
       <Read>Allowed</Read>
       <ReadSourceData>None</ReadSourceData>
-      <CellPermissions>
-        <CellPermission dwd:design-time-name="ba2557d4-254b-461a-bd94-a7b566a7a947">
-          <Access>Read</Access>
-          <Expression>[Sociedad].[País].&amp;[Costa Rica]</Expression>
-        </CellPermission>
-      </CellPermissions>
     </CubePermission>
   </CubePermissions>
   <MeasureGroups>
